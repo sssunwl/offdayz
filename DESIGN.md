@@ -1,4 +1,4 @@
-# SoSolsunday 改版設計規格 v2
+# OffDayz 改版設計規格 v2
 
 > 給執行者（ChatGPT / Codex）的施工說明書。
 > **參考實作已經完成並上線到 `docs/index.html`**，設計系統在 `docs/assets/sosol.css`。
@@ -15,7 +15,7 @@
 4. 三個子頁（destinations、seasonal、city）各自複製一份 CSS，改一次要改四個地方。
 
 改版目標：
-- 沿用 **OkiDayz 的視覺語言**（同一個品牌家族的感覺），但保留 SoSolsunday 自己的「價格速報」個性。
+- 沿用 **OkiDayz 的視覺語言**（同一個品牌家族的感覺），但保留 OffDayz 自己的「價格速報」個性。
 - 首頁改成**可以一路往下滑的 landing page**，不再用 tab 藏內容。
 - 把新的**假期年曆**放上招牌位置 —— 這是這個站現在最有價值、別人沒有的東西。
 - CSS 抽成一支共用檔，四個頁面共用。
@@ -92,7 +92,7 @@ font-family:"Noto Sans TC","PingFang TC","Hiragino Sans",system-ui,sans-serif;
 
 ```
 site-header（sticky、毛玻璃、捲動後加陰影）
-  brand ☀ SoSolsunday ｜ nav: 首頁 · 機票·酒店 · 目的地 · 季節限定 · 假期年曆 ｜ 更新時間 pill
+  brand ☀ OffDayz ｜ nav: 首頁 · 機票·酒店 · 目的地 · 季節限定 · 假期年曆 ｜ 更新時間 pill
 hero
   kicker pill「香港・台北出發 · 每日更新」
   H1「這個週末，/ 飛去哪？」← 第二行套 .play（藍字 + 黃色螢光筆底線）
@@ -208,7 +208,7 @@ site-footer  深色三欄
 ## 9. 檔案清單
 
 ```
-SoSolsunday/
+OffDayz/
 ├── DESIGN.md                     ← 本檔
 └── docs/
     ├── assets/sosol.css          ← 設計系統（唯一色票來源）

@@ -1,7 +1,7 @@
-/* 只覆寫 SoSolsunday 的站頭站尾外觀，不改共用年曆 HTML 或功能。 */
+/* 只覆寫 OffDayz 的站頭站尾外觀，不改共用年曆 HTML 或功能。 */
 .hero{background:var(--sand);color:var(--ink);border-bottom:1px solid var(--line)}
 .hero .backlink{display:inline-flex;gap:12px;align-items:center;color:var(--blue);font-size:.85rem;margin-bottom:26px}
-.hero .backlink::before{content:"☀ SoSolsunday";font-size:1.05rem;font-weight:900;letter-spacing:-.02em;color:var(--navy)}
+.hero .backlink::before{content:"☀ OffDayz";font-size:1.05rem;font-weight:900;letter-spacing:-.02em;color:var(--navy)}
 .hero .backlink:hover{color:var(--navy)}
 .hero .eyebrow{color:var(--blue)}
 .hero h1{font-weight:900;letter-spacing:-.05em;color:var(--navy)}

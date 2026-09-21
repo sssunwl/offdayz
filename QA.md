@@ -24,7 +24,7 @@
 
 ## 重跑測試
 
-在 SoSolsunday 專案內執行：
+在 OffDayz 專案內執行：
 
 ```sh
 node --test tests/frontend.test.cjs

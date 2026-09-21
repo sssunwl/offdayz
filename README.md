@@ -1,8 +1,8 @@
-# 🏖️ SoSolsunday — 旅遊預訂平台
+# 🏖️ OffDayz — 旅遊預訂平台
 
 **狀態**：🟢 運行中  
 **最後更新**：2026-06-27  
-**GitHub**：https://github.com/sssunwl/sosolsunday
+**GitHub**：https://github.com/sssunwl/offdayz
 
 ---
 
@@ -23,7 +23,7 @@
 ## 📁 資料夾結構
 
 ```
-SoSolsunday/
+OffDayz/
 ├── README.md（本文件）
 ├── src/                         ← 網站代碼
 ├── data/                        ← 活動數據 + 價格
@@ -50,7 +50,7 @@ SoSolsunday/
 
 ## 2026-09-03 進度
 
-v2 前端已在本機完成：首頁改為連續捲動、加入假期年曆招牌，四個主頁共用設計系統，並修正手機選單、酒店城市切換與共同連假顯示。Codex 任務「完成 SoSolsunday 改版」的 14 項測試、375px／桌面驗收結果與限制見 [QA.md](QA.md)。
+v2 前端已在本機完成：首頁改為連續捲動、加入假期年曆招牌，四個主頁共用設計系統，並修正手機選單、酒店城市切換與共同連假顯示。Codex 任務「完成 OffDayz 改版」的 14 項測試、375px／桌面驗收結果與限制見 [QA.md](QA.md)。
 
 新增的 [DATA.md](DATA.md) 是資料管線改造規格，尚非已完成功能：依序規劃基準線歷史、假期窗口與機酒套餐、航線擴充及分層排程三個 PR。開工前須先查證 API 價格語意／額度，聯盟連結等 SS 提供 marker ID；前端與資料施工分開，既有 schema 只加不改。
 
@@ -59,8 +59,10 @@ v2 前端已在本機完成：首頁改為連續捲動、加入假期年曆招�
 v2 成果已提交到分支 `feat/v2-redesign`，並合併 origin/main（本機原本落後 9 筆）。
 
 - **機酒資料已更新至 2026-09-03 19:24 HKT。** 遠端每日管線運作正常；先前「資料停在 7/7」是本機 checkout 落後造成的誤判，不是管線停更。
-- 新增配色方案 A「地中海街景」（陶土 × 鴨綠），脫離 OkinawaSundays 色票，規格見 [DESIGN-PALETTE.md](DESIGN-PALETTE.md)。目前以 `docs/assets/palette-terracotta.css` 覆蓋層實作，**尚未定案**，定案後折回 `sosol.css`。
+- 配色方案 A「地中海街景」（陶土 × 鴨綠）已定案並折回 `docs/assets/sosol.css`，不再依賴臨時覆蓋層；規格見 [DESIGN-PALETTE.md](DESIGN-PALETTE.md)。假期年曆亦改為範圍選擇並支援收合。
 - 補上 9/3 新資料帶進來的目的地國旗（沖繩、富國島、MZG、NKG、TAE），原本會 fallback 成 🌍。
 - **口袋地點已依 v2 設計系統重做**：改為獨立頁 `docs/places/`（原本是首頁的一個 tab），加進主導覽與頁尾，首頁另有一段預覽區塊。地圖 × 地區篩選 × 卡片列表功能與原版一致，Leaflet CDN 掛掉時仍看得到卡片。原始實作見 `e0289f8`（PR #1）。
 
 改版仍未部署上線。
+
+同日合併資料基準線後，首頁出發地按鈕已由寫死的香港／台北改為依航線資料動態產生，補回原本看不到的沖繩出發兩條航線；Hero 最低價則固定使用有彙整資料的出發地，避免切到沖繩時空白。重跑 Node 14 項與 Python 10 項測試均通過，六個主要路徑在 1180px／375px 驗收無錯誤或橫向溢出；完整紀錄見 [QA.md](QA.md)。目前 `feat/v2-redesign` 已與遠端同名分支同步，下一步仍是審閱、合併主線及部署驗收。

@@ -1,4 +1,4 @@
-# SoSolsunday
+# OffDayz
 
 靜態旅遊網站，公開頁面放在 `docs/`，沿用既有 GitHub Pages 部署方式。
 

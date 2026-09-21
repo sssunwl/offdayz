@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
-  <title>城市指南 · SoSolsunday</title>
+  <title>城市指南 · OffDayz</title>
   <link rel="stylesheet" href="../assets/sosol.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
 
 <header class="site-header" id="hdr">
   <div class="shell nav">
-    <a class="brand" href="../"><span class="brand-mark">☀</span> SoSolsunday</a>
+    <a class="brand" href="../"><span class="brand-mark">☀</span> OffDayz</a>
     <nav class="desktop-nav" aria-label="主要導覽">
       <a href="../">首頁</a>
       <a href="../#deals">機票・酒店</a>
@@ -86,7 +86,7 @@
   <div class="shell">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="brand" href="../"><span class="brand-mark">☀</span> SoSolsunday</a>
+        <a class="brand" href="../"><span class="brand-mark">☀</span> OffDayz</a>
         <p>香港與台北出發的旅遊速報。機酒價格每日自動更新，假期年曆人工核對官方公告。Suniverse × Sosol 出品。</p>
       </div>
       <div class="footer-col"><strong>逛逛</strong>
@@ -94,7 +94,7 @@
         <a href="../destinations/">目的地</a><a href="../places/">口袋地點</a><a href="../seasonal/">季節限定</a><a href="../calendar/">假期年曆</a>
       </div>
       <div class="footer-col"><strong>關於</strong>
-        <a href="https://github.com/sssunwl/sosolsunday" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/sssunwl/offdayz" target="_blank" rel="noopener">GitHub</a>
         <a href="../calendar/">假期資料來源</a>
       </div>
     </div>
@@ -119,7 +119,7 @@ async function boot() {
   ]);
   SoSol.updateStatus(FD,HD);
   if (!CD) { renderMissing(); return; }
-  document.title = CD.city + ' · SoSolsunday';
+  document.title = CD.city + ' · OffDayz';
   renderHero();
   renderFlights();
   renderHolidays();
@@ -136,7 +136,7 @@ async function boot() {
 }
 
 function renderMissing(){
-  document.title='找不到城市 · SoSolsunday';
+  document.title='找不到城市 · OffDayz';
   document.getElementById('main').innerHTML='<section class="section shell"><div class="card"><h1>找不到這個城市</h1><p>城市連結可能有誤，或資料暫時無法載入。</p><a class="btn btn-primary" href="./">返回目的地</a></div></section>';
   SoSol.updateStatus();
 }
