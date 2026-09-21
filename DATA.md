@@ -1,4 +1,4 @@
-# SoSolsunday 資料管線規格 v1 —— 「判斷引擎」改造
+# OffDayz 資料管線規格 v1 —— 「判斷引擎」改造
 
 > 給執行者（Codex）的施工說明書。**只管資料管線，不碰前端。**
 >
@@ -344,7 +344,7 @@ Travelpayouts **本身就是聯盟網絡**，目前只當免費資料源用，ma
 ## 9. 硬性約束
 
 1. **不准碰 `docs/**.html`、`docs/assets/`、`docs/calendar/`** —— 那是 `DESIGN.md` 的地盤，前端改版進行中
-2. **不准改 `docs/data/holidays.json`** —— 唯讀輸入。它的唯一真相源在 `SoSolsunday/docs/data/`，`SunFamilyTrip` 是副本
+2. **不准改 `docs/data/holidays.json`** —— 唯讀輸入。它的唯一真相源在 `OffDayz/docs/data/`，`SunFamilyTrip` 是副本
 3. **`docs/data/*.json` 既有欄位只加不改**：不准改名、不准刪除、不准改型別。前端正在改版，任何破壞性變更會讓兩邊同時炸
 4. **`requirements.txt` 維持只有 `requests`** —— 統計用 stdlib `statistics`
 5. **金鑰不進 repo** —— 沿用現有 4 個 GitHub secrets，不新增硬編碼

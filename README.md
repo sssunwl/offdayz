@@ -1,8 +1,8 @@
-# 🏖️ SoSolsunday — 旅遊預訂平台
+# 🏖️ OffDayz — 旅遊預訂平台
 
 **狀態**：🟢 運行中  
 **最後更新**：2026-06-27  
-**GitHub**：https://github.com/sssunwl/sosolsunday
+**GitHub**：https://github.com/sssunwl/offdayz
 
 ---
 
@@ -23,7 +23,7 @@
 ## 📁 資料夾結構
 
 ```
-SoSolsunday/
+OffDayz/
 ├── README.md（本文件）
 ├── src/                         ← 網站代碼
 ├── data/                        ← 活動數據 + 價格

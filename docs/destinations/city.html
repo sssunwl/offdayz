@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
-  <title>城市指南 · SoSolsunday</title>
+  <title>城市指南 · OffDayz</title>
   <style>
     :root{
       --navy:#1B2F4A;--gold:#C9A84C;--sand:#F2EDE6;
@@ -86,7 +86,7 @@
 <header class="hdr">
   <a class="hdr-back" href="./">← 目的地</a>
   <span class="hdr-city" id="hdr-city">載入中…</span>
-  <a class="hdr-logo" href="../">☀ SoSolsunday</a>
+  <a class="hdr-logo" href="../">☀ OffDayz</a>
 </header>
 
 <div class="hero">
@@ -129,7 +129,7 @@
 </div>
 
 <footer>
-  <a href="../">☀ SoSolsunday</a> · 旅遊優惠速報 &amp; 目的地指南
+  <a href="../">☀ OffDayz</a> · 旅遊優惠速報 &amp; 目的地指南
 </footer>
 
 <script>
@@ -153,7 +153,7 @@ async function boot() {
 
   if (!CD) { document.getElementById('hdr-city').textContent = '城市資料不存在'; return; }
 
-  document.title = CD.city + ' · SoSolsunday';
+  document.title = CD.city + ' · OffDayz';
   renderHero();
   renderFlights();
 
