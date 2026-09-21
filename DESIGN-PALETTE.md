@@ -1,4 +1,4 @@
-# SoSolsunday 配色方案 — 脫離 OkinawaSundays
+# SoSolsunday 配色方案 — 脫離 OkiDayz
 
 > 2026-09-03。DESIGN.md 是版型與結構規格，這份只談**顏色**。
 > 已實作方案 A，檔案在 `docs/assets/palette-terracotta.css`，五個頁面都已 link，打開就能看。
@@ -7,8 +7,8 @@
 
 ## 0. 為什麼要換
 
-v2 直接沿用 OkinawaSundays 的色票（`#062a3a` 深海藍 + `#79d9e6` 亮青 + `#ffd447` 黃 + `#fff7e8` 奶油底）。
-好處是一眼看得出是同一個家族，壞處是**兩個站放在一起會分不出來** —— OkinawaSundays 講一個島，SoSolsunday 講整個亞洲的機酒與假期，個性應該不一樣。
+v2 直接沿用 OkiDayz 的色票（`#062a3a` 深海藍 + `#79d9e6` 亮青 + `#ffd447` 黃 + `#fff7e8` 奶油底）。
+好處是一眼看得出是同一個家族，壞處是**兩個站放在一起會分不出來** —— OkiDayz 講一個島，SoSolsunday 講整個亞洲的機酒與假期，個性應該不一樣。
 
 版型、字級、圓角、陰影、元件全部不動，**只換顏色**，因為版型那套已經驗收過了。
 
@@ -18,7 +18,7 @@ v2 直接沿用 OkinawaSundays 的色票（`#062a3a` 深海藍 + `#79d9e6` 亮�
 
 | 參考 | 核心配色 | 判斷 |
 |---|---|---|
-| Fly off App（薄荷 × 珊瑚 × 粉膚底） | `#3DD7C6` / `#EC8C6F` / `#F7E0DC` | 好看，但薄荷跟 OkinawaSundays 的亮青太近，**換了等於沒換**；粉膚底也偏美妝／wellness |
+| Fly off App（薄荷 × 珊瑚 × 粉膚底） | `#3DD7C6` / `#EC8C6F` / `#F7E0DC` | 好看，但薄荷跟 OkiDayz 的亮青太近，**換了等於沒換**；粉膚底也偏美妝／wellness |
 | 威尼斯運河 | 奶油白 / 杏橘 / 陶土 / 珊瑚紅 / 墨綠 / 湖藍 | ✅ 方向對 |
 | New Orleans 街景 | `#FFF6ED` / 鴨綠 / 陶土橘 / 磚紅 / 芥末金 | ✅ 方向對，而且**跟威尼斯是同一組家族** |
 | FANA World Travel | 酒紅 / 米駝 / 淺灰藍 / 祖母綠 / 深藍 | 高級旅行社的氣質，偏 editorial；酒紅會跟「價格偏貴」的紅撞在一起 |
@@ -89,7 +89,7 @@ v2 直接沿用 OkinawaSundays 的色票（`#062a3a` 深海藍 + `#79d9e6` 亮�
 --blue:#2FB3A3  --lagoon:#7FE0D3  --lagoon-soft:#E2F7F4
 --coral:#E4785A  --sun:#F2C14E
 ```
-輕、年輕、app 感。**缺點**：薄荷離 OkinawaSundays 的亮青太近，換完還是像同一站；粉膚底在價格表上會偏甜。
+輕、年輕、app 感。**缺點**：薄荷離 OkiDayz 的亮青太近，換完還是像同一站；粉膚底在價格表上會偏甜。
 
 ### C「夜航奢遊」Wine × Emerald × Navy（FANA）
 ```
