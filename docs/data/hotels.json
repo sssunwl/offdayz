@@ -1,11 +1,6 @@
 {
-  "updated_at": "2026-09-24 10:41 HKT",
+  "updated_at": "2026-09-25 10:58 HKT",
   "weekends": [
-    {
-      "label": "9/25–27",
-      "checkin": "2026-09-25",
-      "checkout": "2026-09-27"
-    },
     {
       "label": "10/2–4",
       "checkin": "2026-10-02",
@@ -15,6 +10,11 @@
       "label": "10/9–11",
       "checkin": "2026-10-09",
       "checkout": "2026-10-11"
+    },
+    {
+      "label": "10/16–18",
+      "checkin": "2026-10-16",
+      "checkout": "2026-10-18"
     }
   ],
   "cities": [
@@ -25,42 +25,42 @@
       "weekend_hotels": [
         [
           {
-            "name": "Nest酒店 那覇西",
-            "price": 1026,
+            "name": "INFINISIS NAHA SHURIJO by Hewitt Resort",
+            "price": 1309,
             "rating": 8.6,
             "stars": 4
           },
           {
-            "name": "INFINISIS NAHA SHURIJO by Hewitt Resort",
-            "price": 1305,
-            "rating": 8.6,
-            "stars": 4
-          }
-        ],
-        [
-          {
-            "name": "Nest酒店 那覇西",
-            "price": 1433,
-            "rating": 8.6,
-            "stars": 4
-          },
-          {
-            "name": "INFINISIS NAHA SHURIJO by Hewitt Resort",
-            "price": 1604,
-            "rating": 8.6,
+            "name": "沖繩NaHaNa酒店&水療",
+            "price": 1428,
+            "rating": 8.1,
             "stars": 4
           }
         ],
         [
           {
             "name": "INFINISIS NAHA SHURIJO by Hewitt Resort",
-            "price": 1810,
+            "price": 1505,
             "rating": 8.6,
             "stars": 4
           },
           {
-            "name": "Aqua Citta酒店 那覇",
-            "price": 1970,
+            "name": "Nest酒店 那覇西",
+            "price": 1761,
+            "rating": 8.6,
+            "stars": 4
+          }
+        ],
+        [
+          {
+            "name": "INFINISIS NAHA SHURIJO by Hewitt Resort",
+            "price": 1310,
+            "rating": 8.6,
+            "stars": 4
+          },
+          {
+            "name": "Nest酒店 那覇西",
+            "price": 1500,
             "rating": 8.6,
             "stars": 4
           }
@@ -74,28 +74,14 @@
       "weekend_hotels": [
         [
           {
-            "name": "Okinawa Kariyushi Beach Resort Ocean Spa",
-            "price": 3865,
-            "rating": 7.8,
-            "stars": 4
-          },
-          {
-            "name": "ANA InterContinental Manza Beach Resort by IHG",
-            "price": 4651,
-            "rating": 8.4,
-            "stars": 4
-          }
-        ],
-        [
-          {
             "name": "Rizzan Sea Park Hotel Tancha Bay",
-            "price": 2356,
+            "price": 2677,
             "rating": 8.1,
             "stars": 4
           },
           {
             "name": "Homm Stay Yumiha Okinawa By Banyan Group",
-            "price": 3249,
+            "price": 2955,
             "rating": 9.6,
             "stars": 4
           }
@@ -103,14 +89,28 @@
         [
           {
             "name": "Okinawa Kariyushi Beach Resort Ocean Spa",
-            "price": 3904,
+            "price": 3891,
             "rating": 7.8,
             "stars": 4
           },
           {
             "name": "Umino Ryotei Okinawa Nakamasou",
-            "price": 6031,
+            "price": 6008,
             "rating": 9.4,
+            "stars": 4
+          }
+        ],
+        [
+          {
+            "name": "Rizzan Sea Park Hotel Tancha Bay",
+            "price": 2330,
+            "rating": 8.1,
+            "stars": 4
+          },
+          {
+            "name": "Okinawa Kariyushi Beach Resort Ocean Spa",
+            "price": 2659,
+            "rating": 7.8,
             "stars": 4
           }
         ]
@@ -123,43 +123,43 @@
       "weekend_hotels": [
         [
           {
+            "name": "Stäy Hotel",
+            "price": 2136,
+            "rating": 9.2,
+            "stars": 4
+          },
+          {
+            "name": "Best Western Okinawa Kouki Beach",
+            "price": 2206,
+            "rating": 8.8,
+            "stars": 4
+          }
+        ],
+        [
+          {
             "name": "New Normal Hotel in NAGO",
-            "price": 1154,
+            "price": 1555,
+            "rating": 8.8,
+            "stars": 4
+          },
+          {
+            "name": "Riverside Yofuke AFP Villa",
+            "price": 3964,
+            "rating": 9.4,
+            "stars": 4
+          }
+        ],
+        [
+          {
+            "name": "New Normal Hotel in NAGO",
+            "price": 1311,
             "rating": 8.8,
             "stars": 4
           },
           {
             "name": "TWIN LINE HOTEL YANBARU OKINAWA JAPAN Formerly Okinawa Suncoast Hotel",
-            "price": 3417,
+            "price": 3397,
             "rating": 9.0,
-            "stars": 4
-          }
-        ],
-        [
-          {
-            "name": "Best Western Okinawa Kouki Beach",
-            "price": 2163,
-            "rating": 8.8,
-            "stars": 4
-          },
-          {
-            "name": "Riverside Yofuke AFP Villa",
-            "price": 3411,
-            "rating": 9.4,
-            "stars": 4
-          }
-        ],
-        [
-          {
-            "name": "New Normal Hotel in NAGO",
-            "price": 1662,
-            "rating": 8.8,
-            "stars": 4
-          },
-          {
-            "name": "Riverside Yofuke AFP Villa",
-            "price": 4230,
-            "rating": 9.4,
             "stars": 4
           }
         ]
@@ -170,16 +170,29 @@
       "name": "石垣島",
       "flag": "🇯🇵",
       "weekend_hotels": [
-        [],
         [
           {
             "name": "deigo ISHIGAKI",
-            "price": 8040,
+            "price": 8121,
             "rating": 10.0,
             "stars": 4
           }
         ],
-        []
+        [],
+        [
+          {
+            "name": "Palm Villa石垣島",
+            "price": 4896,
+            "rating": 9.6,
+            "stars": 4
+          },
+          {
+            "name": "deigo ISHIGAKI",
+            "price": 8129,
+            "rating": 10.0,
+            "stars": 4
+          }
+        ]
       ]
     },
     {
@@ -189,43 +202,43 @@
       "weekend_hotels": [
         [
           {
-            "name": "AZZURRA",
-            "price": 2958,
-            "rating": 10.0,
-            "stars": 4
-          },
-          {
-            "name": "宮古島東急飯店",
-            "price": 5935,
-            "rating": 9.2,
-            "stars": 4
-          }
-        ],
-        [
-          {
             "name": "IRAPH SUI, a Luxury Collection Hotel, Miyako Okinawa",
-            "price": 8268,
-            "rating": 9.2,
-            "stars": 4
-          },
-          {
-            "name": "Allamanda伊武野珊瑚村",
-            "price": 8394,
-            "rating": 9.0,
-            "stars": 4
-          }
-        ],
-        [
-          {
-            "name": "IRAPH SUI, a Luxury Collection Hotel, Miyako Okinawa",
-            "price": 8886,
+            "price": 8237,
             "rating": 9.2,
             "stars": 4
           },
           {
             "name": "SANTORINI HOTEL&VILLAS MIYAKOJIMA",
-            "price": 10190,
+            "price": 18839,
             "rating": 9.6,
+            "stars": 4
+          }
+        ],
+        [
+          {
+            "name": "IRAPH SUI, a Luxury Collection Hotel, Miyako Okinawa",
+            "price": 8853,
+            "rating": 9.2,
+            "stars": 4
+          },
+          {
+            "name": "SANTORINI HOTEL&VILLAS MIYAKOJIMA",
+            "price": 9484,
+            "rating": 9.6,
+            "stars": 4
+          }
+        ],
+        [
+          {
+            "name": "宮古島東急飯店",
+            "price": 6355,
+            "rating": 9.2,
+            "stars": 4
+          },
+          {
+            "name": "Allamanda伊武野珊瑚村",
+            "price": 8294,
+            "rating": 9.0,
             "stars": 4
           }
         ]
@@ -239,41 +252,41 @@
         [
           {
             "name": "JAL城市酒店 福岡天神",
-            "price": 3146,
+            "price": 3659,
+            "rating": 8.8,
+            "stars": 4
+          },
+          {
+            "name": "The Royal Park Hotel Fukuoka",
+            "price": 4505,
+            "rating": 8.6,
+            "stars": 4
+          }
+        ],
+        [
+          {
+            "name": "JAL城市酒店 福岡天神",
+            "price": 3869,
             "rating": 8.8,
             "stars": 4
           },
           {
             "name": "Hilton Fukuoka Sea Hawk",
-            "price": 3486,
+            "price": 4022,
             "rating": 8.2,
             "stars": 4
           }
         ],
         [
           {
-            "name": "JAL城市酒店 福岡天神",
-            "price": 3822,
-            "rating": 8.8,
-            "stars": 4
-          },
-          {
             "name": "Mitsui Garden Hotel Fukuoka Nakasu",
-            "price": 4230,
+            "price": 3983,
             "rating": 8.4,
             "stars": 4
-          }
-        ],
-        [
-          {
-            "name": "The Royal Park Hotel Fukuoka",
-            "price": 3992,
-            "rating": 8.6,
-            "stars": 4
           },
           {
             "name": "JAL城市酒店 福岡天神",
-            "price": 4061,
+            "price": 4038,
             "rating": 8.8,
             "stars": 4
           }
@@ -288,27 +301,13 @@
         [
           {
             "name": "Villa Fontaine 羽田機場",
-            "price": 2148,
-            "rating": 8.7,
-            "stars": 4
-          },
-          {
-            "name": "Tobu Hotel Levant Tokyo",
-            "price": 2975,
-            "rating": 8.8,
-            "stars": 4
-          }
-        ],
-        [
-          {
-            "name": "Villa Fontaine 羽田機場",
-            "price": 2625,
+            "price": 2473,
             "rating": 8.7,
             "stars": 4
           },
           {
             "name": "The Royal Park Hotel Tokyo Haneda Airport Terminal 3",
-            "price": 3403,
+            "price": 3238,
             "rating": 8.4,
             "stars": 4
           }
@@ -316,13 +315,27 @@
         [
           {
             "name": "Villa Fontaine 羽田機場",
-            "price": 3111,
+            "price": 3230,
+            "rating": 8.7,
+            "stars": 4
+          },
+          {
+            "name": "Hotel Sunroute Plaza Shinjuku",
+            "price": 3369,
+            "rating": 8.6,
+            "stars": 4
+          }
+        ],
+        [
+          {
+            "name": "Villa Fontaine 羽田機場",
+            "price": 2508,
             "rating": 8.7,
             "stars": 4
           },
           {
             "name": "The Royal Park Hotel Tokyo Haneda Airport Terminal 3",
-            "price": 4387,
+            "price": 3454,
             "rating": 8.4,
             "stars": 4
           }
@@ -336,43 +349,43 @@
       "weekend_hotels": [
         [
           {
-            "name": "Arirang Hill Hotel Dongdaemun",
-            "price": 1833,
-            "rating": 9.2,
+            "name": "GLAD Gangnam COEX Center",
+            "price": 6189,
+            "rating": 9.8,
             "stars": 4
           },
           {
-            "name": "ibis Styles Ambassador Seoul Myeong-dong",
-            "price": 2451,
+            "name": "L7 MYEONGDONG by LOTTE HOTELS",
+            "price": 6582,
             "rating": 9.2,
-            "stars": 4
-          }
-        ],
-        [
-          {
-            "name": "Arirang Hill Hotel Dongdaemun",
-            "price": 4060,
-            "rating": 9.2,
-            "stars": 4
-          },
-          {
-            "name": "樂天城市酒店 明洞",
-            "price": 5162,
-            "rating": 8.8,
             "stars": 4
           }
         ],
         [
           {
             "name": "GLAD Gangnam COEX Center",
-            "price": 3918,
+            "price": 3919,
             "rating": 9.8,
             "stars": 4
           },
           {
             "name": "Arirang Hill Hotel Dongdaemun",
-            "price": 4554,
+            "price": 4474,
             "rating": 9.2,
+            "stars": 4
+          }
+        ],
+        [
+          {
+            "name": "Arirang Hill Hotel Dongdaemun",
+            "price": 3456,
+            "rating": 9.2,
+            "stars": 4
+          },
+          {
+            "name": "GLAD Gangnam COEX Center",
+            "price": 4168,
+            "rating": 9.8,
             "stars": 4
           }
         ]
@@ -385,33 +398,46 @@
       "weekend_hotels": [
         [
           {
+            "name": "ASTI Hotel Busan Station",
+            "price": 2777,
+            "rating": 9.2,
+            "stars": 4
+          },
+          {
             "name": "Haeundae Centum Hotel",
-            "price": 1428,
+            "price": 4212,
+            "rating": 8.4,
+            "stars": 4
+          }
+        ],
+        [
+          {
+            "name": "Lavalse Hotel",
+            "price": 3117,
             "rating": 8.4,
             "stars": 4
           },
           {
-            "name": "ASTI Hotel Busan Station",
-            "price": 1952,
+            "name": "Avani Central Busan",
+            "price": 4150,
             "rating": 9.2,
             "stars": 4
           }
         ],
         [
           {
-            "name": "Avani Central Busan",
-            "price": 4119,
-            "rating": 9.2,
+            "name": "Haeundae Centum Hotel",
+            "price": 1841,
+            "rating": 8.4,
             "stars": 4
           },
           {
             "name": "Lavalse Hotel",
-            "price": 4291,
+            "price": 2073,
             "rating": 8.4,
             "stars": 4
           }
-        ],
-        []
+        ]
       ]
     }
   ]
