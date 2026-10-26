@@ -45,9 +45,19 @@ AIRLINE = {
     "IT": "台灣虎航", "MM": "樂桃", "VZ": "VietJet", "JL": "日航", "NH": "全日空",
     "BR": "長榮", "CI": "中華航空", "JX": "星宇", "TR": "酷航", "GK": "捷星日本",
     "3K": "捷星亞洲", "7C": "濟州航空", "TW": "德威", "LJ": "真航空", "ZE": "易斯達",
-    "SL": "泰國獅航", "D7": "亞航X", "5J": "宿霧太平洋", "BX": "釜山航空",
+    "SL": "泰國獅航", "FD": "泰亞航", "DJ": "日本亞航", "D7": "亞航X", "5J": "宿霧太平洋", "BX": "釜山航空",
     "KE": "大韓航空", "OZ": "韓亞航空", "MU": "東方航空", "CA": "國航", "CZ": "南航",
 }
+
+# 俄語市場代理商：港台讀者用唔到，唔當「速報價」（2026-10-26 試跑見到）
+BLOCKED_GATES = {"Biletix", "Tickets", "City.Travel", "Aviakassa", "Clickavia",
+                 "Kupibilet", "OneTwoTrip", "Tutu.ru", "Ozon.travel", "Pobeda"}
+_CYRILLIC = re.compile(r"[\u0400-\u04FF]")
+
+
+def gate_ok(gate: str) -> bool:
+    return bool(gate) and gate not in BLOCKED_GATES and not _CYRILLIC.search(gate)
+
 
 _SEARCH_DATE = re.compile(r"search_date=(\d{2})(\d{2})(\d{4})")
 
@@ -107,6 +117,8 @@ def fetch(token: str, origin: str, dest: str, month: str, currency: str, one_way
 
 def to_deal(item: dict, origin: str, dest: str, currency: str, one_way: bool,
             now: datetime, marker: str):
+    if not gate_ok(item.get("gate", "")):
+        return None, "blocked_gate"
     obs = observed_on(item.get("link", ""))
     if obs is None:
         return None, "no_observed"

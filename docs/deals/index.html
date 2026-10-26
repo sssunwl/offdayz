@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>機酒速報｜OffDayz</title>
+<meta name="description" content="香港／台北出發去日本嘅機票速報。每個價都寫明幾時搜到、邊度搜到，過期自動落架。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+<style>
+/* 色票沿用 v2 設計系統（docs/assets/sosol.css）；本頁獨立，main / v2 兩邊都用得 */
+:root{
+  --navy:#1E4A45; --blue:#B84E29; --lagoon-soft:#E6F1EC; --coral:#CF5730; --sun:#E8A62F;
+  --sand:#FBF4EC; --paper:#FFFCF7; --ink:#26312E; --muted:#6E6459; --line:rgba(38,49,46,.14);
+  --good:#1F7A63; --warn:#7A6C5C; --bad:#8E2F22;
+  --shadow-sm:0 9px 24px rgba(74,52,36,.10); --radius:16px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--sand);color:var(--ink);line-height:1.6;
+  font-family:"Noto Sans TC","PingFang TC","Hiragino Sans",system-ui,sans-serif;-webkit-text-size-adjust:100%}
+a{color:var(--blue)}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px 64px}
+header{padding:28px 0 8px}
+.back{font-size:13px;text-decoration:none}
+h1{font-size:30px;line-height:1.15;letter-spacing:0;margin:10px 0 6px;color:var(--navy)}
+.lede{color:var(--muted);margin:0 0 4px;font-size:14.5px}
+.status{font-size:12.5px;color:var(--muted);margin:10px 0 0}
+.banner{display:none;margin:14px 0 0;padding:10px 14px;border-radius:12px;background:#F6E3DA;color:var(--bad);font-size:13.5px}
+.controls{display:flex;flex-wrap:wrap;gap:10px 18px;margin:22px 0 14px;align-items:center}
+.seg{display:inline-flex;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg button{border:0;background:none;padding:7px 14px;border-radius:999px;cursor:pointer;font-size:14px;color:var(--ink)}
+.seg button[aria-pressed="true"]{background:var(--navy);color:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips button{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:5px 12px;font-size:13px;cursor:pointer;color:var(--ink)}
+.chips button[aria-pressed="true"]{border-color:var(--coral);color:var(--coral);font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.card{background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:16px;display:flex;flex-direction:column;gap:8px}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.route{font-weight:700;font-size:17px;color:var(--navy)}
+.dates{font-size:13.5px;color:var(--ink)}
+.price{font-size:24px;font-weight:700;color:var(--good);white-space:nowrap;text-align:right;line-height:1.1}
+.price small{display:block;font-size:11.5px;font-weight:500;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{font-size:11.5px;padding:2px 8px;border-radius:999px;background:var(--lagoon-soft);color:var(--navy)}
+.tag.trip{background:var(--navy);color:#fff}
+.tag.hol{background:#FCEBD0;color:#8A5A0B}
+.meta{font-size:12px;color:var(--muted)}
+.go{margin-top:auto;display:inline-block;text-align:center;text-decoration:none;background:var(--coral);color:#fff;border-radius:10px;padding:9px 12px;font-size:14px;font-weight:600}
+.go:hover{background:var(--blue)}
+.empty{padding:40px 0;text-align:center;color:var(--muted)}
+.note{margin-top:28px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="back" href="../">← OffDayz 首頁</a>
+    <h1>機酒速報</h1>
+    <p class="lede">香港、台北出發去日本。每個價都寫明幾時搜到、喺邊度搜到，過期自動落架。</p>
+    <p class="status" id="status">載入中…</p>
+    <div class="banner" id="stale"></div>
+  </header>
+
+  <div class="controls">
+    <div class="seg" role="group" aria-label="出發地" id="origin">
+      <button data-v="HKG" aria-pressed="true">香港出發</button>
+      <button data-v="TPE" aria-pressed="false">台北出發</button>
+    </div>
+    <div class="seg" role="group" aria-label="行程" id="trip">
+      <button data-v="round_trip" aria-pressed="true">來回</button>
+      <button data-v="one_way" aria-pressed="false">單程</button>
+    </div>
+    <div class="chips" role="group" aria-label="目的地" id="dest"></div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <p class="note">
+    價格嚟自 Aviasales 用戶近幾日實際搜到嘅結果（經 Travelpayouts），唔係即時報價；撳「去查價」會重新搜尋，以訂購頁為準。
+    超過 <span id="maxAge">4</span> 日未再被搜到嘅價、或者出發日已到，會自動落架。酒店即時價暫停，資料源升級中。
+  </p>
+</div>
+
+<script>
+(() => {
+  const STALE_HOURS = 36;
+  const state = { origin: 'HKG', trip: 'round_trip', dest: 'ALL' };
+  let DEALS = [], HOL = {};   // HOL: {'HK': {'2026-12-25': '聖誕節'}, 'TW': {...}}
+
+  const $ = id => document.getElementById(id);
+  const fmtD = s => { const [y, m, d] = s.split('-'); return `${+m}/${+d}`; };
+  const wk = s => '日一二三四五六'[new Date(s + 'T00:00:00+08:00').getDay()];
+  const money = (p, c) => (c === 'TWD' ? 'NT$' : 'HK$') + p.toLocaleString();
+
+  function agoText(obs) {
+    const days = Math.round((Date.now() - new Date(obs + 'T12:00:00+08:00')) / 864e5);
+    return days <= 0 ? '今日搜到' : days === 1 ? '昨日搜到' : `${days} 日前搜到`;
+  }
+
+  // 撞唔撞出發地嘅公眾假期（holidays.json 只讀；搵唔到就唔標）
+  function holidayTag(d) {
+    const map = HOL[d.origin === 'HKG' ? 'HK' : 'TW'];
+    if (!map) return '';
+    const end = d.return || d.depart;
+    for (let t = new Date(d.depart + 'T00:00:00Z'); t <= new Date(end + 'T00:00:00Z'); t.setUTCDate(t.getUTCDate() + 1)) {
+      const k = t.toISOString().slice(0, 10);
+      if (map[k]) return map[k];
+    }
+    return '';
+  }
+
+  function seg(id, key) {
+    $(id).addEventListener('click', e => {
+      const b = e.target.closest('button'); if (!b) return;
+      state[key] = b.dataset.v;
+      $(id).querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b));
+      if (key === 'origin') state.dest = 'ALL';
+      render();
+    });
+  }
+
+  function render() {
+    const now = Date.now();
+    const live = DEALS.filter(d => new Date(d.expires_at) > now);   // 前端再過濾一次過期
+    const pool = live.filter(d => d.origin === state.origin && d.trip === state.trip);
+
+    const dests = [...new Map(pool.map(d => [d.dest, d.dest_name])).entries()];
+    $('dest').innerHTML = [['ALL', '全部'], ...dests].map(([v, n]) =>
+      `<button data-v="${v}" aria-pressed="${state.dest === v}">${n}</button>`).join('');
+    $('dest').querySelectorAll('button').forEach(b => b.onclick = () => { state.dest = b.dataset.v; render(); });
+
+    const list = pool.filter(d => state.dest === 'ALL' || d.dest === state.dest)
+      .sort((a, b) => a.price - b.price);
+
+    $('grid').innerHTML = list.length ? list.map(d => {
+      const hol = holidayTag(d);
+      const dates = d.return
+        ? `${fmtD(d.depart)}（${wk(d.depart)}）→ ${fmtD(d.return)}（${wk(d.return)}）`
+        : `${fmtD(d.depart)}（${wk(d.depart)}）出發`;
+      const stops = d.stops === 0 && !(d.return_stops > 0) ? '直飛' : `轉機 ${Math.max(d.stops, d.return_stops || 0)} 次`;
+      return `<article class="card">
+        <div class="top">
+          <div><div class="route">${d.origin_name} → ${d.dest_name}</div><div class="dates">${dates}</div></div>
+          <div class="price">${money(d.price, d.currency)}<small>${d.trip === 'round_trip' ? '來回' : '單程'}・每人</small></div>
+        </div>
+        <div class="tags">
+          <span class="tag trip">${d.trip === 'round_trip' ? '來回' : '單程'}</span>
+          <span class="tag">${stops}</span>
+          <span class="tag">${d.airline_name}</span>
+          ${hol ? `<span class="tag hol">撞假：${hol}</span>` : ''}
+        </div>
+        <div class="meta">${agoText(d.observed_on)}・來源 ${d.source.name}${d.source.agency ? '／' + d.source.agency : ''}・抓取 ${new Date(d.fetched_at).toLocaleString('zh-HK', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })}</div>
+        <a class="go" href="${d.source.url}" target="_blank" rel="noopener sponsored">去查價 →</a>
+      </article>`;
+    }).join('') : '<div class="empty">呢個組合暫時冇未過期嘅價。</div>';
+  }
+
+  async function load() {
+    const ts = '?t=' + Date.now();
+    const [dr, hr] = await Promise.all([
+      fetch('../data/deals.json' + ts).catch(() => null),
+      fetch('../data/holidays.json').catch(() => null),
+    ]);
+    if (!dr || !dr.ok) { $('status').textContent = '暫時讀唔到速報資料。'; return; }
+    const data = await dr.json();
+    DEALS = data.deals || [];
+    $('maxAge').textContent = data.max_age_days ?? 4;
+
+    if (hr && hr.ok) {
+      try {
+        const h = await hr.json();
+        for (const [, byC] of Object.entries(h.years || {}))
+          for (const c of ['HK', 'TW'])
+            for (const [day, name] of (byC[c]?.holidays || [])) (HOL[c] ||= {})[day] = name;
+      } catch (_) { /* 假期標籤係加分項，讀唔到唔影響 */ }
+    }
+
+    const gen = new Date(data.generated_at);
+    const hrs = (Date.now() - gen) / 36e5;
+    $('status').textContent = `最後更新 ${gen.toLocaleString('zh-HK', { dateStyle: 'medium', timeStyle: 'short' })}・有效價 ${DEALS.filter(d => new Date(d.expires_at) > Date.now()).length} 筆`;
+    if (hrs > STALE_HOURS) {
+      $('stale').style.display = 'block';
+      $('stale').textContent = `資料已經 ${Math.floor(hrs)} 小時冇更新，價格可能已變，請以訂購頁為準。`;
+    }
+    render();
+  }
+
+  seg('origin', 'origin'); seg('trip', 'trip');
+  load();
+})();
+</script>
+</body>
+</html>

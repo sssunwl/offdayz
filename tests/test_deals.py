@@ -42,6 +42,12 @@ class DealsTest(unittest.TestCase):
         obs = dict(ITEM, link="/search/x?search_date=09122026")
         self.assertEqual(deals.to_deal(obs, "HKG", "OSA", "hkd", True, now, "")[1], "expired")
 
+    def test_russian_gates_blocked(self):
+        now = datetime(2026, 10, 26, 1, tzinfo=timezone.utc)
+        for gate in ("Biletix", "Авиасейлс"):
+            self.assertEqual(deals.to_deal(dict(ITEM, gate=gate), "HKG", "OSA", "hkd", True, now, "")[1],
+                             "blocked_gate")
+
 
 if __name__ == "__main__":
     unittest.main()
