@@ -125,7 +125,8 @@ def cheapest_6months(origin: str, dest: str) -> dict:
                                 "return_at":    return_at[:10] if return_at else None,
                                 "airline":      AIRLINE.get(item["airline"], item["airline"]),
                                 "airline_code": item["airline"],
-                                "is_round_trip": False,
+                                # 2026-10-26 實測：v1/prices/cheap 預設回傳來回價（帶 return_at）
+                                "is_round_trip": bool(return_at),
                             }
         except Exception as e:
             print(f"  TP {origin}→{dest} {month}: {e}")
@@ -155,6 +156,11 @@ def cheapest_destinations(origin: str, top: int = 5) -> list:
 
 
 # ── LiteAPI ────────────────────────────────────────────────────────────────
+
+def hotels_paused() -> bool:
+    """LiteAPI sandbox key（sand_ 開頭）只回測試價，唔可以當真價發佈。"""
+    return required_env("LITEAPI_KEY").strip().startswith("sand_")
+
 
 _hotel_cache = {}
 
@@ -388,8 +394,8 @@ def write_json_files(flight_data: dict, destinations: dict,
                 "date":        data[m]["date"],
                 "airline":     data[m]["airline"],
                 "is_cheapest": data[m]["price"] == best_price,
-                "return_date": None,
-                "is_round_trip": False,
+                "return_date": data[m].get("return_at"),
+                "is_round_trip": data[m].get("is_round_trip", False),
                 "baseline": calculate_baseline(
                     flight_history.get((origin, dest, m), []), data[m]["price"]
                 ),
@@ -441,7 +447,11 @@ def write_json_files(flight_data: dict, destinations: dict,
         })
 
     with open("docs/data/hotels.json", "w", encoding="utf-8") as f:
-        json.dump({"updated_at": now_str, "weekends": weekends, "cities": cities_json},
+        payload = {"updated_at": now_str, "weekends": weekends, "cities": cities_json}
+        if hotels_paused():
+            payload["status"] = "paused"
+            payload["notice"] = "酒店即時價暫停，資料源升級中"
+        json.dump(payload,
                   f, ensure_ascii=False, indent=2)
     print("✅ docs/data/hotels.json 寫入完成")
 
@@ -553,7 +563,9 @@ def main():
     print(f"🏨  拉酒店（{weekends[0]['checkin']} / {weekends[1]['checkin']} / {weekends[2]['checkin']}）...")
 
     hotel_all = []
-    for country, city, city_label, city_key in HOTEL_CITIES:
+    if hotels_paused():
+        print("  ⏸ LITEAPI_KEY 係 sandbox（測試價），酒店價暫停發佈")
+    for country, city, city_label, city_key in ([] if hotels_paused() else HOTEL_CITIES):
         hotels = get_hotels(country, city)
         if not hotels:
             print(f"  {city}: 無酒店")
@@ -572,15 +584,23 @@ def main():
         flight_data, destinations, hotel_all, weekends, flight_history
     )
 
+    # 機酒速報 deals.json（新管線，見 deals.py / DEALS_PLAN.md）
+    try:
+        import deals
+        deals.main()
+    except Exception as e:  # noqa: BLE001
+        print(f"⚠️ deals.json 失敗（舊 JSON 照常）：{e}")
+
     # Send Telegram
     msg1 = build_flights_msg(flight_data, destinations)
-    msg2 = build_hotels_msg(hotel_all, weekends)
+    msg2 = None if hotels_paused() else build_hotels_msg(hotel_all, weekends)
 
     print("\n── 機票預覽 ──\n" + msg1)
-    print("\n── 酒店預覽 ──\n" + msg2)
+    if msg2:
+        print("\n── 酒店預覽 ──\n" + msg2)
 
     ok1 = send_telegram(msg1)
-    ok2 = send_telegram(msg2)
+    ok2 = send_telegram(msg2) if msg2 else True
 
     if ok1 and ok2:
         print("✅ 兩則訊息發送成功")

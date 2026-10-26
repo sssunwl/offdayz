@@ -1,0 +1,20 @@
+# 暫時：feat/deals-pipeline 分支試跑 deals.py，只上傳 artifact，唔 commit、唔發 TG。合併前刪。
+name: deals-dryrun
+on:
+  push:
+    branches: [feat/deals-pipeline]
+    paths: [deals.py, .github/workflows/deals_dryrun.yml]
+jobs:
+  dryrun:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install requests==2.31.0
+      - env:
+          TRAVELPAYOUTS_TOKEN: ${{ secrets.TRAVELPAYOUTS_TOKEN }}
+          TRAVELPAYOUTS_MARKER: ${{ secrets.TRAVELPAYOUTS_MARKER }}
+        run: python deals.py
+      - uses: actions/upload-artifact@v4
+        with: { name: deals, path: docs/data/deals.json }
