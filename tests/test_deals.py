@@ -37,8 +37,8 @@ class DealsTest(unittest.TestCase):
         deal, _ = deals.to_deal(rt, "HKG", "OSA", "hkd", False, now, "")
         self.assertEqual((deal["trip"], deal["return"]), ("round_trip", "2026-12-15"))
 
-    def test_departure_tomorrow_expires(self):
-        now = datetime(2026, 12, 10, 1, tzinfo=timezone.utc)
+    def test_departure_day_expires(self):
+        now = datetime(2026, 12, 11, 1, tzinfo=timezone.utc)  # 出發當日已下架
         obs = dict(ITEM, link="/search/x?search_date=09122026")
         self.assertEqual(deals.to_deal(obs, "HKG", "OSA", "hkd", True, now, "")[1], "expired")
 
