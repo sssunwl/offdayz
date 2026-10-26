@@ -1,0 +1,17 @@
+name: probe-api
+on:
+  push:
+    branches: [feat/deals-pipeline]
+    paths: [tools/probe_api.py, .github/workflows/probe.yml]
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install requests==2.31.0
+      - env:
+          TRAVELPAYOUTS_TOKEN: ${{ secrets.TRAVELPAYOUTS_TOKEN }}
+          LITEAPI_KEY: ${{ secrets.LITEAPI_KEY }}
+        run: python tools/probe_api.py
