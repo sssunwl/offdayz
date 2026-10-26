@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26 10:43 HKT",
+  "updated_at": "2026-10-26 13:34 HKT",
   "routes": [
     {
       "key": "HKG_TPE",
@@ -15,8 +15,8 @@
           "date": "2026-10-28",
           "airline": "香港快運",
           "is_cheapest": false,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2026-10-31",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 53,
@@ -35,8 +35,8 @@
           "date": "2026-11-23",
           "airline": "香港快運",
           "is_cheapest": false,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2026-11-28",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 54,
@@ -55,8 +55,8 @@
           "date": "2026-12-02",
           "airline": "香港快運",
           "is_cheapest": true,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2026-12-07",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 54,
@@ -75,8 +75,8 @@
           "date": "2027-01-15",
           "airline": "香港快運",
           "is_cheapest": false,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2027-01-17",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 46,
@@ -95,8 +95,8 @@
           "date": "2027-02-13",
           "airline": "香港快運",
           "is_cheapest": false,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2027-02-16",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 39,
@@ -125,8 +125,8 @@
           "date": "2026-10-30",
           "airline": "香港快運",
           "is_cheapest": false,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2026-11-03",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 54,
@@ -145,8 +145,8 @@
           "date": "2026-11-29",
           "airline": "香港快運",
           "is_cheapest": false,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2026-12-12",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 52,
@@ -165,8 +165,8 @@
           "date": "2026-12-08",
           "airline": "香港快運",
           "is_cheapest": true,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2026-12-12",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 27,
@@ -185,8 +185,8 @@
           "date": "2027-01-22",
           "airline": "香港快運",
           "is_cheapest": false,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2027-01-27",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 35,
@@ -205,8 +205,8 @@
           "date": "2027-02-10",
           "airline": "北部灣航空",
           "is_cheapest": false,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2027-02-23",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 25,
@@ -225,8 +225,8 @@
           "date": "2027-03-27",
           "airline": "長榮",
           "is_cheapest": false,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2027-04-01",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 13,
@@ -255,8 +255,8 @@
           "date": "2026-11-07",
           "airline": "香港快運",
           "is_cheapest": false,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2026-11-12",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 54,
@@ -275,8 +275,8 @@
           "date": "2026-12-03",
           "airline": "香港快運",
           "is_cheapest": true,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2026-12-07",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 45,
@@ -295,8 +295,8 @@
           "date": "2027-02-06",
           "airline": "香港快運",
           "is_cheapest": false,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2027-02-24",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 22,
@@ -325,8 +325,8 @@
           "date": "2026-10-27",
           "airline": "台灣虎航",
           "is_cheapest": false,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2026-10-30",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 54,
@@ -345,8 +345,8 @@
           "date": "2026-11-18",
           "airline": "台灣虎航",
           "is_cheapest": true,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2026-11-25",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 54,
@@ -361,12 +361,12 @@
         },
         {
           "month": "2026-12",
-          "price": 1357,
+          "price": 1326,
           "date": "2026-12-05",
           "airline": "樂桃",
           "is_cheapest": false,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2026-12-09",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 52,
@@ -375,7 +375,7 @@
             "min": 1011,
             "max": 1745,
             "percentile": 52,
-            "vs_median_pct": 7,
+            "vs_median_pct": 5,
             "verdict": "normal"
           }
         },
@@ -385,8 +385,8 @@
           "date": "2027-01-06",
           "airline": "SL",
           "is_cheapest": false,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2027-01-13",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 51,
@@ -405,8 +405,8 @@
           "date": "2027-02-15",
           "airline": "樂桃",
           "is_cheapest": false,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2027-02-19",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 49,
@@ -425,8 +425,8 @@
           "date": "2027-03-24",
           "airline": "SL",
           "is_cheapest": false,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2027-03-27",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 25,
@@ -455,8 +455,8 @@
           "date": "2027-03-22",
           "airline": "中華航空",
           "is_cheapest": true,
-          "return_date": null,
-          "is_round_trip": false,
+          "return_date": "2027-04-03",
+          "is_round_trip": true,
           "baseline": {
             "n_days": 90,
             "samples": 1,
