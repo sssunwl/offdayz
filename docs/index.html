@@ -481,6 +481,15 @@ function renderHotels() {
   const cities = HD.cities || [];
   const weekends = HD.weekends || [];
 
+  // 酒店價暫停（hotels.json status=paused）：唔好卡喺「載入中」
+  if (HD.status === 'paused' || !cities.length) {
+    document.getElementById('h-ctabs').innerHTML = '';
+    document.getElementById('h-wtabs').innerHTML = '';
+    document.getElementById('h-hlist').innerHTML =
+      `<div class="nodata">${HD.notice || '暫無酒店數據'}<br><a href="deals/">先睇機票速報 →</a></div>`;
+    return;
+  }
+
   // City tabs
   document.getElementById('h-ctabs').innerHTML = cities.map((c, i) => `
     <button class="ctab ${i===0?'on':''}" onclick="setCity('${c.key}',this)">
