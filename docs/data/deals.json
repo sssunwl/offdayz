@@ -1,20 +1,20 @@
 {
- "generated_at": "2026-11-03T04:54:54Z",
+ "generated_at": "2026-11-04T04:24:45Z",
  "max_age_days": 4,
  "source_note": "Aviasales 用戶近期搜到嘅價格快取，唔係即時報價；實際以訂購頁為準。",
  "stats": {
-  "kept": 76,
+  "kept": 88,
   "items": {
-   "ok": 297,
-   "expired": 154,
-   "blocked_gate": 122
+   "ok": 334,
+   "expired": 141,
+   "blocked_gate": 125
   },
   "observed_age_days_p50": 3,
-  "observed_age_days_p90": 7
+  "observed_age_days_p90": 6
  },
  "deals": [
   {
-   "id": "f-HKG-FUK-2026-11-09-one_way",
+   "id": "f-HKG-FUK-2026-11-11-one_way",
    "kind": "flight",
    "origin": "HKG",
    "origin_name": "香港",
@@ -22,10 +22,10 @@
    "dest_name": "福岡",
    "origin_airport": "HKG",
    "dest_airport": "FUK",
-   "depart": "2026-11-09",
+   "depart": "2026-11-11",
    "return": null,
    "trip": "one_way",
-   "price": 964,
+   "price": 959,
    "currency": "HKD",
    "airline": "UO",
    "airline_name": "香港快運",
@@ -35,15 +35,15 @@
    "source": {
     "name": "Aviasales",
     "agency": "Trip.com",
-    "url": "https://www.aviasales.com/search/HKG0911FUK1?t=UO17942289001794243600000185HKGFUK_6abfa1727140c76e04be74e8cf0db533_9911&search_date=30102026&expected_price_uuid=01a18e96-8f8b-8031-28a4-1e96da1e9b2a&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=JJscOPx06Y0jZoGMJwPSdA&expected_price_source=share&expected_price_currency=hkd&expected_price=964"
+    "url": "https://www.aviasales.com/search/HKG1111FUK1?t=UO17944017001794416400000185HKGFUK_a1b35cdf9e28b2dc5d1acf4bb3d5690d_9965&search_date=03112026&expected_price_uuid=01a1a0d3-ccfe-8030-aa4a-e157ff1afa59&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=JJscOPx06Y0jZoGMJwPSdA&expected_price_source=share&expected_price_currency=hkd&expected_price=959"
    },
-   "observed_on": "2026-10-30",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-03T15:59:59Z",
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
    "month": "2026-11"
   },
   {
-   "id": "f-HKG-FUK-2026-12-29-one_way",
+   "id": "f-HKG-FUK-2026-12-03-one_way",
    "kind": "flight",
    "origin": "HKG",
    "origin_name": "香港",
@@ -51,24 +51,24 @@
    "dest_name": "福岡",
    "origin_airport": "HKG",
    "dest_airport": "FUK",
-   "depart": "2026-12-29",
+   "depart": "2026-12-03",
    "return": null,
    "trip": "one_way",
-   "price": 888,
+   "price": 913,
    "currency": "HKD",
    "airline": "UO",
    "airline_name": "香港快運",
-   "flight_number": "UO866",
+   "flight_number": "UO638",
    "stops": 0,
    "return_stops": null,
    "source": {
     "name": "Aviasales",
-    "agency": "Kiwi.com",
-    "url": "https://www.aviasales.com/search/HKG2912FUK1?t=UO17985129001798528200000195HKGFUK_0ccc92e1eeeed684279f152d0f25436f_9089&search_date=30102026&expected_price_uuid=01a18f03-bfb3-8030-2806-d972bcae4378&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=HWljrimShaBaipMPSIbSkg&expected_price_source=share&expected_price_currency=hkd&expected_price=888"
+    "agency": "Farera",
+    "url": "https://www.aviasales.com/search/HKG0312FUK1?t=UO17963025001796317200000185HKGFUK_d0ff4da223baa41b48f6f5edfd2a7998_9452&search_date=03112026&expected_price_uuid=01a19f5e-2244-8040-6d00-ee608cbe5cce&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=JJscOPx06Y0jZoGMJwPSdA&expected_price_source=share&expected_price_currency=hkd&expected_price=913"
    },
-   "observed_on": "2026-10-30",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-03T15:59:59Z",
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
    "month": "2026-12"
   },
   {
@@ -96,7 +96,7 @@
     "url": "https://www.aviasales.com/search/HKG0801FUK1?t=UO17994237001799438400000185HKGFUK_dc4871d5dc05839fd3902541b3299980_11103&search_date=31102026&expected_price_uuid=01a19428-5d5c-8030-e303-4dbc358555bd&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH1%7CR0%7CTBC0&itinerary_key=Kdx3n194ko8O2UiSdmkSVw&expected_price_source=share&expected_price_currency=hkd&expected_price=1085"
    },
    "observed_on": "2026-10-31",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-04T15:59:59Z",
    "month": "2027-01"
   },
@@ -125,12 +125,12 @@
     "url": "https://www.aviasales.com/search/HKG2203FUK1?t=TW18057231001805818800001535HKGICNFUK_cb09906f6ea452dc15d8d3a8c8feac2c_15449&search_date=02112026&expected_price_uuid=01a19bd7-95e2-8030-2d64-c72b351a9ea6&static_fare_key=TY%7CP1_JW%7CH1%7CL1_1_15%7CCH0%7CR0%7CTBC1&itinerary_key=ddaV4iUldpAb4BQv8ArPuw&expected_price_source=share&expected_price_currency=hkd&expected_price=1496"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2027-03"
   },
   {
-   "id": "f-HKG-FUK-2026-11-30-2026-12-06-round_trip",
+   "id": "f-HKG-FUK-2026-11-11-2026-11-26-round_trip",
    "kind": "flight",
    "origin": "HKG",
    "origin_name": "香港",
@@ -138,28 +138,28 @@
    "dest_name": "福岡",
    "origin_airport": "HKG",
    "dest_airport": "FUK",
-   "depart": "2026-11-30",
-   "return": "2026-12-06",
+   "depart": "2026-11-11",
+   "return": "2026-11-26",
    "trip": "round_trip",
-   "price": 2753,
+   "price": 1868,
    "currency": "HKD",
-   "airline": "HB",
-   "airline_name": "大灣區航空",
-   "flight_number": "HB316",
+   "airline": "UO",
+   "airline_name": "香港快運",
+   "flight_number": "UO638",
    "stops": 0,
    "return_stops": 0,
    "source": {
     "name": "Aviasales",
-    "agency": "Farera",
-    "url": "https://www.aviasales.com/search/HKG3011FUK06121?t=HB17960502001796065200000190HKGFUK17965656001796577300000255FUKHKG_572a44e6c823de00c1cf5fcd75a5b6f3_28177&search_date=01112026&expected_price_uuid=01a19733-b7ee-8031-6ab8-9ce27f870aee&static_fare_key=TY%7CP0%7CH1%7CL1_1_20%7CCH1%7CR1%7CTBC1&itinerary_key=Satvne2J5BB0RIiogiYSig&expected_price_source=share&expected_price_currency=hkd&expected_price=2753"
+    "agency": "Trip.com",
+    "url": "https://www.aviasales.com/search/HKG1111FUK26111?t=UO17944017001794416400000185HKGFUK17956974001795708200000240FUKHKG_8f7222f8f2a88d2c37a8d28cb3083836_19406&search_date=03112026&expected_price_uuid=01a1a0f1-1797-8031-6f9d-71bd5aa93841&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=KrqSUXReyzsnfGLnenmxjw&expected_price_source=share&expected_price_currency=hkd&expected_price=1868"
    },
-   "observed_on": "2026-11-01",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-05T15:59:59Z",
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
    "month": "2026-11"
   },
   {
-   "id": "f-HKG-NGO-2026-11-13-2026-11-16-round_trip",
+   "id": "f-HKG-NGO-2026-11-08-one_way",
    "kind": "flight",
    "origin": "HKG",
    "origin_name": "香港",
@@ -167,28 +167,28 @@
    "dest_name": "名古屋",
    "origin_airport": "HKG",
    "dest_airport": "NGO",
-   "depart": "2026-11-13",
-   "return": "2026-11-16",
-   "trip": "round_trip",
-   "price": 3060,
+   "depart": "2026-11-08",
+   "return": null,
+   "trip": "one_way",
+   "price": 1004,
    "currency": "HKD",
    "airline": "UO",
    "airline_name": "香港快運",
    "flight_number": "UO684",
    "stops": 0,
-   "return_stops": 0,
+   "return_stops": null,
    "source": {
     "name": "Aviasales",
-    "agency": "Farera",
-    "url": "https://www.aviasales.com/search/HKG1311NGO16111?t=UO17945829001794599100000210HKGNGO17948616001794875400000290NGOHKG_5a218217703756973399b33b2a51cb63_31688&search_date=30102026&expected_price_uuid=01a18bc4-93c9-8030-2afb-e4041d130b47&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=ONdM9XD_dHNsfHe-r-AsBA&expected_price_source=share&expected_price_currency=hkd&expected_price=3060"
+    "agency": "Kiwi.com",
+    "url": "https://www.aviasales.com/search/HKG0811NGO1?t=UO17941509001794167100000210HKGNGO_6ee704a0c1001ddb0ceb1e023331d191_10436&search_date=03112026&expected_price_uuid=01a1a1d3-979f-8031-2944-9c07405578ad&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=820vcCK9SGARPQrRwysGZA&expected_price_source=share&expected_price_currency=hkd&expected_price=1004"
    },
-   "observed_on": "2026-10-30",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-03T15:59:59Z",
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
    "month": "2026-11"
   },
   {
-   "id": "f-HKG-NGO-2027-01-14-2027-01-20-round_trip",
+   "id": "f-HKG-NGO-2027-02-03-one_way",
    "kind": "flight",
    "origin": "HKG",
    "origin_name": "香港",
@@ -196,25 +196,25 @@
    "dest_name": "名古屋",
    "origin_airport": "HKG",
    "dest_airport": "NGO",
-   "depart": "2027-01-14",
-   "return": "2027-01-20",
-   "trip": "round_trip",
-   "price": 2440,
+   "depart": "2027-02-03",
+   "return": null,
+   "trip": "one_way",
+   "price": 1857,
    "currency": "HKD",
-   "airline": "UO",
-   "airline_name": "香港快運",
-   "flight_number": "UO684",
-   "stops": 0,
-   "return_stops": 0,
+   "airline": "5J",
+   "airline_name": "宿霧太平洋",
+   "flight_number": "5J113",
+   "stops": 1,
+   "return_stops": null,
    "source": {
     "name": "Aviasales",
     "agency": "Farera",
-    "url": "https://www.aviasales.com/search/HKG1401NGO20011?t=UO17999397001799955900000210HKGNGO18004776001800491400000290NGOHKG_d4e2b11455103c134e5b8d50dcfac893_25091&search_date=30102026&expected_price_uuid=01a18d41-1c10-8040-2a73-57fa7e5368fe&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=rjqq8IUfhgcMhbFJIT8HpQ&expected_price_source=share&expected_price_currency=hkd&expected_price=2440"
+    "url": "https://www.aviasales.com/search/HKG0302NGO1?t=5J18016821001801744500000980HKGMNLNGO_12fb4cb1e6c11495beea971f6125a01b_19328&search_date=04112026&expected_price_uuid=01a1a466-849b-8030-ae8d-dd3c708ab1bd&static_fare_key=TY%7CP1_JW%7CH0%7CL0%7CCH1%7CR0%7CTBC0&itinerary_key=0hsO2knO7AjfMfC0PFi3Cg&expected_price_source=share&expected_price_currency=hkd&expected_price=1857"
    },
-   "observed_on": "2026-10-30",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-03T15:59:59Z",
-   "month": "2027-01"
+   "observed_on": "2026-11-04",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-08T15:59:59Z",
+   "month": "2027-02"
   },
   {
    "id": "f-HKG-OKA-2026-11-23-one_way",
@@ -241,7 +241,7 @@
     "url": "https://www.aviasales.com/search/HKG2311OKA1?t=UO17954490001795461600000150HKGOKA_95c13d46454f297040b5caa7f6ab4272_8597&search_date=02112026&expected_price_uuid=01a19aa3-4d66-8030-241b-bf8bc50c3be4&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=pbgg22mfQgJt8nnDDDE_Ag&expected_price_source=share&expected_price_currency=hkd&expected_price=836"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2026-11"
   },
@@ -270,12 +270,12 @@
     "url": "https://www.aviasales.com/search/HKG0112OKA1?t=UO17961402001796152800000150HKGOKA_afad143bf53b4890bf763d523a277e93_8665&search_date=02112026&expected_price_uuid=01a19c63-a251-8030-ebd4-46110edaf291&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=pbgg22mfQgJt8nnDDDE_Ag&expected_price_source=share&expected_price_currency=hkd&expected_price=839"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2026-12"
   },
   {
-   "id": "f-HKG-OKA-2027-01-08-one_way",
+   "id": "f-HKG-OKA-2027-01-10-one_way",
    "kind": "flight",
    "origin": "HKG",
    "origin_name": "香港",
@@ -283,10 +283,10 @@
    "dest_name": "沖繩",
    "origin_airport": "HKG",
    "dest_airport": "OKA",
-   "depart": "2027-01-08",
+   "depart": "2027-01-10",
    "return": null,
    "trip": "one_way",
-   "price": 881,
+   "price": 798,
    "currency": "HKD",
    "airline": "UO",
    "airline_name": "香港快運",
@@ -295,16 +295,16 @@
    "return_stops": null,
    "source": {
     "name": "Aviasales",
-    "agency": "Kupi.com",
-    "url": "https://www.aviasales.com/search/HKG0801OKA1?t=UO17994234001799436000000150HKGOKA_59e8b58874f69c50876072c64f6e1f5c_9012&search_date=31102026&expected_price_uuid=01a19336-2660-8030-68ff-dab0cbfb1b2b&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH1%7CR0%7CTBC0&itinerary_key=pbgg22mfQgJt8nnDDDE_Ag&expected_price_source=share&expected_price_currency=hkd&expected_price=881"
+    "agency": "Kiwi.com",
+    "url": "https://www.aviasales.com/search/HKG1001OKA1?t=UO17995962001799608800000150HKGOKA_45c6320448ab64c67948292157f77e36_8301&search_date=03112026&expected_price_uuid=01a1a2ed-b3b6-8031-21d3-1df3afe28ca6&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=pbgg22mfQgJt8nnDDDE_Ag&expected_price_source=share&expected_price_currency=hkd&expected_price=798"
    },
-   "observed_on": "2026-10-31",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-04T15:59:59Z",
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
    "month": "2027-01"
   },
   {
-   "id": "f-HKG-OKA-2027-02-25-one_way",
+   "id": "f-HKG-OKA-2027-02-15-one_way",
    "kind": "flight",
    "origin": "HKG",
    "origin_name": "香港",
@@ -312,10 +312,10 @@
    "dest_name": "沖繩",
    "origin_airport": "HKG",
    "dest_airport": "OKA",
-   "depart": "2027-02-25",
+   "depart": "2027-02-15",
    "return": null,
    "trip": "one_way",
-   "price": 841,
+   "price": 1035,
    "currency": "HKD",
    "airline": "UO",
    "airline_name": "香港快運",
@@ -325,11 +325,11 @@
    "source": {
     "name": "Aviasales",
     "agency": "Trip.com",
-    "url": "https://www.aviasales.com/search/HKG2502OKA1?t=UO18035706001803583200000150HKGOKA_c211803ed246fac48dd38b5e86037a84_8647&search_date=30102026&expected_price_uuid=01a18d55-2889-8030-aabf-87ac4970344f&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=pbgg22mfQgJt8nnDDDE_Ag&expected_price_source=share&expected_price_currency=hkd&expected_price=841"
+    "url": "https://www.aviasales.com/search/HKG1502OKA1?t=UO18027066001802719200000150HKGOKA_6147a090ecb0bce4f31d4b275176a82c_10595&search_date=31102026&expected_price_uuid=01a19203-b7fd-8030-234c-d30037145712&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=pbgg22mfQgJt8nnDDDE_Ag&expected_price_source=share&expected_price_currency=hkd&expected_price=1035"
    },
-   "observed_on": "2026-10-30",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-03T15:59:59Z",
+   "observed_on": "2026-10-31",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-04T15:59:59Z",
    "month": "2027-02"
   },
   {
@@ -357,7 +357,7 @@
     "url": "https://www.aviasales.com/search/HKG3003OKA1?t=UO18064167001806429900000160HKGOKA_156a5e44d0a849495f16a3e4ae64e5bc_11753&search_date=01112026&expected_price_uuid=01a195a7-18c1-8031-2959-a6f67567511b&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=H5hKxjw8_ScsLIS5DtOSxw&expected_price_source=share&expected_price_currency=hkd&expected_price=1148"
    },
    "observed_on": "2026-11-01",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-05T15:59:59Z",
    "month": "2027-03"
   },
@@ -386,12 +386,12 @@
     "url": "https://www.aviasales.com/search/HKG1604OKA1?t=UO18078855001807898700000160HKGOKA_8a79e597c51c3f71bf408db1a004d593_10663&search_date=02112026&expected_price_uuid=01a19cb1-5011-8030-6967-26cae7a1fd36&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=H5hKxjw8_ScsLIS5DtOSxw&expected_price_source=share&expected_price_currency=hkd&expected_price=1031"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2027-04"
   },
   {
-   "id": "f-HKG-OKA-2026-11-13-2026-11-18-round_trip",
+   "id": "f-HKG-OKA-2026-11-15-2026-11-17-round_trip",
    "kind": "flight",
    "origin": "HKG",
    "origin_name": "香港",
@@ -399,10 +399,10 @@
    "dest_name": "沖繩",
    "origin_airport": "HKG",
    "dest_airport": "OKA",
-   "depart": "2026-11-13",
-   "return": "2026-11-18",
+   "depart": "2026-11-15",
+   "return": "2026-11-17",
    "trip": "round_trip",
-   "price": 1569,
+   "price": 1651,
    "currency": "HKD",
    "airline": "UO",
    "airline_name": "香港快運",
@@ -411,12 +411,12 @@
    "return_stops": 0,
    "source": {
     "name": "Aviasales",
-    "agency": "Farera",
-    "url": "https://www.aviasales.com/search/HKG1311OKA18111?t=UO17945850001794597600000150HKGOKA17950029001795010100000180OKAHKG_39710dc16a2e11cbe5cfe9cfe646a38c_16135&search_date=30102026&expected_price_uuid=01a18e58-fe29-8030-2f2b-adfcad55a7b7&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=9BsFuFysRLRDu8B-pG6ucw&expected_price_source=share&expected_price_currency=hkd&expected_price=1569"
+    "agency": "Trip.com",
+    "url": "https://www.aviasales.com/search/HKG1511OKA17111?t=UO17947578001794770400000150HKGOKA17949165001794923700000180OKAHKG_c7c79bf22b56d98929ad04bf57793304_17089&search_date=03112026&expected_price_uuid=01a19fad-f42d-8030-e411-65f65ee172c6&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=_b_lPxqX_KLit3q9IH7U8A&expected_price_source=share&expected_price_currency=hkd&expected_price=1651"
    },
-   "observed_on": "2026-10-30",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-03T15:59:59Z",
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
    "month": "2026-11"
   },
   {
@@ -444,7 +444,7 @@
     "url": "https://www.aviasales.com/search/HKG0112OKA08121?t=UO17961402001796152800000150HKGOKA17967309001796738100000180OKAHKG_2f03c75a04f1b840bb55735c2960d453_15835&search_date=02112026&expected_price_uuid=01a19aff-efd0-8031-2d7d-9adba2094da7&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=wZvLLsINc-8Hm2dNXictJg&expected_price_source=share&expected_price_currency=hkd&expected_price=1541"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2026-12"
   },
@@ -473,9 +473,38 @@
     "url": "https://www.aviasales.com/search/HKG2802OKA06031?t=UO18037998001803812400000150HKGOKA18043341001804341300000180OKAHKG_a328e98fff306d451f9c785c8ceb2f98_20107&search_date=02112026&expected_price_uuid=01a19a35-8f1f-8030-a00a-5e4014258a4b&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=8o3XZga3_yXe65Jb6H-i-g&expected_price_source=share&expected_price_currency=hkd&expected_price=1954"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2027-02"
+  },
+  {
+   "id": "f-HKG-OKA-2027-03-30-2027-04-08-round_trip",
+   "kind": "flight",
+   "origin": "HKG",
+   "origin_name": "香港",
+   "dest": "OKA",
+   "dest_name": "沖繩",
+   "origin_airport": "HKG",
+   "dest_airport": "OKA",
+   "depart": "2027-03-30",
+   "return": "2027-04-08",
+   "trip": "round_trip",
+   "price": 1978,
+   "currency": "HKD",
+   "airline": "UO",
+   "airline_name": "香港快運",
+   "flight_number": "UO844",
+   "stops": 0,
+   "return_stops": 0,
+   "source": {
+    "name": "Aviasales",
+    "agency": "Trip.com",
+    "url": "https://www.aviasales.com/search/HKG3003OKA08041?t=UO18064167001806429900000160HKGOKA18071841001807190400000165OKAHKG_451d496a3d003069508990f51a5c1684_20590&search_date=03112026&expected_price_uuid=01a1a2fd-440e-8030-a956-249678df581b&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=8KPBqvX5SKVBTvuQIpAIWg&expected_price_source=share&expected_price_currency=hkd&expected_price=1978"
+   },
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
+   "month": "2027-03"
   },
   {
    "id": "f-HKG-OKA-2027-04-19-2027-05-08-round_trip",
@@ -502,7 +531,7 @@
     "url": "https://www.aviasales.com/search/HKG1904OKA08051?t=UO18081447001808157900000160HKGOKA18097761001809782400000165OKAHKG_94bbe28411b1405128db1910d3ad82b9_20432&search_date=03112026&expected_price_uuid=01a19f6f-a12d-8031-6ae7-af416e13de51&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=o9yRAqrz7GtDJQeT6uKzfA&expected_price_source=share&expected_price_currency=hkd&expected_price=1973"
    },
    "observed_on": "2026-11-03",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-07T15:59:59Z",
    "month": "2027-04"
   },
@@ -531,12 +560,12 @@
     "url": "https://www.aviasales.com/search/HKG2611OSA1?t=UO17957079001795724400000215HKGKIX_91b67d3def5b77bbdf2fb0cb9875bda2_10621&search_date=02112026&expected_price_uuid=01a19a87-75d4-8030-e0e9-4a5a239279d2&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=bBgb1yrbb6FCcayYgxA1Ag&expected_price_source=share&expected_price_currency=hkd&expected_price=1032"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2026-11"
   },
   {
-   "id": "f-HKG-KIX-2026-12-02-one_way",
+   "id": "f-HKG-KIX-2026-12-07-one_way",
    "kind": "flight",
    "origin": "HKG",
    "origin_name": "香港",
@@ -544,10 +573,39 @@
    "dest_name": "大阪",
    "origin_airport": "HKG",
    "dest_airport": "KIX",
-   "depart": "2026-12-02",
+   "depart": "2026-12-07",
    "return": null,
    "trip": "one_way",
-   "price": 969,
+   "price": 932,
+   "currency": "HKD",
+   "airline": "UO",
+   "airline_name": "香港快運",
+   "flight_number": "UO688",
+   "stops": 0,
+   "return_stops": null,
+   "source": {
+    "name": "Aviasales",
+    "agency": "Flightnetwork",
+    "url": "https://www.aviasales.com/search/HKG0712OSA1?t=UO17966547001796671200000215HKGKIX_248799fba7126a97113dc7653785b4b1_9707&search_date=04112026&expected_price_uuid=01a1a482-c572-8030-ee07-261a991c150a&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=PtappnngmMsWUAK2IsV2hA&expected_price_source=share&expected_price_currency=hkd&expected_price=932"
+   },
+   "observed_on": "2026-11-04",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-08T15:59:59Z",
+   "month": "2026-12"
+  },
+  {
+   "id": "f-HKG-KIX-2027-01-07-one_way",
+   "kind": "flight",
+   "origin": "HKG",
+   "origin_name": "香港",
+   "dest": "OSA",
+   "dest_name": "大阪",
+   "origin_airport": "HKG",
+   "dest_airport": "KIX",
+   "depart": "2027-01-07",
+   "return": null,
+   "trip": "one_way",
+   "price": 1036,
    "currency": "HKD",
    "airline": "UO",
    "airline_name": "香港快運",
@@ -557,15 +615,15 @@
    "source": {
     "name": "Aviasales",
     "agency": "Trip.com",
-    "url": "https://www.aviasales.com/search/HKG0212OSA1?t=UO17962263001796242800000215HKGKIX_3642495fefd4a72bda2a3517e1930a27_9920&search_date=31102026&expected_price_uuid=01a1924a-8b20-8030-6bc3-2af371cef3f0&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=bBgb1yrbb6FCcayYgxA1Ag&expected_price_source=share&expected_price_currency=hkd&expected_price=969"
+    "url": "https://www.aviasales.com/search/HKG0701OSA1?t=UO17993367001799353200000215HKGKIX_4ab853f21f8cf8e03b446011b11c4296_10727&search_date=03112026&expected_price_uuid=01a1a07b-749d-8031-62ac-426007eda125&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=bBgb1yrbb6FCcayYgxA1Ag&expected_price_source=share&expected_price_currency=hkd&expected_price=1036"
    },
-   "observed_on": "2026-10-31",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-04T15:59:59Z",
-   "month": "2026-12"
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
+   "month": "2027-01"
   },
   {
-   "id": "f-HKG-KIX-2027-01-08-one_way",
+   "id": "f-HKG-KIX-2027-02-03-one_way",
    "kind": "flight",
    "origin": "HKG",
    "origin_name": "香港",
@@ -573,25 +631,25 @@
    "dest_name": "大阪",
    "origin_airport": "HKG",
    "dest_airport": "KIX",
-   "depart": "2027-01-08",
+   "depart": "2027-02-03",
    "return": null,
    "trip": "one_way",
-   "price": 968,
+   "price": 1961,
    "currency": "HKD",
-   "airline": "UO",
-   "airline_name": "香港快運",
-   "flight_number": "UO688",
-   "stops": 0,
+   "airline": "5J",
+   "airline_name": "宿霧太平洋",
+   "flight_number": "5J113",
+   "stops": 1,
    "return_stops": null,
    "source": {
     "name": "Aviasales",
-    "agency": "Kiwi.com",
-    "url": "https://www.aviasales.com/search/HKG0801OSA1?t=UO17994195001799436000000215HKGKIX_6e3005424540f5e16ce1c48b147e9744_9912&search_date=31102026&expected_price_uuid=01a1900f-1f72-8031-2dfa-b2d67fee70b9&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=PtappnngmMsWUAK2IsV2hA&expected_price_source=share&expected_price_currency=hkd&expected_price=968"
+    "agency": "Farera",
+    "url": "https://www.aviasales.com/search/HKG0302OSA1?t=5J18016821001801765200001325HKGMNLKIX_7b9834bbd972ac130177d92bc2dc6dc7_20411&search_date=04112026&expected_price_uuid=01a1a461-9261-8030-2eb7-4e99fe273966&static_fare_key=TY%7CP1_JW%7CH0%7CL0%7CCH1%7CR0%7CTBC0&itinerary_key=hmrs_hF4MkKYgyZDgU8b1A&expected_price_source=share&expected_price_currency=hkd&expected_price=1961"
    },
-   "observed_on": "2026-10-31",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-04T15:59:59Z",
-   "month": "2027-01"
+   "observed_on": "2026-11-04",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-08T15:59:59Z",
+   "month": "2027-02"
   },
   {
    "id": "f-HKG-KIX-2027-03-01-one_way",
@@ -618,7 +676,7 @@
     "url": "https://www.aviasales.com/search/HKG0103OSA1?t=UO18039123001803928800000215HKGKIX_62f1d332847b6408189bec181c90864b_10766&search_date=02112026&expected_price_uuid=01a19e64-31a1-8031-68e2-3ca6c58b167f&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=PtappnngmMsWUAK2IsV2hA&expected_price_source=share&expected_price_currency=hkd&expected_price=1040"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2027-03"
   },
@@ -647,7 +705,7 @@
     "url": "https://www.aviasales.com/search/HKG1004OSA1?t=UO18073689001807386000000225HKGKIX_31351f2c56013a283c6dc7aed8c77112_13468&search_date=03112026&expected_price_uuid=01a19fae-8a0c-8030-627e-82177f31d6d6&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=EJq_1xHOJ1hEzQGXlqASXw&expected_price_source=share&expected_price_currency=hkd&expected_price=1301"
    },
    "observed_on": "2026-11-03",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-07T15:59:59Z",
    "month": "2027-04"
   },
@@ -676,7 +734,7 @@
     "url": "https://www.aviasales.com/search/HKG2111OSA01121?t=MM17952759001795292400000215HKGKIX17961591001796172300000280KIXHKG_1a6b87ea6683b26e5548d10e6854e2b3_22207&search_date=01112026&expected_price_uuid=01a19673-9800-8030-2ecc-0a2cf9dec00b&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=uejefGXZsxT8T14EOUCf1Q&expected_price_source=share&expected_price_currency=hkd&expected_price=2170"
    },
    "observed_on": "2026-11-01",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-05T15:59:59Z",
    "month": "2026-11"
   },
@@ -705,9 +763,38 @@
     "url": "https://www.aviasales.com/search/HKG1401OSA21011?t=UO17999274001799943900000215HKGKIX18005400001800553200000280KIXHKG_f12d544e5b791271c876276f01c0f544_19723&search_date=02112026&expected_price_uuid=01a19b33-68fe-8030-a094-cc7248ce2703&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=nZ8f5asfHk-ZQ-KNrojH_g&expected_price_source=share&expected_price_currency=hkd&expected_price=1922"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2027-01"
+  },
+  {
+   "id": "f-HKG-KIX-2027-02-05-2027-02-14-round_trip",
+   "kind": "flight",
+   "origin": "HKG",
+   "origin_name": "香港",
+   "dest": "OSA",
+   "dest_name": "大阪",
+   "origin_airport": "HKG",
+   "dest_airport": "KIX",
+   "depart": "2027-02-05",
+   "return": "2027-02-14",
+   "trip": "round_trip",
+   "price": 4362,
+   "currency": "HKD",
+   "airline": "5J",
+   "airline_name": "宿霧太平洋",
+   "flight_number": "5J113",
+   "stops": 1,
+   "return_stops": 1,
+   "source": {
+    "name": "Aviasales",
+    "agency": "Farera",
+    "url": "https://www.aviasales.com/search/HKG0502OSA14021?t=5J18018549001801938000001325HKGMNLKIX18026337001802679000000815KIXMNLHKG_1117fc7ec28ebb5cfe26103363bb41ad_45321&search_date=03112026&expected_price_uuid=01a1a1a5-57c7-8040-63fd-896e39c306d3&static_fare_key=TY%7CP1_JW%7CH1%7CL0%7CCH1%7CR0%7CTBC0&itinerary_key=dSCDFVq4iPmkp-a3oCZUOA&expected_price_source=share&expected_price_currency=hkd&expected_price=4362"
+   },
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
+   "month": "2027-02"
   },
   {
    "id": "f-HKG-KIX-2027-03-16-2027-03-28-round_trip",
@@ -734,7 +821,7 @@
     "url": "https://www.aviasales.com/search/HKG1603OSA28031?t=SC18052047001805296200001465HKGTNAKIX18062544001806337800001450KIXTAOHKG_5a51f1cc0ddc423323078c44037336d6_26554&search_date=01112026&expected_price_uuid=01a19622-17f3-8030-a3ff-1458808874c1&static_fare_key=TY%7CP1%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=M7YEkuGg142TzeE_MyLM-A&expected_price_source=share&expected_price_currency=hkd&expected_price=2594"
    },
    "observed_on": "2026-11-01",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-05T15:59:59Z",
    "month": "2027-03"
   },
@@ -763,9 +850,38 @@
     "url": "https://www.aviasales.com/search/HKG2811SPK1?t=UO17958885001795947300000920HKGHNDNRTCTS_f33e6aed3505cf957db449c22d76e775_17527&search_date=31102026&expected_price_uuid=01a19361-3275-8031-2311-c9a13597f06d&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=cG76_WgWD-sfsGlYYGUUyw&expected_price_source=share&expected_price_currency=hkd&expected_price=1712"
    },
    "observed_on": "2026-10-31",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-04T15:59:59Z",
    "month": "2026-11"
+  },
+  {
+   "id": "f-HKG-CTS-2026-12-28-one_way",
+   "kind": "flight",
+   "origin": "HKG",
+   "origin_name": "香港",
+   "dest": "SPK",
+   "dest_name": "札幌",
+   "origin_airport": "HKG",
+   "dest_airport": "CTS",
+   "depart": "2026-12-28",
+   "return": null,
+   "trip": "one_way",
+   "price": 2074,
+   "currency": "HKD",
+   "airline": "HX",
+   "airline_name": "香港航空",
+   "flight_number": "HX692",
+   "stops": 0,
+   "return_stops": null,
+   "source": {
+    "name": "Aviasales",
+    "agency": "Trip.com",
+    "url": "https://www.aviasales.com/search/HKG2812SPK1?t=HX17984490001798470000000290HKGCTS_28f49b69883b3621cb6e8085feecc551_21546&search_date=03112026&expected_price_uuid=01a1a189-bf0a-8031-65a1-6b8fefad51bb&static_fare_key=TY%7CP1_JW%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=WCRuBBFeqhAkvcu_7JGe-w&expected_price_source=share&expected_price_currency=hkd&expected_price=2074"
+   },
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
+   "month": "2026-12"
   },
   {
    "id": "f-HKG-CTS-2027-01-26-one_way",
@@ -792,7 +908,7 @@
     "url": "https://www.aviasales.com/search/HKG2601SPK1?t=UO18009552001800993600000580HKGNRTCTS_89213fbe06d57e7a9cf70ae384216eb5_15142&search_date=02112026&expected_price_uuid=01a19ac8-7f62-8031-64ba-28825da79584&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=pOQtzLKqJjqwOrTF8Xqdog&expected_price_source=share&expected_price_currency=hkd&expected_price=1472"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2027-01"
   },
@@ -821,9 +937,38 @@
     "url": "https://www.aviasales.com/search/HKG1611SPK23111?t=BR17948658001794913200000730HKGTPECTS17954358001795467000000580CTSTPEHKG_82756504530dd0ef24691fab49c28987_31880&search_date=01112026&expected_price_uuid=01a1978c-8c39-8031-2443-34ce00e5c74d&static_fare_key=TY%7CP1%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=SnKPKG1ofCpBivS69uPBgQ&expected_price_source=share&expected_price_currency=hkd&expected_price=3115"
    },
    "observed_on": "2026-11-01",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-05T15:59:59Z",
    "month": "2026-11"
+  },
+  {
+   "id": "f-HKG-CTS-2026-12-11-2026-12-20-round_trip",
+   "kind": "flight",
+   "origin": "HKG",
+   "origin_name": "香港",
+   "dest": "SPK",
+   "dest_name": "札幌",
+   "origin_airport": "HKG",
+   "dest_airport": "CTS",
+   "depart": "2026-12-11",
+   "return": "2026-12-20",
+   "trip": "round_trip",
+   "price": 3335,
+   "currency": "HKD",
+   "airline": "UO",
+   "airline_name": "香港快運",
+   "flight_number": "UO862",
+   "stops": 1,
+   "return_stops": 1,
+   "source": {
+    "name": "Aviasales",
+    "agency": "Kupi.com",
+    "url": "https://www.aviasales.com/search/HKG1112SPK20121?t=UO17970039001797076200001145HKGKIXCTS17977590001797816000001010CTSNRTHKG_cd184224f3ab38152439dfb844c650db_34533&search_date=03112026&expected_price_uuid=01a1a013-3368-8031-6670-824ab7243a5b&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=mlz_wYG919g2MNlRkvPJnw&expected_price_source=share&expected_price_currency=hkd&expected_price=3335"
+   },
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
+   "month": "2026-12"
   },
   {
    "id": "f-HKG-CTS-2027-01-06-2027-01-10-round_trip",
@@ -850,41 +995,41 @@
     "url": "https://www.aviasales.com/search/HKG0601SPK10011?t=MM17992653001799349600001345HKGHNDNRTCTS17996022001799667900001155CTSKIXHKG_1aa289630ad31be9ca5ef1bf90705622_32729&search_date=02112026&expected_price_uuid=01a19c1a-2931-8030-2885-5e6a880efee3&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=WASU-zJ7cK87g145iN8FQA&expected_price_source=share&expected_price_currency=hkd&expected_price=3169"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2027-01"
   },
   {
-   "id": "f-HKG-NRT-2026-11-15-one_way",
+   "id": "f-HKG-CTS-2027-04-29-2027-05-10-round_trip",
    "kind": "flight",
    "origin": "HKG",
    "origin_name": "香港",
-   "dest": "TYO",
-   "dest_name": "東京",
+   "dest": "SPK",
+   "dest_name": "札幌",
    "origin_airport": "HKG",
-   "dest_airport": "NRT",
-   "depart": "2026-11-15",
-   "return": null,
-   "trip": "one_way",
-   "price": 996,
+   "dest_airport": "CTS",
+   "depart": "2027-04-29",
+   "return": "2027-05-10",
+   "trip": "round_trip",
+   "price": 3399,
    "currency": "HKD",
-   "airline": "GK",
-   "airline_name": "捷星日本",
-   "flight_number": "GK28",
-   "stops": 0,
-   "return_stops": null,
+   "airline": "BR",
+   "airline_name": "長榮",
+   "flight_number": "BR810",
+   "stops": 1,
+   "return_stops": 1,
    "source": {
     "name": "Aviasales",
-    "agency": "Farera",
-    "url": "https://www.aviasales.com/search/HKG1511TYO1?t=GK17947050001794723600000250HKGNRT_556588d206ff06a2802d6ab74233d5a3_10199&search_date=01112026&expected_price_uuid=01a197e0-26f1-8030-af61-6534171b45f5&static_fare_key=TY%7CP1_JW%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=BGgHzOZQvo8pO1geYPVTsQ&expected_price_source=share&expected_price_currency=hkd&expected_price=996"
+    "agency": "Trip.com",
+    "url": "https://www.aviasales.com/search/HKG2904SPK10051?t=BR18090351001809086100000790HKGTPECTS18099540001809978900000475CTSTPEHKG_5689babf8b2dae1130797322ca1c17fe_35389&search_date=04112026&expected_price_uuid=01a1a476-917e-8030-6ce1-006b1a7e24f5&static_fare_key=TY%7CP1%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=w-zXOHv_n-Q1wRSbICkzbg&expected_price_source=share&expected_price_currency=hkd&expected_price=3399"
    },
-   "observed_on": "2026-11-01",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-05T15:59:59Z",
-   "month": "2026-11"
+   "observed_on": "2026-11-04",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-08T15:59:59Z",
+   "month": "2027-04"
   },
   {
-   "id": "f-HKG-HND-2026-12-07-one_way",
+   "id": "f-HKG-HND-2026-11-30-one_way",
    "kind": "flight",
    "origin": "HKG",
    "origin_name": "香港",
@@ -892,10 +1037,10 @@
    "dest_name": "東京",
    "origin_airport": "HKG",
    "dest_airport": "HND",
-   "depart": "2026-12-07",
+   "depart": "2026-11-30",
    "return": null,
    "trip": "one_way",
-   "price": 1035,
+   "price": 1028,
    "currency": "HKD",
    "airline": "UO",
    "airline_name": "香港快運",
@@ -905,15 +1050,15 @@
    "source": {
     "name": "Aviasales",
     "agency": "Trip.com",
-    "url": "https://www.aviasales.com/search/HKG0712TYO1?t=UO17966733001796690700000230HKGHND_b2db81f998abea04593553dfc0ddc1ae_10702&search_date=02112026&expected_price_uuid=01a19ce7-8a2a-8030-e9f2-5f94c4b1a952&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=JDHcf1uPdwB1thZ2aZt-0A&expected_price_source=share&expected_price_currency=hkd&expected_price=1035"
+    "url": "https://www.aviasales.com/search/HKG3011TYO1?t=UO17960685001796085900000230HKGHND_a557fd239110f67eddddef7a6193f13a_10705&search_date=04112026&expected_price_uuid=01a1a495-97e8-8030-2f46-89de490a7395&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=JDHcf1uPdwB1thZ2aZt-0A&expected_price_source=share&expected_price_currency=hkd&expected_price=1028"
    },
-   "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-06T15:59:59Z",
-   "month": "2026-12"
+   "observed_on": "2026-11-04",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-08T15:59:59Z",
+   "month": "2026-11"
   },
   {
-   "id": "f-HKG-HND-2027-01-11-one_way",
+   "id": "f-HKG-HND-2026-12-15-one_way",
    "kind": "flight",
    "origin": "HKG",
    "origin_name": "香港",
@@ -921,28 +1066,28 @@
    "dest_name": "東京",
    "origin_airport": "HKG",
    "dest_airport": "HND",
-   "depart": "2027-01-11",
+   "depart": "2026-12-15",
    "return": null,
    "trip": "one_way",
-   "price": 996,
+   "price": 980,
    "currency": "HKD",
    "airline": "UO",
    "airline_name": "香港快運",
-   "flight_number": "UO622",
+   "flight_number": "UO628",
    "stops": 0,
    "return_stops": null,
    "source": {
     "name": "Aviasales",
     "agency": "Kiwi.com",
-    "url": "https://www.aviasales.com/search/HKG1101TYO1?t=UO17996901001799707500000230HKGHND_98c4d2a6770020767812e472bf8c9cd5_10295&search_date=02112026&expected_price_uuid=01a19c8a-3d50-8030-2b90-f6c01dd2818e&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=hGNTzo1klnNkDc3dQSM4_w&expected_price_source=share&expected_price_currency=hkd&expected_price=996"
+    "url": "https://www.aviasales.com/search/HKG1512TYO1?t=UO17973645001797381900000230HKGHND_eca3eef455141b51bfafca293d1bfa3e_10207&search_date=04112026&expected_price_uuid=01a1a484-75f0-8031-6d58-30268ede4512&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=JDHcf1uPdwB1thZ2aZt-0A&expected_price_source=share&expected_price_currency=hkd&expected_price=980"
    },
-   "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-06T15:59:59Z",
-   "month": "2027-01"
+   "observed_on": "2026-11-04",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-08T15:59:59Z",
+   "month": "2026-12"
   },
   {
-   "id": "f-HKG-NRT-2027-02-28-one_way",
+   "id": "f-HKG-NRT-2027-01-07-one_way",
    "kind": "flight",
    "origin": "HKG",
    "origin_name": "香港",
@@ -950,28 +1095,28 @@
    "dest_name": "東京",
    "origin_airport": "HKG",
    "dest_airport": "NRT",
-   "depart": "2027-02-28",
+   "depart": "2027-01-07",
    "return": null,
    "trip": "one_way",
-   "price": 1059,
+   "price": 1036,
    "currency": "HKD",
    "airline": "UO",
    "airline_name": "香港快運",
-   "flight_number": "UO854",
+   "flight_number": "UO650",
    "stops": 0,
    "return_stops": null,
    "source": {
     "name": "Aviasales",
     "agency": "Trip.com",
-    "url": "https://www.aviasales.com/search/HKG2802TYO1?t=UO18037800001803798300000245HKGNRT_20f3ed1d01189c11e88d54fef6c5725a_10967&search_date=30102026&expected_price_uuid=01a18a89-6414-8031-2f8c-a1c142612783&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=jXz-azpDZZ0YKQEik-CScA&expected_price_source=share&expected_price_currency=hkd&expected_price=1059"
+    "url": "https://www.aviasales.com/search/HKG0701TYO1?t=UO17993304001799348700000245HKGNRT_071a484eec5d89f3c345a6cf32d5c3ee_10727&search_date=03112026&expected_price_uuid=01a1a07c-d12d-8030-2213-b68d7e31b994&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=xXxb6yF6atho09120CKdSw&expected_price_source=share&expected_price_currency=hkd&expected_price=1036"
    },
-   "observed_on": "2026-10-30",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-03T15:59:59Z",
-   "month": "2027-02"
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
+   "month": "2027-01"
   },
   {
-   "id": "f-HKG-NRT-2027-03-02-one_way",
+   "id": "f-HKG-NRT-2027-02-24-one_way",
    "kind": "flight",
    "origin": "HKG",
    "origin_name": "香港",
@@ -979,10 +1124,10 @@
    "dest_name": "東京",
    "origin_airport": "HKG",
    "dest_airport": "NRT",
-   "depart": "2027-03-02",
+   "depart": "2027-02-24",
    "return": null,
    "trip": "one_way",
-   "price": 1036,
+   "price": 1080,
    "currency": "HKD",
    "airline": "UO",
    "airline_name": "香港快運",
@@ -992,11 +1137,40 @@
    "source": {
     "name": "Aviasales",
     "agency": "Trip.com",
-    "url": "https://www.aviasales.com/search/HKG0203TYO1?t=UO18039846001804002900000245HKGNRT_dcb2a6bde1a392ad7fcd37f23a32f8dd_10649&search_date=02112026&expected_price_uuid=01a19b12-1fd1-8030-66ce-3e270df52423&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=a4gbd8AeIEx2CvwWLcf7Dg&expected_price_source=share&expected_price_currency=hkd&expected_price=1036"
+    "url": "https://www.aviasales.com/search/HKG2402TYO1?t=UO18034662001803484500000245HKGNRT_aa991220356bb1b896c3a8a94a80126c_11055&search_date=31102026&expected_price_uuid=01a1920e-d6bc-8031-2cb6-b513c41fde16&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=a4gbd8AeIEx2CvwWLcf7Dg&expected_price_source=share&expected_price_currency=hkd&expected_price=1080"
    },
-   "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-06T15:59:59Z",
+   "observed_on": "2026-10-31",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-04T15:59:59Z",
+   "month": "2027-02"
+  },
+  {
+   "id": "f-HKG-NRT-2027-03-05-one_way",
+   "kind": "flight",
+   "origin": "HKG",
+   "origin_name": "香港",
+   "dest": "TYO",
+   "dest_name": "東京",
+   "origin_airport": "HKG",
+   "dest_airport": "NRT",
+   "depart": "2027-03-05",
+   "return": null,
+   "trip": "one_way",
+   "price": 1031,
+   "currency": "HKD",
+   "airline": "UO",
+   "airline_name": "香港快運",
+   "flight_number": "UO650",
+   "stops": 0,
+   "return_stops": null,
+   "source": {
+    "name": "Aviasales",
+    "agency": "Trip.com",
+    "url": "https://www.aviasales.com/search/HKG0503TYO1?t=UO18042552001804273500000245HKGNRT_8b70bcaf5926254a7735216a25458baf_10731&search_date=04112026&expected_price_uuid=01a1a496-4aba-8030-6536-a44b16d3bc0f&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=xXxb6yF6atho09120CKdSw&expected_price_source=share&expected_price_currency=hkd&expected_price=1031"
+   },
+   "observed_on": "2026-11-04",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-08T15:59:59Z",
    "month": "2027-03"
   },
   {
@@ -1024,7 +1198,7 @@
     "url": "https://www.aviasales.com/search/HKG2804TYO1?t=UO18089172001808937000000270HKGNRT_c5d3c41295e7b7ad7b7d6e11b79fccfc_13446&search_date=03112026&expected_price_uuid=01a19f72-e723-8030-6aba-577ffc1ac216&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=N3LXSMO8ADr1ZE_KLIvIPg&expected_price_source=share&expected_price_currency=hkd&expected_price=1299"
    },
    "observed_on": "2026-11-03",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-07T15:59:59Z",
    "month": "2027-04"
   },
@@ -1053,12 +1227,12 @@
     "url": "https://www.aviasales.com/search/HKG1711TYO01121?t=UO17949273001794945600000245HKGNRT17961387001796154600000325NRTHKG_c10d30881ddc7c1d34bd66b341fbaa2e_19514&search_date=31102026&expected_price_uuid=01a1919d-a840-8031-6fcf-86ab04c8460a&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=ZrL7EzXeAQSeNMClvtYaUA&expected_price_source=share&expected_price_currency=hkd&expected_price=1907"
    },
    "observed_on": "2026-10-31",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-04T15:59:59Z",
    "month": "2026-11"
   },
   {
-   "id": "f-HKG-NRT-2026-12-08-2026-12-16-round_trip",
+   "id": "f-HKG-NRT-2026-12-07-2026-12-11-round_trip",
    "kind": "flight",
    "origin": "HKG",
    "origin_name": "香港",
@@ -1066,24 +1240,24 @@
    "dest_name": "東京",
    "origin_airport": "HKG",
    "dest_airport": "NRT",
-   "depart": "2026-12-08",
-   "return": "2026-12-16",
+   "depart": "2026-12-07",
+   "return": "2026-12-11",
    "trip": "round_trip",
-   "price": 2066,
+   "price": 2072,
    "currency": "HKD",
-   "airline": "UO",
-   "airline_name": "香港快運",
-   "flight_number": "UO646",
+   "airline": "GK",
+   "airline_name": "捷星日本",
+   "flight_number": "GK028",
    "stops": 0,
    "return_stops": 0,
    "source": {
     "name": "Aviasales",
-    "agency": "Trip.com",
-    "url": "https://www.aviasales.com/search/HKG0812TYO16121?t=UO17967348001796753100000245HKGNRT17974089001797424800000325NRTHKG_92389e4af44e6d9c65fbfb370a8020c6_21239&search_date=30102026&expected_price_uuid=01a18eca-9df6-8030-2640-e69d58f8e9ab&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=g2NVIBs-V7_n7FZLYrcvtg&expected_price_source=share&expected_price_currency=hkd&expected_price=2066"
+    "agency": "Farera",
+    "url": "https://www.aviasales.com/search/HKG0712TYO11121?t=GK17966058001796624400000250HKGNRT17970174001797032700000315NRTHKG_89f00e275965c787ba71bbd3e82af78a_21214&search_date=01112026&expected_price_uuid=01a195a9-a1ff-8040-65b5-65dd7c6e4cfa&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=W8JFkMQC8B3muwnSuH390A&expected_price_source=share&expected_price_currency=hkd&expected_price=2072"
    },
-   "observed_on": "2026-10-30",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-03T15:59:59Z",
+   "observed_on": "2026-11-01",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-05T15:59:59Z",
    "month": "2026-12"
   },
   {
@@ -1111,37 +1285,37 @@
     "url": "https://www.aviasales.com/search/HKG1701TYO26011?t=UO18001977001800216000000245HKGNRT18009969001801012800000325NRTHKG_6df5ef4a426d36f077811107a6968790_21121&search_date=02112026&expected_price_uuid=01a19a86-3b3e-8030-e4c2-e19c2fbbfb8f&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=lBqZ1JaCExYrTjD7kCO5Bg&expected_price_source=share&expected_price_currency=hkd&expected_price=2052"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2027-01"
   },
   {
-   "id": "f-HKG-NRT-2027-02-27-2027-03-06-round_trip",
+   "id": "f-HKG-HND-2027-02-24-2027-03-12-round_trip",
    "kind": "flight",
    "origin": "HKG",
    "origin_name": "香港",
    "dest": "TYO",
    "dest_name": "東京",
    "origin_airport": "HKG",
-   "dest_airport": "NRT",
-   "depart": "2027-02-27",
-   "return": "2027-03-06",
+   "dest_airport": "HND",
+   "depart": "2027-02-24",
+   "return": "2027-03-12",
    "trip": "round_trip",
-   "price": 2481,
+   "price": 2105,
    "currency": "HKD",
-   "airline": "HB",
-   "airline_name": "大灣區航空",
-   "flight_number": "HB320",
+   "airline": "UO",
+   "airline_name": "香港快運",
+   "flight_number": "UO622",
    "stops": 0,
    "return_stops": 0,
    "source": {
     "name": "Aviasales",
     "agency": "Trip.com",
-    "url": "https://www.aviasales.com/search/HKG2702TYO06031?t=HB18037191001803737400000245HKGNRT18043458001804362600000340NRTHKG_917a1a52b0fca4b5905f120d0bcce48d_25515&search_date=02112026&expected_price_uuid=01a199d1-9354-8030-a440-d8d922f6a9d3&static_fare_key=TY%7CP0%7CH1%7CL1_1_20%7CCH1%7CR1%7CTBC1&itinerary_key=xU1zVpKlQLpTd9GjuUq3Yg&expected_price_source=share&expected_price_currency=hkd&expected_price=2481"
+    "url": "https://www.aviasales.com/search/HKG2402TYO12031?t=UO18034917001803509100000230HKGHND18048393001804855200000325NRTHKG_e5cffcfb3ac6d27e6fa8010cbc1b6a56_21815&search_date=03112026&expected_price_uuid=01a1a093-4bae-8030-2c44-d73e09321719&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=7Iq322DCNGsHyJSqAjOvZw&expected_price_source=share&expected_price_currency=hkd&expected_price=2105"
    },
-   "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-06T15:59:59Z",
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
    "month": "2027-02"
   },
   {
@@ -1169,12 +1343,12 @@
     "url": "https://www.aviasales.com/search/HKG2403TYO06041?t=MF18059166001805973900000895HKGKHHNRT18070254001807099800001300NRTFOCHKG_e4fd0459857112ae48a216d7ee4d74da_34740&search_date=02112026&expected_price_uuid=01a19b37-c013-8031-2cfc-00ff0f0c3882&static_fare_key=TY%7CP1%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=hg2tXBsSQkDsNgO3n3e95g&expected_price_source=share&expected_price_currency=hkd&expected_price=3386"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2027-03"
   },
   {
-   "id": "f-HKG-NRT-2027-04-01-2027-04-30-round_trip",
+   "id": "f-HKG-NRT-2027-04-04-2027-04-18-round_trip",
    "kind": "flight",
    "origin": "HKG",
    "origin_name": "香港",
@@ -1182,24 +1356,24 @@
    "dest_name": "東京",
    "origin_airport": "HKG",
    "dest_airport": "NRT",
-   "depart": "2027-04-01",
-   "return": "2027-04-30",
+   "depart": "2027-04-04",
+   "return": "2027-04-18",
    "trip": "round_trip",
-   "price": 2880,
+   "price": 2885,
    "currency": "HKD",
    "airline": "UO",
    "airline_name": "香港快運",
-   "flight_number": "UO646",
+   "flight_number": "UO650",
    "stops": 0,
    "return_stops": 0,
    "source": {
     "name": "Aviasales",
     "agency": "Trip.com",
-    "url": "https://www.aviasales.com/search/HKG0104TYO30041?t=UO18065844001806604200000270HKGNRT18090999001809114000000295NRTHKG_dfc398a4ef15818d73ddc97a0ab7d7b3_29473&search_date=30102026&expected_price_uuid=01a18cb0-5325-8031-2f4f-bd8feb059786&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=3SllemN_90jqf_IAvVaw5A&expected_price_source=share&expected_price_currency=hkd&expected_price=2880"
+    "url": "https://www.aviasales.com/search/HKG0404TYO18041?t=UO18068481001806867900000270HKGNRT18080352001808051100000325NRTHKG_ac0f476372e38b55d679cbd4a9d094d2_29868&search_date=03112026&expected_price_uuid=01a19f82-a394-8030-208a-e80c4b434285&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=uwdK1FHOLR2aF7267c9zdQ&expected_price_source=share&expected_price_currency=hkd&expected_price=2885"
    },
-   "observed_on": "2026-10-30",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-03T15:59:59Z",
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
    "month": "2027-04"
   },
   {
@@ -1227,7 +1401,7 @@
     "url": "https://www.aviasales.com/search/TPE3001FUK1?t=MM18012909001801329600000585TPEISGFUK_f34b87829c9c4d888df680d3bd925702_18323&search_date=31102026&expected_price_uuid=01a190d5-75fc-8040-2b12-09816bf0daef&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=lF4URiUODTC286x0HDvGjw&expected_price_source=share&expected_price_currency=twd&expected_price=7444"
    },
    "observed_on": "2026-10-31",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-04T15:59:59Z",
    "month": "2027-01"
   },
@@ -1256,12 +1430,12 @@
     "url": "https://www.aviasales.com/search/TPE1511FUK19111?t=IT17947440001794756000000140TPEFUK17950857001795092000000165FUKTPE_8d4d9bae7be43858f187fac48c2f48e1_23117&search_date=01112026&expected_price_uuid=01a195e0-3fca-8040-a73e-8a450df9b79b&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=BekVH5HyBhGfd1Zw0iIvCQ&expected_price_source=share&expected_price_currency=twd&expected_price=9391"
    },
    "observed_on": "2026-11-01",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-05T15:59:59Z",
    "month": "2026-11"
   },
   {
-   "id": "f-TPE-FUK-2026-12-08-2026-12-13-round_trip",
+   "id": "f-TPE-FUK-2026-12-01-2026-12-05-round_trip",
    "kind": "flight",
    "origin": "TPE",
    "origin_name": "台北",
@@ -1269,24 +1443,24 @@
    "dest_name": "福岡",
    "origin_airport": "TPE",
    "dest_airport": "FUK",
-   "depart": "2026-12-08",
-   "return": "2026-12-13",
+   "depart": "2026-12-01",
+   "return": "2026-12-05",
    "trip": "round_trip",
-   "price": 9330,
+   "price": 7942,
    "currency": "TWD",
    "airline": "IT",
    "airline_name": "台灣虎航",
-   "flight_number": "IT232",
-   "stops": 1,
-   "return_stops": 1,
+   "flight_number": "IT240",
+   "stops": 0,
+   "return_stops": 0,
    "source": {
     "name": "Aviasales",
-    "agency": "Flightnetwork",
-    "url": "https://www.aviasales.com/search/TPE0812FUK13121?t=MM17967540001796817300000995TPEOKAFUK17971545001797243600001545FUKOKATPE_af708b4e258b8843ca3a75699df3b41a_23073&search_date=30102026&expected_price_uuid=01a18d10-9583-8031-6365-cfda36c885e3&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=2YOl_t5a84mZFKe2Jz0phg&expected_price_source=share&expected_price_currency=twd&expected_price=9330"
+    "agency": "Farera",
+    "url": "https://www.aviasales.com/search/TPE0112FUK05121?t=IT17961075001796119200000135TPEFUK17964681001796474400000165FUKTPE_88073a07d128a0743e8cc540ea3f9868_19766&search_date=03112026&expected_price_uuid=01a1a36a-d9bb-8030-6e40-bf83b7d277ce&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=kkhv2dWBLocvBkwAe66C2Q&expected_price_source=share&expected_price_currency=twd&expected_price=7942"
    },
-   "observed_on": "2026-10-30",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-03T15:59:59Z",
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
    "month": "2026-12"
   },
   {
@@ -1314,7 +1488,7 @@
     "url": "https://www.aviasales.com/search/TPE1711NGO1?t=MM17948841001794896700000150TPENGO_616f32b84bbd7ddefc0fe0f3629f0a15_11724&search_date=01112026&expected_price_uuid=01a19713-8a66-8030-6fd4-ca5bf63c5a1a&static_fare_key=TY%7CP1_JW%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=kF23UhDDBd8B-3_1XkjZLA&expected_price_source=share&expected_price_currency=twd&expected_price=4763"
    },
    "observed_on": "2026-11-01",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-05T15:59:59Z",
    "month": "2026-11"
   },
@@ -1343,8 +1517,66 @@
     "url": "https://www.aviasales.com/search/TPE1712NGO1?t=MM17975208001797547200000380TPEOKANGO_5a9a519bca7442d5fe0cfcaca7003b83_11512&search_date=31102026&expected_price_uuid=01a19252-c180-8031-2ca9-1a4c42fbd07c&static_fare_key=TY%7CP1_JW%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=15pG5aKh56rM9IO3VyAVDw&expected_price_source=share&expected_price_currency=twd&expected_price=4677"
    },
    "observed_on": "2026-10-31",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-04T15:59:59Z",
+   "month": "2026-12"
+  },
+  {
+   "id": "f-TPE-NGO-2026-11-24-2026-11-27-round_trip",
+   "kind": "flight",
+   "origin": "TPE",
+   "origin_name": "台北",
+   "dest": "NGO",
+   "dest_name": "名古屋",
+   "origin_airport": "TPE",
+   "dest_airport": "NGO",
+   "depart": "2026-11-24",
+   "return": "2026-11-27",
+   "trip": "round_trip",
+   "price": 10912,
+   "currency": "TWD",
+   "airline": "MM",
+   "airline_name": "樂桃",
+   "flight_number": "MM724",
+   "stops": 0,
+   "return_stops": 0,
+   "source": {
+    "name": "Aviasales",
+    "agency": "Farera",
+    "url": "https://www.aviasales.com/search/TPE2411NGO27111?t=IT17954889001795501500000150TPENGO17958141001795823400000215NGOTPE_09b2a99d8e60fd9492adb00eb821d23c_27019&search_date=03112026&expected_price_uuid=01a1a052-1a6c-8040-ab12-75120bf2084b&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=bCKlCIKcX-IEOGC4RUihDA&expected_price_source=share&expected_price_currency=twd&expected_price=10912"
+   },
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
+   "month": "2026-11"
+  },
+  {
+   "id": "f-TPE-NGO-2026-12-27-2026-12-31-round_trip",
+   "kind": "flight",
+   "origin": "TPE",
+   "origin_name": "台北",
+   "dest": "NGO",
+   "dest_name": "名古屋",
+   "origin_airport": "TPE",
+   "dest_airport": "NGO",
+   "depart": "2026-12-27",
+   "return": "2026-12-31",
+   "trip": "round_trip",
+   "price": 9071,
+   "currency": "TWD",
+   "airline": "MM",
+   "airline_name": "樂桃",
+   "flight_number": "MM724",
+   "stops": 0,
+   "return_stops": 0,
+   "source": {
+    "name": "Aviasales",
+    "agency": "Farera",
+    "url": "https://www.aviasales.com/search/TPE2712NGO31121?t=MM17983401001798352700000150TPENGO17987574001798767000000220NGOTPE_376242052560ba603bb3e5d44b4dbbde_22577&search_date=03112026&expected_price_uuid=01a1a2ea-e350-8040-25d3-a7559502a6a9&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=0xt-UazPO-XkhEKnMzoC_g&expected_price_source=share&expected_price_currency=twd&expected_price=9071"
+   },
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
    "month": "2026-12"
   },
   {
@@ -1372,9 +1604,38 @@
     "url": "https://www.aviasales.com/search/TPE0701NGO11011?t=MM17992905001799303100000150TPENGO17997078001799717400000220NGOTPE_d75f85a8e12bf605f86f2ce4ee22e4b5_24297&search_date=02112026&expected_price_uuid=01a19d47-d74c-8040-6c8e-c1e1371d642a&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=0xt-UazPO-XkhEKnMzoC_g&expected_price_source=share&expected_price_currency=twd&expected_price=9747"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2027-01"
+  },
+  {
+   "id": "f-TPE-NGO-2027-04-05-2027-04-10-round_trip",
+   "kind": "flight",
+   "origin": "TPE",
+   "origin_name": "台北",
+   "dest": "NGO",
+   "dest_name": "名古屋",
+   "origin_airport": "TPE",
+   "dest_airport": "NGO",
+   "depart": "2027-04-05",
+   "return": "2027-04-10",
+   "trip": "round_trip",
+   "price": 15063,
+   "currency": "TWD",
+   "airline": "OZ",
+   "airline_name": "韓亞航空",
+   "flight_number": "OZ714",
+   "stops": 1,
+   "return_stops": 1,
+   "source": {
+    "name": "Aviasales",
+    "agency": "Farera",
+    "url": "https://www.aviasales.com/search/TPE0504NGO10041?t=OZ18069450001807008900001005TPEICNNGO18073836001807439100000985NGOICNTPE_26b75f5abed0c6f2bf064b4180e6c061_37321&search_date=03112026&expected_price_uuid=01a1a093-1e2e-8040-6457-2c2f2018bd44&static_fare_key=TY%7CP1%7CH0%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=x4uTPnzf0q2ahIPBYOl_Tw&expected_price_source=share&expected_price_currency=twd&expected_price=15063"
+   },
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
+   "month": "2027-04"
   },
   {
    "id": "f-TPE-OKA-2026-11-05-one_way",
@@ -1388,20 +1649,20 @@
    "depart": "2026-11-05",
    "return": null,
    "trip": "one_way",
-   "price": 2414,
+   "price": 2658,
    "currency": "TWD",
-   "airline": "IT",
-   "airline_name": "台灣虎航",
-   "flight_number": "IT232",
+   "airline": "MM",
+   "airline_name": "樂桃",
+   "flight_number": "MM930",
    "stops": 0,
    "return_stops": null,
    "source": {
     "name": "Aviasales",
     "agency": "Farera",
-    "url": "https://www.aviasales.com/search/TPE0511OKA1?t=IT17939028001793911200000080TPEOKA_198579a13cebf8fda4767bcf25ff9a2a_5967&search_date=02112026&expected_price_uuid=01a199f0-ac09-8040-66c9-41afb1dd7e4f&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=JBknKPSMV3Zp0Xhh6k_WXA&expected_price_source=share&expected_price_currency=twd&expected_price=2414"
+    "url": "https://www.aviasales.com/search/TPE0511OKA1?t=MM17939028001793911800000090TPEOKA_838ac1d84be54c7549cb4f585613b026_6612&search_date=03112026&expected_price_uuid=01a1a20d-1364-8030-a5c5-31974405136c&static_fare_key=TY%7CP1_JW%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=sS5TwKCC7fHZFlyHljSwAQ&expected_price_source=share&expected_price_currency=twd&expected_price=2658"
    },
-   "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-04T15:59:59Z",
    "month": "2026-11"
   },
@@ -1417,7 +1678,7 @@
    "depart": "2026-12-26",
    "return": null,
    "trip": "one_way",
-   "price": 2683,
+   "price": 2659,
    "currency": "TWD",
    "airline": "IT",
    "airline_name": "台灣虎航",
@@ -1427,11 +1688,11 @@
    "source": {
     "name": "Aviasales",
     "agency": "Kiwi.com",
-    "url": "https://www.aviasales.com/search/TPE2612OKA1?t=IT17983092001798317600000080TPEOKA_258316e8b526389a6fded476da520897_6605&search_date=31102026&expected_price_uuid=01a19361-5b2e-8030-e465-2ad56eef1a3f&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=JBknKPSMV3Zp0Xhh6k_WXA&expected_price_source=share&expected_price_currency=twd&expected_price=2683"
+    "url": "https://www.aviasales.com/search/TPE2612OKA1?t=IT17983092001798317600000080TPEOKA_258316e8b526389a6fded476da520897_6583&search_date=03112026&expected_price_uuid=01a19fda-273a-8030-ec83-6af9a3278d6e&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=JBknKPSMV3Zp0Xhh6k_WXA&expected_price_source=share&expected_price_currency=twd&expected_price=2659"
    },
-   "observed_on": "2026-10-31",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-04T15:59:59Z",
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
    "month": "2026-12"
   },
   {
@@ -1446,7 +1707,7 @@
    "depart": "2027-01-05",
    "return": null,
    "trip": "one_way",
-   "price": 2878,
+   "price": 2891,
    "currency": "TWD",
    "airline": "MM",
    "airline_name": "樂桃",
@@ -1456,10 +1717,10 @@
    "source": {
     "name": "Aviasales",
     "agency": "Kupi.com",
-    "url": "https://www.aviasales.com/search/TPE0501OKA1?t=MM17991732001799182200000090TPEOKA_bfb70312d3ad16bce675f67e6384cd95_7157&search_date=03112026&expected_price_uuid=01a19ef3-1eff-8030-268d-e9d46e1abf00&static_fare_key=TY%7CP1_JW%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=sS5TwKCC7fHZFlyHljSwAQ&expected_price_source=share&expected_price_currency=twd&expected_price=2878"
+    "url": "https://www.aviasales.com/search/TPE0501OKA1?t=MM17991732001799182200000090TPEOKA_bfb70312d3ad16bce675f67e6384cd95_7157&search_date=03112026&expected_price_uuid=01a19ef3-1eff-8030-268d-e9d46e1abf00&static_fare_key=TY%7CP1_JW%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=sS5TwKCC7fHZFlyHljSwAQ&expected_price_source=share&expected_price_currency=twd&expected_price=2891"
    },
    "observed_on": "2026-11-03",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-07T15:59:59Z",
    "month": "2027-01"
   },
@@ -1488,7 +1749,7 @@
     "url": "https://www.aviasales.com/search/TPE1502OKA1?t=MM18027156001802724600000090TPEOKA_7b8f9566506e628b1abb084ca55e19ca_7094&search_date=31102026&expected_price_uuid=01a19204-96d4-8030-af1f-e7ec468b52c7&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=sS5TwKCC7fHZFlyHljSwAQ&expected_price_source=share&expected_price_currency=twd&expected_price=2882"
    },
    "observed_on": "2026-10-31",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-04T15:59:59Z",
    "month": "2027-02"
   },
@@ -1517,12 +1778,12 @@
     "url": "https://www.aviasales.com/search/TPE0403OKA1?t=MM18041736001804182600000090TPEOKA_f9710ddf071f59f8452f32cb7285a252_7282&search_date=02112026&expected_price_uuid=01a19a51-a87b-8031-2d27-e6833e10187d&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=eks2qicE1qzS5L6Y93I8Bg&expected_price_source=share&expected_price_currency=twd&expected_price=2941"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2027-03"
   },
   {
-   "id": "f-TPE-OKA-2026-11-18-2026-11-25-round_trip",
+   "id": "f-TPE-OKA-2026-11-05-2026-11-12-round_trip",
    "kind": "flight",
    "origin": "TPE",
    "origin_name": "台北",
@@ -1530,10 +1791,10 @@
    "dest_name": "沖繩",
    "origin_airport": "TPE",
    "dest_airport": "OKA",
-   "depart": "2026-11-18",
-   "return": "2026-11-25",
+   "depart": "2026-11-05",
+   "return": "2026-11-12",
    "trip": "round_trip",
-   "price": 4492,
+   "price": 4762,
    "currency": "TWD",
    "airline": "IT",
    "airline_name": "台灣虎航",
@@ -1543,15 +1804,15 @@
    "source": {
     "name": "Aviasales",
     "agency": "Farera",
-    "url": "https://www.aviasales.com/search/TPE1811OKA25111?t=IT17950260001795034400000080TPEOKA17955999001795602000000095OKATPE_2b564f08c2abe045bddb7a01400033e1_11109&search_date=30102026&expected_price_uuid=01a18e88-819d-8040-2129-830f38b9c7d0&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=o4-ceU5zTGT4r7ZhZm815g&expected_price_source=share&expected_price_currency=twd&expected_price=4492"
+    "url": "https://www.aviasales.com/search/TPE0511OKA12111?t=IT17939028001793911200000080TPEOKA17944767001794478800000095OKATPE_11a0928dc38cd58fcc6bd19a12b6689d_11845&search_date=02112026&expected_price_uuid=01a19d02-a0ab-8030-63f5-8a8ac0f9123f&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=o4-ceU5zTGT4r7ZhZm815g&expected_price_source=share&expected_price_currency=twd&expected_price=4762"
    },
-   "observed_on": "2026-10-30",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-03T15:59:59Z",
+   "observed_on": "2026-11-02",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-04T15:59:59Z",
    "month": "2026-11"
   },
   {
-   "id": "f-TPE-OKA-2026-12-30-2027-01-02-round_trip",
+   "id": "f-TPE-OKA-2026-12-01-2026-12-05-round_trip",
    "kind": "flight",
    "origin": "TPE",
    "origin_name": "台北",
@@ -1559,10 +1820,10 @@
    "dest_name": "沖繩",
    "origin_airport": "TPE",
    "dest_airport": "OKA",
-   "depart": "2026-12-30",
-   "return": "2027-01-02",
+   "depart": "2026-12-01",
+   "return": "2026-12-05",
    "trip": "round_trip",
-   "price": 7187,
+   "price": 5021,
    "currency": "TWD",
    "airline": "IT",
    "airline_name": "台灣虎航",
@@ -1572,11 +1833,11 @@
    "source": {
     "name": "Aviasales",
     "agency": "Farera",
-    "url": "https://www.aviasales.com/search/TPE3012OKA02011?t=IT17986548001798663200000080TPEOKA17988831001798885200000095OKATPE_3bf0c8da05565ce93f79a1f6a1c6ee55_17692&search_date=01112026&expected_price_uuid=01a195d9-8c78-8040-66d1-a9ae7eb0ddbc&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=oednSKHqnLpv6NzhoS8jbg&expected_price_source=share&expected_price_currency=twd&expected_price=7187"
+    "url": "https://www.aviasales.com/search/TPE0112OKA05121?t=IT17961492001796157600000080TPEOKA17964639001796466000000095OKATPE_8dc3ba3138ae342d9e36aa1235398244_12497&search_date=03112026&expected_price_uuid=01a1a2df-bad5-8040-af50-6cf19e1ce5b0&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=0sfJ7NIWukdOE7fvdO5zmg&expected_price_source=share&expected_price_currency=twd&expected_price=5021"
    },
-   "observed_on": "2026-11-01",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-05T15:59:59Z",
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
    "month": "2026-12"
   },
   {
@@ -1604,7 +1865,7 @@
     "url": "https://www.aviasales.com/search/TPE0901OKA13011?t=IT17995080001799517000000090TPEOKA17998335001799835600000095OKATPE_31b481246c6688cb9bb4a32916026edc_13434&search_date=02112026&expected_price_uuid=01a19d35-5c54-8040-26e4-0a12f7104966&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=X1OTOA8RDAuxrVWm94ZGlg&expected_price_source=share&expected_price_currency=twd&expected_price=5389"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2027-01"
   },
@@ -1633,7 +1894,7 @@
     "url": "https://www.aviasales.com/search/TPE0102OKA05021?t=MM18015060001801515000000090TPEOKA18018153001801817700000100OKATPE_a9978788f689002df38839b00b36d648_21644&search_date=02112026&expected_price_uuid=01a19d32-4a58-8040-2ef8-65098165a099&static_fare_key=TY%7CP1_JW%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=_wdccK7w_kzQnqNVp8cPKQ&expected_price_source=share&expected_price_currency=twd&expected_price=8683"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2027-02"
   },
@@ -1662,7 +1923,7 @@
     "url": "https://www.aviasales.com/search/TPE1403OKA18031?t=MM18050376001805046600000090TPEOKA18053577001805360100000100OKATPE_a086578cf73209ee6bf2fe14f832681f_16382&search_date=02112026&expected_price_uuid=01a19c7d-5483-8040-606c-478ea5baa4c3&static_fare_key=TY%7CP1_JW%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=SaRuBJJRDWGaZ0qUhsJnaw&expected_price_source=share&expected_price_currency=twd&expected_price=6588"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2027-03"
   },
@@ -1691,38 +1952,9 @@
     "url": "https://www.aviasales.com/search/TPE2612OSA1?t=AK17982996001798313400000170TPEKIX_d3a4aec84bd0233f10ea7f68c5cf7aa8_8463&search_date=02112026&expected_price_uuid=01a1999f-a807-8030-27bc-5fa2e57db594&static_fare_key=TY%7CP1_JW%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=frH0DXdXOxMpEvjTMokN8Q&expected_price_source=share&expected_price_currency=twd&expected_price=3421"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2026-12"
-  },
-  {
-   "id": "f-TPE-KIX-2027-02-13-one_way",
-   "kind": "flight",
-   "origin": "TPE",
-   "origin_name": "台北",
-   "dest": "OSA",
-   "dest_name": "大阪",
-   "origin_airport": "TPE",
-   "dest_airport": "KIX",
-   "depart": "2027-02-13",
-   "return": null,
-   "trip": "one_way",
-   "price": 4352,
-   "currency": "TWD",
-   "airline": "AK",
-   "airline_name": "AK",
-   "flight_number": "AK176",
-   "stops": 0,
-   "return_stops": null,
-   "source": {
-    "name": "Aviasales",
-    "agency": "Trip.com",
-    "url": "https://www.aviasales.com/search/TPE1302OSA1?t=AK18025332001802547000000170TPEKIX_8cad02e9890b440179d65f18a56d3f1c_10713&search_date=31102026&expected_price_uuid=01a1908a-24f1-8030-6a0f-99635e9a19d7&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=frH0DXdXOxMpEvjTMokN8Q&expected_price_source=share&expected_price_currency=twd&expected_price=4352"
-   },
-   "observed_on": "2026-10-31",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-04T15:59:59Z",
-   "month": "2027-02"
   },
   {
    "id": "f-TPE-KIX-2026-11-10-2026-11-15-round_trip",
@@ -1736,7 +1968,7 @@
    "depart": "2026-11-10",
    "return": "2026-11-15",
    "trip": "round_trip",
-   "price": 8578,
+   "price": 8532,
    "currency": "TWD",
    "airline": "VZ",
    "airline_name": "VietJet",
@@ -1746,11 +1978,11 @@
    "source": {
     "name": "Aviasales",
     "agency": "Farera",
-    "url": "https://www.aviasales.com/search/TPE1011OSA15111?t=VZ17942961001794308400000145TPEKIX17947440001794752400000200KIXTPE_7a3078b64b8096ef7f2b90a365c70a79_21241&search_date=02112026&expected_price_uuid=01a19a83-1ba2-8031-60c5-6e4322514b4c&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=qHy1ThrDuwgJZG-yys5b8Q&expected_price_source=share&expected_price_currency=twd&expected_price=8578"
+    "url": "https://www.aviasales.com/search/TPE1011OSA15111?t=VZ17942961001794308400000145TPEKIX17947440001794752400000200KIXTPE_7a3078b64b8096ef7f2b90a365c70a79_21140&search_date=03112026&expected_price_uuid=01a1a093-3900-8040-2a61-ce440d4376b8&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=qHy1ThrDuwgJZG-yys5b8Q&expected_price_source=share&expected_price_currency=twd&expected_price=8532"
    },
-   "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-06T15:59:59Z",
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
    "month": "2026-11"
   },
   {
@@ -1778,7 +2010,7 @@
     "url": "https://www.aviasales.com/search/TPE1012OSA15121?t=MM17968956001796908200000150TPEKIX17973189001797327900000210KIXTPE_8294672042bb30afbf83f97f2f253f6d_18688&search_date=02112026&expected_price_uuid=01a19e37-2599-8030-e6af-319db43fcc15&static_fare_key=TY%7CP1_JW%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=uLSB7Wqh1LkoJtkGgCOnKw&expected_price_source=share&expected_price_currency=twd&expected_price=7502"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2026-12"
   },
@@ -1807,12 +2039,12 @@
     "url": "https://www.aviasales.com/search/TPE2201OSA29011?t=UO18006525001800735600001325TPEHKGKIX18012069001801215900000210KIXTPE_5b67167669b4edafa4bd86d4f6509564_29632&search_date=01112026&expected_price_uuid=01a195c0-751c-8040-a909-d6595744668c&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=xcurH4PcV8xuU_N8nr8DDg&expected_price_source=share&expected_price_currency=twd&expected_price=12038"
    },
    "observed_on": "2026-11-01",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-05T15:59:59Z",
    "month": "2027-01"
   },
   {
-   "id": "f-TPE-KIX-2027-02-25-2027-03-03-round_trip",
+   "id": "f-TPE-KIX-2027-02-04-2027-02-08-round_trip",
    "kind": "flight",
    "origin": "TPE",
    "origin_name": "台北",
@@ -1820,25 +2052,54 @@
    "dest_name": "大阪",
    "origin_airport": "TPE",
    "dest_airport": "KIX",
-   "depart": "2027-02-25",
-   "return": "2027-03-03",
+   "depart": "2027-02-04",
+   "return": "2027-02-08",
    "trip": "round_trip",
-   "price": 9721,
+   "price": 16670,
    "currency": "TWD",
-   "airline": "TW",
-   "airline_name": "德威",
-   "flight_number": "TW664",
+   "airline": "PR",
+   "airline_name": "PR",
+   "flight_number": "PR891",
    "stops": 1,
    "return_stops": 0,
    "source": {
     "name": "Aviasales",
     "agency": "Farera",
-    "url": "https://www.aviasales.com/search/TPE2502OSA03031?t=AK18035205001803579300000920TPETAEKIX18041073001804115700000200KIXTPE_61f3d28761540dfa43af65de3e9f2243_24212&search_date=30102026&expected_price_uuid=01a18a92-3ab1-8030-655b-2f9e0a09f397&static_fare_key=TY%7CP1_JW%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=Xbj-I_q5hvy9CdcBug-oJw&expected_price_source=share&expected_price_currency=twd&expected_price=9721"
+    "url": "https://www.aviasales.com/search/TPE0402OSA08021?t=PR18017358001801814100001245TPEMNLKIX18020931001802101500000200KIXTPE_701fcc4b431072dbcbfaa6e7c82ad3f1_41034&search_date=01112026&expected_price_uuid=01a19742-de2d-8040-2aad-73c6dd21c9d0&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=r36pjEFon6Va4EiY2BDrTA&expected_price_source=share&expected_price_currency=twd&expected_price=16670"
    },
-   "observed_on": "2026-10-30",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-03T15:59:59Z",
+   "observed_on": "2026-11-01",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-05T15:59:59Z",
    "month": "2027-02"
+  },
+  {
+   "id": "f-TPE-KIX-2027-04-01-2027-04-06-round_trip",
+   "kind": "flight",
+   "origin": "TPE",
+   "origin_name": "台北",
+   "dest": "OSA",
+   "dest_name": "大阪",
+   "origin_airport": "TPE",
+   "dest_airport": "KIX",
+   "depart": "2027-04-01",
+   "return": "2027-04-06",
+   "trip": "round_trip",
+   "price": 18469,
+   "currency": "TWD",
+   "airline": "OZ",
+   "airline_name": "韓亞航空",
+   "flight_number": "OZ712",
+   "stops": 1,
+   "return_stops": 1,
+   "source": {
+    "name": "Aviasales",
+    "agency": "Farera",
+    "url": "https://www.aviasales.com/search/TPE0104OSA06041?t=OZ18065823001806615300000490TPEICNKIX18070407001807093500000940KIXICNTPE_5cdf84b8684f1be70bee09369f4fc39b_45883&search_date=04112026&expected_price_uuid=01a1a3db-2b02-8040-6367-61cb564c7b64&static_fare_key=TY%7CP1%7CH0%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=idmDvuh1x4MQiA58k9jSCQ&expected_price_source=share&expected_price_currency=twd&expected_price=18469"
+   },
+   "observed_on": "2026-11-04",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-08T15:59:59Z",
+   "month": "2027-04"
   },
   {
    "id": "f-TPE-CTS-2027-01-10-one_way",
@@ -1865,7 +2126,7 @@
     "url": "https://www.aviasales.com/search/TPE1001SPK1?t=HB17995809001799675400001515TPEHKGCTS_7953e0dd6b93a13542e05ea8db25be52_17548&search_date=02112026&expected_price_uuid=01a19e1e-d088-8030-6581-156f946e3c95&static_fare_key=TY%7CP1%7CH0%7CL1_1_20%7CCH1%7CR1%7CTBC1&itinerary_key=imAoVvRcO3n8Dv_ueuZNAQ&expected_price_source=share&expected_price_currency=twd&expected_price=7043"
    },
    "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-06T15:59:59Z",
    "month": "2027-01"
   },
@@ -1894,9 +2155,38 @@
     "url": "https://www.aviasales.com/search/TPE2211SPK25111?t=IT17953500001795366800000220TPECTS17956077001795620900000280CTSTPE_2e82933314ae9bc805a48ce2752057e3_22197&search_date=01112026&expected_price_uuid=01a19500-4e89-8040-2af8-5264bc9c7778&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=pQUo7n2Nq0SVIQbx-hzeRQ&expected_price_source=share&expected_price_currency=twd&expected_price=9017"
    },
    "observed_on": "2026-11-01",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-05T15:59:59Z",
    "month": "2026-11"
+  },
+  {
+   "id": "f-TPE-CTS-2026-12-01-2026-12-05-round_trip",
+   "kind": "flight",
+   "origin": "TPE",
+   "origin_name": "台北",
+   "dest": "SPK",
+   "dest_name": "札幌",
+   "origin_airport": "TPE",
+   "dest_airport": "CTS",
+   "depart": "2026-12-01",
+   "return": "2026-12-05",
+   "trip": "round_trip",
+   "price": 10946,
+   "currency": "TWD",
+   "airline": "IT",
+   "airline_name": "台灣虎航",
+   "flight_number": "IT234",
+   "stops": 0,
+   "return_stops": 0,
+   "source": {
+    "name": "Aviasales",
+    "agency": "Farera",
+    "url": "https://www.aviasales.com/search/TPE0112SPK05121?t=IT17961057001796122500000220TPECTS17964717001796484900000280CTSTPE_e7802f45f97c532769b83908a0e43e63_27243&search_date=03112026&expected_price_uuid=01a1a2ed-160f-8040-2972-67ec2aab5140&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=IyERsSG5pgN4aRxiNwMVVA&expected_price_source=share&expected_price_currency=twd&expected_price=10946"
+   },
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
+   "month": "2026-12"
   },
   {
    "id": "f-TPE-CTS-2027-01-18-2027-01-23-round_trip",
@@ -1923,7 +2213,7 @@
     "url": "https://www.aviasales.com/search/TPE1801SPK23011?t=MM18002964001800388200001470TPEOKANRTCTS18007038001800780900001345CTSOKATPE_92c0a9b0f522b829770bb90ac6a10fa2_34666&search_date=01112026&expected_price_uuid=01a195fa-7a04-8040-2759-5b138834ae33&static_fare_key=TY%7CP1_JW%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=cvL1NXtfaJa0ADlg4Px40A&expected_price_source=share&expected_price_currency=twd&expected_price=14083"
    },
    "observed_on": "2026-11-01",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-05T15:59:59Z",
    "month": "2027-01"
   },
@@ -1939,7 +2229,7 @@
    "depart": "2027-04-29",
    "return": "2027-05-04",
    "trip": "round_trip",
-   "price": 10330,
+   "price": 10376,
    "currency": "TWD",
    "airline": "TR",
    "airline_name": "酷航",
@@ -1949,15 +2239,15 @@
    "source": {
     "name": "Aviasales",
     "agency": "Farera",
-    "url": "https://www.aviasales.com/search/TPE2904SPK04051?t=IT18090036001809021300000235TPECTS18094323001809444000000255CTSTPE_e8ac20e9ffcd8ce43b687ee4eeca1963_25691&search_date=03112026&expected_price_uuid=01a19f55-458c-8040-662f-d1b65839f248&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=gBPOnqlqaGIgokGjHP8wPg&expected_price_source=share&expected_price_currency=twd&expected_price=10330"
+    "url": "https://www.aviasales.com/search/TPE2904SPK04051?t=IT18090036001809021300000235TPECTS18094323001809444000000255CTSTPE_e8ac20e9ffcd8ce43b687ee4eeca1963_25691&search_date=03112026&expected_price_uuid=01a19f55-458c-8040-662f-d1b65839f248&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=gBPOnqlqaGIgokGjHP8wPg&expected_price_source=share&expected_price_currency=twd&expected_price=10376"
    },
    "observed_on": "2026-11-03",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-07T15:59:59Z",
    "month": "2027-04"
   },
   {
-   "id": "f-TPE-NRT-2026-11-11-one_way",
+   "id": "f-TPE-NRT-2026-11-18-one_way",
    "kind": "flight",
    "origin": "TPE",
    "origin_name": "台北",
@@ -1965,10 +2255,10 @@
    "dest_name": "東京",
    "origin_airport": "TPE",
    "dest_airport": "NRT",
-   "depart": "2026-11-11",
+   "depart": "2026-11-18",
    "return": null,
    "trip": "one_way",
-   "price": 4182,
+   "price": 4361,
    "currency": "TWD",
    "airline": "TR",
    "airline_name": "酷航",
@@ -1977,12 +2267,12 @@
    "return_stops": null,
    "source": {
     "name": "Aviasales",
-    "agency": "Kupi.com",
-    "url": "https://www.aviasales.com/search/TPE1111TYO1?t=TR17943798001794394500000185TPENRT_56d75576e68aef2f0908f52a55c10a3b_10321&search_date=02112026&expected_price_uuid=01a19b5c-3c9a-8030-ef2b-2a4141564386&static_fare_key=TY%7CP1_JW%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=e6mqHTfu8NLSJJHs6jdH8A&expected_price_source=share&expected_price_currency=twd&expected_price=4182"
+    "agency": "Flightnetwork",
+    "url": "https://www.aviasales.com/search/TPE1811TYO1?t=TR17949846001794999300000185TPENRT_8fcb1ee1ebdf038a004f1a3af9e26dfd_10834&search_date=03112026&expected_price_uuid=01a1a1bb-2b35-8040-22db-e6dd6838c380&static_fare_key=TY%7CP1_JW%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=e6mqHTfu8NLSJJHs6jdH8A&expected_price_source=share&expected_price_currency=twd&expected_price=4361"
    },
-   "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-06T15:59:59Z",
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
    "month": "2026-11"
   },
   {
@@ -1997,25 +2287,25 @@
    "depart": "2026-12-23",
    "return": null,
    "trip": "one_way",
-   "price": 5234,
+   "price": 4411,
    "currency": "TWD",
-   "airline": "IT",
-   "airline_name": "台灣虎航",
-   "flight_number": "IT202",
+   "airline": "TR",
+   "airline_name": "酷航",
+   "flight_number": "TR874",
    "stops": 0,
    "return_stops": null,
    "source": {
     "name": "Aviasales",
-    "agency": "Kiwi.com",
-    "url": "https://www.aviasales.com/search/TPE2312TYO1?t=IT17980326001798047000000180TPENRT_a05404df26d3c2d6ea10b710f6fa9e01_12956&search_date=30102026&expected_price_uuid=01a18d70-fa94-8030-2f1c-c741719afa8c&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=D-8HPIDOw2MH3zPujjjnqA&expected_price_source=share&expected_price_currency=twd&expected_price=5234"
+    "agency": "Kupi.com",
+    "url": "https://www.aviasales.com/search/TPE2312TYO1?t=TR17980359001798050600000185TPENRT_a12413e9f75e4b27b253572ee47f94e7_10959&search_date=03112026&expected_price_uuid=01a1a18b-1c59-8030-643f-ea78b1293241&static_fare_key=TY%7CP1_JW%7CH1%7CL0%7CCH1%7CR0%7CTBC0&itinerary_key=FxA1qBqye38gX0hGl_y53w&expected_price_source=share&expected_price_currency=twd&expected_price=4411"
    },
-   "observed_on": "2026-10-30",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-03T15:59:59Z",
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
    "month": "2026-12"
   },
   {
-   "id": "f-TPE-NRT-2027-01-19-one_way",
+   "id": "f-TPE-NRT-2027-01-14-one_way",
    "kind": "flight",
    "origin": "TPE",
    "origin_name": "台北",
@@ -2023,25 +2313,83 @@
    "dest_name": "東京",
    "origin_airport": "TPE",
    "dest_airport": "NRT",
-   "depart": "2027-01-19",
+   "depart": "2027-01-14",
    "return": null,
    "trip": "one_way",
-   "price": 5338,
+   "price": 5259,
    "currency": "TWD",
    "airline": "VZ",
    "airline_name": "VietJet",
-   "flight_number": "VZ1218",
+   "flight_number": "VZ568",
    "stops": 1,
    "return_stops": null,
    "source": {
     "name": "Aviasales",
     "agency": "Kiwi.com",
-    "url": "https://www.aviasales.com/search/TPE1901TYO1?t=GK18003699001800397500000400TPEOKANRT_6783b2d38ecd3e0e9502a4e478fdc59c_13295&search_date=30102026&expected_price_uuid=01a18b3b-43b3-8030-2816-3444270f0b69&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=qxl1s1hJ6Avey5gPiyVdkg&expected_price_source=share&expected_price_currency=twd&expected_price=5338"
+    "url": "https://www.aviasales.com/search/TPE1401TYO1?t=GK17999379001799965500000400TPEOKANRT_30766a6d5e10a78191a98cc66efe7bbf_13062&search_date=03112026&expected_price_uuid=01a1a0d4-b5b4-8040-2f40-13a223823998&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=qxl1s1hJ6Avey5gPiyVdkg&expected_price_source=share&expected_price_currency=twd&expected_price=5259"
    },
-   "observed_on": "2026-10-30",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-03T15:59:59Z",
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
    "month": "2027-01"
+  },
+  {
+   "id": "f-TPE-NRT-2027-02-14-one_way",
+   "kind": "flight",
+   "origin": "TPE",
+   "origin_name": "台北",
+   "dest": "TYO",
+   "dest_name": "東京",
+   "origin_airport": "TPE",
+   "dest_airport": "NRT",
+   "depart": "2027-02-14",
+   "return": null,
+   "trip": "one_way",
+   "price": 4860,
+   "currency": "TWD",
+   "airline": "TR",
+   "airline_name": "酷航",
+   "flight_number": "TR866",
+   "stops": 0,
+   "return_stops": null,
+   "source": {
+    "name": "Aviasales",
+    "agency": "Kiwi.com",
+    "url": "https://www.aviasales.com/search/TPE1402TYO1?t=TR18025878001802602500000185TPENRT_77e2419f26ddb2623a9b28c3ef45b363_12073&search_date=03112026&expected_price_uuid=01a1a174-0463-8040-61a0-5a836c53ff74&static_fare_key=TY%7CP1_JW%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=e6mqHTfu8NLSJJHs6jdH8A&expected_price_source=share&expected_price_currency=twd&expected_price=4860"
+   },
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
+   "month": "2027-02"
+  },
+  {
+   "id": "f-TPE-NRT-2027-03-24-one_way",
+   "kind": "flight",
+   "origin": "TPE",
+   "origin_name": "台北",
+   "dest": "TYO",
+   "dest_name": "東京",
+   "origin_airport": "TPE",
+   "dest_airport": "NRT",
+   "depart": "2027-03-24",
+   "return": null,
+   "trip": "one_way",
+   "price": 4678,
+   "currency": "TWD",
+   "airline": "TR",
+   "airline_name": "酷航",
+   "flight_number": "TR874",
+   "stops": 0,
+   "return_stops": null,
+   "source": {
+    "name": "Aviasales",
+    "agency": "Trip.com",
+    "url": "https://www.aviasales.com/search/TPE2403TYO1?t=TR18058983001805913000000185TPENRT_cb6f5bf37556588d08fc101a62bfa9b3_11622&search_date=03112026&expected_price_uuid=01a1a1ac-b5ee-8031-6c03-0e4fffd91300&static_fare_key=TY%7CP1_JW%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=FxA1qBqye38gX0hGl_y53w&expected_price_source=share&expected_price_currency=twd&expected_price=4678"
+   },
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
+   "month": "2027-03"
   },
   {
    "id": "f-TPE-NRT-2026-11-27-2026-12-01-round_trip",
@@ -2055,7 +2403,7 @@
    "depart": "2026-11-27",
    "return": "2026-12-01",
    "trip": "round_trip",
-   "price": 7775,
+   "price": 7810,
    "currency": "TWD",
    "airline": "TR",
    "airline_name": "酷航",
@@ -2065,44 +2413,44 @@
    "source": {
     "name": "Aviasales",
     "agency": "Farera",
-    "url": "https://www.aviasales.com/search/TPE2711TYO01121?t=GK17957895001795804200000185TPENRT17961639001796175000000245NRTTPE_18b4d387d89d3bb40cf25941500c7953_19337&search_date=03112026&expected_price_uuid=01a19f7c-337b-8030-e546-be09d2553c7f&static_fare_key=TY%7CP1_JW%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=vEbqiSUN9xAI8eKCEWR8oA&expected_price_source=share&expected_price_currency=twd&expected_price=7775"
+    "url": "https://www.aviasales.com/search/TPE2711TYO01121?t=GK17957895001795804200000185TPENRT17961639001796175000000245NRTTPE_18b4d387d89d3bb40cf25941500c7953_19337&search_date=03112026&expected_price_uuid=01a19f7c-337b-8030-e546-be09d2553c7f&static_fare_key=TY%7CP1_JW%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=vEbqiSUN9xAI8eKCEWR8oA&expected_price_source=share&expected_price_currency=twd&expected_price=7810"
    },
    "observed_on": "2026-11-03",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-07T15:59:59Z",
    "month": "2026-11"
   },
   {
-   "id": "f-TPE-NRT-2026-12-01-2026-12-15-round_trip",
+   "id": "f-TPE-HND-2026-12-01-2026-12-17-round_trip",
    "kind": "flight",
    "origin": "TPE",
    "origin_name": "台北",
    "dest": "TYO",
    "dest_name": "東京",
    "origin_airport": "TPE",
-   "dest_airport": "NRT",
+   "dest_airport": "HND",
    "depart": "2026-12-01",
-   "return": "2026-12-15",
+   "return": "2026-12-17",
    "trip": "round_trip",
-   "price": 8252,
+   "price": 8201,
    "currency": "TWD",
-   "airline": "TR",
-   "airline_name": "酷航",
-   "flight_number": "TR866",
+   "airline": "MM",
+   "airline_name": "樂桃",
+   "flight_number": "MM860",
    "stops": 0,
    "return_stops": 0,
    "source": {
     "name": "Aviasales",
     "agency": "Farera",
-    "url": "https://www.aviasales.com/search/TPE0112TYO15121?t=GK17961078001796122500000185TPENRT17973234001797335400000260NRTTPE_9c76d3acabccaa64d519a881fd03d992_20525&search_date=02112026&expected_price_uuid=01a19d01-38a8-8030-64c8-fa28938f38e4&static_fare_key=TY%7CP1_JW%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=aY4JeV2xJTXc2VuVgxVJ9Q&expected_price_source=share&expected_price_currency=twd&expected_price=8252"
+    "url": "https://www.aviasales.com/search/TPE0112TYO17121?t=TR17961585001796172600000175TPEHND17975094001797520200000240NRTTPE_720f572e2edb04d9e256f1be7479719c_20411&search_date=03112026&expected_price_uuid=01a1a2d2-ae12-8040-296e-c995804ab55d&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=D2mDc0vrVWbLPby_QQV2Dg&expected_price_source=share&expected_price_currency=twd&expected_price=8201"
    },
-   "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-06T15:59:59Z",
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
    "month": "2026-12"
   },
   {
-   "id": "f-TPE-NRT-2027-01-13-2027-01-17-round_trip",
+   "id": "f-TPE-NRT-2027-01-10-2027-01-14-round_trip",
    "kind": "flight",
    "origin": "TPE",
    "origin_name": "台北",
@@ -2110,28 +2458,28 @@
    "dest_name": "東京",
    "origin_airport": "TPE",
    "dest_airport": "NRT",
-   "depart": "2027-01-13",
-   "return": "2027-01-17",
+   "depart": "2027-01-10",
+   "return": "2027-01-14",
    "trip": "round_trip",
-   "price": 10276,
+   "price": 8971,
    "currency": "TWD",
-   "airline": "TR",
-   "airline_name": "酷航",
-   "flight_number": "TR874",
+   "airline": "GK",
+   "airline_name": "捷星日本",
+   "flight_number": "GK014",
    "stops": 0,
    "return_stops": 0,
    "source": {
     "name": "Aviasales",
     "agency": "Farera",
-    "url": "https://www.aviasales.com/search/TPE1301TYO17011?t=MM17998503001799865000000185TPENRT18001647001800176100000250HNDTPE_1f9f48c454f31dd85e02eff4085df73d_25295&search_date=31102026&expected_price_uuid=01a18f78-b6ef-8031-659f-4e5a04945440&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=IWGMCrSqvEXhQjax_3yRbA&expected_price_source=share&expected_price_currency=twd&expected_price=10276"
+    "url": "https://www.aviasales.com/search/TPE1001TYO14011?t=GK17995854001799600100000185TPENRT17999154001799927400000260NRTTPE_a9ad10eca8a0ee76fe79d3dfaea6959c_22279&search_date=03112026&expected_price_uuid=01a1a0da-b479-8040-65be-885684dabb43&static_fare_key=TY%7CP1_JW%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=LtC78molq2C0y_W9GzXgCg&expected_price_source=share&expected_price_currency=twd&expected_price=8971"
    },
-   "observed_on": "2026-10-31",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-04T15:59:59Z",
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
    "month": "2027-01"
   },
   {
-   "id": "f-TPE-NRT-2027-02-04-2027-02-08-round_trip",
+   "id": "f-TPE-NRT-2027-02-21-2027-02-26-round_trip",
    "kind": "flight",
    "origin": "TPE",
    "origin_name": "台北",
@@ -2139,24 +2487,24 @@
    "dest_name": "東京",
    "origin_airport": "TPE",
    "dest_airport": "NRT",
-   "depart": "2027-02-04",
-   "return": "2027-02-08",
+   "depart": "2027-02-21",
+   "return": "2027-02-26",
    "trip": "round_trip",
-   "price": 20599,
+   "price": 10946,
    "currency": "TWD",
-   "airline": "TR",
-   "airline_name": "酷航",
-   "flight_number": "TR874",
+   "airline": "GK",
+   "airline_name": "捷星日本",
+   "flight_number": "GK012",
    "stops": 0,
    "return_stops": 0,
    "source": {
     "name": "Aviasales",
-    "agency": "Vayama",
-    "url": "https://www.aviasales.com/search/TPE0402TYO08021?t=GK18017511001801765800000185TPENRT18020754001802087400000260NRTTPE_992daea52513575ef1f6896082403fad_51003&search_date=02112026&expected_price_uuid=01a19b82-faec-8040-61b3-a32e76ae3d0e&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=BVOpsJNzHjkj0UOV7NV2gg&expected_price_source=share&expected_price_currency=twd&expected_price=20599"
+    "agency": "Farera",
+    "url": "https://www.aviasales.com/search/TPE2102TYO26021?t=GK18031770001803191700000185TPENRT18036807001803691800000245NRTTPE_a44b66dfc1599979158079c3023aa31b_27193&search_date=03112026&expected_price_uuid=01a1a16a-cf82-8040-6684-b1d2d7d26bf1&static_fare_key=TY%7CP1_JW%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=QUS1dGIWAZiUiD2Wmi-xrg&expected_price_source=share&expected_price_currency=twd&expected_price=10946"
    },
-   "observed_on": "2026-11-02",
-   "fetched_at": "2026-11-03T04:54:54Z",
-   "expires_at": "2026-11-06T15:59:59Z",
+   "observed_on": "2026-11-03",
+   "fetched_at": "2026-11-04T04:24:45Z",
+   "expires_at": "2026-11-07T15:59:59Z",
    "month": "2027-02"
   },
   {
@@ -2184,7 +2532,7 @@
     "url": "https://www.aviasales.com/search/TPE0103TYO06031?t=IT18038838001803898500000185TPENRT18043092001804319700000235HNDTPE_7b628b55d7002eed150db6c5c9dc0375_24081&search_date=01112026&expected_price_uuid=01a194ce-fee9-8040-a157-3f3de485c2af&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=i9QTFpGOaYEdUfoWsueNPw&expected_price_source=share&expected_price_currency=twd&expected_price=9783"
    },
    "observed_on": "2026-11-01",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-05T15:59:59Z",
    "month": "2027-03"
   },
@@ -2213,7 +2561,7 @@
     "url": "https://www.aviasales.com/search/TPE2904TYO03051?t=IT18090126001809028500000205TPENRT18093219001809331200000215HNDTPE_4b9dc8ee9d4be283b0ef102119a1e569_26047&search_date=31102026&expected_price_uuid=01a19095-72c2-8030-a575-53c8733ceac1&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=716wjezESZvCNJw60PLAag&expected_price_source=share&expected_price_currency=twd&expected_price=10581"
    },
    "observed_on": "2026-10-31",
-   "fetched_at": "2026-11-03T04:54:54Z",
+   "fetched_at": "2026-11-04T04:24:45Z",
    "expires_at": "2026-11-04T15:59:59Z",
    "month": "2027-04"
   }
