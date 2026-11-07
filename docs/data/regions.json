@@ -1,0 +1,102 @@
+{
+  "_meta": {
+    "title": "OffDayz 目的地地區 第一波",
+    "updated": "2026-11-07",
+    "note": "flight_hours 是直飛大約時間（小時），null＝這個出發地不適用（台灣不當台北出發者的目的地，香港不當香港出發者的目的地）。utc_offset 是相對台港（UTC+8）的時差。holiday_codes 對 holidays.json 的國家代碼；crowd_from 是會一起擠過來的外地假期（中國黃金週）。季節活動用 airports 對 seasonal.json 的 destinations[].airport。handoff 的城市交給 OkiDayz，不在 OffDayz 重做。",
+    "stamp_colors": "terra / green / mustard / sage / coral，只用 DESIGN-PALETTE 方案 A 的現有色"
+  },
+  "regions": [
+    {
+      "code": "JP",
+      "name": "日本",
+      "en": "Japan",
+      "stamp": "terra",
+      "home": ["HK", "TPE"],
+      "utc_offset": 1,
+      "currency": "JPY",
+      "holiday_codes": ["JP"],
+      "crowd_from": ["CN"],
+      "pitch": "短連假最好用的地方：飛 2–5 小時，季節感最強。要避開的是日本自己的黃金週、お盆和年末年始。",
+      "cities": [
+        { "id": "tokyo", "name": "東京", "airports": ["NRT", "HND"], "flight_hours": { "HK": 4.5, "TPE": 3.5 }, "min_days": 4 },
+        { "id": "kansai", "name": "大阪・京都", "airports": ["KIX"], "flight_hours": { "HK": 4, "TPE": 2.75 }, "min_days": 4 },
+        { "id": "fukuoka", "name": "福岡・九州", "airports": ["FUK"], "flight_hours": { "HK": 3.5, "TPE": 2.25 }, "min_days": 3 },
+        { "id": "hokkaido", "name": "北海道", "airports": ["CTS", "MMB"], "flight_hours": { "HK": 5.5, "TPE": 4 }, "min_days": 5 }
+      ],
+      "handoff": [
+        { "name": "沖繩・石垣・宮古", "airports": ["OKA", "ISG", "MMY"], "to": "OkiDayz", "url": "https://sssunwl.github.io/okidayz/" }
+      ]
+    },
+    {
+      "code": "KR",
+      "name": "韓國",
+      "en": "Korea",
+      "stamp": "green",
+      "home": ["HK", "TPE"],
+      "utc_offset": 1,
+      "currency": "KRW",
+      "holiday_codes": ["KR"],
+      "crowd_from": ["CN"],
+      "pitch": "3–4 天就玩得完。春天櫻花、秋天紅葉最好；설날和추석當地人自己放假，店會關。",
+      "cities": [
+        { "id": "seoul", "name": "首爾", "airports": ["ICN", "GMP"], "flight_hours": { "HK": 3.5, "TPE": 2.5 }, "min_days": 3 },
+        { "id": "busan", "name": "釜山", "airports": ["PUS"], "flight_hours": { "HK": 3, "TPE": 2.25 }, "min_days": 3 },
+        { "id": "jeju", "name": "濟州", "airports": ["CJU"], "flight_hours": { "HK": 3, "TPE": 2.25 }, "min_days": 4 }
+      ],
+      "handoff": []
+    },
+    {
+      "code": "TH",
+      "name": "泰國",
+      "en": "Thailand",
+      "stamp": "mustard",
+      "home": ["HK", "TPE"],
+      "utc_offset": -1,
+      "currency": "THB",
+      "holiday_codes": ["TH"],
+      "crowd_from": ["CN"],
+      "pitch": "冬天（11–2 月）是乾季最舒服。宋干潑水節全國停擺，想玩水就去，想逛街就避開。",
+      "cities": [
+        { "id": "bangkok", "name": "曼谷", "airports": ["BKK", "DMK"], "flight_hours": { "HK": 3, "TPE": 3.75 }, "min_days": 4 },
+        { "id": "chiangmai", "name": "清邁", "airports": ["CNX"], "flight_hours": { "HK": 2.75, "TPE": 4 }, "min_days": 4, "note": "台北直飛班次少，常要經曼谷" },
+        { "id": "phuket", "name": "布吉", "airports": ["HKT"], "flight_hours": { "HK": 3.5, "TPE": 4.5 }, "min_days": 5 }
+      ],
+      "handoff": []
+    },
+    {
+      "code": "TW",
+      "name": "台灣",
+      "en": "Taiwan",
+      "stamp": "sage",
+      "home": ["HK"],
+      "utc_offset": 0,
+      "currency": "TWD",
+      "holiday_codes": ["TW"],
+      "crowd_from": [],
+      "pitch": "給香港讀者：飛 1.5 小時、沒有時差，週末加一天假就夠。台灣春節和中秋自己也很擠。",
+      "cities": [
+        { "id": "taipei", "name": "台北", "airports": ["TPE", "TSA"], "flight_hours": { "HK": 1.75, "TPE": null }, "min_days": 3 },
+        { "id": "taichung-tainan", "name": "台中・台南", "airports": ["RMQ", "KHH"], "flight_hours": { "HK": 1.75, "TPE": null }, "min_days": 3 },
+        { "id": "east", "name": "花蓮・台東", "airports": [], "flight_hours": { "HK": null, "TPE": null }, "min_days": 4, "note": "香港沒直飛，台北轉火車約 2–3 小時" }
+      ],
+      "handoff": []
+    },
+    {
+      "code": "HK",
+      "name": "香港・澳門",
+      "en": "Hong Kong & Macau",
+      "stamp": "coral",
+      "home": ["TPE"],
+      "utc_offset": 0,
+      "currency": "HKD",
+      "holiday_codes": ["HK", "MO"],
+      "crowd_from": ["CN"],
+      "pitch": "給台灣讀者：2–3 天的城市假期，吃和逛為主。中國黃金週人潮會直接湧進來，一定要避開。",
+      "cities": [
+        { "id": "hongkong", "name": "香港", "airports": ["HKG"], "flight_hours": { "HK": null, "TPE": 1.75 }, "min_days": 3 },
+        { "id": "macau", "name": "澳門", "airports": ["MFM"], "flight_hours": { "HK": null, "TPE": 1.75 }, "min_days": 2, "note": "也可以從香港搭船或走港珠澳大橋，約 1 小時" }
+      ],
+      "handoff": []
+    }
+  ]
+}
