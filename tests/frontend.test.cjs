@@ -146,7 +146,9 @@ test('Landing renders live data, six calendar months, and the holiday banner',as
   assert.equal((nodes.get('priceTable').innerHTML.match(/scope="col"/g)||[]).length,7);
   assert.equal((nodes.get('heroList').innerHTML.match(/hero-price-row/g)||[]).length,4);
   assert.ok((nodes.get('eventList').innerHTML.match(/class="ecard /g)||[]).length<=6);
-  assert.match(nodes.get('hotelList').innerHTML,/HK\$/);
+  const hotels=lookup('./data/hotels.json');
+  if(hotels.status==='paused') assert.match(nodes.get('hotelList').innerHTML,/deals\//);
+  else assert.match(nodes.get('hotelList').innerHTML,/HK\$/);
 });
 
 test('Landing and seasonal views replace loading content when every fetch fails',async()=>{

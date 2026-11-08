@@ -53,6 +53,8 @@
         <a class="btn btn-primary" href="#deals">看今日最抵 <span>→</span></a>
         <a class="btn btn-sun" href="calendar/">📅 假期年曆</a>
         <a class="btn btn-ghost" href="destinations/">🌏 探索目的地</a>
+        <a class="btn btn-ghost" href="offdays/">🗓 放假去哪</a>
+        <a class="btn btn-ghost" href="deals/">⚡ 機酒速報</a>
       </div>
     </div>
     <div class="card card-lg" id="heroCard">
@@ -280,7 +282,12 @@ function renderEvents(){
 }
 function renderHotels(){
   const t=document.getElementById('hotelToggle');
-  if(!HD?.cities?.length){document.getElementById('hotelList').innerHTML='<div class="nodata">暫無數據</div>';return;}
+  // 酒店價暫停（hotels.json status=paused）：顯示說明，不要卡在「載入中」
+  if(HD?.status==='paused'||!HD?.cities?.length){
+    t.innerHTML='';
+    document.getElementById('hotelList').innerHTML=`<div class="nodata">${SoSol.esc(HD?.notice||'暫無數據')}<br><a href="deals/">先看機票速報 →</a></div>`;
+    return;
+  }
   hCity=hCity||HD.cities[0].key;
   const select=document.getElementById('hotelCity');
   if(!select.options.length)select.innerHTML=HD.cities.map(c=>`<option value="${SoSol.esc(c.key)}">${SoSol.esc(c.flag+' '+c.name)}</option>`).join('');
