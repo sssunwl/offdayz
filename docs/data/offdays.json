@@ -1,0 +1,1036 @@
+{
+ "_meta": {
+  "generated_on": "2026-11-09",
+  "note": "tools/build_offdays.py 產生，不要手改。"
+ },
+ "windows": [
+  {
+   "id": "2026-xmas-hk",
+   "home": "HK",
+   "start": "2026-12-25",
+   "end": "2026-12-27",
+   "days": 3,
+   "title": "聖誕",
+   "estimated": false,
+   "book_by": "2026-10-30",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 4,
+     "start": "2026-12-25",
+     "end": "2026-12-28"
+    },
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2026-12-25",
+     "end": "2026-12-29"
+    },
+    {
+     "leave": 4,
+     "days": 10,
+     "start": "2026-12-25",
+     "end": "2027-01-03"
+    }
+   ],
+   "picks": [
+    "taichung-tainan",
+    "chiangmai",
+    "bangkok",
+    "taipei",
+    "phuket"
+   ],
+   "avoid": [
+    "hokkaido",
+    "fukuoka",
+    "kansai"
+   ],
+   "url": "offdays/2026-xmas-hk/"
+  },
+  {
+   "id": "2027-newyear-hk",
+   "home": "HK",
+   "start": "2027-01-01",
+   "end": "2027-01-03",
+   "days": 3,
+   "title": "元旦",
+   "estimated": false,
+   "book_by": "2026-11-06",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 4,
+     "start": "2027-01-01",
+     "end": "2027-01-04"
+    },
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2027-01-01",
+     "end": "2027-01-05"
+    },
+    {
+     "leave": 4,
+     "days": 10,
+     "start": "2026-12-25",
+     "end": "2027-01-03"
+    }
+   ],
+   "picks": [
+    "taichung-tainan",
+    "taipei",
+    "busan",
+    "seoul",
+    "jeju"
+   ],
+   "avoid": [
+    "chiangmai",
+    "bangkok",
+    "phuket"
+   ],
+   "url": "offdays/2027-newyear-hk/"
+  },
+  {
+   "id": "2027-cny-hk",
+   "home": "HK",
+   "start": "2027-02-06",
+   "end": "2027-02-09",
+   "days": 4,
+   "title": "農曆新年",
+   "estimated": false,
+   "book_by": "2026-12-12",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 5,
+     "start": "2027-02-06",
+     "end": "2027-02-10"
+    },
+    {
+     "leave": 3,
+     "days": 9,
+     "start": "2027-02-06",
+     "end": "2027-02-14"
+    },
+    {
+     "leave": 4,
+     "days": 10,
+     "start": "2027-02-05",
+     "end": "2027-02-14"
+    }
+   ],
+   "picks": [
+    "taichung-tainan",
+    "bangkok",
+    "hokkaido"
+   ],
+   "avoid": [
+    "phuket",
+    "taipei",
+    "chiangmai"
+   ],
+   "url": "offdays/2027-cny-hk/"
+  },
+  {
+   "id": "2027-easter-hk",
+   "home": "HK",
+   "start": "2027-03-26",
+   "end": "2027-03-29",
+   "days": 4,
+   "title": "復活節",
+   "estimated": false,
+   "book_by": "2027-01-29",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 5,
+     "start": "2027-03-26",
+     "end": "2027-03-30"
+    },
+    {
+     "leave": 3,
+     "days": 7,
+     "start": "2027-03-26",
+     "end": "2027-04-01"
+    },
+    {
+     "leave": 4,
+     "days": 11,
+     "start": "2027-03-26",
+     "end": "2027-04-05"
+    }
+   ],
+   "picks": [
+    "fukuoka",
+    "tokyo",
+    "taichung-tainan",
+    "jeju",
+    "kansai"
+   ],
+   "avoid": [
+    "chiangmai"
+   ],
+   "url": "offdays/2027-easter-hk/"
+  },
+  {
+   "id": "2027-qingming-hk",
+   "home": "HK",
+   "start": "2027-04-03",
+   "end": "2027-04-05",
+   "days": 3,
+   "title": "清明",
+   "estimated": false,
+   "book_by": "2027-02-06",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 4,
+     "start": "2027-04-03",
+     "end": "2027-04-06"
+    },
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2027-04-03",
+     "end": "2027-04-07"
+    },
+    {
+     "leave": 4,
+     "days": 11,
+     "start": "2027-03-26",
+     "end": "2027-04-05"
+    }
+   ],
+   "picks": [
+    "busan",
+    "fukuoka",
+    "seoul",
+    "jeju",
+    "tokyo"
+   ],
+   "avoid": [
+    "chiangmai",
+    "bangkok",
+    "hokkaido"
+   ],
+   "url": "offdays/2027-qingming-hk/"
+  },
+  {
+   "id": "2027-buddha-hk",
+   "home": "HK",
+   "start": "2027-05-13",
+   "end": "2027-05-13",
+   "days": 1,
+   "title": "佛誕",
+   "estimated": false,
+   "book_by": "2027-03-18",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 4,
+     "start": "2027-05-13",
+     "end": "2027-05-16"
+    },
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2027-05-12",
+     "end": "2027-05-16"
+    },
+    {
+     "leave": 4,
+     "days": 9,
+     "start": "2027-05-08",
+     "end": "2027-05-16"
+    }
+   ],
+   "picks": [
+    "busan",
+    "jeju",
+    "fukuoka",
+    "kansai",
+    "tokyo"
+   ],
+   "avoid": [
+    "chiangmai",
+    "bangkok",
+    "phuket"
+   ],
+   "url": "offdays/2027-buddha-hk/"
+  },
+  {
+   "id": "2027-duanwu-hk",
+   "home": "HK",
+   "start": "2027-06-09",
+   "end": "2027-06-09",
+   "days": 1,
+   "title": "端午",
+   "estimated": false,
+   "book_by": "2027-04-14",
+   "leave": [
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2027-06-09",
+     "end": "2027-06-13"
+    },
+    {
+     "leave": 4,
+     "days": 9,
+     "start": "2027-06-05",
+     "end": "2027-06-13"
+    }
+   ],
+   "picks": [
+    "hokkaido",
+    "chiangmai",
+    "busan",
+    "jeju",
+    "bangkok"
+   ],
+   "avoid": [
+    "taipei",
+    "taichung-tainan",
+    "fukuoka"
+   ],
+   "url": "offdays/2027-duanwu-hk/"
+  },
+  {
+   "id": "2027-july1-hk",
+   "home": "HK",
+   "start": "2027-07-01",
+   "end": "2027-07-01",
+   "days": 1,
+   "title": "七一",
+   "estimated": false,
+   "book_by": "2027-05-06",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 4,
+     "start": "2027-07-01",
+     "end": "2027-07-04"
+    },
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2027-06-30",
+     "end": "2027-07-04"
+    },
+    {
+     "leave": 4,
+     "days": 9,
+     "start": "2027-06-26",
+     "end": "2027-07-04"
+    }
+   ],
+   "picks": [
+    "hokkaido",
+    "chiangmai",
+    "busan",
+    "jeju",
+    "bangkok"
+   ],
+   "avoid": [
+    "taipei",
+    "taichung-tainan",
+    "seoul"
+   ],
+   "url": "offdays/2027-july1-hk/"
+  },
+  {
+   "id": "2027-midautumn-hk",
+   "home": "HK",
+   "start": "2027-09-16",
+   "end": "2027-09-16",
+   "days": 1,
+   "title": "中秋",
+   "estimated": false,
+   "book_by": "2027-07-22",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 4,
+     "start": "2027-09-16",
+     "end": "2027-09-19"
+    },
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2027-09-15",
+     "end": "2027-09-19"
+    },
+    {
+     "leave": 4,
+     "days": 9,
+     "start": "2027-09-11",
+     "end": "2027-09-19"
+    }
+   ],
+   "picks": [
+    "hokkaido",
+    "taipei",
+    "taichung-tainan",
+    "chiangmai",
+    "fukuoka"
+   ],
+   "avoid": [
+    "seoul",
+    "busan",
+    "jeju"
+   ],
+   "url": "offdays/2027-midautumn-hk/"
+  },
+  {
+   "id": "2027-national-hk",
+   "home": "HK",
+   "start": "2027-10-01",
+   "end": "2027-10-03",
+   "days": 3,
+   "title": "國慶",
+   "estimated": false,
+   "book_by": "2027-08-06",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 4,
+     "start": "2027-10-01",
+     "end": "2027-10-04"
+    },
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2027-10-01",
+     "end": "2027-10-05"
+    },
+    {
+     "leave": 4,
+     "days": 10,
+     "start": "2027-10-01",
+     "end": "2027-10-10"
+    }
+   ],
+   "picks": [
+    "taipei",
+    "taichung-tainan",
+    "busan"
+   ],
+   "avoid": [
+    "jeju",
+    "fukuoka",
+    "seoul"
+   ],
+   "url": "offdays/2027-national-hk/"
+  },
+  {
+   "id": "2027-chungyeung-hk",
+   "home": "HK",
+   "start": "2027-10-08",
+   "end": "2027-10-10",
+   "days": 3,
+   "title": "重陽",
+   "estimated": false,
+   "book_by": "2027-08-13",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 4,
+     "start": "2027-10-08",
+     "end": "2027-10-11"
+    },
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2027-10-08",
+     "end": "2027-10-12"
+    },
+    {
+     "leave": 4,
+     "days": 10,
+     "start": "2027-10-01",
+     "end": "2027-10-10"
+    }
+   ],
+   "picks": [
+    "busan",
+    "fukuoka",
+    "taipei",
+    "taichung-tainan",
+    "seoul"
+   ],
+   "avoid": [
+    "phuket"
+   ],
+   "url": "offdays/2027-chungyeung-hk/"
+  },
+  {
+   "id": "2027-xmas-hk",
+   "home": "HK",
+   "start": "2027-12-25",
+   "end": "2027-12-27",
+   "days": 3,
+   "title": "聖誕",
+   "estimated": false,
+   "book_by": "2027-10-30",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 4,
+     "start": "2027-12-25",
+     "end": "2027-12-28"
+    },
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2027-12-25",
+     "end": "2027-12-29"
+    },
+    {
+     "leave": 4,
+     "days": 9,
+     "start": "2027-12-25",
+     "end": "2028-01-02"
+    }
+   ],
+   "picks": [
+    "taichung-tainan",
+    "chiangmai",
+    "bangkok",
+    "hokkaido",
+    "taipei"
+   ],
+   "avoid": [],
+   "url": "offdays/2027-xmas-hk/"
+  },
+  {
+   "id": "2026-xmas-tw",
+   "home": "TPE",
+   "start": "2026-12-25",
+   "end": "2026-12-27",
+   "days": 3,
+   "title": "聖誕",
+   "estimated": false,
+   "book_by": "2026-10-30",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 4,
+     "start": "2026-12-25",
+     "end": "2026-12-28"
+    },
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2026-12-25",
+     "end": "2026-12-29"
+    },
+    {
+     "leave": 4,
+     "days": 10,
+     "start": "2026-12-25",
+     "end": "2027-01-03"
+    }
+   ],
+   "picks": [
+    "seoul",
+    "bangkok",
+    "chiangmai",
+    "phuket",
+    "busan"
+   ],
+   "avoid": [
+    "hongkong",
+    "macau",
+    "hokkaido"
+   ],
+   "url": "offdays/2026-xmas-tw/"
+  },
+  {
+   "id": "2027-newyear-tw",
+   "home": "TPE",
+   "start": "2027-01-01",
+   "end": "2027-01-03",
+   "days": 3,
+   "title": "元旦",
+   "estimated": false,
+   "book_by": "2026-11-06",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 4,
+     "start": "2027-01-01",
+     "end": "2027-01-04"
+    },
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2027-01-01",
+     "end": "2027-01-05"
+    },
+    {
+     "leave": 4,
+     "days": 10,
+     "start": "2026-12-25",
+     "end": "2027-01-03"
+    }
+   ],
+   "picks": [
+    "busan",
+    "seoul",
+    "jeju"
+   ],
+   "avoid": [
+    "bangkok",
+    "hokkaido",
+    "chiangmai"
+   ],
+   "url": "offdays/2027-newyear-tw/"
+  },
+  {
+   "id": "2027-cny-tw",
+   "home": "TPE",
+   "start": "2027-02-04",
+   "end": "2027-02-10",
+   "days": 7,
+   "title": "春節",
+   "estimated": false,
+   "book_by": "2026-12-10",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 8,
+     "start": "2027-02-04",
+     "end": "2027-02-11"
+    },
+    {
+     "leave": 3,
+     "days": 12,
+     "start": "2027-02-03",
+     "end": "2027-02-14"
+    },
+    {
+     "leave": 4,
+     "days": 13,
+     "start": "2027-02-02",
+     "end": "2027-02-14"
+    }
+   ],
+   "picks": [
+    "hokkaido",
+    "bangkok",
+    "phuket"
+   ],
+   "avoid": [
+    "hongkong",
+    "macau",
+    "fukuoka"
+   ],
+   "url": "offdays/2027-cny-tw/"
+  },
+  {
+   "id": "2027-228-tw",
+   "home": "TPE",
+   "start": "2027-02-27",
+   "end": "2027-03-01",
+   "days": 3,
+   "title": "228",
+   "estimated": false,
+   "book_by": "2027-01-02",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 4,
+     "start": "2027-02-27",
+     "end": "2027-03-02"
+    },
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2027-02-27",
+     "end": "2027-03-03"
+    },
+    {
+     "leave": 4,
+     "days": 9,
+     "start": "2027-02-27",
+     "end": "2027-03-07"
+    }
+   ],
+   "picks": [
+    "hokkaido",
+    "hongkong",
+    "macau",
+    "fukuoka",
+    "bangkok"
+   ],
+   "avoid": [],
+   "url": "offdays/2027-228-tw/"
+  },
+  {
+   "id": "2027-qingming-tw",
+   "home": "TPE",
+   "start": "2027-04-03",
+   "end": "2027-04-06",
+   "days": 4,
+   "title": "清明兒童節",
+   "estimated": false,
+   "book_by": "2027-02-06",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 5,
+     "start": "2027-04-03",
+     "end": "2027-04-07"
+    },
+    {
+     "leave": 3,
+     "days": 9,
+     "start": "2027-04-03",
+     "end": "2027-04-11"
+    },
+    {
+     "leave": 4,
+     "days": 10,
+     "start": "2027-04-02",
+     "end": "2027-04-11"
+    }
+   ],
+   "picks": [
+    "fukuoka",
+    "seoul",
+    "tokyo",
+    "busan",
+    "jeju"
+   ],
+   "avoid": [
+    "hongkong",
+    "macau",
+    "bangkok"
+   ],
+   "url": "offdays/2027-qingming-tw/"
+  },
+  {
+   "id": "2027-labour-tw",
+   "home": "TPE",
+   "start": "2027-04-30",
+   "end": "2027-05-02",
+   "days": 3,
+   "title": "勞動節",
+   "estimated": false,
+   "book_by": "2027-03-05",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 4,
+     "start": "2027-04-30",
+     "end": "2027-05-03"
+    },
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2027-04-30",
+     "end": "2027-05-04"
+    },
+    {
+     "leave": 4,
+     "days": 9,
+     "start": "2027-04-24",
+     "end": "2027-05-02"
+    }
+   ],
+   "picks": [
+    "busan",
+    "seoul",
+    "jeju",
+    "hongkong",
+    "macau"
+   ],
+   "avoid": [
+    "fukuoka",
+    "kansai",
+    "tokyo"
+   ],
+   "url": "offdays/2027-labour-tw/"
+  },
+  {
+   "id": "2027-duanwu-tw",
+   "home": "TPE",
+   "start": "2027-06-09",
+   "end": "2027-06-09",
+   "days": 1,
+   "title": "端午",
+   "estimated": false,
+   "book_by": "2027-04-14",
+   "leave": [
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2027-06-09",
+     "end": "2027-06-13"
+    },
+    {
+     "leave": 4,
+     "days": 9,
+     "start": "2027-06-05",
+     "end": "2027-06-13"
+    }
+   ],
+   "picks": [
+    "hokkaido",
+    "busan",
+    "jeju",
+    "seoul",
+    "bangkok"
+   ],
+   "avoid": [
+    "hongkong",
+    "macau",
+    "fukuoka"
+   ],
+   "url": "offdays/2027-duanwu-tw/"
+  },
+  {
+   "id": "2027-midautumn-tw",
+   "home": "TPE",
+   "start": "2027-09-15",
+   "end": "2027-09-15",
+   "days": 1,
+   "title": "中秋",
+   "estimated": false,
+   "book_by": "2027-07-21",
+   "leave": [
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2027-09-15",
+     "end": "2027-09-19"
+    },
+    {
+     "leave": 4,
+     "days": 9,
+     "start": "2027-09-11",
+     "end": "2027-09-19"
+    }
+   ],
+   "picks": [
+    "hokkaido",
+    "hongkong",
+    "macau",
+    "fukuoka",
+    "kansai"
+   ],
+   "avoid": [
+    "seoul",
+    "busan",
+    "jeju"
+   ],
+   "url": "offdays/2027-midautumn-tw/"
+  },
+  {
+   "id": "2027-teachers-tw",
+   "home": "TPE",
+   "start": "2027-09-28",
+   "end": "2027-09-28",
+   "days": 1,
+   "title": "教師節",
+   "estimated": false,
+   "book_by": "2027-08-03",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 4,
+     "start": "2027-09-25",
+     "end": "2027-09-28"
+    },
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2027-09-25",
+     "end": "2027-09-29"
+    },
+    {
+     "leave": 4,
+     "days": 9,
+     "start": "2027-09-25",
+     "end": "2027-10-03"
+    }
+   ],
+   "picks": [
+    "seoul",
+    "hokkaido",
+    "hongkong",
+    "macau",
+    "fukuoka"
+   ],
+   "avoid": [
+    "bangkok",
+    "phuket"
+   ],
+   "url": "offdays/2027-teachers-tw/"
+  },
+  {
+   "id": "2027-national-tw",
+   "home": "TPE",
+   "start": "2027-10-09",
+   "end": "2027-10-11",
+   "days": 3,
+   "title": "國慶",
+   "estimated": false,
+   "book_by": "2027-08-14",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 4,
+     "start": "2027-10-09",
+     "end": "2027-10-12"
+    },
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2027-10-09",
+     "end": "2027-10-13"
+    },
+    {
+     "leave": 4,
+     "days": 9,
+     "start": "2027-10-09",
+     "end": "2027-10-17"
+    }
+   ],
+   "picks": [
+    "hongkong",
+    "macau",
+    "fukuoka",
+    "busan",
+    "seoul"
+   ],
+   "avoid": [
+    "phuket"
+   ],
+   "url": "offdays/2027-national-tw/"
+  },
+  {
+   "id": "2027-retrocession-tw",
+   "home": "TPE",
+   "start": "2027-10-23",
+   "end": "2027-10-25",
+   "days": 3,
+   "title": "光復節",
+   "estimated": false,
+   "book_by": "2027-08-28",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 4,
+     "start": "2027-10-23",
+     "end": "2027-10-26"
+    },
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2027-10-23",
+     "end": "2027-10-27"
+    },
+    {
+     "leave": 4,
+     "days": 9,
+     "start": "2027-10-23",
+     "end": "2027-10-31"
+    }
+   ],
+   "picks": [
+    "fukuoka",
+    "busan",
+    "seoul",
+    "hongkong",
+    "macau"
+   ],
+   "avoid": [
+    "phuket"
+   ],
+   "url": "offdays/2027-retrocession-tw/"
+  },
+  {
+   "id": "2027-xmas-tw",
+   "home": "TPE",
+   "start": "2027-12-24",
+   "end": "2027-12-26",
+   "days": 3,
+   "title": "聖誕",
+   "estimated": false,
+   "book_by": "2027-10-29",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 4,
+     "start": "2027-12-24",
+     "end": "2027-12-27"
+    },
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2027-12-24",
+     "end": "2027-12-28"
+    },
+    {
+     "leave": 4,
+     "days": 10,
+     "start": "2027-12-24",
+     "end": "2028-01-02"
+    }
+   ],
+   "picks": [
+    "hongkong",
+    "macau",
+    "hokkaido",
+    "fukuoka",
+    "seoul"
+   ],
+   "avoid": [],
+   "url": "offdays/2027-xmas-tw/"
+  },
+  {
+   "id": "2028-newyear-tw",
+   "home": "TPE",
+   "start": "2027-12-31",
+   "end": "2028-01-02",
+   "days": 3,
+   "title": "元旦",
+   "estimated": false,
+   "book_by": "2027-11-05",
+   "leave": [
+    {
+     "leave": 1,
+     "days": 4,
+     "start": "2027-12-31",
+     "end": "2028-01-03"
+    },
+    {
+     "leave": 2,
+     "days": 5,
+     "start": "2027-12-31",
+     "end": "2028-01-04"
+    },
+    {
+     "leave": 4,
+     "days": 10,
+     "start": "2027-12-24",
+     "end": "2028-01-02"
+    }
+   ],
+   "picks": [
+    "hongkong",
+    "macau",
+    "busan",
+    "seoul",
+    "bangkok"
+   ],
+   "avoid": [
+    "hokkaido",
+    "fukuoka",
+    "kansai"
+   ],
+   "url": "offdays/2028-newyear-tw/"
+  }
+ ]
+}
