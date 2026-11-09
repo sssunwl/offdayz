@@ -327,13 +327,14 @@ def page_head(title, desc, canonical, depth):
   <meta property="og:url" content="{esc(canonical)}">
   <meta property="og:type" content="article">
   <link rel="stylesheet" href="{up}assets/sosol.css">
+  <link rel="stylesheet" href="{up}assets/magazine.css">
   <link rel="stylesheet" href="{up}offdays/offdays.css">
 </head>
 <body>
 <a class="skip-link" href="#main">跳到主要內容</a>
 <header class="site-header" id="hdr">
   <div class="shell nav">
-    <a class="brand" href="{up}"><span class="brand-mark">☀</span> OffDayz</a>
+    <a class="brand" href="{up}">Off<i>Dayz</i></a>
     <nav class="desktop-nav" aria-label="主要導覽">
       <a href="{up}">首頁</a>
       <a href="{up}offdays/" aria-current="page">放假去哪</a>
@@ -363,7 +364,7 @@ def page_foot(depth, updated):
   <div class="shell">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="brand" href="{up}"><span class="brand-mark">☀</span> OffDayz</a>
+        <a class="brand" href="{up}">Off<i>Dayz</i></a>
         <p>放假，去哪？先看你什麼時候有假，再看這段假最適合去哪裡。</p>
       </div>
       <div class="footer-col"><strong>逛逛</strong>

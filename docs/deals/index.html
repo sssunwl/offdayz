@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>機酒速報｜OffDayz</title>
-<meta name="description" content="香港／台北出發去日本嘅機票速報。每個價都寫明幾時搜到、邊度搜到，過期自動落架。">
+<meta name="description" content="香港／台北出發去日本的機票速報。每個價格都標明何時、在哪裡搜到，過期自動下架。">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
 <style>
 /* 色票沿用 v2 設計系統（docs/assets/sosol.css）；本頁獨立，main / v2 兩邊都用得 */
@@ -49,13 +49,31 @@ h1{font-size:30px;line-height:1.15;letter-spacing:0;margin:10px 0 6px;color:var(
 .empty{padding:40px 0;text-align:center;color:var(--muted)}
 .note{margin-top:28px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
 </style>
+<link rel="stylesheet" href="../assets/magazine.css">
+<style>
+/* 雜誌層：本頁樣式自帶，這裡補上跟全站一致的紙張、字體、方角 */
+.logo{font:800 1.15em/1 var(--serif);color:var(--navy)} .logo i{font-style:italic;font-weight:500;color:var(--blue)}
+.back{font-family:var(--type);letter-spacing:.04em}
+h1{font-family:var(--serif-zh);font-weight:900;font-size:38px}
+header{border-top:3px solid var(--ink);border-bottom:3px double var(--ink);padding:10px 0 16px;margin-bottom:6px}
+.status,.meta,.note{font-family:var(--type)}
+.seg,.seg button,.chips button,.tag,.go,.banner{border-radius:2px}
+.chips button,.tag{font-family:var(--type)}
+.card{border-radius:2px;border:1px solid var(--line);background-image:var(--grain);box-shadow:var(--shadow-sm)}
+.card:hover{transform:rotate(-.4deg)}
+.route{font-family:var(--serif-zh);font-weight:900}
+.price{font-family:var(--serif);font-weight:800}
+.go{background:var(--navy);font-weight:700}
+.go:hover{background:var(--blue)}
+.tag.hol{background:transparent;border:1.5px solid var(--coral);color:var(--coral);transform:rotate(-2deg)}
+</style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <a class="back" href="../">← OffDayz 首頁</a>
+    <a class="back" href="../">← <span class="logo">Off<i>Dayz</i></span> 首頁</a>
     <h1>機酒速報</h1>
-    <p class="lede">香港、台北出發去日本。每個價都寫明幾時搜到、喺邊度搜到，過期自動落架。</p>
+    <p class="lede">香港、台北出發去日本。每個價格都標明何時、在哪裡搜到，過期自動下架。</p>
     <p class="status" id="status">載入中…</p>
     <div class="banner" id="stale"></div>
   </header>
@@ -75,8 +93,8 @@ h1{font-size:30px;line-height:1.15;letter-spacing:0;margin:10px 0 6px;color:var(
   <div class="grid" id="grid"></div>
 
   <p class="note">
-    價格嚟自 Aviasales 用戶近幾日實際搜到嘅結果（經 Travelpayouts），唔係即時報價；撳「去查價」會重新搜尋，以訂購頁為準。
-    超過 <span id="maxAge">4</span> 日未再被搜到嘅價、或者出發日已到，會自動落架。酒店即時價暫停，資料源升級中。
+    價格來自 Aviasales 用戶近幾天實際搜到的結果（經 Travelpayouts），不是即時報價；按「去查價」會重新搜尋，以訂購頁為準。
+    超過 <span id="maxAge">4</span> 天沒有再被搜到的價格，或出發日已到，會自動下架。酒店即時價暫停，資料源升級中。
   </p>
 </div>
 
@@ -93,7 +111,7 @@ h1{font-size:30px;line-height:1.15;letter-spacing:0;margin:10px 0 6px;color:var(
 
   function agoText(obs) {
     const days = Math.round((Date.now() - new Date(obs + 'T12:00:00+08:00')) / 864e5);
-    return days <= 0 ? '今日搜到' : days === 1 ? '昨日搜到' : `${days} 日前搜到`;
+    return days <= 0 ? '今天搜到' : days === 1 ? '昨天搜到' : `${days} 天前搜到`;
   }
 
   // 撞唔撞出發地嘅公眾假期（holidays.json 只讀；搵唔到就唔標）
@@ -151,7 +169,7 @@ h1{font-size:30px;line-height:1.15;letter-spacing:0;margin:10px 0 6px;color:var(
         <div class="meta">${agoText(d.observed_on)}・來源 ${d.source.name}${d.source.agency ? '／' + d.source.agency : ''}・抓取 ${new Date(d.fetched_at).toLocaleString('zh-HK', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })}</div>
         <a class="go" href="${d.source.url}" target="_blank" rel="noopener sponsored">去查價 →</a>
       </article>`;
-    }).join('') : '<div class="empty">呢個組合暫時冇未過期嘅價。</div>';
+    }).join('') : '<div class="empty">這個組合目前沒有未過期的價格。</div>';
   }
 
   async function load() {
@@ -160,7 +178,7 @@ h1{font-size:30px;line-height:1.15;letter-spacing:0;margin:10px 0 6px;color:var(
       fetch('../data/deals.json' + ts).catch(() => null),
       fetch('../data/holidays.json').catch(() => null),
     ]);
-    if (!dr || !dr.ok) { $('status').textContent = '暫時讀唔到速報資料。'; return; }
+    if (!dr || !dr.ok) { $('status').textContent = '暫時讀不到速報資料。'; return; }
     const data = await dr.json();
     DEALS = data.deals || [];
     $('maxAge').textContent = data.max_age_days ?? 4;
@@ -179,7 +197,7 @@ h1{font-size:30px;line-height:1.15;letter-spacing:0;margin:10px 0 6px;color:var(
     $('status').textContent = `最後更新 ${gen.toLocaleString('zh-HK', { dateStyle: 'medium', timeStyle: 'short' })}・有效價 ${DEALS.filter(d => new Date(d.expires_at) > Date.now()).length} 筆`;
     if (hrs > STALE_HOURS) {
       $('stale').style.display = 'block';
-      $('stale').textContent = `資料已經 ${Math.floor(hrs)} 小時冇更新，價格可能已變，請以訂購頁為準。`;
+      $('stale').textContent = `資料已經 ${Math.floor(hrs)} 小時沒有更新，價格可能已變，請以訂購頁為準。`;
     }
     render();
   }

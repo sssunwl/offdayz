@@ -1,0 +1,102 @@
+/* OffDayz 雜誌層（2026-11-09）
+   疊在 sosol.css 之後，把版面換成 Sona 品牌手冊的「西式旅行雜誌」：
+   Fraunces 刊頭／數字、思源宋體標題、Courier 打字機標籤、紙紋、撕頁邊、紙膠帶、護照章、登機證。
+   只換外觀不動結構；色票沿用 sosol.css（方案 A），只新增牛皮紙 --kraft。
+   品牌真相來源：SonaSNS-Platform/offdayz-brand.html、assets/brandbook/offdayz.css */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,800;1,9..144,500&family=Noto+Serif+TC:wght@600;900&family=Courier+Prime:wght@400;700&display=swap');
+
+:root{
+  --kraft:#D9C3A5;
+  --serif:'Fraunces','Noto Serif TC',Georgia,serif;
+  --serif-zh:'Noto Serif TC','Fraunces',Georgia,serif;
+  --type:'Courier Prime',ui-monospace,monospace;
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .18 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --fibers:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012 .35' numOctaves='2' seed='4'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .36 0 0 0 0 .25 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
+  --torn:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='16' preserveAspectRatio='none'%3E%3Cpath d='M0 0H240V9L232 13 224 8 214 14 205 9 196 15 186 10 178 14 168 7 158 13 150 9 140 15 131 8 121 14 112 10 102 16 93 9 84 13 74 7 64 14 55 10 45 15 36 8 26 13 17 9 8 14 0 9Z'/%3E%3C/svg%3E");
+  /* 紙張不是圓角卡片 */
+  --radius-xl:4px;--radius-lg:3px;--radius:2px;
+  --line:rgba(38,49,46,.2);
+  --shadow:0 1px 1px rgba(60,40,20,.08),0 18px 30px -18px rgba(60,40,20,.45);
+  --shadow-sm:0 1px 1px rgba(60,40,20,.08),0 10px 18px -14px rgba(60,40,20,.5);
+}
+
+body{background-color:var(--sand);background-image:var(--grain),var(--fibers)}
+
+/* 海浪、圓形色塊是舊的「海」語言，整站改成「街」 */
+.ocean-waves,.hero::before,.hero::after,.calband::after,.dcard::before{display:none}
+
+/* ---------- 刊頭（站頭） ---------- */
+.site-header,.site-header.stuck{background:rgba(251,244,236,.94);border-top:3px solid var(--ink);border-bottom:3px double var(--ink);box-shadow:none}
+.brand{font:800 1.75rem/1 var(--serif);letter-spacing:-.02em;color:var(--navy);gap:0}
+.brand i{font-style:italic;font-weight:500;color:var(--blue)}
+.brand-mark{display:none}
+.desktop-nav a{border-radius:0;font-weight:700;color:var(--ink)}
+.desktop-nav a:hover{background:transparent;color:var(--blue);box-shadow:inset 0 -2px 0 var(--blue)}
+.desktop-nav a[aria-current="page"]{background:var(--navy);color:var(--sand)}
+.icon-btn{border-radius:2px}
+
+/* ---------- 字 ---------- */
+.eyebrow{font:700 .76rem var(--type);letter-spacing:.16em;color:var(--blue)}
+.hero h1,.page-hero h1{font-family:var(--serif-zh);font-weight:900;letter-spacing:0;line-height:1.16;color:var(--navy)}
+.hero h1 .play{color:var(--blue)}
+/* 螢光筆底線 */
+.hero h1 .play::after{height:.36em;left:-2px;right:-2px;bottom:.06em;border-radius:0;opacity:.6;transform:rotate(-1deg)}
+.section-head h2,.calband h2,.card-title,h3{font-family:var(--serif-zh);letter-spacing:0}
+.section-head h2{line-height:1.2}
+.section-link{font-family:var(--type);font-weight:700;letter-spacing:.04em}
+/* 數字用 Fraunces */
+.stat b,.pcard .price,.flight-price,.hero-price-row b,.nextbox .rng,.od-row-date,.od-day b{font-family:var(--serif);letter-spacing:-.01em}
+
+/* ---------- 按鈕、標籤：方角、打字機 ---------- */
+.btn{border-radius:2px;font-weight:700;letter-spacing:.02em}
+.btn-primary:hover,.btn-ghost:hover,.btn-sun:hover{transform:translateY(-1px) rotate(-.4deg)}
+.btn-ghost{background:var(--paper);border-color:rgba(38,49,46,.35)}
+.pill{border-radius:2px;background:transparent;border:1.5px solid currentColor;font:700 .72rem var(--type);letter-spacing:.08em;text-transform:uppercase;color:var(--navy)}
+.toggle{border-radius:2px;background:var(--paper)}
+.toggle button{border-radius:0}
+.toggle button.on{background:var(--navy);color:var(--sand)}
+.city-tag,.spot-tag,.art-tag,.ev-tag,.ev-cat,.od-chip,.pl-chip,.pl-tag{border-radius:2px;font-family:var(--type);letter-spacing:.04em}
+
+/* ---------- 紙張 ---------- */
+.card,.stat,.pcard,.dcard,.ecard,.hrow-card,.qi,.pl-card,.ev-card,.od-row,.od-pn,.od-day{
+  background-color:var(--paper);background-image:var(--grain);border-color:var(--line);box-shadow:var(--shadow-sm)}
+.card:hover,.dcard:hover,.ecard:hover,.pcard:hover{transform:translateY(-2px) rotate(-.5deg);box-shadow:var(--shadow);background-color:var(--paper)}
+/* 大卡：下緣撕開＋紙膠帶 */
+.card-lg{position:relative;padding-bottom:36px;
+  -webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 14px) no-repeat,var(--torn) bottom/240px 16px repeat-x;
+          mask:linear-gradient(#000 0 0) top/100% calc(100% - 14px) no-repeat,var(--torn) bottom/240px 16px repeat-x}
+.hero-grid>.card-lg{transform:rotate(.6deg);overflow:visible}
+.hero-grid>.card-lg::before{content:"";position:absolute;width:110px;height:30px;top:-12px;left:50%;
+  transform:translateX(-50%) rotate(-3deg);background:rgba(232,166,47,.45);z-index:2}
+
+/* 目的地卡：右上角入境章 */
+.dcard{overflow:hidden}
+.dcard .flag{filter:saturate(.85)}
+
+/* 年曆色帶：深綠紙頁 */
+.calband{background:var(--navy);background-image:var(--grain);border-radius:3px}
+.nextbox{border-radius:2px;border-style:dashed}
+.nextbox .tag{border-radius:2px;font-family:var(--type)}
+
+/* ---------- 表格：雜誌資料欄 ---------- */
+th{font-family:var(--type);letter-spacing:.08em}
+
+/* ---------- 尾頁 ---------- */
+.site-footer{background-color:var(--navy);background-image:var(--grain);border-top:3px double var(--sand)}
+.site-footer .brand{color:var(--sand)}
+.site-footer .brand i{color:var(--sun)}
+.footer-col strong{font-family:var(--type);letter-spacing:.12em;text-transform:uppercase}
+.footer-base{font-family:var(--type);letter-spacing:.03em}
+
+/* ---------- 放假去哪：登機證列表、入境章日子 ---------- */
+.od-row{position:relative;border-radius:2px}
+.od-row-leave{border-radius:2px;font-family:var(--type);transform:rotate(-2deg);background:transparent;border:1.5px solid var(--blue);color:var(--blue)}
+.od-day{border-radius:2px}
+.od-hol{background:var(--coral);background-image:none}
+.od-leaves .od-leave{border-radius:2px !important}
+
+@media(max-width:640px){
+  .brand{font-size:1.5rem}
+  .hero-grid>.card-lg{transform:none}
+}
+@media(prefers-reduced-motion:reduce){.card:hover,.dcard:hover,.ecard:hover,.pcard:hover,.btn:hover{transform:none}}

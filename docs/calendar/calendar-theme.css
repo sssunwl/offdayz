@@ -1,7 +1,8 @@
 /* 只覆寫 OffDayz 的站頭站尾外觀，不改共用年曆 HTML 或功能。 */
+@import url("../assets/magazine.css");
 .hero{background:var(--sand);color:var(--ink);border-bottom:1px solid var(--line)}
 .hero .backlink{display:inline-flex;gap:12px;align-items:center;color:var(--blue);font-size:.85rem;margin-bottom:26px}
-.hero .backlink::before{content:"☀ OffDayz";font-size:1.05rem;font-weight:900;letter-spacing:-.02em;color:var(--navy)}
+.hero .backlink::before{content:"OffDayz";font:800 1.5rem/1 var(--serif);letter-spacing:-.02em;color:var(--navy)}
 .hero .backlink:hover{color:var(--navy)}
 .hero .eyebrow{color:var(--blue)}
 .hero h1{font-weight:900;letter-spacing:-.05em;color:var(--navy)}
@@ -35,3 +36,14 @@ footer a{color:var(--sun)}
   --shadow-sm:0 9px 24px rgba(74,52,36,.10);
 }
 .hero{background:var(--sand)}
+
+/* ── 雜誌層（2026-11-09）：紙紋、方角、宋體標題、打字機標籤，對齊全站 magazine.css ── */
+body{background-color:var(--sand);background-image:var(--grain),var(--fibers)}
+.hero{background:transparent;border-top:3px solid var(--ink);border-bottom:3px double var(--ink)}
+.hero h1{font-family:var(--serif-zh);letter-spacing:0}
+.hero .eyebrow,.hero .backlink{font-family:var(--type);letter-spacing:.12em}
+.panel,.mo{border-radius:2px;background-color:var(--paper);background-image:var(--grain);box-shadow:var(--shadow-sm)}
+.win{border-radius:2px}
+.win-len,.est,.yearpick button,.presets button,.rangepick,.jumpcal,.chip{border-radius:2px}
+.win-len{font-family:var(--type)}
+footer{background-color:var(--navy);background-image:var(--grain)}
