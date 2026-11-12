@@ -11,6 +11,20 @@
   <link rel="stylesheet" href="assets/magazine.css">
 </head>
 <body>
+<!-- 入境章墨色(②油墨印台,SS 2026-11-13 定):線條清楚、一邊濃一邊淡、少量缺墨。章約 120px、線 4–5px -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="inkPad" x="-8%" y="-8%" width="116%" height="116%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="5" result="w"/>
+    <feDisplacementMap in="SourceGraphic" in2="w" scale="1.6" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="0.3" result="soft"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="3" seed="12" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -5 3.75" result="gm"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="1" seed="40" result="p"/>
+    <feColorMatrix in="p" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.6 2.2" result="pm"/>
+    <feComposite in="gm" in2="pm" operator="arithmetic" k1="1" result="cover"/>
+    <feComposite in="soft" in2="cover" operator="in"/>
+  </filter>
+</svg>
 <a class="skip-link" href="#main">跳到主要內容</a>
 
 <div class="ocean-waves" aria-hidden="true">

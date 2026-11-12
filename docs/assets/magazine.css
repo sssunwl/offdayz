@@ -200,7 +200,7 @@ body{background-color:#cfb48c;background-image:var(--grain-heavy),var(--blotch),
 .toc-row{transition:padding .2s,color .2s}.toc-row:hover{padding-left:10px;color:var(--blue)}.toc-row:hover .toc-dots{border-color:var(--blue)}
 
 /* ---------- 進場動畫(只有首頁會掛 .anim-wait) ---------- */
-@keyframes stampIn{0%{opacity:0;scale:2.1}55%{opacity:.95;scale:.9}75%{scale:1.04}100%{opacity:.95;scale:1}}
+@keyframes stampIn{0%{opacity:0;scale:2.1}55%{opacity:.95;scale:.9}75%{scale:1.04}100%{opacity:1;scale:1}}
 @keyframes restamp{0%{scale:1}40%{scale:.88}70%{scale:1.06}100%{scale:1}}
 @keyframes tapeIn{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
 @keyframes marker{from{background-size:0 100%}to{background-size:100% 100%}}
@@ -241,3 +241,7 @@ body{background-color:#cfb48c;background-image:var(--grain-heavy),var(--blotch),
 /* 墨點遮罩只蓋到元素框,行高 1 的大字要留下伸部空間 */
 .mast-logo{padding-bottom:.16em;margin-bottom:-.16em}
 .countdown b{padding:.04em 0 .1em}
+/* 入境章改用②油墨印台濾鏡(定義在 index.html 的 #inkPad):線條清楚、一邊濃一邊淡。取代原本的墨點遮罩 */
+.passport-stamp{-webkit-mask:none;mask:none;filter:url(#inkPad);opacity:1}
+.passport-stamp.stamp-japan{color:#C2381F}
+.passport-stamp{border-width:5px}
