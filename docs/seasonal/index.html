@@ -22,23 +22,24 @@
     <a class="brand" href="../">Off<i>Dayz</i></a>
     <nav class="desktop-nav" aria-label="主要導覽">
       <a href="../">首頁</a>
-      <a href="../#deals">機票・酒店</a>
-      <a href="../destinations/">目的地</a><a href="../places/">口袋地點</a>
+      
+      <a href="../offdays/">放假去哪</a><a href="../destinations/">目的地</a><a href="../places/">口袋地點</a>
       <a href="../seasonal/" aria-current="page">季節限定</a>
       <a href="../calendar/">假期年曆</a>
     </nav>
     <div class="nav-actions">
-      <span class="pill" id="updPill"><span class="dot"></span>載入中</span>
+      
       <button class="icon-btn menu-btn" id="menuBtn" aria-label="選單" aria-controls="dropNav" aria-expanded="false">☰</button>
     </div>
   </div>
   <nav class="drop-nav shell" id="dropNav" aria-label="手機導覽" hidden>
     <a href="../">首頁</a>
-    <a href="../#deals">機票・酒店</a><a href="../destinations/">目的地</a><a href="../places/">口袋地點</a>
+    <a href="../offdays/">放假去哪</a><a href="../destinations/">目的地</a><a href="../places/">口袋地點</a>
     <a href="../seasonal/" aria-current="page">季節限定</a><a href="../calendar/">假期年曆</a>
   </nav>
 </header>
-<main id="main">
+<main id="main" class="column-main">
+<div class="column-masthead"><div class="masthead"><a class="mast-logo" href="../">Off<i>Dayz</i></a><span class="issue">HK · TPE DEPARTURES</span></div><div class="dateline"><span>P.05 季節限定</span><span>Seasonal</span></div></div>
 
 <section class="hero page-hero"><div class="shell"><span class="eyebrow">Seasonal Experiences</span><h1>這個<span class="play">季節限定</span></h1><p class="hero-lead">花祭、鯨魚季、珊瑚產卵、雪祭——只在特定月份遇得到的旅行體驗。</p></div></section>
 
@@ -54,11 +55,11 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="brand" href="../">Off<i>Dayz</i></a>
-        <p>香港與台北出發的旅遊速報。機酒價格每日自動更新，假期年曆人工核對官方公告。Suniverse × Sosol 出品。</p>
+        <p>香港與台北出發的假期旅行筆記。假期資料依各地政府公告整理，預估日期另有標示。Suniverse × Sosol 出品。</p>
       </div>
       <div class="footer-col"><strong>逛逛</strong>
-        <a href="../#deals">機票價格</a><a href="../#hotels">酒店精選</a>
-        <a href="../destinations/">目的地</a><a href="../places/">口袋地點</a><a href="../seasonal/">季節限定</a><a href="../calendar/">假期年曆</a>
+        
+        <a href="../offdays/">放假去哪</a><a href="../destinations/">目的地</a><a href="../places/">口袋地點</a><a href="../seasonal/">季節限定</a><a href="../calendar/">假期年曆</a>
       </div>
       <div class="footer-col"><strong>關於</strong>
         <a href="https://www.instagram.com/offdayz_/" target="_blank" rel="noopener">Instagram</a>
@@ -67,13 +68,13 @@
         <a href="../calendar/">假期資料來源</a>
       </div>
     </div>
-    <div class="footer-base"><span id="footUpd">—</span><span>價格僅供參考，實際以訂購平台為準</span></div>
+    <div class="footer-base"><span>Off days, well spent.</span><span>假期依政府公告整理，出發前請再核對官方日期</span></div>
   </div>
 </footer>
 
 <script src="../assets/site.js"></script>
 <script>
-let SD = null, FD = null;
+let SD = null;
 let selMonth = 0;
 let selCat = '全部';
 const MONTHS = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
@@ -86,8 +87,7 @@ const CITY_KEYS = {
 };
 
 async function boot() {
-  [SD,FD]=await Promise.all([SoSol.getJSON('../data/seasonal.json'),SoSol.getJSON('../data/flights.json')]);
-  SoSol.updateStatus(FD);
+  SD=await SoSol.getJSON('../data/seasonal.json');
   selMonth = +SoSol.todayISO().slice(5,7);
   buildMonthStrip();
   buildCatStrip();
@@ -126,26 +126,6 @@ function setCat(c, btn) {
   render();
 }
 
-function bestFlightPrice(airportCode) {
-  if (!FD || !airportCode) return null;
-  const routes = (FD.routes || []).filter(r => r.dest === airportCode);
-  let best = null;
-  for (const r of routes) {
-    for (const m of r.months) {
-      if (!best || m.price < best.price) best = { price: m.price, origin: r.origin_name };
-    }
-  }
-  for (const [oc, items] of Object.entries(FD.destinations || {})) {
-    const orig = oc === 'HKG' ? '香港' : '台北';
-    for (const d of items) {
-      if (d.code === airportCode && (!best || d.price < best.price)) {
-        best = { price: d.price, origin: orig };
-      }
-    }
-  }
-  return best;
-}
-
 function render() {
   const events = (SD?.events || []).filter(e => {
     const monthOk = selMonth === 0 || e.months.includes(selMonth);
@@ -164,22 +144,16 @@ function render() {
   }
 
   document.getElementById('events-list').innerHTML = events.map(e => {
-    // best price for compact row
-    const prices = e.destinations.map(d => bestFlightPrice(d.airport)).filter(Boolean);
-    const cheapest = prices.length ? prices.reduce((a, b) => a.price < b.price ? a : b) : null;
-    const compactPrice = cheapest ? `<span class="ev-price-mini">HK$${cheapest.price.toLocaleString()}</span>` : '';
     const compactDest = e.destinations[0]?.city || '';
 
     // full destination list for expanded
     const destsHtml = e.destinations.map(d => {
-      const fp = bestFlightPrice(d.airport);
       const cityKey = d.city_key || CITY_KEYS[d.airport] || null;
       return `<div class="ev-dest">
         <div class="ev-dest-info">
           <div class="ev-dest-city">${d.city}</div>
           <div class="ev-dest-note">${d.note}</div>
         </div>
-        ${fp ? `<span class="ev-dest-price">HK$${fp.price.toLocaleString()}</span>` : ''}
         ${cityKey ? `<a class="ev-dest-link" href="../destinations/city.html?key=${cityKey}" onclick="event.stopPropagation()">指南</a>` : ''}
       </div>`;
     }).join('');
@@ -194,7 +168,7 @@ function render() {
       <div class="ev-desc-short">${e.desc}</div>
       <div class="ev-price-row">
         <span class="ev-dest-mini">${compactDest}</span>
-        ${compactPrice}
+        
       </div>
       <div class="ev-expand-hint">點開看詳情 ▾</div>
       </summary><div class="ev-detail">

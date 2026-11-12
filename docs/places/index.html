@@ -25,26 +25,27 @@
     <a class="brand" href="../">Off<i>Dayz</i></a>
     <nav class="desktop-nav" aria-label="主要導覽">
       <a href="../">首頁</a>
-      <a href="../#deals">機票・酒店</a>
-      <a href="../destinations/">目的地</a>
+      
+      <a href="../offdays/">放假去哪</a><a href="../destinations/">目的地</a>
       <a href="../places/" aria-current="page">口袋地點</a>
       <a href="../seasonal/">季節限定</a>
       <a href="../calendar/">假期年曆</a>
     </nav>
     <div class="nav-actions">
-      <span class="pill" id="updPill"><span class="dot"></span>載入中</span>
+      
       <button class="icon-btn menu-btn" id="menuBtn" aria-label="選單" aria-controls="dropNav" aria-expanded="false">☰</button>
     </div>
   </div>
   <nav class="drop-nav shell" id="dropNav" aria-label="手機導覽" hidden>
     <a href="../">首頁</a>
-    <a href="../#deals">機票・酒店</a><a href="../destinations/">目的地</a>
+    <a href="../offdays/">放假去哪</a><a href="../destinations/">目的地</a>
     <a href="../places/" aria-current="page">口袋地點</a>
     <a href="../seasonal/">季節限定</a><a href="../calendar/">假期年曆</a>
   </nav>
 </header>
 
-<main id="main">
+<main id="main" class="column-main">
+<div class="column-masthead"><div class="masthead"><a class="mast-logo" href="../">Off<i>Dayz</i></a><span class="issue">HK · TPE DEPARTURES</span></div><div class="dateline"><span>P.04 口袋地點</span><span>Pocket Places</span></div></div>
   <section class="hero page-hero"><div class="shell">
     <span class="eyebrow">Pocket Places</span>
     <h1>口袋<span class="play">地點</span></h1>
@@ -74,11 +75,11 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="brand" href="../">Off<i>Dayz</i></a>
-        <p>香港與台北出發的旅遊速報。機酒價格每日自動更新，假期年曆人工核對官方公告。Suniverse × Sosol 出品。</p>
+        <p>香港與台北出發的假期旅行筆記。假期資料依各地政府公告整理，預估日期另有標示。Suniverse × Sosol 出品。</p>
       </div>
       <div class="footer-col"><strong>逛逛</strong>
-        <a href="../#deals">機票價格</a><a href="../#hotels">酒店精選</a>
-        <a href="../destinations/">目的地</a><a href="../places/">口袋地點</a>
+        
+        <a href="../offdays/">放假去哪</a><a href="../destinations/">目的地</a><a href="../places/">口袋地點</a>
         <a href="../seasonal/">季節限定</a><a href="../calendar/">假期年曆</a>
       </div>
       <div class="footer-col"><strong>關於</strong>
@@ -88,7 +89,7 @@
         <a href="../calendar/">假期資料來源</a>
       </div>
     </div>
-    <div class="footer-base"><span id="footUpd">—</span><span>地點資料來自個人收藏，出發前請自行確認營業狀態</span></div>
+    <div class="footer-base"><span>Off days, well spent.</span><span>地點資料來自個人收藏，出發前請自行確認營業狀態</span></div>
   </div>
 </footer>
 
@@ -188,8 +189,9 @@ function focus(i,card){
   try{const r=await fetch('../data/places.json?v='+Date.now()); if(r.ok)d=await r.json();}catch(e){}
   PLACES=d?.places||[];
   const stamp=d?.updated||'—';
-  document.getElementById('updPill').innerHTML='<span class="dot"></span>地點 '+stamp;
-  document.getElementById('footUpd').textContent='地點資料更新：'+stamp;
+  const pill=document.getElementById('updPill'), foot=document.getElementById('footUpd');
+  if(pill)pill.innerHTML='<span class="dot"></span>地點 '+stamp;
+  if(foot)foot.textContent='地點資料更新：'+stamp;
   renderChips(); render();
 })();
 </script>

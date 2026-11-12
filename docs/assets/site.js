@@ -53,22 +53,13 @@
     try{const r=await fetch(path+'?v='+Date.now(),{signal:controller.signal});return r.ok?await r.json():null;}
     catch{return null;}finally{clearTimeout(timeout);}
   }
-  function updateStatus(...datasets){
-    const dates=[...new Set(datasets.map(d=>d?.updated_at).filter(Boolean))].sort();
-    const stamp=dates[0],stale=!stamp||stamp.slice(0,10)<todayISO();
+  function updateStatus(){
     const pill=document.getElementById('updPill');
-    if(pill){
-      pill.classList.toggle('stale',stale);
-      pill.innerHTML='<span class="dot"></span>'+esc(stamp?(stale?'資料 '+stamp.slice(5,10).replace('-','/'):'今日更新'):'資料未載入');
-      pill.title=stamp?'最早報價更新：'+stamp:'無法取得價格資料';
-    }
+    if(pill)pill.textContent='假期旅行筆記';
     const foot=document.getElementById('footUpd');
-    if(foot)foot.textContent=stamp?'機酒數據更新：'+dates.join(' / '):'價格資料暫時無法取得，請稍後再試';
+    if(foot)foot.textContent='假期資料依各地政府公告整理';
     const notice=document.getElementById('dataNotice');
-    if(notice){
-      notice.hidden=!stale;
-      notice.textContent=stamp?'目前顯示 '+stamp+' 的最近一期報價，非今日即時價格；日期與實際售價請以訂購平台為準。':'價格資料暫時無法取得，目的地指南與假期年曆仍可瀏覽。';
-    }
+    if(notice)notice.hidden=true;
   }
   const api={DAY,iso,date,todayISO,esc,nextWindow,upcomingHolidays,getJSON,updateStatus};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>OffDayz｜這個週末，飛去哪？</title>
-<meta name="description" content="香港・台北出發的機票酒店價格速報、亞洲季節限定活動，以及台港家人都放假的假期年曆。">
+<title>OffDayz｜放假，去哪？</title>
+<meta name="description" content="先看你什麼時候有假，再安排下一站。香港、台北出發的連假攻略、城市筆記與季節限定。">
 <meta name="theme-color" content="#062a3a">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
 <link rel="stylesheet" href="assets/sosol.css">
@@ -25,152 +25,54 @@
     <a class="brand" href="./">Off<i>Dayz</i></a>
     <nav class="desktop-nav" aria-label="主要導覽">
       <a href="./" aria-current="page">首頁</a>
-      <a href="#deals">機票・酒店</a>
-      <a href="destinations/">目的地</a><a href="places/">口袋地點</a>
+      
+      <a href="offdays/">放假去哪</a><a href="destinations/">目的地</a><a href="places/">口袋地點</a>
       <a href="seasonal/">季節限定</a>
       <a href="calendar/">假期年曆</a>
     </nav>
     <div class="nav-actions">
-      <span class="pill" id="updPill"><span class="dot"></span>載入中</span>
+      
       <button class="icon-btn menu-btn" id="menuBtn" aria-label="選單" aria-controls="dropNav" aria-expanded="false">☰</button>
     </div>
   </div>
   <nav class="drop-nav shell" id="dropNav" aria-label="手機導覽" hidden>
     <a href="./" aria-current="page">首頁</a>
-    <a href="#deals">機票・酒店</a><a href="destinations/">目的地</a><a href="places/">口袋地點</a>
+    <a href="offdays/">放假去哪</a><a href="destinations/">目的地</a><a href="places/">口袋地點</a>
     <a href="seasonal/">季節限定</a><a href="calendar/">假期年曆</a>
   </nav>
 </header>
 
-<main id="main">
-<!-- ══ HERO ══ -->
-<section class="hero">
-  <div class="shell hero-grid">
-    <div>
-      <span class="pill"><span class="dot"></span>香港・台北出發 · 每日更新</span>
-      <h1>放假，<br><span class="play">去哪？</span></h1>
-      <p class="hero-lead">先看你什麼時候有假，再告訴你這段假最適合去哪裡。香港、台北出發，連假、請假攻略、當季目的地一次看完。</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#deals">看今日最抵 <span>→</span></a>
-        <a class="btn btn-sun" href="calendar/">📅 假期年曆</a>
-        <a class="btn btn-ghost" href="destinations/">🌏 探索目的地</a>
-        <a class="btn btn-ghost" href="offdays/">🗓 放假去哪</a>
-        <a class="btn btn-ghost" href="deals/">⚡ 機酒速報</a>
-      </div>
-    </div>
-    <div class="card card-lg" id="heroCard">
-      <div class="card-head"><h3 class="card-title">今日最低機票</h3><span class="eyebrow" id="heroOrigin">HKG</span></div>
-      <div id="heroList" class="loading">載入中…</div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ 數據橫幅 ══ -->
-<div class="shell">
-  <div class="statband" id="statband"></div>
-  <p class="data-notice" id="dataNotice" role="status" hidden></p>
-</div>
-
-<!-- ══ 年曆 banner ══ -->
-<section class="section">
-  <div class="shell">
-    <div class="calband">
-      <div class="calband-grid">
-        <div>
-          <span class="eyebrow">Family Trip Planner</span>
-          <h2>台港家人，什麼時候<br>可以一起出發？</h2>
-          <p>勾選家人所在地，年曆會標出大家同時放假的日子，並算好各自要請幾天假；再勾目的地，就能避開當地連假的人潮與漲價。</p>
-          <a class="btn btn-sun" href="calendar/">打開年曆 <span>→</span></a>
-        </div>
-        <div class="nextbox" id="nextbox">
-          <div class="lbl">下一個共同連假</div>
-          <div class="rng">計算中…</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ 機票 ══ -->
-<section class="section" id="deals">
-  <div class="shell">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow">Flights</span>
-        <h2>本月最抵機票</h2>
-        <p>六條主力航線、六個月來回報價（港幣）。★ 是該航線目前追蹤期間的最低點。</p>
-      </div>
-      <div class="toggle" id="originToggle" aria-label="出發地">
-        <button class="on" data-o="HKG" aria-pressed="true">🇭🇰 香港出發</button>
-      </div>
-    </div>
-    <div class="hrow" id="destRow"><div class="loading">載入中…</div></div>
-    <div class="card table-scroll" tabindex="0" role="region" aria-label="六個月機票價格，可橫向捲動">
-      <table id="priceTable"></table>
-    </div>
-  </div>
-</section>
-
-<!-- ══ 目的地 ══ -->
-<section class="section">
-  <div class="shell">
-    <div class="section-head">
-      <div><span class="eyebrow">Destinations</span><h2>探索目的地</h2>
-      <p>每個城市有玩法、交通、預算與當地假期提醒。</p></div>
-      <a class="section-link" href="destinations/">全部城市 <span>→</span></a>
-    </div>
-    <div class="dgrid" id="cityGrid"></div>
-  </div>
-</section>
-
-
-<!-- ══ 口袋地點 ══ -->
-<section class="section" id="places">
-  <div class="shell">
-    <div class="section-head">
-      <div><span class="eyebrow">Pocket Places</span><h2>口袋地點</h2>
-      <p>從 Notion 收藏整理出來、已經查過位置的餐廳與景點。</p></div>
-      <a class="section-link" href="places/">看地圖 <span>→</span></a>
-    </div>
-    <div class="elist" id="placePeek"><div class="loading">載入中…</div></div>
-  </div>
-</section>
-
-<!-- ══ 季節限定 ══ -->
-<section class="section">
-  <div class="shell">
-    <div class="section-head">
-      <div><span class="eyebrow">Seasonal</span><h2>這個季節限定</h2>
-      <p>只有這幾個月才遇得到的祭典、花期與自然現象。</p></div>
-      <a class="section-link" href="seasonal/">全部活動 <span>→</span></a>
-    </div>
-    <div class="elist" id="eventList"><div class="loading">載入中…</div></div>
-  </div>
-</section>
-
-<!-- ══ 酒店 ══ -->
-<section class="section" id="hotels">
-  <div class="shell">
-    <div class="section-head">
-      <div><span class="eyebrow">Hotels</span><h2>週末酒店精選</h2>
-      <p id="hotelSub">四星以上、兩人兩晚含稅總價。</p></div>
-      <div class="hotel-controls"><label class="field-label">酒店城市<select id="hotelCity"></select></label><div class="toggle" id="hotelToggle" aria-label="住宿週末"></div></div>
-    </div>
-    <div class="hlist" id="hotelList"><div class="loading">載入中…</div></div>
-  </div>
-</section>
-
+<main id="main" class="magazine-wrap">
+<div class="cover-wrap"><span class="paper-tape" aria-hidden="true"></span><section class="sheet cover-sheet">
+<header class="masthead" id="masthead"><a class="mast-logo" href="./">Off<i>Dayz</i></a><div class="issue"><span id="issueDate">ISSUE 01 · NOV 2026</span><br>HK · TPE DEPARTURES</div></header>
+<div class="dateline"><span>放假，去哪？</span><span>EST. 2026 · OFFDAYZ.SSSUNI.COM</span></div>
+<div class="cover-story"><div><div class="eyebrow">COVER STORY · <span id="coverKicker">下一個連假</span></div><div class="countdown" id="countdown" hidden><b id="countdownNum">0</b><span>天後<br>放假</span></div><h1 id="coverTitle">先看你<em>什麼時候有假</em>，<br>再告訴你去哪裡。</h1><p id="coverDeck">把香港與台灣的假期攤開來看，先找能一起出發的日子，再挑剛好當季的城市。</p><p class="cover-deck">先看你什麼時候有假，再告訴你去哪裡。<br><i>Off days, well spent.</i></p><a class="cover-cta" id="coverCta" href="offdays/" hidden>翻開這篇攻略 →</a></div><div class="cover-stamps" id="coverStamps" aria-label="這個連假的目的地靈感">目的地資料整理中</div></div>
+<svg class="flight-path" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true"><path class="route-dash"d="M10 100 C 260 10, 640 10, 990 70"/><circle cx="10" cy="100" r="6"/><circle cx="990" cy="70" r="6"/></svg>
+</section></div>
+<a class="boarding-pass" id="boardingPass" href="calendar/" aria-label="下一個共同連假，打開假期年曆"><div id="nextbox">假期資料整理中</div><span class="ticket-stub">SEAT 3A →</span></a>
+<nav class="sheet contents-sheet" id="contents" aria-label="本期目次"><h2 class="mag-heading">目次 <i>Contents</i></h2>
+<a class="toc-row" href="#offdays"><span><b>放假去哪</b><small>最近的連假與請假安排</small></span><span class="toc-dots"></span><strong>P.02</strong></a>
+<a class="toc-row" href="#destinations"><span><b>目的地</b><small>街角、交通與行前資料</small></span><span class="toc-dots"></span><strong>P.03</strong></a>
+<a class="toc-row" href="#places"><span><b>口袋地點</b><small>留給下一趟旅行的小收藏</small></span><span class="toc-dots"></span><strong>P.04</strong></a>
+<a class="toc-row" href="#seasonal"><span><b>季節限定</b><small>這個月份才遇得到的風景</small></span><span class="toc-dots"></span><strong>P.05</strong></a>
+<a class="toc-row" href="calendar/"><span><b>假期年曆</b><small>把大家的假期攤開來看</small></span><span class="toc-dots"></span><strong>P.06</strong></a>
+</nav>
+<section class="sheet" id="offdays"><div class="section-head"><h2 class="mag-heading"><span>P.02</span>放假去哪 <i>Off Days</i></h2><a class="section-link" href="offdays/">翻閱全部 →</a></div><div class="ticket-grid" id="offdayList">資料整理中</div></section>
+<section class="sheet" id="destinations"><div class="section-head"><h2 class="mag-heading"><span>P.03</span>目的地 <i>Destinations</i></h2><a class="section-link" href="destinations/">翻閱全部 →</a></div><div class="travel-grid" id="cityGrid">資料整理中</div></section>
+<section class="sheet" id="places"><div class="section-head"><h2 class="mag-heading"><span>P.04</span>口袋地點 <i>Pocket Places</i></h2><a class="section-link" href="places/">翻閱全部 →</a></div><div class="polaroid-grid" id="placePeek">資料整理中</div></section>
+<section class="sheet" id="seasonal"><div class="section-head"><h2 class="mag-heading"><span>P.05</span>季節限定 <i>Seasonal</i></h2><a class="section-link" href="seasonal/">翻閱全部 →</a></div><div class="season-list" id="eventList">資料整理中</div></section>
+<section class="sheet editor-note"><h2 class="mag-heading"><span>P.06</span>編輯手記 <i>Editor's note</i></h2><blockquote>先把日子留給彼此，<br>再把目的地填上去。</blockquote><ul><li>先用年曆找台港共同放假的日子，確認大家都能走。</li><li>翻翻放假攻略，再看城市的簽證與當地假期，排好自己的步調。</li><li>收藏幾個想去的街角就好，留一點空白給路上的發現。</li></ul><a href="calendar/">打開假期年曆 →</a></section>
 </main>
 <footer class="site-footer">
   <div class="shell">
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="brand" href="./">Off<i>Dayz</i></a>
-        <p>香港與台北出發的旅遊速報。機酒價格每日自動更新，假期年曆人工核對官方公告。Suniverse × Sosol 出品。</p>
+        <p>香港與台北出發的假期旅行筆記。假期資料依各地政府公告整理，預估日期另有標示。Suniverse × Sosol 出品。</p>
       </div>
       <div class="footer-col"><strong>逛逛</strong>
-        <a href="#deals">機票價格</a><a href="#hotels">酒店精選</a>
-        <a href="destinations/">目的地</a><a href="places/">口袋地點</a><a href="seasonal/">季節限定</a><a href="calendar/">假期年曆</a>
+        
+        <a href="offdays/">放假去哪</a><a href="destinations/">目的地</a><a href="places/">口袋地點</a><a href="seasonal/">季節限定</a><a href="calendar/">假期年曆</a>
       </div>
       <div class="footer-col"><strong>關於</strong>
         <a href="https://www.instagram.com/offdayz_/" target="_blank" rel="noopener">Instagram</a>
@@ -179,167 +81,68 @@
         <a href="calendar/">假期資料來源</a>
       </div>
     </div>
-    <div class="footer-base"><span id="footUpd">—</span><span>價格僅供參考，實際以訂購平台為準</span></div>
+    <div class="footer-base"><span>Off days, well spent.</span><span>假期依政府公告整理，出發前請再核對官方日期</span></div>
   </div>
 </footer>
 
 <script src="assets/site.js"></script>
 <script>
-let FD=null,HD=null,SD=null,CAL=null,PLD=null,origin='HKG',hWknd=0,hCity=null;
-const FLAG={'三亞':'🇨🇳','桂林':'🇨🇳','寧波':'🇨🇳','廣州':'🇨🇳','深圳':'🇨🇳','上海':'🇨🇳','北京':'🇨🇳','成都':'🇨🇳',
-'台北':'🇹🇼','高雄':'🇹🇼','台中':'🇹🇼','香港':'🇭🇰','沖繩那覇':'🇯🇵','石垣島':'🇯🇵','宮古島':'🇯🇵','東京':'🇯🇵',
-'大阪':'🇯🇵','福岡':'🇯🇵','札幌':'🇯🇵','名古屋':'🇯🇵','首爾':'🇰🇷','釜山':'🇰🇷','濟州':'🇰🇷','馬尼拉':'🇵🇭',
-'宿霧':'🇵🇭','曼谷':'🇹🇭','普吉':'🇹🇭','清邁':'🇹🇭','新加坡':'🇸🇬','吉隆坡':'🇲🇾','峇里島':'🇮🇩','沖繩':'🇯🇵','澎湖':'🇹🇼','馬公':'🇹🇼','MZG':'🇹🇼','南京':'🇨🇳','NKG':'🇨🇳','大邱':'🇰🇷','TAE':'🇰🇷','富國島':'🇻🇳','芽莊':'🇻🇳','河內':'🇻🇳','胡志明':'🇻🇳','峴港':'🇻🇳'};
-const CITIES=[{flag:'🇯🇵',name:'沖繩',key:'okinawa',meta:'海島 · 自駕'},{flag:'🇯🇵',name:'東京',key:'tokyo',meta:'都會 · 親子'},
-{flag:'🇯🇵',name:'福岡',key:'fukuoka',meta:'美食 · 短程'},{flag:'🇯🇵',name:'石垣島',key:'ishigaki',meta:'潛水 · 離島'},
-{flag:'🇰🇷',name:'首爾',key:'seoul',meta:'購物 · 咖啡'},{flag:'🇰🇷',name:'釜山',key:'busan',meta:'海景 · 慢遊'},
-{flag:'🇹🇼',name:'台北',key:'taipei',meta:'家人 · 小吃'},{flag:'🇯🇵',name:'宮古島',key:'miyakojima',meta:'跳島 · 海灘'}];
-
-const {iso,date:mkd}=SoSol;
-const WD=['一','二','三','四','五','六','日'], wd=d=>(d.getUTCDay()+6)%7;
-
-/* 沿用參考版的連續休假條件，日期統一以台港時區計算。 */
-function nextWindow(){return SoSol.nextWindow(CAL);}
-function renderNext(){
-  const b=nextWindow(), el=document.getElementById('nextbox');
-  if(!b){el.innerHTML='<div class="lbl">下一個共同連假</div><div class="empty-note">'+(CAL?'已收錄日期內暫無符合的連假':'假期資料暫時無法載入')+'</div>';return;}
-  const a=mkd(b.from),z=mkd(b.to),d0=Math.round((a-mkd(SoSol.todayISO()))/864e5);
-  el.innerHTML=`<div class="lbl">下一個共同連假 · 免請假</div>
-    <div class="rng">${a.getUTCMonth()+1}/${a.getUTCDate()}(${WD[wd(a)]}) – ${z.getUTCMonth()+1}/${z.getUTCDate()}(${WD[wd(z)]})</div>
-    <div class="cnt">連休 ${b.len} 天 · 還有 ${d0} 天　${b.why.join(' × ')}</div>
-    <span class="tag">台灣 0 天 · 香港 0 天</span>`;
-}
-
-/* ── 機票 ── */
-const ORIGIN_FLAG={HKG:'🇭🇰',TPE:'🇹🇼',OKA:'🇯🇵',KHH:'🇹🇼',TPE_:'🇹🇼'};
-const originName=o=>(FD?.routes||[]).find(r=>r.origin===o)?.origin_name||o;
-const cheapest=o=>[...(FD?.destinations?.[o]||[])]
-  .filter(d=>Number.isFinite(d.price)&&d.price>0).sort((a,b)=>a.price-b.price);
-
-// 出發地按鈕依實際資料產生，資料新增出發地時不用改程式
-function renderOriginToggle(){
-  const origins=[...new Set((FD?.routes||[]).map(r=>r.origin))];
-  if(!origins.length) return;
-  if(!origins.includes(origin)) origin=origins[0];
-  const box=document.getElementById('originToggle');
-  box.innerHTML=origins.map(o=>`<button data-o="${o}" class="${o===origin?'on':''}"
-    aria-pressed="${o===origin}">${ORIGIN_FLAG[o]||'✈️'} ${originName(o)}出發</button>`).join('');
-  box.querySelectorAll('button').forEach(b=>b.onclick=()=>{
-    origin=b.dataset.o;
-    box.querySelectorAll('button').forEach(x=>{x.classList.remove('on');x.setAttribute('aria-pressed',String(x===b));});
-    b.classList.add('on'); renderDests(); renderTable();
-  });
-}
-
-function renderHeroList(){
-  // hero 卡片固定看有「本月最低」資料的第一個出發地，不跟著下方切換跑掉
-  const o=Object.keys(FD?.destinations||{}).find(k=>cheapest(k).length)||origin;
-  const ds=cheapest(o), h=document.getElementById('heroList');
-  h.className=''; document.getElementById('heroOrigin').textContent=o;
-  h.innerHTML=ds.slice(0,4).map(d=>`<div class="hrow-card hero-price-row">
-    <span class="hero-price-flag">${FLAG[d.name]||'🌍'}</span>
-    <div class="info"><div class="nm">${d.name}</div><div class="sub">來回含稅</div></div>
-    <div class="amt">HK$${d.price.toLocaleString()}</div></div>`).join('')||'<div class="nodata">暫無數據</div>';
-}
-
-function renderDests(){
-  const el=document.getElementById('destRow'), ds=cheapest(origin);
-  el.innerHTML=ds.length?ds.map(d=>`<a class="pcard" href="destinations/">
-    <div class="flag">${FLAG[d.name]||'🌍'}</div><div class="city">${d.name}</div>
-    <div class="price">HK$${d.price.toLocaleString()}</div><div class="sub">本月最低</div></a>`).join('')
-    :`<div class="nodata">${originName(origin)}出發還沒有「本月最低」的彙整，往下看六個月價格表。</div>`;
-}
-function renderTable(){
-  const el=document.getElementById('priceTable');
-  const rs=(FD?.routes||[]).filter(r=>r.origin===origin);
-  if(!rs.length){el.innerHTML='<tr><td class="nodata">暫無數據</td></tr>';return;}
-  const start=mkd(SoSol.todayISO());
-  const ms=Array.from({length:6},(_,i)=>iso(new Date(Date.UTC(start.getUTCFullYear(),start.getUTCMonth()+i,1))).slice(0,7));
-  const th=`<caption class="sr-only">六個月最低來回機票報價，單位港幣，★ 表示追蹤期間最低</caption><thead><tr><th scope="col" style="text-align:left;padding:8px 10px;color:var(--muted);font-size:.72rem">航線</th>`+
-    ms.map(m=>`<th scope="col" style="padding:8px 6px;color:var(--muted);font-size:.72rem">${+m.slice(5)}月</th>`).join('')+'</tr></thead>';
-  const rows=rs.map(r=>{const mp={};r.months.forEach(m=>mp[m.month]=m);
-    const mn=Math.min(...r.months.filter(m=>ms.includes(m.month)&&m.price>0).map(m=>m.price));
-    return `<tr><td style="text-align:left;padding:9px 10px;font-weight:800;border-top:1px solid var(--line)">${r.flag} ${r.dest_name}</td>`+
-      ms.map(m=>{if(!mp[m]||!Number.isFinite(mp[m].price)||mp[m].price<=0)return '<td style="padding:9px 6px;text-align:center;color:var(--muted);border-top:1px solid var(--line)">—</td>';
-        const p=mp[m].price,r0=(p-mn)/mn;
-        const col=p===mn?'var(--good)':r0<=.12?'var(--good)':r0<=.30?'var(--warn)':'var(--bad)';
-        return `<td style="padding:9px 6px;text-align:center;color:${col};font-weight:${p===mn?900:700};border-top:1px solid var(--line)">${p>=1000?'$'+(p/1000).toFixed(1)+'k':'$'+p}${p===mn?'★':''}</td>`;}).join('')+'</tr>';}).join('');
-  el.innerHTML=th+'<tbody>'+rows+'</tbody>';
-}
-
-/* ── 目的地 / 活動 / 酒店 ── */
-function renderCities(){
-  document.getElementById('cityGrid').innerHTML=CITIES.map(c=>`
-    <a class="dcard" href="destinations/city.html?key=${c.key}">
-      <div class="flag">${c.flag}</div>
-      <div><div class="name">${c.name}</div><div class="meta">${c.meta}</div></div></a>`).join('');
-}
-function renderEvents(){
-  const el=document.getElementById('eventList'),m=+SoSol.todayISO().slice(5,7);
-  const ev=(SD?.events||[]).filter(e=>(e.months||[]).some(x=>x===m||x===m%12+1)).slice(0,6);
-  el.innerHTML=ev.length?ev.map(e=>`<a class="ecard event-link" href="seasonal/"><div class="ico">${e.icon||'✨'}</div>
-    <div><h3>${e.title}</h3><div class="when">${e.period||''}</div><div class="cat">${e.category||''}</div></div></a>`).join('')
-    :'<div class="nodata">這個月暫無活動資料</div>';
-}
-function renderHotels(){
-  const t=document.getElementById('hotelToggle');
-  // 酒店價暫停（hotels.json status=paused）：顯示說明，不要卡在「載入中」
-  if(HD?.status==='paused'||!HD?.cities?.length){
-    t.innerHTML='';
-    document.getElementById('hotelList').innerHTML=`<div class="nodata">${SoSol.esc(HD?.notice||'暫無數據')}<br><a href="deals/">先看機票速報 →</a></div>`;
-    return;
-  }
-  hCity=hCity||HD.cities[0].key;
-  const select=document.getElementById('hotelCity');
-  if(!select.options.length)select.innerHTML=HD.cities.map(c=>`<option value="${SoSol.esc(c.key)}">${SoSol.esc(c.flag+' '+c.name)}</option>`).join('');
-  select.value=hCity;select.onchange=()=>{hCity=select.value;renderHotels();};
-  t.innerHTML=(HD.weekends||[]).map((w,i)=>`<button class="${i===hWknd?'on':''}" data-w="${i}" aria-pressed="${i===hWknd}">${w.label}</button>`).join('');
-  t.querySelectorAll('button').forEach(b=>b.onclick=()=>{hWknd=+b.dataset.w;renderHotels();});
-  const city=HD.cities.find(c=>c.key===hCity)||HD.cities[0];
-  const hs=[...(city.weekend_hotels?.[hWknd]||[])].filter(h=>h.stars>=4&&Number.isFinite(h.price)&&h.price>0).sort((a,b)=>a.price-b.price);
-  document.getElementById('hotelSub').textContent=`${city.flag} ${city.name} · 四星以上、兩人兩晚含稅總價`;
-  document.getElementById('hotelList').innerHTML=hs.length?hs.slice(0,5).map((h,i)=>`
-    <div class="hrow-card"><div class="rank">${i+1}</div>
-      <div class="info"><div class="nm">${h.name}</div><div class="sub">⭐${h.rating||'—'} · ${'★'.repeat(h.stars||4)}</div></div>
-      <div class="amt">HK$${h.price.toLocaleString()}</div></div>`).join('')
-    :'<div class="nodata">此週末暫無報價</div>';
-}
-function renderStats(){
-  const all=[...(FD?.destinations?.HKG||[]),...(FD?.destinations?.TPE||[])];
-  const min=all.length?Math.min(...all.map(d=>d.price)):null;
-  document.getElementById('statband').innerHTML=[
-    [min?'HK$'+min.toLocaleString():'—','最低來回機票'],
-    [(FD?.routes||[]).length,'追蹤航線'],
-    [(SD?.events||[]).length,'季節限定活動'],
-    [CAL?.countries?.length||'—','假期年曆國家'],
-  ].map(([a,b])=>`<div class="stat"><b>${a}</b><span>${b}</span></div>`).join('');
-  SoSol.updateStatus(FD,HD);
-}
-
-function renderPlacePeek(){
-  const el=document.getElementById('placePeek');
-  if(!el) return;
-  const ps=(PLD?.places)||[];
-  if(!ps.length){
-    el.innerHTML='<div class="pl-empty" style="grid-column:1/-1"><strong>還沒有收藏的地點 🗺️</strong>'
-      +'在 Notion「IG 收藏整理」把項目發佈到含「地圖站」並標成已整理，下次同步就會出現。</div>';
-    return;
-  }
-  el.innerHTML=ps.slice(0,3).map(p=>`
-    <a class="ecard" href="places/">
-      <div class="ico">📍</div>
-      <div><h3>${p.name}</h3>
-      <div class="when">${p.region||''}${p.category?' · '+p.category:''}</div>
-      <div class="cat">${(p.summary||'').slice(0,42)}${(p.summary||'').length>42?'…':''}</div></div>
-    </a>`).join('');
-}
-
 (async()=>{
-  const get=SoSol.getJSON;
-  [FD,HD,SD,CAL,PLD]=await Promise.all([get('./data/flights.json'),get('./data/hotels.json'),
-    get('./data/seasonal.json'),get('./data/holidays.json'),get('./data/places.json')]);
-  renderStats();renderOriginToggle();renderHeroList();renderDests();renderTable();renderCities();renderEvents();renderHotels();renderNext();renderPlacePeek();
+ const {esc:e,getJSON:get}=SoSol,today=SoSol.todayISO();
+ const keys=['fukuoka','seoul','taipei','okinawa','tokyo','ishigaki','busan','miyakojima'];
+ const [CAL,OD,SD,PL,RG,...cities]=await Promise.all([get('./data/holidays.json'),get('./data/offdays.json'),get('./data/seasonal.json'),get('./data/places.json'),get('./data/regions.json'),...keys.map(k=>get('./destinations/data/'+k+'.json'))]);
+ // regions.json:城市 id → 名稱/機場/章色
+ const CITY={};(RG?.regions||[]).forEach(g=>(g.cities||[]).forEach(c=>CITY[c.id]={...c,ink:g.stamp,country:g.name}));
+ const INK={terra:'stamp-japan',green:'stamp-korea',sage:'stamp-taiwan',mustard:'stamp-thai',coral:'stamp-hk'};
+ const md=s=>+s.slice(5,7)+'/'+ +s.slice(8,10);
+ let cdTo=0;
+ const bestLeave=w=>(w.leave||[]).filter(l=>l.leave<=4).sort((a,b)=>b.days-a.days||a.leave-b.leave)[0];
+ const now=SoSol.date(today),issue=Math.max(1,(now.getUTCFullYear()-2026)*12+now.getUTCMonth()-10+1);
+ document.getElementById('issueDate').textContent='ISSUE '+String(issue).padStart(2,'0')+' · '+['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'][now.getUTCMonth()]+' '+now.getUTCFullYear();
+ const win=SoSol.nextWindow(CAL),stampDate=win?win.from.slice(5).replace('-','.'): '日期待確認';
+ const english={fukuoka:'FUKUOKA',seoul:'SEOUL',taipei:'TAIPEI',okinawa:'OKINAWA',tokyo:'TOKYO',ishigaki:'ISHIGAKI',busan:'BUSAN',miyakojima:'MIYAKOJIMA'};
+ function stamp(city, index) {
+   const countryClass = {'日本': 'stamp-japan', '韓國': 'stamp-korea', '台灣': 'stamp-taiwan'}[city.country] || 'stamp-japan';
+   const shapeClass = index % 2 === 0 ? 'stamp-round' : 'stamp-rect';
+   const rotation = -12 + (index * 7) % 25;
+   return inkStamp({en:english[city.key]||city.key,name:city.city,code:city.airport_codes?.[0]},countryClass,index);
+ }
+ // 入境章:不寫日期;方章多一行 ARRIVAL
+ function inkStamp(s,ink,i,voided){
+   const rect=i%2===1, rot=-12+(i*7)%25;
+   return `<span class="passport-stamp ${ink} ${rect?'stamp-rect':'stamp-round'}${voided?' stamp-void':''}" style="--stamp-rotation:${rot}deg;--i:${i}">${rect?'<span>ARRIVAL</span>':`<span>${e(s.en)}</span>`}<b>${e(s.name)}</b><span>${rect?e(s.en)+' · ':''}${e(s.code||'')}</span>${voided?'<em>先別去</em>':''}</span>`;
+ }
+ // 封面:下一個(香港出發)連假,請幾天放幾天+倒數+這次去/先別去
+ const next=(OD?.windows||[]).filter(w=>w.start>=today).sort((a,b)=>a.start.localeCompare(b.start)||a.home.localeCompare(b.home))[0];
+ if(next){
+   const L=bestLeave(next), name=c=>CITY[c]?.name||c, days=Math.round((SoSol.date(next.start)-SoSol.date(today))/864e5);
+   document.getElementById('coverKicker').textContent=next.title+'連假';
+   document.getElementById('countdown').hidden=false;cdTo=days;
+   document.getElementById('coverTitle').innerHTML=L?`${e(next.title)}連假，<br><em>請 ${L.leave} 天，放 ${L.days} 天。</em>`:`${e(next.title)}連假，<br><em>免請假放 ${next.days} 天。</em>`;
+   document.getElementById('coverDeck').innerHTML=`${next.home==='HK'?'香港':'台北'}出發 · ${md(L?L.start:next.start)}–${md(L?L.end:next.end)}<br>這次去 <b>${(next.picks||[]).slice(0,3).map(c=>e(name(c))).join('、')}</b>${next.avoid?.length?`；先別去 <s>${e(name(next.avoid[0]))}</s>`:''}`;
+   const cta=document.getElementById('coverCta');cta.hidden=false;cta.href=next.url;
+   const picks=(next.picks||[]).filter(c=>CITY[c]).slice(0,3).map((c,i)=>inkStamp({en:c.replace(/-.*/,'').toUpperCase(),name:CITY[c].name.split('・')[0],code:CITY[c].airports?.[0]},INK[CITY[c].ink],i));
+   const av=(next.avoid||[]).find(c=>CITY[c]);
+   if(av)picks.push(inkStamp({en:av.toUpperCase(),name:CITY[av].name.split('・')[0],code:CITY[av].airports?.[0]},INK[CITY[av].ink],3,true));
+   document.getElementById('coverStamps').innerHTML=picks.join('');
+ }else document.getElementById('coverStamps').innerHTML=cities.filter(Boolean).slice(0,3).map(stamp).join('')||'<p class="nodata">目的地資料暫時無法載入</p>';
+ document.getElementById('nextbox').innerHTML=win?`<div class="eyebrow">BOARDING · 2 PAX</div><h2>${e(win.from)} — ${e(win.to)}</h2><strong>HKG · TPE → <span class="boarding-destination">去哪？</span></strong><p>下一個共同連假 · ${win.len} 天 · 台港免請假</p><small>${e(win.why.join(' × '))}</small>`:`<div class="eyebrow">BOARDING · 2 PAX</div><p>${CAL?'已收錄日期內暫無符合的共同連假':'假期資料暫時無法載入'}，打開年曆查看 →</p>`;
+ const windows=(OD?.windows||[]).filter(w=>w.end>=today).sort((a,b)=>a.start.localeCompare(b.start)||a.home.localeCompare(b.home)).slice(0,3);
+ document.getElementById('offdayList').innerHTML=windows.map((w,i)=>{const L=bestLeave(w);return `<a class="gate-ticket" href="${e(w.url)}" style="--i:${i}"><div><span class="eyebrow">GATE A${i+1} · ${e(w.home)}</span><h3>${e(w.title)}</h3><p class="leave-hook">${L?`請 <b>${L.leave}</b> 放 <b>${L.days}</b>`:`放 <b>${w.days}</b> 天`}</p><p>${md(w.start)} — ${md(w.end)} · ${w.home==='HK'?'香港':'台北'}出發${w.estimated?' · 預估':''}</p><small>去 ${(w.picks||[]).slice(0,2).map(c=>e(CITY[c]?.name||c)).join('、')}</small></div><span class="ticket-stub">OPEN →</span></a>`}).join('')||'<p class="nodata">'+(OD?'已收錄的假期窗口已列完，請查看年曆':'假期攻略暫時無法載入')+'</p>';
+ document.getElementById('cityGrid').innerHTML=cities.map((c,i)=>c?`<a class="travel-card" href="destinations/city.html?key=${e(keys[i])}">${stamp(c,i)}<h3>${e(c.city)}</h3><dl>${[['時區',c.timezone],['簽證',typeof c.visa==='object'?'港：'+(c.visa.HK||'請查官方')+'／台：'+(c.visa.TW||'請查官方'):c.visa],['貨幣',c.currency],['最佳月份',(c.best_months||[]).join('、')]].map(([k,v])=>`<div><dt>${k}</dt><dd>${e(v||'待補充')}</dd></div>`).join('')}</dl></a>`:`<p class="nodata">${e(english[keys[i]])} 城市資料暫時無法載入</p>`).join('');
+ document.getElementById('placePeek').innerHTML=(PL?.places||[]).slice(0,3).map(p=>`<a class="polaroid" href="places/"><span class="paper-tape" aria-hidden="true"></span><div class="film-frame"><span>${e(p.region||'旅行筆記')}</span><b>${e(p.name)}</b></div><h3>${e(p.name)}</h3><p>${e(p.summary||p.category||'留給下一趟旅行')}</p></a>`).join('')||'<p class="nodata">'+(PL?'還沒有收藏的地點，先留一頁給下一趟旅行':'口袋地點暫時無法載入')+'</p>';
+ const m=+today.slice(5,7),events=(SD?.events||[]).filter(v=>(v.months||[]).some(n=>n===m||n===m%12+1)).slice(0,6);
+ document.getElementById('eventList').innerHTML=events.map(v=>`<a class="toc-row" href="seasonal/"><span><small>${e(v.period||'日期待公布')}</small><b>${e(v.title)}</b></span><span class="toc-dots"></span><span>${e((v.destinations||[]).map(d=>d.city).join('、'))}</span></a>`).join('')||'<p class="nodata">'+(SD?'這兩個月暫無活動資料':'活動資料暫時無法載入')+'</p>';
+ // 進場動畫:紙張落下、蓋章、倒數跳字;減少動態時直接顯示
+ const still=typeof matchMedia!=='function'||matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const cdNum=document.getElementById('countdownNum');
+ const tick=b=>{const to=cdTo;if(still){b.textContent=to;return;}const t0=performance.now();const f=t=>{const k=Math.min(1,(t-t0)/1100);b.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f);};requestAnimationFrame(f);};
+ const targets=document.querySelectorAll('.cover-sheet,.boarding-pass,.sheet,.flight-path,.passport-stamp,.gate-ticket,.travel-card,.polaroid,.toc-row');
+ targets.forEach(el=>el.classList.add('anim-wait'));
+ if(still||typeof IntersectionObserver==='undefined'){targets.forEach(el=>el.classList.add('in'));tick(cdNum);return;}
+ const io=new IntersectionObserver(es=>es.forEach(x=>{if(!x.isIntersecting)return;x.target.classList.add('in');io.unobserve(x.target);if(x.target.contains(cdNum))tick(cdNum);}),{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+ targets.forEach(el=>io.observe(el));
 })();
+
 </script>
-</body>
-</html>
+</body></html>

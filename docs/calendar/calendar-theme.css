@@ -5,7 +5,7 @@
 .hero .backlink::before{content:"OffDayz";font:800 1.5rem/1 var(--serif);letter-spacing:-.02em;color:var(--navy)}
 .hero .backlink:hover{color:var(--navy)}
 .hero .eyebrow{color:var(--blue)}
-.hero h1{font-weight:900;letter-spacing:-.05em;color:var(--navy)}
+.hero h1{font-weight:900;letter-spacing:0;line-height:1.16;color:var(--navy)}
 .hero p{color:var(--muted)}
 .yearpick button{border-color:var(--line);color:var(--muted);background:var(--paper)}
 .yearpick button.on{background:var(--navy);color:var(--sun);border-color:var(--navy)}
@@ -47,3 +47,8 @@ body{background-color:var(--sand);background-image:var(--grain),var(--fibers)}
 .win-len,.est,.yearpick button,.presets button,.rangepick,.jumpcal,.chip{border-radius:2px}
 .win-len{font-family:var(--type)}
 footer{background-color:var(--navy);background-image:var(--grain)}
+
+/* 年曆保留原版型，以欄目刊頭和撕頁收邊接續本期。 */
+.hero .backlink::after{content:"P.06 假期年曆 · Calendar";font:12px var(--type);letter-spacing:.04em}
+.hero{background-image:var(--grain);border-top:3px solid var(--ink);border-bottom:3px double var(--ink)}
+@media(max-width:640px){.hero .backlink{flex-wrap:wrap}.hero .backlink::after{font-size:11px}}

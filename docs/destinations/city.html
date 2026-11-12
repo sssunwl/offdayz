@@ -22,23 +22,24 @@
     <a class="brand" href="../">Off<i>Dayz</i></a>
     <nav class="desktop-nav" aria-label="主要導覽">
       <a href="../">首頁</a>
-      <a href="../#deals">機票・酒店</a>
-      <a href="../destinations/" aria-current="page">目的地</a><a href="../places/">口袋地點</a>
+      
+      <a href="../offdays/">放假去哪</a><a href="../destinations/" aria-current="page">目的地</a><a href="../places/">口袋地點</a>
       <a href="../seasonal/">季節限定</a>
       <a href="../calendar/">假期年曆</a>
     </nav>
     <div class="nav-actions">
-      <span class="pill" id="updPill"><span class="dot"></span>載入中</span>
+      
       <button class="icon-btn menu-btn" id="menuBtn" aria-label="選單" aria-controls="dropNav" aria-expanded="false">☰</button>
     </div>
   </div>
   <nav class="drop-nav shell" id="dropNav" aria-label="手機導覽" hidden>
     <a href="../">首頁</a>
-    <a href="../#deals">機票・酒店</a><a href="../destinations/" aria-current="page">目的地</a><a href="../places/">口袋地點</a>
+    <a href="../offdays/">放假去哪</a><a href="../destinations/" aria-current="page">目的地</a><a href="../places/">口袋地點</a>
     <a href="../seasonal/">季節限定</a><a href="../calendar/">假期年曆</a>
   </nav>
 </header>
-<main id="main">
+<main id="main" class="column-main">
+<div class="column-masthead"><div class="masthead"><a class="mast-logo" href="../">Off<i>Dayz</i></a><span class="issue">HK · TPE DEPARTURES</span></div><div class="dateline"><span>P.03 目的地</span><span>Destinations</span></div></div>
 
 <section class="hero page-hero"><div class="shell">
   <a class="section-link" href="./">← 所有目的地</a>
@@ -56,19 +57,9 @@
   <div class="area-desc" id="area-desc"></div>
 </div>
 
-<div class="section shell">
-  <div class="section-head"><div><span class="eyebrow">Flights</span><h2>即時機票最低價</h2><p>香港與台北出發，追蹤期間的最低來回報價（港幣）。</p></div></div>
-  <div id="live-flights"><div class="loading">載入中…</div></div>
-</div>
-
-<div class="section shell">
-  <div class="section-head"><div><span class="eyebrow">Hotels</span><h2>週末酒店報價</h2><p>四星以上、兩人兩晚；住宿日期依最近一期資料顯示。</p></div></div>
-  <div id="live-hotels"><div class="loading">載入中…</div></div>
-</div>
-
 <section class="section shell" id="local-holidays"><div class="section-head"><div><span class="eyebrow">Local Holidays</span><h2>今年的公眾假期</h2><p>未來三個當地假期，先留意人潮再安排出發。</p></div><a class="section-link" href="../calendar/">完整年曆 <span>→</span></a></div><div class="hlist" id="holiday-list"><div class="loading">載入中…</div></div></section>
 <div class="section shell">
-  <div class="section-head"><div><span class="eyebrow">Explore</span><h2>必去亮點</h2><p>走進這座城市的風景與日常。</p></div></div>
+  <div class="section-head"><div><span class="eyebrow">Explore</span><h2>城市散步</h2><p>走進這座城市的風景與日常。</p></div></div>
   <div class="card-grid" id="highlights"></div>
 </div>
 
@@ -88,11 +79,11 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="brand" href="../">Off<i>Dayz</i></a>
-        <p>香港與台北出發的旅遊速報。機酒價格每日自動更新，假期年曆人工核對官方公告。Suniverse × Sosol 出品。</p>
+        <p>香港與台北出發的假期旅行筆記。假期資料依各地政府公告整理，預估日期另有標示。Suniverse × Sosol 出品。</p>
       </div>
       <div class="footer-col"><strong>逛逛</strong>
-        <a href="../#deals">機票價格</a><a href="../#hotels">酒店精選</a>
-        <a href="../destinations/">目的地</a><a href="../places/">口袋地點</a><a href="../seasonal/">季節限定</a><a href="../calendar/">假期年曆</a>
+        
+        <a href="../offdays/">放假去哪</a><a href="../destinations/">目的地</a><a href="../places/">口袋地點</a><a href="../seasonal/">季節限定</a><a href="../calendar/">假期年曆</a>
       </div>
       <div class="footer-col"><strong>關於</strong>
         <a href="https://www.instagram.com/offdayz_/" target="_blank" rel="noopener">Instagram</a>
@@ -101,7 +92,7 @@
         <a href="../calendar/">假期資料來源</a>
       </div>
     </div>
-    <div class="footer-base"><span id="footUpd">—</span><span>價格僅供參考，實際以訂購平台為準</span></div>
+    <div class="footer-base"><span>Off days, well spent.</span><span>假期依政府公告整理，出發前請再核對官方日期</span></div>
   </div>
 </footer>
 
@@ -110,28 +101,22 @@
 const params  = new URLSearchParams(location.search);
 const CITY_KEY = params.get('key') || '';
 
-let CD = null, FD = null, HD = null, CAL = null;
+let CD = null, CAL = null;
 const COUNTRY={okinawa:'JP',tokyo:'JP',fukuoka:'JP',ishigaki:'JP',miyakojima:'JP',seoul:'KR',busan:'KR',taipei:'TW'};
 let currentArea = null;
 
 async function boot() {
   if (!Object.hasOwn(COUNTRY,CITY_KEY)) { renderMissing(); return; }
-  [CD,FD,HD,CAL]=await Promise.all([
-    SoSol.getJSON('./data/'+CITY_KEY+'.json'),SoSol.getJSON('../data/flights.json'),
-    SoSol.getJSON('../data/hotels.json'),SoSol.getJSON('../data/holidays.json')
-  ]);
-  SoSol.updateStatus(FD,HD);
+  [CD,CAL]=await Promise.all([SoSol.getJSON('./data/'+CITY_KEY+'.json'),SoSol.getJSON('../data/holidays.json')]);
   if (!CD) { renderMissing(); return; }
   document.title = CD.city + ' · OffDayz';
   renderHero();
-  renderFlights();
   renderHolidays();
 
   if (CD.areas?.length) {
     renderAreaTabs();
     setArea(CD.areas[0], document.querySelector('.atab'));
   } else {
-    renderHotels(CD.hotel_city_key);
     renderSpots(CD.highlights, 'highlights', false);
     renderSpots(CD.foods, 'foods', true);
     renderArticles(CD.articles);
@@ -144,7 +129,7 @@ function renderMissing(){
   SoSol.updateStatus();
 }
 function renderHolidays(){
-  const list=SoSol.upcomingHolidays(CAL,COUNTRY[CITY_KEY]);
+  const list=SoSol.upcomingHolidays(CAL,COUNTRY[CITY_KEY],SoSol.todayISO());
   document.getElementById('holiday-list').innerHTML=list.length?list.map(h=>`<div class="hrow-card holiday-row"><div class="info"><div class="nm">${SoSol.esc(h.name)}</div><div class="sub">${h.date}${h.estimated?' · 預估，待官方確認':''}</div></div><span class="pill holiday-warning">${h.days>=3?'當地連假，人多 · '+h.days+' 天':'當地公眾假期'}</span></div>`).join(''):'<div class="nodata">'+(CAL?'今年已收錄的未來假期已列完，請查看完整年曆。':'假期資料暫時無法載入，請稍後再試。')+'</div>';
 }
 // ── Hero ───────────────────────────────────────────────────────────────────
@@ -181,79 +166,9 @@ function setArea(area, btn) {
   document.querySelectorAll('.atab').forEach(b => {b.classList.remove('on');b.setAttribute('aria-pressed',String(b===btn));});
   if (btn) btn.classList.add('on');
   document.getElementById('area-desc').textContent = area.desc || '';
-  renderHotels(area.hotel_city_key);
   renderSpots(area.highlights, 'highlights', false);
   renderSpots(area.foods, 'foods', true);
   renderArticles(area.articles);
-}
-
-// ── Flights ────────────────────────────────────────────────────────────────
-function renderFlights() {
-  const el = document.getElementById('live-flights');
-  if (!FD) { el.innerHTML = '<div class="nodata">暫無機票數據</div>'; return; }
-
-  const codes = CD.airport_codes || [];
-  const routes = (FD.routes || []).filter(r => codes.includes(r.dest));
-
-  const destRows = [];
-  for (const [oc, on] of [['HKG','香港'],['TPE','台北']]) {
-    const found = (FD.destinations?.[oc] || []).find(d => d.name === CD.flight_city_name);
-    if (found) destRows.push({ origin: on, price: found.price });
-  }
-
-  let html = '';
-  for (const r of routes) {
-    const best = r.months.reduce((a, b) => a.price < b.price ? a : b, r.months[0]);
-    if (!best) continue;
-    html += `<div class="hrow-card flight-row">
-      <div>
-        <div class="flight-route">${r.flag} ${r.origin_name} → ${r.dest_name}</div>
-        <div class="flight-meta">${best.airline} · 6個月最低</div>
-      </div>
-      <div style="text-align:right">
-        <div class="flight-price">HK$${best.price.toLocaleString()}</div>
-        <div class="flight-month">${best.month.slice(5)}月出發</div>
-      </div>
-    </div>`;
-  }
-  if (!routes.length) {
-    for (const d of destRows) {
-      html += `<div class="hrow-card flight-row">
-        <div>
-          <div class="flight-route">🛫 從${d.origin}出發</div>
-          <div class="flight-meta">本月最低價</div>
-        </div>
-        <div style="text-align:right">
-          <div class="flight-price">HK$${d.price.toLocaleString()}</div>
-        </div>
-      </div>`;
-    }
-  }
-  el.innerHTML = html || '<div class="nodata">暫無機票數據</div>';
-}
-
-// ── Hotels ────────────────────────────────────────────────────────────────
-function renderHotels(cityKey) {
-  const el = document.getElementById('live-hotels');
-  if (!HD || !cityKey) { el.innerHTML = '<div class="nodata">暫無酒店數據</div>'; return; }
-
-  const city = (HD.cities || []).find(c => c.key === cityKey);
-  const hotels = city?.weekend_hotels?.[0] || [];
-  const wknd = HD.weekends?.[0];
-
-  if (!hotels.length) { el.innerHTML = '<div class="nodata">本週末暫無報價</div>'; return; }
-
-  el.innerHTML = hotels.map(h => `
-    <div class="hrow-card hotel-row">
-      <div style="flex:1;min-width:0">
-        <div class="hotel-name">${h.name}</div>
-        <div class="hotel-sub">⭐${h.rating} · ${'★'.repeat(h.stars||4)} · ${wknd?.label||''} · 2晚2人</div>
-      </div>
-      <div style="flex-shrink:0;text-align:right;margin-left:12px">
-        <div class="hotel-price">HK$${h.price.toLocaleString()}</div>
-        <div class="hotel-nights">2晚</div>
-      </div>
-    </div>`).join('');
 }
 
 // ── Highlights & Foods ─────────────────────────────────────────────────────

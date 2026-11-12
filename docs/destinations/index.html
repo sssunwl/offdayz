@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
   <title>探索目的地 · OffDayz</title>
-  <meta name="description" content="探索日本、韓國、台灣 8 個精選城市：交通、景點、美食、機酒報價與當地假期提醒。">
+  <meta name="description" content="探索日本、韓國、台灣 8 個精選城市：交通、景點、美食、當地假期提醒。">
   <link rel="stylesheet" href="../assets/sosol.css">
   <link rel="stylesheet" href="../assets/magazine.css">
 </head>
@@ -23,23 +23,24 @@
     <a class="brand" href="../">Off<i>Dayz</i></a>
     <nav class="desktop-nav" aria-label="主要導覽">
       <a href="../">首頁</a>
-      <a href="../#deals">機票・酒店</a>
-      <a href="../destinations/" aria-current="page">目的地</a><a href="../places/">口袋地點</a>
+      
+      <a href="../offdays/">放假去哪</a><a href="../destinations/" aria-current="page">目的地</a><a href="../places/">口袋地點</a>
       <a href="../seasonal/">季節限定</a>
       <a href="../calendar/">假期年曆</a>
     </nav>
     <div class="nav-actions">
-      <span class="pill" id="updPill"><span class="dot"></span>載入中</span>
+      
       <button class="icon-btn menu-btn" id="menuBtn" aria-label="選單" aria-controls="dropNav" aria-expanded="false">☰</button>
     </div>
   </div>
   <nav class="drop-nav shell" id="dropNav" aria-label="手機導覽" hidden>
     <a href="../">首頁</a>
-    <a href="../#deals">機票・酒店</a><a href="../destinations/" aria-current="page">目的地</a><a href="../places/">口袋地點</a>
+    <a href="../offdays/">放假去哪</a><a href="../destinations/" aria-current="page">目的地</a><a href="../places/">口袋地點</a>
     <a href="../seasonal/">季節限定</a><a href="../calendar/">假期年曆</a>
   </nav>
 </header>
-<main id="main">
+<main id="main" class="column-main">
+<div class="column-masthead"><div class="masthead"><a class="mast-logo" href="../">Off<i>Dayz</i></a><span class="issue">HK · TPE DEPARTURES</span></div><div class="dateline"><span>P.03 目的地</span><span>Destinations</span></div></div>
 
 <section class="hero page-hero"><div class="shell"><span class="eyebrow">Destinations · 亞洲</span><h1>探索<span class="play">目的地</span></h1><p class="hero-lead">從城市街角到離島海岸，找到適合你的下一站。</p></div></section>
 
@@ -137,11 +138,11 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="brand" href="../">Off<i>Dayz</i></a>
-        <p>香港與台北出發的旅遊速報。機酒價格每日自動更新，假期年曆人工核對官方公告。Suniverse × Sosol 出品。</p>
+        <p>香港與台北出發的假期旅行筆記。假期資料依各地政府公告整理，預估日期另有標示。Suniverse × Sosol 出品。</p>
       </div>
       <div class="footer-col"><strong>逛逛</strong>
-        <a href="../#deals">機票價格</a><a href="../#hotels">酒店精選</a>
-        <a href="../destinations/">目的地</a><a href="../places/">口袋地點</a><a href="../seasonal/">季節限定</a><a href="../calendar/">假期年曆</a>
+        
+        <a href="../offdays/">放假去哪</a><a href="../destinations/">目的地</a><a href="../places/">口袋地點</a><a href="../seasonal/">季節限定</a><a href="../calendar/">假期年曆</a>
       </div>
       <div class="footer-col"><strong>關於</strong>
         <a href="https://www.instagram.com/offdayz_/" target="_blank" rel="noopener">Instagram</a>
@@ -150,13 +151,11 @@
         <a href="../calendar/">假期資料來源</a>
       </div>
     </div>
-    <div class="footer-base"><span id="footUpd">—</span><span>價格僅供參考，實際以訂購平台為準</span></div>
+    <div class="footer-base"><span>Off days, well spent.</span><span>假期依政府公告整理，出發前請再核對官方日期</span></div>
   </div>
 </footer>
 
 <script src="../assets/site.js"></script>
-<script>
-SoSol.getJSON('../data/flights.json').then(data=>SoSol.updateStatus(data));
-</script>
+
 </body>
 </html>

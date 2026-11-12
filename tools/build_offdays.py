@@ -327,8 +327,8 @@ def page_head(title, desc, canonical, depth):
   <meta property="og:url" content="{esc(canonical)}">
   <meta property="og:type" content="article">
   <link rel="stylesheet" href="{up}assets/sosol.css">
-  <link rel="stylesheet" href="{up}assets/magazine.css">
   <link rel="stylesheet" href="{up}offdays/offdays.css">
+  <link rel="stylesheet" href="{up}assets/magazine.css">
 </head>
 <body>
 <a class="skip-link" href="#main">跳到主要內容</a>
@@ -341,7 +341,7 @@ def page_head(title, desc, canonical, depth):
       <a href="{up}destinations/">目的地</a>
       <a href="{up}seasonal/">季節限定</a>
       <a href="{up}calendar/">假期年曆</a>
-      <a href="{up}deals/">機酒速報</a>
+      
     </nav>
     <div class="nav-actions">
       <button class="icon-btn menu-btn" id="menuBtn" aria-label="選單" aria-controls="dropNav" aria-expanded="false">☰</button>
@@ -350,10 +350,11 @@ def page_head(title, desc, canonical, depth):
   <nav class="drop-nav shell" id="dropNav" aria-label="手機導覽" hidden>
     <a href="{up}">首頁</a><a href="{up}offdays/" aria-current="page">放假去哪</a>
     <a href="{up}destinations/">目的地</a><a href="{up}seasonal/">季節限定</a>
-    <a href="{up}calendar/">假期年曆</a><a href="{up}deals/">機酒速報</a>
+    <a href="{up}calendar/">假期年曆</a>
   </nav>
 </header>
-<main id="main">
+<main id="main" class="column-main">
+<div class="column-masthead"><div class="masthead"><a class="mast-logo" href="{up}">Off<i>Dayz</i></a><span class="issue">HK · TPE DEPARTURES</span></div><div class="dateline"><span>P.02 放假去哪</span><span>Off Days</span></div></div>
 """
 
 
@@ -368,7 +369,7 @@ def page_foot(depth, updated):
         <p>放假，去哪？先看你什麼時候有假，再看這段假最適合去哪裡。</p>
       </div>
       <div class="footer-col"><strong>逛逛</strong>
-        <a href="{up}offdays/">放假去哪</a><a href="{up}calendar/">假期年曆</a><a href="{up}deals/">機酒速報</a>
+        <a href="{up}offdays/">放假去哪</a><a href="{up}calendar/">假期年曆</a>
         <a href="{up}destinations/">目的地</a><a href="{up}seasonal/">季節限定</a>
       </div>
       <div class="footer-col"><strong>關於</strong>
@@ -377,7 +378,7 @@ def page_foot(depth, updated):
         <a href="{up}calendar/">假期資料來源</a>
       </div>
     </div>
-    <div class="footer-base"><span>假期資料依官方公告整理，頁面更新：{esc(updated)}</span><span>機票、酒店連結會即時查價，實際以訂購平台為準</span></div>
+    <div class="footer-base"><span>假期資料依官方公告整理，頁面更新：{esc(updated)}</span><span>假期依政府公告整理，出發前請再核對官方日期</span></div>
   </div>
 </footer>
 <script src="{up}assets/site.js"></script>
@@ -523,7 +524,7 @@ def render_window(w, go, avoid, today, updated, nav):
   <h1>{esc(h1)}</h1>
   <div class="hero-lead">{esc(lead)}</div>
   {crowd_home}{est}
-  <div class="hero-cta"><a class="btn btn-sun" href="../../calendar/">📅 打開假期年曆</a><a class="btn btn-ghost" href="../../deals/">⚡ 機酒速報</a></div>
+  <div class="hero-cta"><a class="btn btn-sun" href="../../calendar/">📅 打開假期年曆</a></div>
   {twin_html}
 </div></section>
 

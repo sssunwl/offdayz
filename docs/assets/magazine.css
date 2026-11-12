@@ -1,7 +1,7 @@
 /* OffDayz 雜誌層（2026-11-09）
    疊在 sosol.css 之後，把版面換成 Sona 品牌手冊的「西式旅行雜誌」：
    Fraunces 刊頭／數字、思源宋體標題、Courier 打字機標籤、紙紋、撕頁邊、紙膠帶、護照章、登機證。
-   只換外觀不動結構；色票沿用 sosol.css（方案 A），只新增牛皮紙 --kraft。
+   色票沿用 sosol.css（方案 A），只新增牛皮紙 --kraft。
    品牌真相來源：SonaSNS-Platform/offdayz-brand.html、assets/brandbook/offdayz.css */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,800;1,9..144,500&family=Noto+Serif+TC:wght@600;900&family=Courier+Prime:wght@400;700&display=swap');
 
@@ -100,3 +100,144 @@ th{font-family:var(--type);letter-spacing:.08em}
   .hero-grid>.card-lg{transform:none}
 }
 @media(prefers-reduced-motion:reduce){.card:hover,.dcard:hover,.ecard:hover,.pcard:hover,.btn:hover{transform:none}}
+
+/* 本期前台：刊頭、紙頁與票根，沿用全站 token。 */
+.magazine-wrap{max-width:1040px;margin:auto;padding:28px 24px 60px}
+.sheet{position:relative;background:var(--grain),var(--paper);padding:28px 28px 42px;margin:28px 0;mask:linear-gradient(#000 0 0) top/100% calc(100% - 14px) no-repeat,var(--torn) bottom/240px 16px repeat-x}
+.cover-wrap{position:relative}.paper-tape{position:absolute;width:110px;height:30px;top:-10px;left:50%;background:color-mix(in srgb,var(--sun) 45%,transparent);transform:translateX(-50%) rotate(-3deg);z-index:2}
+.masthead{display:flex;justify-content:space-between;align-items:end;gap:16px;border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);padding:16px 0}
+.mast-logo{font:800 clamp(54px,10vw,104px)/1 var(--serif);color:var(--navy);white-space:nowrap;text-decoration:none;letter-spacing:-.02em}.mast-logo i{color:var(--blue);font-weight:500}
+.issue{font:700 12px/1.6 var(--type);text-align:right;letter-spacing:.08em}.dateline{display:flex;justify-content:space-between;gap:12px;font:12px/1.5 var(--type);padding:6px 0;border-bottom:3px double var(--ink);color:var(--muted)}
+.cover-story{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:20px;align-items:center;margin-top:24px}.cover-story h1{font:900 clamp(27px,4vw,44px)/1.2 var(--serif-zh);letter-spacing:0;margin:10px 0 18px}.cover-story h1 em{font-style:normal;background:linear-gradient(transparent 65%,color-mix(in srgb,var(--sun) 60%,transparent) 65%)}.cover-story p{line-height:1.8}.cover-deck{font:italic 500 21px/1.5 var(--serif);color:var(--navy)}
+.cover-stamps{position:relative;min-height:260px}.passport-stamp{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;width:120px;height:120px;flex-shrink:0;border:5px double currentColor;border-radius:50%;font:700 12px/1.5 var(--type);color:var(--blue);transform:rotate(var(--stamp-rotation,0deg))}.passport-stamp.stamp-japan{color:var(--blue)}
+.passport-stamp.stamp-korea{color:var(--navy)}
+.passport-stamp.stamp-taiwan{color:var(--lagoon)}
+.passport-stamp.stamp-rect{border-radius:0;width:132px;height:90px}
+.travel-card .passport-stamp.stamp-rect{width:120px;height:80px}
+.boarding-destination{color:var(--blue)}
+.passport-stamp b{font:900 23px/1.3 var(--serif-zh)}.cover-stamps .passport-stamp{position:absolute;top:0;left:0}.cover-stamps .passport-stamp:nth-child(2){top:85px;left:110px;}.cover-stamps .passport-stamp:nth-child(3){top:135px;left:25px;}
+.boarding-pass,.gate-ticket{display:flex;background:var(--grain),var(--paper);color:var(--ink);text-decoration:none;border:1px solid var(--line);box-shadow:var(--shadow-sm);min-width:0}.boarding-pass{margin:28px 0;transform:rotate(-.4deg)}.boarding-pass>div{padding:22px 26px;flex:1;min-width:0}.boarding-pass h2{font:800 clamp(18px,3vw,28px)/1.4 var(--serif);margin:8px 0}.boarding-pass p{margin:8px 0}.ticket-stub{display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;letter-spacing:.18em;font:700 11px var(--type);background:var(--lagoon-soft);border-left:2px dashed var(--lagoon);padding:24px;flex-shrink:0}
+.contents-sheet{background:var(--grain),var(--kraft);padding-top:44px}.contents-sheet::before{content:'';position:absolute;top:12px;left:18px;right:18px;height:10px;background:radial-gradient(circle,var(--sand) 4px,transparent 4.5px) 0 0/26px 10px repeat-x}
+.mag-heading{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;font:900 26px/1.4 var(--serif-zh);letter-spacing:0;margin:0 0 16px}.mag-heading>span{color:var(--blue);font:800 15px var(--serif)}.mag-heading i{font:italic 500 18px var(--serif);color:var(--muted)}
+.toc-row{display:flex;align-items:baseline;gap:12px;padding:12px 0;text-decoration:none;color:var(--ink)}.toc-row b{display:block;font-family:var(--serif-zh)}.toc-row small{display:block;color:var(--muted);font-size:13px}.toc-dots{flex:1;min-width:12px;border-bottom:1px dotted var(--muted)}.toc-row strong{color:var(--blue);font-family:var(--serif)}
+.ticket-grid,.travel-grid,.polaroid-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.gate-ticket>div{padding:18px;min-width:0;flex:1}.gate-ticket h3{margin:12px 0;font-size:18px}.gate-ticket p{font:13px/1.6 var(--type)}.gate-ticket .ticket-stub{padding:15px}.travel-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.travel-card{display:block;padding:22px;color:var(--ink);border:1px solid var(--line);text-decoration:none}.travel-card .passport-stamp{float:right;width:100px;height:100px;font-size:10px;margin:0 0 12px 12px}.travel-card h3{font-size:25px;margin:0 0 24px}.travel-card dl{clear:both;margin:0;font-size:14px}.travel-card dl>div{display:flex;gap:12px;border-top:1px solid var(--line);padding:7px 0}.travel-card dt{flex:0 0 60px;color:var(--muted)}.travel-card dd{margin:0;overflow-wrap:anywhere}
+.polaroid{position:relative;padding:14px;background:var(--paper);box-shadow:var(--shadow);text-decoration:none;color:var(--ink);margin-top:12px;transform:rotate(-1deg)}.polaroid:nth-child(2){transform:rotate(1deg)}.polaroid .paper-tape{width:80px;height:22px}.film-frame{min-height:150px;background:var(--lagoon-soft);border:8px solid var(--ink);border-top-style:dotted;border-bottom-style:dotted;display:flex;flex-direction:column;justify-content:center;padding:18px;gap:12px}.film-frame span{font:12px var(--type);color:var(--navy)}.film-frame b{font-family:var(--serif-zh)}.polaroid h3{font-size:17px;margin:18px 0 8px}.polaroid p{font-size:14px}.season-list .toc-row{border-bottom:1px solid var(--line)}
+.editor-note{background:var(--grain),var(--navy);color:var(--sand)}.editor-note .mag-heading span,.editor-note a{color:var(--sun)}.editor-note .mag-heading i{color:var(--lagoon)}.editor-note blockquote{font:900 clamp(24px,4vw,34px)/1.5 var(--serif-zh);letter-spacing:0;border-left:3px solid var(--coral);margin:24px 0;padding-left:18px}.editor-note li{margin:10px 0}.editor-note a{font-family:var(--type)}
+/* 次頁沿用原內容順序，紙張承接原有篩選與地圖。 */
+.column-masthead{max-width:1000px;margin:28px auto 0;padding:20px 26px;background:var(--grain),var(--paper)}.column-masthead .mast-logo{font-size:56px}.column-masthead .dateline{margin-top:10px}.column-main>.section,.column-main>.hero,.column-main>#r-asia,.column-main>.pl-layout{background:var(--grain),var(--paper);padding-top:28px;padding-bottom:38px;mask:linear-gradient(#000 0 0) top/100% calc(100% - 14px) no-repeat,var(--torn) bottom/240px 16px repeat-x}.column-main .section-head h2::before{content:attr(data-folio);color:var(--blue);font:800 15px var(--serif);margin-right:12px}.column-main .page-hero{margin-top:20px}.column-main h1{line-height:1.16;letter-spacing:0}
+@media(max-width:760px){.cover-story{grid-template-columns:1fr}.cover-stamps{display:flex;justify-content:center;gap:20px;min-height:130px;padding:8px}.cover-stamps .passport-stamp,.cover-stamps .passport-stamp:nth-child(2){position:static}.cover-stamps .passport-stamp:nth-child(3){display:none}.ticket-grid,.polaroid-grid{grid-template-columns:1fr}.travel-grid{grid-template-columns:1fr}.masthead{flex-wrap:wrap}.issue{font-size:10px}.magazine-wrap{padding:12px 16px 36px}.sheet{padding:22px 18px 36px}.contents-sheet{padding-top:40px}.column-masthead{margin:20px 16px 0;padding:18px}.column-masthead .mast-logo{font-size:48px}.column-masthead .issue{display:none}.mag-heading{font-size:23px;gap:8px}.boarding-pass>div{padding:18px 14px}.ticket-stub{padding:14px}.dateline{font-size:10px}.toc-row{gap:8px}.toc-row>span:last-child{max-width:40%;font-size:13px}.cover-story h1{font-size:27px}.cover-story{gap:8px}.magazine-wrap .section-head{align-items:start;flex-direction:column;gap:4px}}
+
+.column-main>.shell>.section{background:var(--grain),var(--paper);padding:24px 18px 38px;margin-top:24px;mask:linear-gradient(#000 0 0) top/100% calc(100% - 14px) no-repeat,var(--torn) bottom/240px 16px repeat-x}
+
+/* ---------- 紙質加重+動畫(2026-11-13) ----------
+   SS:整體太淡、紙感不夠、動畫太少。做法:
+   桌面改牛皮紙深底讓紙張浮起來;紙張加粗紙紋、纖維、邊緣泛黃;
+   章、標題用墨點遮罩做出油墨不均;進場動畫只在首頁 index.html 掛 .anim-wait。 */
+:root{
+  --grain-heavy:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .32 0 0 0 0 .24 0 0 0 0 .14 0 0 0 .2 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --blotch:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cfilter id='b'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.006' numOctaves='3' seed='9'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .40 0 0 0 0 .18 0 0 0 .16 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23b)'/%3E%3C/svg%3E");
+  /* 墨點遮罩:大部分不透明、零星缺墨 */
+  --ink-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.55' numOctaves='3' seed='3'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -8 5.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23m)'/%3E%3C/svg%3E");
+  --ink-mask-light:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12 10.6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23m)'/%3E%3C/svg%3E");
+  --paper-age:radial-gradient(120% 90% at 50% 40%,transparent 55%,rgba(150,105,45,.16) 100%);
+}
+/* 桌面:牛皮紙深底 */
+body{background-color:#cfb48c;background-image:var(--grain-heavy),var(--blotch),var(--fibers)}
+.site-header,.site-header.stuck{background-color:#fbf4ec;background-image:var(--grain-heavy)}
+
+/* 紙張:粗紙紋+泛黃邊+微斜;陰影放父層 filter,才不會被撕邊 mask 裁掉 */
+.magazine-wrap,.column-main{filter:drop-shadow(0 2px 1px rgba(70,45,15,.18)) drop-shadow(0 18px 22px rgba(70,45,15,.28))}
+.sheet,.cover-sheet,.boarding-pass,.gate-ticket,.travel-card,.polaroid{background-image:var(--paper-age),var(--grain-heavy),var(--blotch);background-color:var(--paper)}
+.contents-sheet{background-image:var(--paper-age),var(--grain-heavy),var(--fibers);background-color:var(--kraft)}
+.editor-note{background-image:var(--grain-heavy),var(--blotch);background-color:var(--navy)}
+.magazine-wrap>.sheet:nth-of-type(odd){rotate:-.35deg}.magazine-wrap>.sheet:nth-of-type(even){rotate:.3deg}
+
+/* 油墨感:刊頭、大標、段頭 */
+.mast-logo,.cover-story h1,.mag-heading,.countdown b,.leave-hook b{-webkit-mask:var(--ink-mask-light) 0 0/220px;mask:var(--ink-mask-light) 0 0/220px}
+.cover-story p,.toc-row b{text-shadow:0 0 .6px currentColor}
+
+/* 入境章:油墨不均、疊印、不寫日期 */
+.passport-stamp{-webkit-mask:var(--ink-mask) 0 0/180px;mask:var(--ink-mask) 0 0/180px;mix-blend-mode:multiply;opacity:.95;border-width:4px;border-style:double;text-transform:uppercase;letter-spacing:.08em;box-shadow:inset 0 0 0 2px transparent}
+.passport-stamp::after{content:'';position:absolute;inset:7px;border:1.5px solid currentColor;border-radius:inherit;opacity:.7}
+.passport-stamp{position:relative}
+.passport-stamp.stamp-thai{color:#a26f08}
+.passport-stamp.stamp-hk{color:var(--coral)}
+.passport-stamp.stamp-taiwan{color:#447e6d}
+.passport-stamp.stamp-void em{position:absolute;left:-14%;right:-14%;bottom:-6px;rotate:-10deg;font:900 13px/1.5 var(--serif-zh);font-style:normal;letter-spacing:.2em;color:var(--coral);border-block:2px solid currentColor;background:color-mix(in srgb,var(--paper) 55%,transparent);text-align:center}
+.passport-stamp.stamp-void b{text-decoration:line-through;text-decoration-thickness:2px}
+
+/* 封面:倒數+大標 */
+.countdown{display:flex;align-items:center;gap:12px;margin:6px 0 2px;color:var(--coral)}
+.countdown b{font:800 clamp(76px,11vw,128px)/.9 var(--serif);letter-spacing:-.03em;font-variant-numeric:lining-nums}
+.countdown span{font:900 18px/1.25 var(--serif-zh);color:var(--navy)}
+.cover-story h1{font-size:clamp(30px,4.6vw,52px);color:var(--navy)}
+.cover-story h1 em{color:var(--blue);background:linear-gradient(transparent 62%,color-mix(in srgb,var(--sun) 70%,transparent) 62%) no-repeat 0 0/100% 100%}
+#coverDeck{font:700 16px/1.8 var(--sans,inherit);color:var(--ink)}
+#coverDeck b{color:var(--navy);box-shadow:inset 0 -.45em color-mix(in srgb,var(--lagoon) 55%,transparent)}
+#coverDeck s{color:var(--muted);text-decoration-color:var(--coral);text-decoration-thickness:2px}
+.cover-deck{font:600 14px/1.7 var(--serif-zh);color:var(--muted)}.cover-deck i{font:italic 500 18px var(--serif);color:var(--navy)}
+.cover-cta{display:inline-block;margin-top:6px;padding:10px 18px;background:var(--navy);color:var(--sand);font:700 14px var(--type);letter-spacing:.06em;text-decoration:none;box-shadow:3px 3px 0 var(--blue);transition:transform .2s,box-shadow .2s}
+.cover-cta:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--blue)}
+.cover-story{grid-template-columns:minmax(0,1fr) 300px}
+.cover-stamps{min-height:310px}
+.cover-stamps .passport-stamp:nth-child(1){top:0;left:0}
+.cover-stamps .passport-stamp:nth-child(2){top:28px;left:150px}
+.cover-stamps .passport-stamp:nth-child(3){top:158px;left:14px}
+.cover-stamps .passport-stamp:nth-child(4){top:176px;left:158px}
+.flight-path{display:block;width:100%;height:70px;margin:-8px 0 -18px;overflow:visible}
+.flight-path .route-dash{fill:none;stroke:var(--blue);stroke-width:2.5;stroke-dasharray:10 9;vector-effect:non-scaling-stroke}
+.flight-path circle{fill:var(--blue)}
+
+/* 票根:請幾天放幾天 */
+.leave-hook{font:900 20px/1 var(--serif-zh);color:var(--navy);margin:4px 0 10px!important}
+.leave-hook b{font:800 46px/1 var(--serif);color:var(--blue);margin:0 2px}
+.gate-ticket small{font:700 13px var(--serif-zh);color:var(--navy)}
+.gate-ticket,.travel-card,.polaroid,.boarding-pass{transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s}
+.gate-ticket:hover,.travel-card:hover,.polaroid:hover{transform:translateY(-6px) rotate(-.8deg);box-shadow:0 22px 30px -16px rgba(60,40,20,.55)}
+.boarding-pass:hover{transform:rotate(0) translateY(-3px)}
+.gate-ticket:hover .ticket-stub,.boarding-pass:hover .ticket-stub{background:var(--sun);transition:background .2s}
+.travel-card:hover .passport-stamp{animation:restamp .4s ease}
+.toc-row{transition:padding .2s,color .2s}.toc-row:hover{padding-left:10px;color:var(--blue)}.toc-row:hover .toc-dots{border-color:var(--blue)}
+
+/* ---------- 進場動畫(只有首頁會掛 .anim-wait) ---------- */
+@keyframes stampIn{0%{opacity:0;scale:2.1}55%{opacity:.95;scale:.9}75%{scale:1.04}100%{opacity:.95;scale:1}}
+@keyframes restamp{0%{scale:1}40%{scale:.88}70%{scale:1.06}100%{scale:1}}
+@keyframes tapeIn{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes marker{from{background-size:0 100%}to{background-size:100% 100%}}
+.anim-wait{transition:opacity .7s ease,transform .8s cubic-bezier(.2,.8,.2,1),translate .8s cubic-bezier(.2,.8,.2,1),rotate .8s cubic-bezier(.2,.8,.2,1)}
+.anim-wait:not(.in){opacity:0;translate:0 34px}
+.sheet.anim-wait:not(.in),.cover-sheet.anim-wait:not(.in){translate:0 46px;rotate:-1.6deg}
+.boarding-pass.anim-wait:not(.in){translate:60px 0}
+.passport-stamp.anim-wait{transition:none}
+.passport-stamp.anim-wait:not(.in){opacity:0;translate:none}
+.passport-stamp.anim-wait.in{animation:stampIn .5s cubic-bezier(.3,.7,.3,1) calc(.35s + var(--i,0)*.22s) both}
+.gate-ticket.anim-wait,.travel-card.anim-wait,.polaroid.anim-wait{transition-delay:calc(var(--i,0)*.09s)}
+.travel-card.anim-wait:nth-child(2){--i:1}.travel-card.anim-wait:nth-child(3){--i:2}.travel-card.anim-wait:nth-child(4){--i:3}
+.toc-row.anim-wait:not(.in){translate:-24px 0}
+.toc-row.anim-wait:nth-of-type(2){transition-delay:.06s}.toc-row.anim-wait:nth-of-type(3){transition-delay:.12s}.toc-row.anim-wait:nth-of-type(4){transition-delay:.18s}.toc-row.anim-wait:nth-of-type(5){transition-delay:.24s}
+.flight-path.anim-wait{transition:clip-path 1.6s cubic-bezier(.6,0,.3,1) .4s,opacity .3s}
+.flight-path.anim-wait:not(.in){clip-path:inset(0 100% 0 0);translate:none}
+.flight-path.in{clip-path:inset(0 0 0 0)}
+.cover-sheet.in .cover-story h1 em{animation:marker .9s ease .9s both}
+.cover-wrap .paper-tape{animation:tapeIn .6s ease .2s both}
+@media(prefers-reduced-motion:reduce){
+  .anim-wait,.anim-wait:not(.in){opacity:1!important;translate:none!important;rotate:none;clip-path:none!important;transition:none!important}
+  .passport-stamp.anim-wait.in,.cover-wrap .paper-tape,.cover-sheet.in .cover-story h1 em,.travel-card:hover .passport-stamp{animation:none}
+  .gate-ticket:hover,.travel-card:hover,.polaroid:hover{transform:none}
+}
+@media(max-width:760px){
+  .cover-story{grid-template-columns:1fr}
+  .cover-stamps{flex-wrap:wrap;min-height:0}
+  .cover-stamps .passport-stamp:nth-child(n){position:static;width:96px;height:96px;font-size:10px}
+  .cover-stamps .passport-stamp.stamp-rect{width:110px;height:76px}
+  .cover-stamps .passport-stamp b{font-size:19px}
+  .countdown b{font-size:84px}
+  .leave-hook b{font-size:38px}
+  .magazine-wrap>.sheet:nth-of-type(n){rotate:none}
+}
+
+.passport-stamp.stamp-rect{font-size:10px;letter-spacing:.04em;padding:0 6px}
+.passport-stamp.stamp-rect b{margin:2px 0}
+/* 墨點遮罩只蓋到元素框,行高 1 的大字要留下伸部空間 */
+.mast-logo{padding-bottom:.16em;margin-bottom:-.16em}
+.countdown b{padding:.04em 0 .1em}
