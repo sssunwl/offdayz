@@ -52,3 +52,40 @@ footer{background-color:var(--navy);background-image:var(--grain)}
 .hero .backlink::after{content:"P.06 假期年曆 · Calendar";font:12px var(--type);letter-spacing:.04em}
 .hero{background-image:var(--grain);border-top:3px solid var(--ink);border-bottom:3px double var(--ink)}
 @media(max-width:640px){.hero .backlink{flex-wrap:wrap}.hero .backlink::after{font-size:11px}}
+
+/* ── 特輯封面（2026-11-21）：跟其他內頁同一套開頭。只改 CSS，年曆 HTML 不動（要跟 songsong 同一份） ── */
+.hero{background:transparent;border:0;padding-top:28px}
+.hero>.shell{position:relative;width:min(1040px,calc(100% - 32px));padding:24px 28px 46px;
+  background-color:var(--paper);background-image:var(--paper-age),var(--grain-heavy),var(--blotch);
+  -webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 14px) no-repeat,var(--torn) bottom/240px 16px repeat-x;
+          mask:linear-gradient(#000 0 0) top/100% calc(100% - 14px) no-repeat,var(--torn) bottom/240px 16px repeat-x;
+  filter:drop-shadow(0 18px 22px rgba(70,45,15,.22))}
+/* 刊頭：OffDayz 大字＋雙線＋頁碼 */
+.hero .backlink{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:6px 16px;margin-bottom:18px;padding:14px 0 10px;
+  border-top:3px solid var(--ink);border-bottom:3px double var(--ink);font-size:0}
+.hero .backlink::before{content:"OffDayz";font:800 clamp(44px,7vw,64px)/1 var(--serif);letter-spacing:-.02em;color:var(--navy)}
+.hero .backlink::after{content:"P.06 假期年曆 · ← 回首頁";font:700 12px var(--type);letter-spacing:.08em;color:var(--muted)}
+.hero .backlink:hover::after{color:var(--blue)}
+.hero .eyebrow{font:700 .76rem var(--type);letter-spacing:.16em}
+.hero .eyebrow::before{content:"COVER STORY · "}
+.hero h1{font-size:clamp(32px,5vw,54px);margin:8px 0 14px}
+.hero h1{background:linear-gradient(transparent 64%,color-mix(in srgb,var(--sun) 65%,transparent) 64%) no-repeat 0 0/100% 100%;display:inline;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;animation:marker .9s ease .3s both}
+.hero h1+p{margin-top:16px;font:600 15px/1.8 var(--serif-zh)}
+.hero h1+p::after{content:"把台港的假期攤開來看，先找到能一起出發的日子。";display:block;font:italic 500 16px/1.6 var(--serif);color:var(--navy);margin-top:6px}
+/* 最佳窗口：登機證 */
+.win{position:relative;background-color:var(--paper);background-image:var(--grain);border:1px solid var(--line);box-shadow:var(--shadow-sm);
+  padding-right:64px;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s}
+.win::after{content:"BOARDING";position:absolute;top:0;right:0;bottom:0;width:44px;display:flex;align-items:center;justify-content:center;
+  writing-mode:vertical-rl;font:700 10px var(--type);letter-spacing:.18em;color:var(--navy);background:var(--lagoon-soft);border-left:2px dashed var(--lagoon)}
+.win.best{background-color:var(--go-soft);rotate:-.4deg}
+.win.best::after{content:"SEAT 1A";background:var(--sun);border-left-color:var(--navy)}
+.win:hover{transform:translateY(-3px);box-shadow:0 18px 26px -16px rgba(60,40,20,.5)}
+.win-range{font-family:var(--serif);font-size:1.12rem}
+@media(max-width:640px){
+  .hero{padding-top:18px}
+  .hero>.shell{padding:18px 18px 40px}
+  .hero .backlink::before{font-size:46px}
+  .win{padding-right:52px}.win::after{width:34px}
+}
+@media(prefers-reduced-motion:reduce){.win:hover{transform:none}}

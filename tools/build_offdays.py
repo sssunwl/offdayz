@@ -311,7 +311,7 @@ CITY_PAGES = {"tokyo", "seoul", "busan", "fukuoka", "taipei"}
 
 # ---------- HTML ----------
 
-def page_head(title, desc, canonical, depth):
+def page_head(title, desc, canonical, depth, masthead=True):
     up = "../" * depth
     return f"""<!DOCTYPE html>
 <html lang="zh-TW">
@@ -354,8 +354,8 @@ def page_head(title, desc, canonical, depth):
   </nav>
 </header>
 <main id="main" class="column-main">
-<div class="column-masthead"><div class="masthead"><a class="mast-logo" href="{up}">Off<i>Dayz</i></a><span class="issue">HK · TPE DEPARTURES</span></div><div class="dateline"><span>P.02 放假去哪</span><span>Off Days</span></div></div>
-"""
+""" + (f"""<div class="column-masthead"><div class="masthead"><a class="mast-logo" href="{up}">Off<i>Dayz</i></a><span class="issue">HK · TPE DEPARTURES</span></div><div class="dateline"><span>P.02 放假去哪</span><span>Off Days</span></div></div>
+""" if masthead else "")
 
 
 def page_foot(depth, updated):
@@ -545,12 +545,83 @@ def render_window(w, go, avoid, today, updated, nav):
     return page_head(h1, desc, canonical, 2) + body + page_foot(2, updated)
 
 
+# 入境章顏色：regions.json 的 stamp → magazine.css 的章色（同首頁）
+STAMP_INK = {"terra": "stamp-japan", "green": "stamp-korea", "sage": "stamp-taiwan", "mustard": "stamp-thai", "coral": "stamp-hk"}
+INK_PAD = '<!-- 入境章墨色(②油墨印台,SS 2026-11-13 定):線條清楚、一邊濃一邊淡、少量缺墨。章約 120px、線 4–5px -->\n<svg width="0" height="0" style="position:absolute" aria-hidden="true">\n  <filter id="inkPad" x="-8%" y="-8%" width="116%" height="116%" color-interpolation-filters="sRGB">\n    <feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="5" result="w"/>\n    <feDisplacementMap in="SourceGraphic" in2="w" scale="1.6" xChannelSelector="R" yChannelSelector="G" result="r"/>\n    <feGaussianBlur in="r" stdDeviation="0.3" result="soft"/>\n    <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="3" seed="12" result="g"/>\n    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -5 3.75" result="gm"/>\n    <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="1" seed="40" result="p"/>\n    <feColorMatrix in="p" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.6 2.2" result="pm"/>\n    <feComposite in="gm" in2="pm" operator="arithmetic" k1="1" result="cover"/>\n    <feComposite in="soft" in2="cover" operator="in"/>\n  </filter>\n</svg>\n'
+MONTH_EN = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
+
+
+def md(day):
+    return f"{day.month}/{day.day}"
+
+
+def best_leave(w):
+    """首頁同一條規則：請 4 天以內、放最多天、同天數請最少。"""
+    opts = [o for o in w["leave"] if o["leave"] <= MAX_LEAVE]
+    return min(opts, key=lambda o: (-o["days"], o["leave"])) if opts else None
+
+
+def ink_stamp(p, i, void=False):
+    c = p["city"]
+    rect = i % 2 == 1
+    en = c["id"].split("-")[0].upper()
+    name = c["name"].split("・")[0]
+    code = (c.get("airports") or [""])[0]
+    ink = STAMP_INK.get(p["region"].get("stamp"), "stamp-japan")
+    top = "<span>ARRIVAL</span>" if rect else f"<span>{esc(en)}</span>"
+    bottom = f"{esc(en)} · {esc(code)}" if rect else esc(code)
+    return (f'<span class="passport-stamp {ink} {"stamp-rect" if rect else "stamp-round"}{" stamp-void" if void else ""}" '
+            f'style="--stamp-rotation:{-12 + (i * 7) % 25}deg;--i:{i}">{top}<b>{esc(name)}</b><span>{bottom}</span>'
+            f'{"<em>先別去</em>" if void else ""}</span>')
+
+
+def render_cover(w, today):
+    h = HOMES[w["home"]]
+    L = best_leave(w)
+    a, b = (L["start"], L["end"]) if L else (w["start"], w["end"])
+    hook = f"請 {L['leave']} 天，放 {L['days']} 天。" if L else f"免請假放 {w['days']} 天。"
+    go = "、".join(esc(p["city"]["name"]) for p in w["go"][:3])
+    avoid = f"；先別去 <s>{esc(w['avoid'][0]['city']['name'])}</s>" if w["avoid"] else ""
+    stamps = [ink_stamp(p, i) for i, p in enumerate(w["go"][:3])]
+    if w["avoid"]:
+        stamps.append(ink_stamp(w["avoid"][0], 3, void=True))
+    days = (w["start"] - today).days
+    return f"""<div class="cover-story" data-home="{h['slug']}"><div>
+  <div class="eyebrow">COVER STORY · {esc(w['title'])}連假{' · 預估' if w['estimated'] else ''}</div>
+  <div class="countdown"{' hidden' if days < 0 else ''}><b data-countdown="{w['start'].isoformat()}">{max(days, 0)}</b><span>天後<br>放假</span></div>
+  <h1>{esc(w['title'])}連假，<br><em>{hook}</em></h1>
+  <p class="cover-lead">{h['name']}出發 · {md(a)}–{md(b)}<br>這次去 <b>{go}</b>{avoid}</p>
+  <p class="cover-deck">每段連假一頁：幾天、要不要請假、哪裡正當季、哪裡當地也在放假。<br><i>Off days, well spent.</i></p>
+  <a class="cover-cta" href="{w['id']}/">翻開這篇攻略 →</a>
+</div><div class="cover-stamps" aria-label="這個連假的目的地">{''.join(stamps)}</div></div>"""
+
+
+def value_tickets(ws):
+    """請最少、放最多的三段假（封面那段除外）。免請假的算最划算。"""
+    def ratio(w):
+        L = best_leave(w)
+        return (L["days"] / L["leave"]) if L else w["days"] * 2
+    picks = sorted(ws[1:], key=lambda w: (-ratio(w), w["start"]))[:3]
+    out = []
+    for i, w in enumerate(picks):
+        L = best_leave(w)
+        hook = f"請 <b>{L['leave']}</b> 放 <b>{L['days']}</b>" if L else f"放 <b>{w['days']}</b> 天"
+        go = "、".join(esc(p["city"]["name"]) for p in w["go"][:2])
+        out.append(f"""<a class="gate-ticket" href="{w['id']}/"><div><span class="eyebrow">GATE B{i + 1} · {esc(w['home'])}</span><h3>{w['year']} {esc(w['title'])}</h3><p class="leave-hook">{hook}</p><p>{md(w['start'])} — {md(w['end'])}{' · 預估' if w['estimated'] else ''}</p><small>去 {go}</small></div><span class="ticket-stub">OPEN →</span></a>""")
+    return "".join(out)
+
+
 def render_index(by_home, today, updated):
     blocks = []
     for home, ws in by_home.items():
         h = HOMES[home]
         rows = []
+        last = None
         for w in ws:
+            ym = (w["start"].year, w["start"].month)
+            if ym != last:
+                rows.append(f'<h3 class="od-month">{ym[1]} 月號 <i>{MONTH_EN[ym[1] - 1]} {ym[0]}</i></h3>')
+                last = ym
             n = len(w["go"])
             badge = chip("預估", "warn") if w["estimated"] else ""
             leave = ""
@@ -563,22 +634,27 @@ def render_index(by_home, today, updated):
   <span class="od-row-picks">{esc('、'.join(p['city']['name'] for p in w['go'][:3]))}{' 等 ' + str(n) + ' 個' if n > 3 else ''}</span>
   {leave}
 </a>""")
-        blocks.append(f'<section class="section shell od-home" data-home="{h["slug"]}"><div class="od-rows">{"".join(rows)}</div></section>')
-    nxt = {home: ws[0] for home, ws in by_home.items() if ws}
-    body = f"""<section class="hero page-hero"><div class="shell">
-  <div class="eyebrow">Off Days</div>
-  <h1>放假，去哪？</h1>
-  <div class="hero-lead">每段連假一頁：幾天、要不要請假、哪裡正當季、哪裡當地也在放假。</div>
-  <div class="toggle od-toggle" role="group" aria-label="出發地">
-    <button type="button" data-home="hk" class="on">從香港出發</button>
-    <button type="button" data-home="tw">從台北出發</button>
-  </div>
-  {''.join(f'<p class="od-next" data-home="{HOMES[k]["slug"]}">下一個：<a href="{v["id"]}/">{esc(short_heading(v))}</a>（{fmt(v["start"])}）</p>' for k, v in nxt.items())}
-</div></section>
+        blocks.append(f'<section class="section shell od-home" data-home="{h["slug"]}"><div class="section-head"><h2 class="mag-heading">每一段連假 <i>All off days · from {h["en"]}</i></h2></div><div class="od-rows">{"".join(rows)}</div></section>')
+    covers = "".join(render_cover(ws[0], today) for ws in by_home.values() if ws)
+    tickets = "".join(f'<div class="ticket-grid" data-home="{HOMES[home]["slug"]}">{value_tickets(ws)}</div>' for home, ws in by_home.items() if len(ws) > 1)
+    body = f"""<div class="cover-wrap feature-wrap"><span class="paper-tape" aria-hidden="true"></span><div class="column-masthead">
+<div class="masthead"><a class="mast-logo" href="../">Off<i>Dayz</i></a><div class="issue"><span data-issue>ISSUE 01 · NOV 2026</span><br>HK · TPE DEPARTURES</div></div>
+<div class="dateline"><span>P.02 放假去哪</span><span>Off Days · 放假，去哪？</span></div>
+<div class="toggle od-toggle" role="group" aria-label="出發地">
+  <button type="button" data-home="hk" class="on">從香港出發</button>
+  <button type="button" data-home="tw">從台北出發</button>
+</div>
+{covers}
+<svg class="flight-path" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true"><path class="route-dash" d="M10 100 C 260 10, 640 10, 990 70"/><circle cx="10" cy="100" r="6"/><circle cx="990" cy="70" r="6"/></svg>
+</div></div>
+<section class="feature-sheet kraft"><div class="section-head"><h2 class="mag-heading">最划算的三段假 <i>Best value</i></h2></div>
+<p class="sheet-lead">請最少天、放最多天。先把這幾段留起來，機票酒店建議出發前 6–8 週訂。</p>
+{tickets}
+</section>
 {''.join(blocks)}
 """
     desc = "香港、台北出發的連假攻略：每段假期幾天、怎麼請假、去哪裡剛好。"
-    return page_head("放假，去哪？", desc, f"{SITE}/offdays/", 1) + body + page_foot(1, updated)
+    return page_head("放假，去哪？", desc, f"{SITE}/offdays/", 1, masthead=False).replace("<body>\n", "<body>\n" + INK_PAD, 1) + body + page_foot(1, updated)
 
 
 def main():

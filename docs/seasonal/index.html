@@ -9,6 +9,20 @@
   <link rel="stylesheet" href="../assets/magazine.css">
 </head>
 <body>
+<!-- 入境章墨色(②油墨印台,SS 2026-11-13 定):線條清楚、一邊濃一邊淡、少量缺墨。章約 120px、線 4–5px -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="inkPad" x="-8%" y="-8%" width="116%" height="116%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="5" result="w"/>
+    <feDisplacementMap in="SourceGraphic" in2="w" scale="1.6" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="0.3" result="soft"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="3" seed="12" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -5 3.75" result="gm"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="1" seed="40" result="p"/>
+    <feColorMatrix in="p" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.6 2.2" result="pm"/>
+    <feComposite in="gm" in2="pm" operator="arithmetic" k1="1" result="cover"/>
+    <feComposite in="soft" in2="cover" operator="in"/>
+  </filter>
+</svg>
 <a class="skip-link" href="#main">跳到主要內容</a>
 <div class="ocean-waves" aria-hidden="true">
   <svg viewBox="0 0 2400 120" preserveAspectRatio="none">
@@ -39,9 +53,23 @@
   </nav>
 </header>
 <main id="main" class="column-main">
-<div class="column-masthead"><div class="masthead"><a class="mast-logo" href="../">Off<i>Dayz</i></a><span class="issue">HK · TPE DEPARTURES</span></div><div class="dateline"><span>P.05 季節限定</span><span>Seasonal</span></div></div>
+<div class="cover-wrap feature-wrap"><span class="paper-tape" aria-hidden="true"></span><div class="column-masthead">
+<div class="masthead"><a class="mast-logo" href="../">Off<i>Dayz</i></a><div class="issue"><span data-issue>ISSUE 01 · NOV 2026</span><br>HK · TPE DEPARTURES</div></div>
+<div class="dateline"><span>P.05 季節限定</span><span>Seasonal · 只在這個月</span></div>
+<div class="cover-story"><div>
+  <div class="eyebrow">COVER STORY · <span id="coverKicker">季節限定</span></div>
+  <h1 id="coverTitle">錯過這個月，<br><em>就要再等一年。</em></h1>
+  <p class="cover-lead" id="coverLead">花祭、鯨魚季、珊瑚產卵、雪祭——只在特定月份遇得到的旅行體驗。</p>
+  <p class="cover-deck">有些風景不等人。<br><i>Only this season.</i></p>
+  <a class="cover-cta" href="#events-list">看這個月的全部 →</a>
+</div><div class="cover-stamps" id="coverStamps" aria-label="這個月的活動地點"></div></div>
+<svg class="flight-path" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true"><path class="route-dash" d="M10 100 C 260 10, 640 10, 990 70"/><circle cx="10" cy="100" r="6"/><circle cx="990" cy="70" r="6"/></svg>
+</div></div>
 
-<section class="hero page-hero"><div class="shell"><span class="eyebrow">Seasonal Experiences</span><h1>這個<span class="play">季節限定</span></h1><p class="hero-lead">花祭、鯨魚季、珊瑚產卵、雪祭——只在特定月份遇得到的旅行體驗。</p></div></section>
+<nav class="feature-sheet kraft" aria-label="下個月預告"><div class="section-head"><h2 class="mag-heading"><span id="nextMonthNo">下個月</span>預告 <i>Coming up</i></h2></div>
+<p class="sheet-lead">現在開始排假、訂票剛剛好。</p>
+<div class="season-list" id="nextList"><p class="nodata">活動資料整理中</p></div>
+</nav>
 
 <section class="section shell seasonal-section"><div class="section-head"><div><span class="eyebrow">Find your season</span><h2>跟著月份找靈感</h2><p>選擇月份與活動類型，展開卡片查看目的地與玩法。</p></div></div><div class="toggle month-strip" id="month-strip" aria-label="月份篩選"></div>
 <div class="toggle cat-strip" aria-label="活動分類" id="cat-strip"></div>
@@ -92,6 +120,29 @@ async function boot() {
   buildMonthStrip();
   buildCatStrip();
   render();
+  renderCover(await SoSol.getJSON('../data/regions.json'));
+}
+
+// 封面:這個月第一個活動當大標、活動地點蓋章;下面是「下個月才開始」的預告
+function renderCover(RG) {
+  const e = SoSol.esc, m = selMonth, next = m % 12 + 1;
+  const events = SD?.events || [];
+  const now = events.filter(v => (v.months || []).includes(m));
+  const soon = events.filter(v => (v.months || []).includes(next) && !(v.months || []).includes(m));
+  document.getElementById('nextMonthNo').textContent = next + ' 月';
+  document.getElementById('nextList').innerHTML = soon.slice(0, 5).map(v =>
+    `<a class="toc-row" href="#events-list" onclick="setMonth(${next},document.getElementById('mbtn-${next}'))"><span><small>${e(v.period || '日期待公布')}</small><b>${e(v.icon || '')} ${e(v.title)}</b></span><span class="toc-dots"></span><span>${e((v.destinations || []).map(d => d.city).join('、'))}</span></a>`
+  ).join('') || `<p class="nodata">${SD ? next + ' 月沒有新開始的活動，可以直接看全年' : '活動資料暫時無法載入'}</p>`;
+  if (!now.length) return;
+  const INK = {terra:'stamp-japan',green:'stamp-korea',sage:'stamp-taiwan',mustard:'stamp-thai',coral:'stamp-hk'}, AP = {};
+  (RG?.regions || []).forEach(g => (g.cities || []).forEach(c => (c.airports || []).forEach(a => AP[a] = INK[g.stamp])));
+  document.getElementById('coverKicker').textContent = m + ' 月限定';
+  document.getElementById('coverTitle').innerHTML = `${m} 月，<br>正好遇見<em>${e(now[0].title)}</em>。`;
+  document.getElementById('coverLead').innerHTML = `${e(now[0].desc || '')}<br>這個月還有：<b>${now.slice(1, 4).map(v => e(v.title)).join('、') || '更多活動整理中'}</b>`;
+  document.getElementById('coverStamps').innerHTML = now.slice(0, 4).map((v, i) => {
+    const d = (v.destinations || [])[0] || {}, rect = i % 2 === 1;
+    return `<span class="passport-stamp ${AP[d.airport] || 'stamp-japan'} ${rect ? 'stamp-rect' : 'stamp-round'}" style="--stamp-rotation:${-12 + (i * 7) % 25}deg;--i:${i}">${rect ? '<span>SEASON</span>' : `<span>${e(d.airport || '')}</span>`}<b>${e(d.city || v.title)}</b><span>${e(MONTHS[m - 1])}${rect ? ' · ' + e(d.airport || '') : ''}</span></span>`;
+  }).join('');
 }
 
 function buildMonthStrip() {
@@ -101,7 +152,7 @@ function buildMonthStrip() {
   MONTHS.forEach((m, i) => {
     const n = i + 1;
     const cls = allMonths.has(n) ? 'has-event' : '';
-    html += `<button class="mbtn ${cls} ${selMonth===n?'on':''}" aria-pressed="${selMonth===n}" onclick="setMonth(${n},this)" aria-label="${n}月">${n}月</button>`;
+    html += `<button class="mbtn ${cls} ${selMonth===n?'on':''}" aria-pressed="${selMonth===n}" id="mbtn-${n}" onclick="setMonth(${n},this)" aria-label="${n}月">${n}月</button>`;
   });
   el.innerHTML = html;
 }

@@ -12,6 +12,20 @@
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body>
+<!-- 入境章墨色(②油墨印台,SS 2026-11-13 定):線條清楚、一邊濃一邊淡、少量缺墨。章約 120px、線 4–5px -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="inkPad" x="-8%" y="-8%" width="116%" height="116%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="5" result="w"/>
+    <feDisplacementMap in="SourceGraphic" in2="w" scale="1.6" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="0.3" result="soft"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="3" seed="12" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -5 3.75" result="gm"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="1" seed="40" result="p"/>
+    <feColorMatrix in="p" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.6 2.2" result="pm"/>
+    <feComposite in="gm" in2="pm" operator="arithmetic" k1="1" result="cover"/>
+    <feComposite in="soft" in2="cover" operator="in"/>
+  </filter>
+</svg>
 <a class="skip-link" href="#main">跳到主要內容</a>
 <div class="ocean-waves" aria-hidden="true">
   <svg viewBox="0 0 2400 120" preserveAspectRatio="none">
@@ -45,16 +59,25 @@
 </header>
 
 <main id="main" class="column-main">
-<div class="column-masthead"><div class="masthead"><a class="mast-logo" href="../">Off<i>Dayz</i></a><span class="issue">HK · TPE DEPARTURES</span></div><div class="dateline"><span>P.04 口袋地點</span><span>Pocket Places</span></div></div>
-  <section class="hero page-hero"><div class="shell">
-    <span class="eyebrow">Pocket Places</span>
-    <h1>口袋<span class="play">地點</span></h1>
-    <p class="hero-lead">從 Notion「IG 收藏整理」挑出來、已經查過位置的餐廳與景點。按地區看，點卡片在地圖上找它。</p>
-    <p><a class="section-link" href="taipei-michelin-2026/">特輯：台北米其林 2026，84 間按區吃 →</a></p>
-  </div></section>
+<div class="cover-wrap feature-wrap"><span class="paper-tape" aria-hidden="true"></span><div class="column-masthead">
+<div class="masthead"><a class="mast-logo" href="../">Off<i>Dayz</i></a><div class="issue"><span data-issue>ISSUE 01 · NOV 2026</span><br>HK · TPE DEPARTURES</div></div>
+<div class="dateline"><span>P.04 口袋地點</span><span>Pocket Places · 特輯</span></div>
+<div class="cover-story"><div>
+  <div class="eyebrow">COVER STORY · 台北米其林 2026</div>
+  <h1>週末飛台北，<br><em><span id="miTotal">84</span> 間，按區吃。</em></h1>
+  <p class="cover-lead" id="miLead">從三星的<b>態芮</b>、<b>頤宮</b>，到巷口排隊的必比登。<br>先挑一區，一天吃兩間剛剛好。</p>
+  <p class="cover-deck">把想吃的店排進同一條路線。<br><i>Eat by neighbourhood.</i></p>
+  <a class="cover-cta" href="taipei-michelin-2026/">翻開特輯 →</a>
+</div><div class="cover-stamps" id="miStamps" aria-label="台北米其林 2026 各級數量"><span class="passport-stamp stamp-hk stamp-round" style="--stamp-rotation:-12deg;--i:0"><span>THREE STARS</span><b>三星</b><span id="mi3">2 間</span></span><span class="passport-stamp stamp-japan stamp-rect" style="--stamp-rotation:-5deg;--i:1"><span>TWO STARS</span><b>二星</b><span id="mi2">9 間</span></span><span class="passport-stamp stamp-korea stamp-round" style="--stamp-rotation:2deg;--i:2"><span>ONE STAR</span><b>一星</b><span id="mi1">36 間</span></span><span class="passport-stamp stamp-thai stamp-rect" style="--stamp-rotation:9deg;--i:3"><span>BIB GOURMAND</span><b>必比登</b><span id="miBib">37 間</span></span></div></div>
+<svg class="flight-path" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true"><path class="route-dash" d="M10 100 C 260 10, 640 10, 990 70"/><circle cx="10" cy="100" r="6"/><circle cx="990" cy="70" r="6"/></svg>
+</div></div>
+
+<a class="boarding-pass feature-ticket" href="taipei-michelin-2026/"><div><div class="eyebrow">BOARDING · HKG → TPE · 按區吃</div><h2>先選一區，再選今天吃哪兩間</h2><p id="miAreas">士林・天母、大直・內湖、大稻埕……台北分成 9 區，每區一張地圖。</p><div class="tiers"><span>三星 · 二星 · 一星</span><span>必比登推介</span><span>附 Google 地圖</span></div></div><span class="ticket-stub">SEAT 2A →</span></a>
 
   <div class="shell">
     <div class="section">
+      <div class="section-head"><h2 class="mag-heading">收藏夾 <i>Saved for later</i></h2></div>
+      <p class="sheet-lead" id="plNote">從 Notion「IG 收藏整理」挑出來、已經查過位置的餐廳與景點。按地區看，點卡片在地圖上找它。</p>
       <div class="pl-toolbar">
         <div class="pl-chips" id="plChips" role="group" aria-label="地區篩選"></div>
         <span class="pl-count" id="plCount"></span>
@@ -193,7 +216,20 @@ function focus(i,card){
   const pill=document.getElementById('updPill'), foot=document.getElementById('footUpd');
   if(pill)pill.innerHTML='<span class="dot"></span>地點 '+stamp;
   if(foot)foot.textContent='地點資料更新：'+stamp;
+  if(PLACES.length&&PLACES.length<3)document.getElementById('plNote').textContent='編輯還在一間一間查位置，收藏會慢慢變多。等不及的話，先翻上面的台北米其林特輯。';
   renderChips(); render();
+})();
+// 封面數字跟著米其林名單走;讀不到就保留頁面上的數字
+(async()=>{
+  const d=await SoSol.getJSON('../data/michelin_taipei_2026.json');
+  const shops=Array.isArray(d?.shops)?d.shops:null;
+  if(!shops||!shops.length)return;
+  const n=t=>shops.filter(x=>x.tier===t).length;
+  document.getElementById('miTotal').textContent=shops.length;
+  [['mi3','3'],['mi2','2'],['mi1','1'],['miBib','bib']].forEach(([id,t])=>{document.getElementById(id).textContent=n(t)+' 間';});
+  const top=shops.filter(x=>x.tier==='3').map(x=>'<b>'+SoSol.esc(x.name)+'</b>');
+  if(top.length)document.getElementById('miLead').innerHTML='從三星的'+top.join('、')+'，到巷口排隊的必比登。<br>先挑一區，一天吃兩間剛剛好。';
+  if(Array.isArray(d.areas)&&d.areas.length)document.getElementById('miAreas').textContent=d.areas.slice(0,3).map(a=>a.name).join('、')+'……台北分成 '+d.areas.length+' 區，每區一張地圖。';
 })();
 </script>
 </body>

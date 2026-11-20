@@ -61,7 +61,12 @@
     const notice=document.getElementById('dataNotice');
     if(notice)notice.hidden=true;
   }
-  const api={DAY,iso,date,todayISO,esc,nextWindow,upcomingHolidays,getJSON,updateStatus};
+  // 期號跟首頁同一條算法:2026 年 11 月是第 01 期
+  function issueLabel(today=todayISO()){
+    const d=date(today),n=Math.max(1,(d.getUTCFullYear()-2026)*12+d.getUTCMonth()-10+1);
+    return 'ISSUE '+String(n).padStart(2,'0')+' · '+['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'][d.getUTCMonth()]+' '+d.getUTCFullYear();
+  }
+  const api={DAY,iso,date,todayISO,esc,nextWindow,upcomingHolidays,getJSON,updateStatus,issueLabel};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;
   root.SoSol=api;
   if(typeof document==='undefined')return;
@@ -73,6 +78,15 @@
     document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!nav.hidden){close();menu.focus();}});
     document.addEventListener('click',e=>{if(!header.contains(e.target))close();});
     matchMedia('(min-width:861px)').addEventListener('change',e=>{if(e.matches)close();});
+  }
+  // 內頁封面:期號、倒數天數(靜態頁也跟著今天走)
+  if(document.querySelectorAll){
+    const today=todayISO();
+    document.querySelectorAll('[data-issue]').forEach(el=>{el.textContent=issueLabel(today);});
+    document.querySelectorAll('[data-countdown]').forEach(el=>{
+      const n=Math.round((date(el.dataset.countdown)-date(today))/DAY);
+      if(n>=0)el.textContent=n;else el.closest('.countdown')?.setAttribute('hidden','');
+    });
   }
   if(header){
     const update=()=>header.classList.toggle('stuck',scrollY>10);

@@ -245,3 +245,75 @@ body{background-color:#cfb48c;background-image:var(--grain-heavy),var(--blotch),
 .passport-stamp{-webkit-mask:none;mask:none;filter:url(#inkPad);opacity:1}
 .passport-stamp.stamp-japan{color:#C2381F}
 .passport-stamp{border-width:5px}
+
+/* ---------- 內頁特輯封面(2026-11-21) ----------
+   SS:首頁有雜誌感、內頁不會想去旅行。五個內頁開頭改成跟首頁同一套封面:
+   刊頭+期號+COVER STORY+底線大標+入境章+航線虛線,下面接一段「想去」的導引。
+   沿用首頁的 .cover-story/.cover-stamps/.gate-ticket/.polaroid/.toc-row,這裡只補內頁版位。 */
+.feature-wrap{max-width:1040px;margin:28px auto 0;padding:0 24px}
+.feature-wrap .column-masthead{max-width:none;margin:0;padding:24px 28px 44px;position:relative;
+  background-image:var(--paper-age),var(--grain-heavy),var(--blotch);background-color:var(--paper);
+  -webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 14px) no-repeat,var(--torn) bottom/240px 16px repeat-x;
+          mask:linear-gradient(#000 0 0) top/100% calc(100% - 14px) no-repeat,var(--torn) bottom/240px 16px repeat-x}
+.feature-wrap .cover-story{margin-top:22px}
+.feature-wrap .cover-story h1{margin:10px 0 16px}
+.feature-wrap .toggle{margin-top:18px}
+.cover-lead{font:700 16px/1.8 var(--sans,inherit);color:var(--ink);margin:0 0 6px}
+.cover-lead b{color:var(--navy);box-shadow:inset 0 -.45em color-mix(in srgb,var(--lagoon) 55%,transparent)}
+.cover-lead s{color:var(--muted);text-decoration-color:var(--coral);text-decoration-thickness:2px}
+.cover-stamps .nodata,.cover-stamps:empty{display:none}
+/* 封面只有 1–3 個章時也排得好看 */
+.feature-wrap .cover-stamps{min-height:250px}
+/* 進場:章一個個蓋下去、航線畫出來(純 CSS,資料晚到也會播) */
+.feature-wrap .passport-stamp{animation:stampIn .5s cubic-bezier(.3,.7,.3,1) calc(.3s + var(--i,0)*.2s) both}
+.feature-wrap .flight-path{animation:routeDraw 1.6s cubic-bezier(.6,0,.3,1) .3s both}
+.feature-wrap .paper-tape{animation:tapeIn .6s ease .15s both}
+@keyframes routeDraw{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+/* 封面下的導引段:用首頁的紙頁 */
+.column-main>.feature-sheet{max-width:1040px;margin:28px auto 0;padding:26px 28px 42px;
+  background-image:var(--paper-age),var(--grain-heavy),var(--blotch);background-color:var(--paper)}
+.column-main>.feature-sheet.kraft{background-image:var(--paper-age),var(--grain-heavy),var(--fibers);background-color:var(--kraft)}
+.feature-sheet .section-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.feature-sheet .mag-heading{margin-bottom:6px}
+.feature-sheet .sheet-lead{color:var(--muted);margin:0 0 18px;line-height:1.7}
+.polaroid .film-frame small{font:13px/1.6 var(--serif-zh);color:var(--ink)}
+/* 放假去哪:月份段頭 */
+.od-month{display:flex;align-items:baseline;gap:10px;margin:18px 0 2px;font:900 20px/1.3 var(--serif-zh);color:var(--navy)}
+.od-month:first-child{margin-top:0}
+.od-month i{font:italic 500 15px var(--serif);color:var(--muted)}
+.od-month::after{content:'';flex:1;border-bottom:1px dotted var(--muted)}
+/* 季節限定:活動卡像貼在本子上的拍立得 */
+.events-list .ev-card{position:relative;overflow:visible;padding-top:24px}
+.events-list .ev-card::before{content:'';position:absolute;top:-9px;left:50%;width:76px;height:20px;background:color-mix(in srgb,var(--sun) 45%,transparent);transform:translateX(-50%) rotate(-3deg)}
+.events-list .ev-card:nth-child(odd){rotate:-.5deg}.events-list .ev-card:nth-child(even){rotate:.4deg}
+.events-list .ev-card[open]{rotate:none}
+.events-list .ev-title{font-family:var(--serif-zh);font-weight:900}
+/* 口袋地點:米其林特輯大票 */
+.column-main>.feature-ticket{max-width:992px;margin:26px auto 0}
+.feature-ticket h2{font-family:var(--serif-zh)}
+.feature-ticket .tiers{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+.feature-ticket .tiers span{font:700 12px var(--type);letter-spacing:.06em;padding:4px 10px;border:1.5px solid currentColor;color:var(--navy)}
+.feature-ticket .tiers span:first-child{color:var(--coral)}
+@media(max-width:760px){
+  .feature-wrap{margin-top:20px;padding:0 16px}
+  .feature-wrap .column-masthead{margin:0;padding:18px 18px 38px}
+  .feature-wrap .cover-stamps{min-height:0;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+  .feature-wrap .cover-stamps .passport-stamp:nth-child(n){position:static;width:96px;height:96px;font-size:10px}
+  .feature-wrap .cover-stamps .passport-stamp.stamp-rect{width:110px;height:76px}
+  .feature-wrap .cover-stamps .passport-stamp b{font-size:19px}
+  .column-main>.feature-sheet{margin:22px 16px 0;padding:22px 18px 36px}
+  .column-main>.feature-ticket{margin:20px 16px 0}
+  .feature-ticket .ticket-stub{display:none}
+  .events-list .ev-card:nth-child(n){rotate:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .feature-wrap .passport-stamp,.feature-wrap .flight-path,.feature-wrap .paper-tape{animation:none}
+}
+.column-main>.feature-sheet{-webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 14px) no-repeat,var(--torn) bottom/240px 16px repeat-x;
+          mask:linear-gradient(#000 0 0) top/100% calc(100% - 14px) no-repeat,var(--torn) bottom/240px 16px repeat-x}
+/* 封面、導引段、列表三張紙對齊同一欄寬 */
+.column-main>.feature-sheet{max-width:992px}
+.column-main>.section.od-home{width:min(992px,calc(100% - 32px))}
+.column-main>.shell,.column-main>.section.shell{width:min(992px,calc(100% - 32px))}
+.column-main>.section.shell{padding-inline:28px}
+@media(max-width:760px){.column-main>.section.shell{padding-inline:16px}}

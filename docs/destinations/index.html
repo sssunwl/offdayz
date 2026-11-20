@@ -10,6 +10,20 @@
   <link rel="stylesheet" href="../assets/magazine.css">
 </head>
 <body>
+<!-- 入境章墨色(②油墨印台,SS 2026-11-13 定):線條清楚、一邊濃一邊淡、少量缺墨。章約 120px、線 4–5px -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="inkPad" x="-8%" y="-8%" width="116%" height="116%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="5" result="w"/>
+    <feDisplacementMap in="SourceGraphic" in2="w" scale="1.6" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="0.3" result="soft"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="3" seed="12" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -5 3.75" result="gm"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="1" seed="40" result="p"/>
+    <feColorMatrix in="p" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.6 2.2" result="pm"/>
+    <feComposite in="gm" in2="pm" operator="arithmetic" k1="1" result="cover"/>
+    <feComposite in="soft" in2="cover" operator="in"/>
+  </filter>
+</svg>
 <a class="skip-link" href="#main">跳到主要內容</a>
 <div class="ocean-waves" aria-hidden="true">
   <svg viewBox="0 0 2400 120" preserveAspectRatio="none">
@@ -40,9 +54,23 @@
   </nav>
 </header>
 <main id="main" class="column-main">
-<div class="column-masthead"><div class="masthead"><a class="mast-logo" href="../">Off<i>Dayz</i></a><span class="issue">HK · TPE DEPARTURES</span></div><div class="dateline"><span>P.03 目的地</span><span>Destinations</span></div></div>
+<div class="cover-wrap feature-wrap"><span class="paper-tape" aria-hidden="true"></span><div class="column-masthead">
+<div class="masthead"><a class="mast-logo" href="../">Off<i>Dayz</i></a><div class="issue"><span data-issue>ISSUE 01 · NOV 2026</span><br>HK · TPE DEPARTURES</div></div>
+<div class="dateline"><span>P.03 目的地</span><span>Destinations · 下一站</span></div>
+<div class="cover-story"><div>
+  <div class="eyebrow">COVER STORY · <span id="coverKicker">這個月的當季</span></div>
+  <h1 id="coverTitle">這個月，<br><em>去哪裡剛好？</em></h1>
+  <p class="cover-lead" id="coverLead">從城市街角到離島海岸，先看哪裡正當季，再挑你的下一站。</p>
+  <p class="cover-deck">天氣對了，旅行就成功一半。<br><i>Go where the season is.</i></p>
+  <a class="cover-cta" href="#r-asia">翻開城市指南 →</a>
+</div><div class="cover-stamps" id="coverStamps" aria-label="這個月正當季的城市"></div></div>
+<svg class="flight-path" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true"><path class="route-dash" d="M10 100 C 260 10, 640 10, 990 70"/><circle cx="10" cy="100" r="6"/><circle cx="990" cy="70" r="6"/></svg>
+</div></div>
 
-<section class="hero page-hero"><div class="shell"><span class="eyebrow">Destinations · 亞洲</span><h1>探索<span class="play">目的地</span></h1><p class="hero-lead">從城市街角到離島海岸，找到適合你的下一站。</p></div></section>
+<section class="feature-sheet" id="inSeason"><div class="section-head"><h2 class="mag-heading"><span id="seasonMonth">本月</span>正當季 <i>In season</i></h2><a class="section-link" href="../offdays/">看哪段連假去 →</a></div>
+<p class="sheet-lead">只寫每年都成立的天氣和花期；當年活動請看季節限定。</p>
+<div class="polaroid-grid" id="seasonGrid"><p class="nodata">當季資料整理中</p></div>
+</section>
 
 <div class="shell"><div class="toggle region-tabs" aria-label="地區">
   <button class="on" aria-pressed="true" >🌏 亞洲</button>
@@ -156,6 +184,33 @@
 </footer>
 
 <script src="../assets/site.js"></script>
+<script>
+(async()=>{
+ const {esc:e,getJSON:get}=SoSol,m=+SoSol.todayISO().slice(5,7);
+ const [CS,RG]=await Promise.all([get('../data/city_seasons.json'),get('../data/regions.json')]);
+ const grid=document.getElementById('seasonGrid');
+ document.getElementById('seasonMonth').textContent=m+' 月';
+ if(!CS?.cities){grid.innerHTML='<p class="nodata">當季資料暫時無法載入，先翻翻下面的城市指南</p>';return;}
+ // regions.json:城市 id → 名稱/機場/章色(同首頁)
+ const CITY={},INK={terra:'stamp-japan',green:'stamp-korea',sage:'stamp-taiwan',mustard:'stamp-thai',coral:'stamp-hk'};
+ (RG?.regions||[]).forEach(g=>(g.cities||[]).forEach(c=>CITY[c.id]={...c,ink:INK[g.stamp]||'stamp-japan'}));
+ const GUIDES=['okinawa','ishigaki','miyakojima','tokyo','fukuoka','seoul','busan','taipei'];
+ const note=c=>(c.notes||[]).find(n=>(n.months||[]).includes(m))?.text||'';
+ // 本月 2 分=正當季;有城市指南、有當月筆記的排前面
+ const hot=Object.entries(CS.cities).filter(([,c])=>c.months?.[m]===2)
+   .map(([id,c])=>({id,c,name:(CITY[id]?.name||id).split('・')[0],guide:GUIDES.includes(id),note:note(c)}))
+   .sort((a,b)=>(b.guide-a.guide)||(!!b.note-!!a.note));
+ if(!hot.length){grid.innerHTML='<p class="nodata">這個月沒有特別當季的城市，下面的城市指南隨時可以翻</p>';return;}
+ document.getElementById('coverKicker').textContent=m+' 月當季';
+ document.getElementById('coverTitle').innerHTML=`這個月，<br>正好去<em>${hot.slice(0,2).map(h=>e(h.name)).join('、')}</em>。`;
+ document.getElementById('coverLead').innerHTML=`${hot[0].note?e(hot[0].note)+'。':''}<br>${m} 月正當季：<b>${hot.slice(0,5).map(h=>e(h.name)).join('、')}</b>`;
+ document.getElementById('coverStamps').innerHTML=hot.slice(0,4).map((h,i)=>{
+   const rect=i%2===1,en=(h.c.en||h.id).toUpperCase(),code=CITY[h.id]?.airports?.[0]||'';
+   return `<span class="passport-stamp ${CITY[h.id]?.ink||'stamp-japan'} ${rect?'stamp-rect':'stamp-round'}" style="--stamp-rotation:${-12+(i*7)%25}deg;--i:${i}">${rect?'<span>ARRIVAL</span>':`<span>${e(en)}</span>`}<b>${e(h.name)}</b><span>${rect?e(en)+' · ':''}${e(code)}</span></span>`;
+ }).join('');
+ grid.innerHTML=hot.filter(h=>h.note).slice(0,3).map(h=>`<a class="polaroid" href="${h.guide?'city.html?key='+e(h.id):'../offdays/'}"><span class="paper-tape" aria-hidden="true"></span><div class="film-frame"><span>${e((h.c.en||h.id).toUpperCase())} · ${m} 月</span><b>${e(h.name)}</b><small>${e(h.note)}</small></div><h3>${e(h.name)}，${m} 月剛好</h3><p>${h.guide?'翻開城市指南 →':'看哪段連假適合去 →'}</p></a>`).join('');
+})();
+</script>
 
 </body>
 </html>
