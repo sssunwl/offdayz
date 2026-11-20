@@ -14,10 +14,9 @@
     .mi-stats b{font:800 28px/1 var(--serif);color:var(--navy);margin-right:4px}
     .mi-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
     .mi-figure{margin:0;background:var(--paper);border:1px solid var(--line)}
-    .mi-figure svg{display:block;width:100%;height:auto}
-    .mi-figure .dot{cursor:pointer;transition:opacity .2s}
-    .mi-figure .dot:hover{opacity:.75}
-    .mi-figure .dot.dim{opacity:.12;pointer-events:none}
+    .mi-figure img{display:block;width:100%;height:auto}
+    .mi-no{display:inline-grid;place-items:center;min-width:26px;height:26px;padding:0 5px;margin-right:8px;border-radius:13px;font:800 13px/1 'Helvetica Neue',Arial,sans-serif;vertical-align:2px}
+    .mi-no.green{box-shadow:0 0 0 2px var(--paper),0 0 0 4px var(--good)}
     .mi-tools{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px;font:13px var(--type);color:var(--muted)}
     .mi-embed{position:relative;width:100%;aspect-ratio:4/3;background:var(--lagoon-soft);border:1px solid var(--line)}
     .mi-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
@@ -79,11 +78,10 @@
   <div class="shell">
     <div class="section">
       <div class="section-head"><h2 class="mag-heading"><span>01</span>一張圖看全部 <i>The Map</i></h2></div>
-      <div class="mi-chips" id="miChips" role="group" aria-label="篩選"></div>
-      <figure class="mi-figure" id="miFigure"><div class="loading">載入中…</div></figure>
+      <figure class="mi-figure"><a href="map.png" target="_blank" rel="noopener"><img src="map.png" width="1200" height="2274" alt="台北米其林 2026 地圖：84 間餐廳按編號標在台北地圖上，下方按區列出店名" loading="eager"></a></figure>
       <div class="mi-tools">
-        <span>點圓點會跳到那間店的卡片。</span>
-        <button class="btn btn-ghost" id="miDownload" type="button">下載這張圖 PNG</button>
+        <span>圓點數字對照圖下方清單，也對照下面的卡片。點圖可放大。</span>
+        <a class="btn btn-ghost" href="map.png" download="offdayz-taipei-michelin-2026.png">下載這張圖</a>
       </div>
     </div>
 
@@ -96,6 +94,7 @@
 
     <div class="section">
       <div class="section-head"><h2 class="mag-heading"><span>03</span>按區列 <i>By District</i></h2></div>
+      <div class="mi-chips" id="miChips" role="group" aria-label="篩選"></div>
       <div id="miAreas"></div>
       <p class="mi-src" id="miSrc" style="margin-top:34px"></p>
     </div>
@@ -130,87 +129,14 @@ const css=getComputedStyle(document.documentElement);
 const V=n=>css.getPropertyValue(n).trim();
 const COL={paper:V('--paper')||'#FFFCF7',ink:V('--ink')||'#26312E',navy:V('--navy')||'#1E4A45',coral:V('--coral')||'#CF5730',
   sun:V('--sun')||'#E8A62F',muted:V('--muted')||'#6E6459',good:V('--good')||'#1F7A63',lagoon:V('--lagoon-soft')||'#E6F1EC',river:'#9CC7D6'};
+// 跟 tools/michelin_map/build.py 的一張圖同配色:星越多越紅,必比登黃
 const TIER={
-  '3':{label:'三星',badge:'★★★',c:COL.coral},
-  '2':{label:'二星',badge:'★★',c:COL.navy},
-  '1':{label:'一星',badge:'★',c:'#447e6d'},
-  'bib':{label:'必比登',badge:'必比登',c:COL.sun}};
+  '3':{label:'三星',badge:'★★★',c:'#A8261A',t:'#fff'},
+  '2':{label:'二星',badge:'★★',c:'#D2482B',t:'#fff'},
+  '1':{label:'一星',badge:'★',c:'#E98A5F',t:'#fff'},
+  'bib':{label:'必比登',badge:'必比登',c:'#F2BC3D',t:COL.ink}};
 const TIER_ORDER=['3','2','1','bib'];
-
-// 旅人好用的分區(不是行政區);[label 位置 lat, lon]
-const AREAS=[
-  {id:'zs',name:'中山・晶華一帶',en:'Zhongshan',at:[25.071,121.527]},
-  {id:'dt',name:'大稻埕・大同',en:'Dadaocheng',at:[25.072,121.497]},
-  {id:'zz',name:'台北車站・中正',en:'Main Station',at:[25.025,121.519]},
-  {id:'wh',name:'西門・萬華・南機場',en:'Ximen & Wanhua',at:[25.021,121.493]},
-  {id:'da',name:'大安・永康・東區',en:'Da\'an',at:[25.022,121.548]},
-  {id:'ss',name:'松山・民生・南京復興',en:'Songshan',at:[25.066,121.556]},
-  {id:'xy',name:'信義',en:'Xinyi',at:[25.022,121.573]},
-  {id:'dz',name:'大直・美麗華・內湖',en:'Dazhi & Neihu',at:[25.093,121.566]},
-  {id:'sl',name:'士林・天母・陽明山',en:'Shilin & Tianmu',at:[25.13,121.51]}];
-const OVERRIDE={'頤宮':'zz'};   // 君品在承德路一段,座標落在中山邊界
-function areaOf(s){
-  if(OVERRIDE[s.name])return OVERRIDE[s.name];
-  const {lat,lon}=s;
-  if(lat>=25.11)return 'sl';
-  if(lat>=25.085&&lon<121.535)return 'sl';
-  if(lat>=25.07&&lon>=121.535)return 'dz';
-  if(lon<121.515&&lat>=25.048)return 'dt';
-  if(lon<121.512)return 'wh';
-  if(lon<121.535&&lat>=25.048)return 'zs';
-  if(lon<121.528)return 'zz';
-  if(lat>=25.045)return 'ss';
-  if(lon>=121.56)return 'xy';
-  return 'da';
-}
-
-// 地圖投影:1080×1350(IG 4:5),等距近似
-const W=1080,H=1350,K=7600,LON0=121.535,LAT0=25.075,COS=Math.cos(25.07*Math.PI/180);
-const px=lon=>W/2+(lon-LON0)*COS*K, py=lat=>780-(lat-LAT0)*K;
-const pt=([la,lo])=>`${px(lo).toFixed(1)},${py(la).toFixed(1)}`;
-// 河道是示意,不是精確水線
-const TAMSUI=[[25.16,121.452],[25.13,121.462],[25.105,121.472],[25.088,121.49],[25.072,121.503],[25.056,121.507],[25.042,121.496],[25.028,121.491],[25.015,121.503],[25.006,121.52],[24.996,121.54]];
-const KEELUNG=[[25.105,121.472],[25.098,121.497],[25.085,121.513],[25.073,121.522],[25.074,121.536],[25.075,121.552],[25.071,121.566],[25.066,121.58],[25.06,121.6]];
-const smooth=pts=>'M'+pts.map(pt).join(' L');
-
-let SHOPS=[],filter='all',DATA=null;
-
-function svgMap(){
-  const dots=[...SHOPS].sort((a,b)=>TIER_ORDER.indexOf(b.tier)-TIER_ORDER.indexOf(a.tier)).map(s=>{
-    const x=px(s.lon).toFixed(1),y=py(s.lat).toFixed(1),t=TIER[s.tier];
-    const dim=filter!=='all'&&!match(s)?' dim':'';
-    let g;
-    if(s.tier==='3')g=`<circle r="17" fill="${t.c}" stroke="${COL.paper}" stroke-width="3"/><text y="6" text-anchor="middle" font-size="17" font-weight="800" fill="#fff">3</text>`;
-    else if(s.tier==='2')g=`<circle r="13" fill="${t.c}" stroke="${COL.paper}" stroke-width="2.5"/><text y="5" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">2</text>`;
-    else if(s.tier==='1')g=`<circle r="8.5" fill="${t.c}" stroke="${COL.paper}" stroke-width="2"/>`;
-    else g=`<circle r="7" fill="${t.c}" stroke="${COL.ink}" stroke-width="1.2"/>`;
-    if(s.green)g=`<circle r="${s.tier==='bib'?11:13}" fill="none" stroke="${COL.good}" stroke-width="2.5" stroke-dasharray="3 2.5"/>`+g;
-    return `<g class="dot${dim}" data-id="${s.id}" transform="translate(${x} ${y})" tabindex="0" role="button" aria-label="${esc(s.name)}"><title>${esc(s.name)}・${t.label}</title>${g}</g>`;
-  }).join('');
-  const labels=AREAS.map(a=>`<text x="${px(a.at[1]).toFixed(0)}" y="${py(a.at[0]).toFixed(0)}" text-anchor="middle" font-size="22" font-weight="900" fill="${COL.muted}" opacity=".85">${esc(a.name)}</text>`).join('');
-  const cnt=t=>SHOPS.filter(s=>s.tier===t).length;
-  const legend=[['3','三星 ×'+cnt('3')],['2','二星 ×'+cnt('2')],['1','一星 ×'+cnt('1')],['bib','必比登 ×'+cnt('bib')]].map(([t,l],i)=>{
-    const y=1180+i*34,c=TIER[t].c;
-    return `<circle cx="780" cy="${y}" r="${t==='3'?12:t==='2'?10:8}" fill="${c}" ${t==='bib'?`stroke="${COL.ink}" stroke-width="1.2"`:''}/><text x="806" y="${y+7}" font-size="21" font-weight="700" fill="${COL.ink}">${l}</text>`;
-  }).join('')+`<circle cx="780" cy="1316" r="10" fill="none" stroke="${COL.good}" stroke-width="2.5" stroke-dasharray="3 2.5"/><text x="806" y="1323" font-size="21" font-weight="700" fill="${COL.ink}">綠星</text>`;
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" font-family="'Noto Serif TC','Songti TC','PMingLiU',serif" role="img" aria-label="台北米其林 2026 地圖">
-  <rect width="${W}" height="${H}" fill="${COL.paper}"/>
-  <path d="${smooth(TAMSUI)}" fill="none" stroke="${COL.river}" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/>
-  <path d="${smooth(KEELUNG)}" fill="none" stroke="${COL.river}" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/>
-  <text x="${px(121.47).toFixed(0)}" y="${py(25.122).toFixed(0)}" font-size="16" fill="#6c9fb1" transform="rotate(-62 ${px(121.47).toFixed(0)} ${py(25.122).toFixed(0)})">淡水河</text>
-  <text x="${px(121.548).toFixed(0)}" y="${py(25.089).toFixed(0)}" font-size="16" fill="#6c9fb1">基隆河</text>
-  <rect x="0" y="0" width="${W}" height="200" fill="${COL.paper}"/>
-  <line x1="60" y1="40" x2="${W-60}" y2="40" stroke="${COL.ink}" stroke-width="4"/>
-  <text x="60" y="118" font-size="62" font-weight="900" fill="${COL.navy}">台北米其林 2026</text>
-  <text x="60" y="166" font-size="24" fill="${COL.muted}" font-family="'Courier Prime',ui-monospace,monospace" letter-spacing="2">MICHELIN GUIDE TAIPEI · BY DISTRICT</text>
-  <line x1="60" y1="190" x2="${W-60}" y2="190" stroke="${COL.ink}" stroke-width="1.5"/>
-  ${labels}${dots}
-  <rect x="756" y="1150" width="270" height="190" fill="${COL.paper}" opacity=".9"/>
-  ${legend}
-  <text x="60" y="1320" font-size="20" font-weight="700" fill="${COL.navy}" font-family="Georgia,serif">Off<tspan font-style="italic" fill="#B84E29">Dayz</tspan></text>
-  <text x="60" y="1296" font-size="15" fill="${COL.muted}">offdayz.sssuni.com・河道為示意</text>
-</svg>`;
-}
+let SHOPS=[],AREAS=[],filter='all',DATA=null;
 
 function match(s){
   if(filter==='all')return true;
@@ -219,22 +145,12 @@ function match(s){
   return s.tier===filter;
 }
 
-function renderMap(){
-  const fig=document.getElementById('miFigure');
-  fig.innerHTML=svgMap();
-  fig.querySelectorAll('.dot').forEach(d=>{
-    const go=()=>{const c=document.getElementById('shop-'+d.dataset.id); if(!c)return;
-      c.scrollIntoView({behavior:'smooth',block:'center'}); c.classList.add('flash'); setTimeout(()=>c.classList.remove('flash'),1600);};
-    d.onclick=go; d.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}};
-  });
-}
-
 function card(s){
   const t=TIER[s.tier];
   const q=encodeURIComponent(`${s.name}${s.en?' '+s.en:''} 台北市`);
-  return `<article class="mi-card" id="shop-${s.id}" style="--c:${t.c}">
+  return `<article class="mi-card" id="shop-${s.no}" style="--c:${t.c}">
     <span class="mi-badge${s.tier==='bib'?' bib':''}">${t.badge}</span>
-    <div class="mi-card-nm">${esc(s.name)}</div>
+    <div class="mi-card-nm"><span class="mi-no${s.green?' green':''}" style="background:${t.c};color:${t.t}">${s.no}</span>${esc(s.name)}</div>
     ${s.en?`<div class="mi-card-en">${esc(s.en)}</div>`:''}
     <div class="mi-meta"><span>${esc(s.cuisine)}</span>${s.green?'<span class="green">綠星</span>':''}${s.note?`<span class="note">${esc(s.note)}</span>`:''}</div>
     ${s.address?`<div class="mi-addr">${esc(s.address)}${s.verified===false?'(門牌待確認)':''}</div>`:''}
@@ -245,7 +161,7 @@ function card(s){
 function renderAreas(){
   const shown=SHOPS.filter(match);
   document.getElementById('miAreas').innerHTML=AREAS.map(a=>{
-    const list=shown.filter(s=>s.area===a.id).sort((x,y)=>TIER_ORDER.indexOf(x.tier)-TIER_ORDER.indexOf(y.tier));
+    const list=shown.filter(s=>s.area===a.id).sort((x,y)=>x.no-y.no);
     if(!list.length)return '';
     const stars=list.filter(s=>s.tier!=='bib').length,bib=list.length-stars;
     return `<section class="mi-area"><h3>${esc(a.name)} <small>${[stars?`星級 ${stars}`:'',bib?`必比登 ${bib}`:''].filter(Boolean).join(' · ')}</small></h3>
@@ -259,22 +175,13 @@ function renderChips(){
   const el=document.getElementById('miChips');
   el.innerHTML=opts.map(([k,l])=>`<button class="pl-chip" data-f="${k}" aria-pressed="${k===filter}">${l} ${n(k)}</button>`).join('');
   el.querySelectorAll('button').forEach(b=>b.onclick=()=>{filter=b.dataset.f;
-    el.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderMap();renderAreas();});
-}
-
-function downloadPng(){
-  filter='all';renderChips();renderMap();renderAreas();
-  const svg=svgMap().replace(/ class="dot[^"]*"/g,'');
-  const img=new Image(),cv=document.createElement('canvas');cv.width=W;cv.height=H;
-  img.onload=()=>{cv.getContext('2d').drawImage(img,0,0);
-    const a=document.createElement('a');a.download='offdayz-taipei-michelin-2026.png';a.href=cv.toDataURL('image/png');a.click();};
-  img.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+    el.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderAreas();});
 }
 
 (async()=>{
   try{const r=await fetch('../../data/michelin_taipei_2026.json'); if(r.ok)DATA=await r.json();}catch(e){}
-  if(!DATA){document.getElementById('miFigure').innerHTML='<div class="pl-empty">資料載入失敗，請重新整理。</div>';return;}
-  SHOPS=DATA.shops.map((s,i)=>({...s,id:i,area:areaOf(s)}));
+  if(!DATA){document.getElementById('miAreas').innerHTML='<div class="pl-empty">資料載入失敗，請重新整理。</div>';return;}
+  SHOPS=DATA.shops; AREAS=DATA.areas;
   const c=t=>SHOPS.filter(s=>s.tier===t).length;
   document.getElementById('miStats').innerHTML=
     `<span><b>${c('3')}</b>三星</span><span><b>${c('2')}</b>二星</span><span><b>${c('1')}</b>一星</span><span><b>${c('bib')}</b>必比登</span>`;
@@ -282,8 +189,7 @@ function downloadPng(){
   document.getElementById('miMyMaps').src=`https://www.google.com/maps/d/embed?mid=${mid}`;
   document.getElementById('miMyMapsLink').href=`https://www.google.com/maps/d/viewer?mid=${mid}`;
   document.getElementById('miSrc').textContent=`資料來源：${DATA.source} 整理日期 ${DATA.updated}。米其林每年改版，出發前請再確認營業時間與訂位。`;
-  document.getElementById('miDownload').onclick=downloadPng;
-  renderChips();renderMap();renderAreas();
+  renderChips();renderAreas();
 })();
 </script>
 </body>
