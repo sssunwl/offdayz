@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
+  <title>雄記蔥抓餅｜台北米其林 2026 必比登推介 · OffDayz</title>
+  <meta name="description" content="雄記蔥抓餅：2026 台北米其林必比登推介，夜市小吃，位在大安・永康・東區。附地圖、附近的其他米其林餐廳。">
+  <link rel="canonical" href="https://offdayz.sssuni.com/places/taipei-michelin-2026/80/">
+  <link rel="stylesheet" href="../../../assets/sosol.css">
+  <link rel="stylesheet" href="../../../assets/magazine.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "雄記蔥抓餅", "alternateName": null, "servesCuisine": "夜市小吃", "address": "台北市中正區羅斯福路四段108巷2號(公館)", "geo": {"@type": "GeoCoordinates", "latitude": 25.013444, "longitude": 121.53534}, "url": "https://offdayz.sssuni.com/places/taipei-michelin-2026/80/"}</script>
+  <style>
+    .rs-hero{padding-top:18px}
+    .rs-crumb{font:700 12px var(--type);letter-spacing:.06em;color:var(--muted);margin-bottom:14px}
+    .rs-crumb a{color:var(--blue)}
+    .rs-title{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+    .rs-no{display:inline-grid;place-items:center;min-width:44px;height:44px;padding:0 8px;border-radius:22px;font:800 20px/1 'Helvetica Neue',Arial,sans-serif}
+    .rs-no.green{box-shadow:0 0 0 3px var(--paper),0 0 0 6px var(--good)}
+    .rs-title h1{margin:0}
+    .rs-en{font:italic 500 18px var(--serif);color:var(--muted);margin:6px 0 0}
+    .rs-tags{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+    .rs-tags span{font:700 13px var(--type);padding:4px 10px;border:1px solid var(--line);background:var(--paper)}
+    .rs-tags .tier{color:var(--t);background:var(--c);border-color:var(--c)}
+    .rs-tags .green{border-color:var(--good);color:var(--good)}
+    .rs-tags .note{border-color:var(--coral);color:var(--coral)}
+    .rs-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:28px;align-items:start}
+    @media(max-width:860px){.rs-grid{grid-template-columns:1fr}}
+    .rs-photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+    .rs-photos .instagram-media{min-width:0!important;margin:0!important}
+    .rs-nophoto{padding:26px 22px;border:1px dashed var(--line);background:var(--paper);color:var(--muted);line-height:1.8;font-size:14px}
+    .rs-nophoto a{font-weight:700;color:var(--blue)}
+    .rs-info{background:var(--paper);border:1px solid var(--line);padding:18px 20px}
+    .rs-info dl{display:grid;grid-template-columns:72px 1fr;gap:10px 12px;margin:0;font-size:14.5px;line-height:1.6}
+    .rs-info dt{font:700 12px var(--type);color:var(--muted);letter-spacing:.06em;padding-top:3px}
+    .rs-info dd{margin:0}
+    .rs-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    #rsMap{height:300px;margin-top:16px;border:1px solid var(--line)}
+    .rs-near{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+    .rs-near a{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--paper);border:1px solid var(--line);color:var(--ink)}
+    .rs-near a:hover{border-color:var(--navy)}
+    .rs-near .n{display:inline-grid;place-items:center;min-width:26px;height:26px;border-radius:13px;font:800 13px/1 'Helvetica Neue',Arial,sans-serif;flex:none}
+    .rs-near b{font:900 15px/1.3 var(--serif-zh);color:var(--navy)}
+    .rs-near small{display:block;font:12px var(--type);color:var(--muted)}
+    .rs-pager{display:flex;justify-content:space-between;gap:12px;margin-top:36px;font:700 14px var(--type)}
+    .rs-pager a{color:var(--blue)}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要內容</a>
+
+<header class="site-header" id="hdr">
+  <div class="shell nav">
+    <a class="brand" href="../../../">Off<i>Dayz</i></a>
+    <nav class="desktop-nav" aria-label="主要導覽">
+      <a href="../../../">首頁</a>
+      <a href="../../../offdays/">放假去哪</a><a href="../../../destinations/">目的地</a>
+      <a href="../../" aria-current="page">口袋地點</a>
+      <a href="../../../seasonal/">季節限定</a>
+      <a href="../../../calendar/">假期年曆</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="選單" aria-controls="dropNav" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <nav class="drop-nav shell" id="dropNav" aria-label="手機導覽" hidden>
+    <a href="../../../">首頁</a>
+    <a href="../../../offdays/">放假去哪</a><a href="../../../destinations/">目的地</a>
+    <a href="../../" aria-current="page">口袋地點</a>
+    <a href="../../../seasonal/">季節限定</a><a href="../../../calendar/">假期年曆</a>
+  </nav>
+</header>
+
+<main id="main" class="column-main">
+  <section class="hero page-hero rs-hero"><div class="shell">
+    <div class="rs-crumb"><a href="../">台北米其林 2026</a> ／ 大安・永康・東區</div>
+    <div class="rs-title"><span class="rs-no" style="background:#F2BC3D;color:#26312E">80</span><h1>雄記蔥抓餅</h1></div>
+    
+    <div class="rs-tags"><span class="tier" style="--c:#F2BC3D;--t:#26312E">必比登推介</span><span>夜市小吃</span></div>
+  </div></section>
+
+  <div class="shell">
+    <div class="section rs-grid">
+      <div>
+        <div class="section-head"><h2 class="mag-heading"><span>01</span>菜色與環境 <i>Photos</i></h2></div>
+        <div class="rs-nophoto">店家照片整理中。想先看菜色與環境：<a href="https://www.google.com/maps/search/?api=1&query=雄記蔥抓餅  台北市" target="_blank" rel="noopener">Google 地圖相片</a></div>
+      </div>
+      <div>
+        <div class="section-head"><h2 class="mag-heading"><span>02</span>怎麼去 <i>Getting there</i></h2></div>
+        <div class="rs-info">
+          <dl>
+            <dt>等級</dt><dd>必比登推介</dd>
+            <dt>料理</dt><dd>夜市小吃</dd>
+            <dt>區域</dt><dd>大安・永康・東區</dd>
+            <dt>地址</dt><dd>台北市中正區羅斯福路四段108巷2號(公館)</dd>
+          </dl>
+          <div class="rs-btns">
+            <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=雄記蔥抓餅  台北市" target="_blank" rel="noopener">Google 地圖導航</a>
+            
+          </div>
+          <div id="rsMap" role="application" aria-label="雄記蔥抓餅 與附近米其林餐廳地圖"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head"><h2 class="mag-heading"><span>03</span>附近還有 <i>Nearby</i></h2></div>
+      <ul class="rs-near"><li><a href="../78/"><span class="n" style="background:#F2BC3D;color:#26312E">78</span><span><b>鼎泰豐(信義路)</b><small>必比登推介・上海菜/小籠包・約 2.3 km</small></span></a></li><li><a href="../54/"><span class="n" style="background:#F2BC3D;color:#26312E">54</span><span><b>杭州小籠湯包(大安)</b><small>必比登推介・點心/小籠包・約 2.6 km</small></span></a></li><li><a href="../63/"><span class="n" style="background:#D2482B;color:#fff">63</span><span><b>牡丹</b><small>二星・日式天婦羅・約 2.7 km</small></span></a></li><li><a href="../73/"><span class="n" style="background:#E98A5F;color:#fff">73</span><span><b>de nuit</b><small>一星・現代法國菜・約 2.7 km</small></span></a></li><li><a href="../67/"><span class="n green" style="background:#E98A5F;color:#fff">67</span><span><b>山海樓</b><small>一星・台灣菜・約 2.8 km</small></span></a></li><li><a href="../76/"><span class="n" style="background:#F2BC3D;color:#26312E">76</span><span><b>巷子龍家常菜</b><small>必比登推介・湘菜・約 2.8 km</small></span></a></li></ul>
+      <div class="rs-pager">
+        <a href="../79/">← 79. Pàng 胖塔可</a>
+        <a href="../#map">回到總覽地圖</a>
+        <a href="../81/">81. 侯布雄 →</a>
+      </div>
+      <p class="mi-src" style="margin-top:30px">名單依《臺灣米其林指南 2026》整理。營業時間與訂位方式常有變動，出發前請以店家公告為準。</p>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../../">Off<i>Dayz</i></a>
+        <p>香港與台北出發的假期旅行筆記。假期資料依各地政府公告整理，預估日期另有標示。Suniverse × Sosol 出品。</p>
+      </div>
+      <div class="footer-col"><strong>逛逛</strong>
+        <a href="../../../offdays/">放假去哪</a><a href="../../../destinations/">目的地</a><a href="../../">口袋地點</a>
+        <a href="../../../seasonal/">季節限定</a><a href="../../../calendar/">假期年曆</a>
+      </div>
+      <div class="footer-col"><strong>關於</strong>
+        <a href="https://www.instagram.com/offdayz_/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.threads.net/@offdayz_" target="_blank" rel="noopener">Threads</a>
+        <a href="https://github.com/sssunwl/offdayz" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-base"><span>Off days, well spent.</span><span>名單依《臺灣米其林指南 2026》整理，出發前請自行確認營業狀態</span></div>
+  </div>
+</footer>
+<script src="../../../assets/site.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+(()=>{
+  if(typeof L==='undefined'){document.getElementById('rsMap').remove();return;}
+  const P=[{"no": 80, "name": "雄記蔥抓餅", "lat": 25.013444, "lon": 121.53534, "c": "#F2BC3D", "me": true}, {"no": 78, "name": "鼎泰豐(信義路)", "lat": 25.033503, "lon": 121.530118, "c": "#F2BC3D", "me": false}, {"no": 54, "name": "杭州小籠湯包(大安)", "lat": 25.034069, "lon": 121.523723, "c": "#F2BC3D", "me": false}, {"no": 63, "name": "牡丹", "lat": 25.035127, "lon": 121.547106, "c": "#D2482B", "me": false}, {"no": 73, "name": "de nuit", "lat": 25.033488, "lon": 121.550541, "c": "#E98A5F", "me": false}, {"no": 67, "name": "山海樓", "lat": 25.037981, "lon": 121.531407, "c": "#E98A5F", "me": false}, {"no": 76, "name": "巷子龍家常菜", "lat": 25.035469, "lon": 121.548253, "c": "#F2BC3D", "me": false}];
+  const map=L.map('rsMap',{scrollWheelZoom:false});
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(map);
+  P.forEach(p=>{
+    const r=p.me?13:10;
+    const icon=L.divIcon({className:'',iconSize:[r*2,r*2],html:`<div style="width:${r*2}px;height:${r*2}px;border-radius:50%;background:${p.c};border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.35);display:grid;place-items:center;font:800 ${p.me?13:11}px/1 Helvetica Neue,Arial,sans-serif;color:#fff">${p.no}</div>`});
+    const m=L.marker([p.lat,p.lon],{icon,zIndexOffset:p.me?1000:0}).addTo(map).bindTooltip(p.name);
+    if(!p.me)m.on('click',()=>location.href=`../${p.no}/`);
+  });
+  map.fitBounds(P.map(p=>[p.lat,p.lon]),{padding:[30,30],maxZoom:16});
+})();
+</script>
+</body>
+</html>

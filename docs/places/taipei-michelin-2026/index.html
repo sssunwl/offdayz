@@ -35,6 +35,9 @@
     .mi-meta .green{border-color:var(--good);color:var(--good)}
     .mi-meta .note{border-color:var(--coral);color:var(--coral)}
     .mi-card a{font:700 13px var(--type);color:var(--blue)}
+    .mi-card .mi-link{font:inherit;color:inherit}
+    .mi-card .mi-link:hover{text-decoration:underline}
+    .mi-acts{display:flex;gap:16px}
     .mi-addr{font-size:12.5px;color:var(--muted);margin:2px 0 6px}
     .mi-src{font-size:13px;color:var(--muted);line-height:1.8}
     [hidden]{display:none!important}
@@ -77,7 +80,7 @@
 
   <div class="shell">
     <div class="section">
-      <div class="section-head"><h2 class="mag-heading"><span>01</span>一張圖看全部 <i>The Map</i></h2></div>
+      <div class="section-head" id="map"><h2 class="mag-heading"><span>01</span>一張圖看全部 <i>The Map</i></h2></div>
       <figure class="mi-figure"><a href="map.png" target="_blank" rel="noopener"><img src="map.png" width="1200" height="2274" alt="台北米其林 2026 地圖：84 間餐廳按編號標在台北地圖上，下方按區列出店名" loading="eager"></a></figure>
       <div class="mi-tools">
         <span>圓點數字對照圖下方清單，也對照下面的卡片。點圖可放大。</span>
@@ -150,11 +153,11 @@ function card(s){
   const q=encodeURIComponent(`${s.name}${s.en?' '+s.en:''} 台北市`);
   return `<article class="mi-card" id="shop-${s.no}" style="--c:${t.c}">
     <span class="mi-badge${s.tier==='bib'?' bib':''}">${t.badge}</span>
-    <div class="mi-card-nm"><span class="mi-no${s.green?' green':''}" style="background:${t.c};color:${t.t}">${s.no}</span>${esc(s.name)}</div>
+    <div class="mi-card-nm"><a class="mi-link" href="${s.no}/"><span class="mi-no${s.green?' green':''}" style="background:${t.c};color:${t.t}">${s.no}</span>${esc(s.name)}</a></div>
     ${s.en?`<div class="mi-card-en">${esc(s.en)}</div>`:''}
     <div class="mi-meta"><span>${esc(s.cuisine)}</span>${s.green?'<span class="green">綠星</span>':''}${s.note?`<span class="note">${esc(s.note)}</span>`:''}</div>
     ${s.address?`<div class="mi-addr">${esc(s.address)}${s.verified===false?'(門牌待確認)':''}</div>`:''}
-    <a href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank" rel="noopener">Google 地圖 →</a>
+    <div class="mi-acts"><a href="${s.no}/">看店家頁 →</a><a href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank" rel="noopener">Google 地圖</a></div>
   </article>`;
 }
 
