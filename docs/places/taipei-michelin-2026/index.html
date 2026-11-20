@@ -38,6 +38,7 @@
     .mi-card .mi-link{font:inherit;color:inherit}
     .mi-card .mi-link:hover{text-decoration:underline}
     .mi-acts{display:flex;gap:16px}
+.mi-blurb{font-size:13.5px;line-height:1.7;color:var(--ink);margin:2px 0 8px}
     .mi-addr{font-size:12.5px;color:var(--muted);margin:2px 0 6px}
     .mi-src{font-size:13px;color:var(--muted);line-height:1.8}
     [hidden]{display:none!important}
@@ -155,7 +156,8 @@ function card(s){
     <span class="mi-badge${s.tier==='bib'?' bib':''}">${t.badge}</span>
     <div class="mi-card-nm"><a class="mi-link" href="${s.no}/"><span class="mi-no${s.green?' green':''}" style="background:${t.c};color:${t.t}">${s.no}</span>${esc(s.name)}</a></div>
     ${s.en?`<div class="mi-card-en">${esc(s.en)}</div>`:''}
-    <div class="mi-meta"><span>${esc(s.cuisine)}</span>${s.green?'<span class="green">綠星</span>':''}${s.note?`<span class="note">${esc(s.note)}</span>`:''}</div>
+    <div class="mi-meta"><span>${esc(s.cuisine)}</span>${s.price?`<span>${esc(s.price)}</span>`:''}${s.green?'<span class="green">綠星</span>':''}${s.note?`<span class="note">${esc(s.note)}</span>`:''}${s.closed?'<span class="note">官網標示暫時關閉</span>':''}</div>
+    ${s.blurb?`<p class="mi-blurb">${esc(s.blurb)}</p>`:''}
     ${s.address?`<div class="mi-addr">${esc(s.address)}${s.verified===false?'(門牌待確認)':''}</div>`:''}
     <div class="mi-acts"><a href="${s.no}/">看店家頁 →</a><a href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank" rel="noopener">Google 地圖</a></div>
   </article>`;

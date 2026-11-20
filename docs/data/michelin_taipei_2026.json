@@ -12,7 +12,14 @@
    "lat": 25.1353,
    "lon": 121.547064,
    "area": "sl",
-   "no": 1
+   "no": 1,
+   "slug": "restaurant-12",
+   "address": "士林區建業路12號",
+   "site": "https://ymsbyonefifteen.com/restaurant-12/",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": false,
+   "blurb": "在陽明山舊美軍宿舍裡吃西班牙主廚的法西料理，大片玻璃窗外是山景，十多道套餐慢慢吃，就是一整個下午。"
   },
   {
    "name": "金蓬萊遵古台菜",
@@ -22,37 +29,62 @@
    "lat": 25.1183,
    "lon": 121.536252,
    "area": "sl",
-   "no": 2
+   "no": 2,
+   "slug": "golden-formosa",
+   "address": "士林區天母東路101號",
+   "site": "",
+   "closed": false,
+   "price": "$$",
+   "bookable": true,
+   "blurb": "從北投酒家菜起家、傳到第三代的老台菜，味道下得重、很下飯。到天母一定要排的一頓。"
   },
   {
    "name": "松竹園",
    "tier": "bib",
    "cuisine": "台菜",
-   "address": "台北市士林區永公路546號",
+   "address": "士林區永公路546號",
    "lat": 25.139812,
    "lon": 121.567616,
    "area": "sl",
-   "no": 3
+   "no": 3,
+   "slug": "sung-chu-yuan",
+   "site": "https://www.28616261.com.tw/",
+   "closed": false,
+   "price": "$$",
+   "bookable": false,
+   "blurb": "陽明山上吃自家養的土雞，開了三十多年。吃完順路去冷水坑或絹絲瀑布走走，剛好半天。"
   },
   {
    "name": "番紅花印度美饌",
    "tier": "bib",
    "cuisine": "印度菜",
-   "address": "台北市士林區天母東路38之6號",
+   "address": "士林區天母東路38之6號",
    "lat": 25.117531,
    "lon": 121.532989,
    "area": "sl",
-   "no": 4
+   "no": 4,
+   "slug": "saffron",
+   "site": "",
+   "closed": false,
+   "price": "$$",
+   "bookable": true,
+   "blurb": "天母老牌北印度餐廳，窯烤爐做的料理焦香又嫩，現烤的烤餅是重點。"
   },
   {
    "name": "鍾家原上海生煎包",
    "tier": "bib",
    "cuisine": "夜市小吃",
-   "address": "台北市士林區小東街38號(士林夜市)",
+   "address": "士林區小東街38號 (士林夜市)",
    "lat": 25.089445,
    "lon": 121.526342,
    "area": "sl",
-   "no": 5
+   "no": 5,
+   "slug": "chung-chia-sheng-jian-bao",
+   "site": "",
+   "closed": false,
+   "price": "$",
+   "bookable": false,
+   "blurb": "士林夜市裡的老生煎包攤，底部煎得金黃酥脆，逛夜市第一站。"
   },
   {
    "name": "態芮",
@@ -62,7 +94,14 @@
    "lat": 25.08278,
    "lon": 121.559177,
    "area": "dz",
-   "no": 6
+   "no": 6,
+   "slug": "tairroir",
+   "address": "中山區樂群三路299號6樓",
+   "site": "https://www.tairroir.com/",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": false,
+   "blurb": "何順凱用台灣食材重寫台菜的二星餐桌，菜名多是諧音成語，邊吃邊猜很有趣，甜點用在地茶和水果收尾。"
   },
   {
    "name": "logy",
@@ -72,7 +111,14 @@
    "lat": 25.074901,
    "lon": 121.574815,
    "area": "dz",
-   "no": 7
+   "no": 7,
+   "slug": "logy",
+   "address": "內湖區瑞光路258巷39號",
+   "site": "https://logy.tw/",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": true,
+   "blurb": "北海道出身的主廚，把日本與台灣風味揉在一起的二星餐廳，2025 年搬到內湖後空間更明亮。"
   },
   {
    "name": "FRASSI",
@@ -82,7 +128,14 @@
    "lat": 25.082843,
    "lon": 121.559159,
    "area": "dz",
-   "no": 8
+   "no": 8,
+   "slug": "frassi",
+   "address": "中山區樂群三路299號1樓",
+   "site": "https://www.frassi.com.tw/",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": false,
+   "blurb": "托斯卡納主廚做的創意義大利菜，自家熟成肉類，餐酒可以點半杯，一個人來也不尷尬。"
   },
   {
    "name": "La Vie by Thomas Bühner",
@@ -92,7 +145,14 @@
    "lat": 25.082456,
    "lon": 121.557283,
    "area": "dz",
-   "no": 9
+   "no": 9,
+   "slug": "la-vie-by-thomas-buhner",
+   "address": "中山區樂群三路200號1樓 (忠泰樂生活)",
+   "site": "https://www.laviebythomasbuehner.com/en",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": false,
+   "blurb": "德國名廚 Thomas Bühner 的台北店，挑高空間吃現代歐陸菜，野味和巧克力塔都是亮點。"
   },
   {
    "name": "心宴",
@@ -102,7 +162,14 @@
    "lat": 25.081337,
    "lon": 121.551991,
    "area": "dz",
-   "no": 10
+   "no": 10,
+   "slug": "amaze",
+   "address": "中山區明水路598號",
+   "site": "https://www.amaze598.com/",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": true,
+   "blurb": "杭州、江浙老菜加上西式手法的創意套餐，牆上掛著台灣當代藝術，服務很熱情。"
   },
   {
    "name": "斑泊",
@@ -112,7 +179,14 @@
    "lat": 25.081119,
    "lon": 121.560431,
    "area": "dz",
-   "no": 11
+   "no": 11,
+   "slug": "ban-bo",
+   "address": "中山區樂群二路265巷38號",
+   "site": "",
+   "closed": false,
+   "price": "$$$",
+   "bookable": true,
+   "blurb": "年輕主廚把下酒菜、辦桌和焢窯變成精緻套餐，二樓用餐區沉穩復古，用了很多在地設計師的家具。"
   },
   {
    "name": "米香",
@@ -122,7 +196,14 @@
    "lat": 25.080489,
    "lon": 121.553897,
    "area": "dz",
-   "no": 12
+   "no": 12,
+   "slug": "mipon",
+   "address": "中山區樂群二路55號3樓 (美福大飯店)",
+   "site": "https://www.grandmayfull.com/",
+   "closed": false,
+   "price": "$$",
+   "bookable": true,
+   "blurb": "美福飯店裡的台菜，把米飯文化當主角，宴客體面又不會太拘謹。"
   },
   {
    "name": "欣葉 鐘菜",
@@ -132,7 +213,14 @@
    "lat": 25.08047,
    "lon": 121.559396,
    "area": "dz",
-   "no": 13
+   "no": 13,
+   "slug": "shin-yeh-taiwanese-signature",
+   "address": "中山區樂群二路199號 (中城廣場)",
+   "site": "https://www.shinyeh.com.tw/content/zh/Brand/Index.aspx?BrandId=11",
+   "closed": false,
+   "price": "$$",
+   "bookable": false,
+   "blurb": "欣葉的宴客旗艦，菜單上百道，從七十年代的經典大菜到新菜都有。"
   },
   {
    "name": "盈科",
@@ -142,37 +230,62 @@
    "lat": 25.057479,
    "lon": 121.510515,
    "area": "dt",
-   "no": 14
+   "no": 14,
+   "slug": "eika",
+   "address": "大同區民樂街58號",
+   "site": "https://eika.tw/",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": false,
+   "blurb": "日式料理融入台灣與世界食材，先在茶室喝迎賓飲，再上二樓看開放廚房出菜。"
   },
   {
    "name": "HUGH dessert dining",
    "tier": "bib",
    "cuisine": "甜點/法式",
-   "address": "台北市大同區重慶北路三段136巷56號",
+   "address": "大同區重慶北路3段136巷56號",
    "lat": 25.067576,
    "lon": 121.512189,
    "area": "dt",
-   "no": 15
+   "no": 15,
+   "slug": "hugh",
+   "site": "https://hughdessert.com/dining",
+   "closed": false,
+   "price": "$$",
+   "bookable": false,
+   "blurb": "只做盤式甜點的套餐，六七道甜點像展覽。營業日每月在社群公布，要先看好日子。"
   },
   {
    "name": "大橋頭老牌筒仔米糕",
    "tier": "bib",
    "cuisine": "小吃",
-   "address": "台北市大同區延平北路三段41號",
+   "address": "大同區延平北路三段41號",
    "lat": 25.064897,
    "lon": 121.511231,
    "area": "dt",
-   "no": 16
+   "no": 16,
+   "slug": "da-qiao-tou-tube-rice-pudding",
+   "site": "",
+   "closed": false,
+   "price": "$",
+   "bookable": false,
+   "blurb": "1973 年開到現在的筒仔米糕，第三代接手，清早就開，配一碗蚵仔湯很滿足。"
   },
   {
    "name": "賣麵炎仔",
    "tier": "bib",
    "cuisine": "麵",
-   "address": "台北市大同區安西街106號",
+   "address": "大同區安西街106號",
    "lat": 25.061099,
    "lon": 121.509786,
    "area": "dt",
-   "no": 17
+   "no": 17,
+   "slug": "mai-mien-yen-tsai",
+   "site": "",
+   "closed": false,
+   "price": "$",
+   "bookable": false,
+   "blurb": "大稻埕巷子裡的老麵攤，沒有菜單，老闆看人數幫你配。燒肉十點後才有。"
   },
   {
    "name": "明壽司",
@@ -182,7 +295,14 @@
    "lat": 25.066147,
    "lon": 121.524874,
    "area": "zs",
-   "no": 18
+   "no": 18,
+   "slug": "sushi-akira",
+   "address": "中山區雙城街25巷6之3號",
+   "site": "",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": true,
+   "blurb": "開業十多年的江戶前壽司，熟成黑鮪魚很出色，板前包廂可以看師傅捏。位子難訂但值得。"
   },
   {
    "name": "天香樓",
@@ -192,7 +312,14 @@
    "lat": 25.062883,
    "lon": 121.529991,
    "area": "zs",
-   "no": 19
+   "no": 19,
+   "slug": "tien-hsiang-lo",
+   "address": "中山區民權東路二段41號B1 (亞都麗緻大飯店）",
+   "site": "https://taipei.landishotelsresorts.com/dining-detail/tien-hsiang-lo",
+   "closed": false,
+   "price": "$$$",
+   "bookable": true,
+   "blurb": "亞都麗緻地下的杭州菜，以茶配餐。晚上來，書法家會把菜單寫成冊子讓你帶走。"
   },
   {
    "name": "明福台菜海產",
@@ -202,7 +329,14 @@
    "lat": 25.061656,
    "lon": 121.524265,
    "area": "zs",
-   "no": 20
+   "no": 20,
+   "slug": "ming-fu",
+   "address": "中山區中山北路二段137巷18之1號",
+   "site": "",
+   "closed": false,
+   "price": "$$$",
+   "bookable": false,
+   "blurb": "巷子裡開了半世紀的台菜海產，佛跳牆、鮑魚糯米雞都要先預訂，很有人情味。"
   },
   {
    "name": "鮨隆",
@@ -212,7 +346,14 @@
    "lat": 25.055909,
    "lon": 121.527172,
    "area": "zs",
-   "no": 21
+   "no": 21,
+   "slug": "sushi-ryu",
+   "address": "中山區新生北路二段60之5號",
+   "site": "",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": true,
+   "blurb": "老師傅自立門戶的傳統壽司吧，米飯混三種醋，秋冬的鮟鱇魚肝壽司是招牌。"
   },
   {
    "name": "Ad Astra",
@@ -222,7 +363,14 @@
    "lat": 25.054508,
    "lon": 121.5241,
    "area": "zs",
-   "no": 22
+   "no": 22,
+   "slug": "ad-astra-1206669",
+   "address": "中山區中山北路二段45巷23號",
+   "site": "https://www.adastra.com.tw/",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": true,
+   "blurb": "沒有招牌、要按門鈴的板前餐廳，美籍主廚用亞洲食材做歐陸料理，最後的釜飯最讓人期待。"
   },
   {
    "name": "Impromptu by Paul Lee",
@@ -232,7 +380,14 @@
    "lat": 25.054176,
    "lon": 121.524231,
    "area": "zs",
-   "no": 23
+   "no": 23,
+   "slug": "impromptu-by-paul-lee",
+   "address": "中山區中山北路二段39巷3號B1 (晶華酒店)",
+   "site": "",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": true,
+   "blurb": "晶華地下的亞歐融合套餐，把台灣小吃變成精緻料理，坐吧檯可以看整個廚房運作。"
   },
   {
    "name": "Circum-",
@@ -242,7 +397,14 @@
    "lat": 25.05416,
    "lon": 121.525318,
    "area": "zs",
-   "no": 24
+   "no": 24,
+   "slug": "circum",
+   "address": "中山區中山北路二段39巷3號B2 (晶華酒店)",
+   "site": "",
+   "closed": false,
+   "price": "$$$",
+   "bookable": false,
+   "blurb": "中餐和法餐背景的雙主廚，用法式手法做各地中菜，橘紅色空間很明亮，甜點還配古詩。"
   },
   {
    "name": "晶華軒",
@@ -253,7 +415,14 @@
    "lon": 121.524194,
    "note": "升一星",
    "area": "zs",
-   "no": 25
+   "no": 25,
+   "slug": "silks-house",
+   "address": "中山區中山北路二段39巷3號3樓 (晶華酒店)",
+   "site": "https://www.regenttaiwan.com/dining/silks-house",
+   "closed": false,
+   "price": "$$$",
+   "bookable": false,
+   "blurb": "晶華的粵菜廳，燒味、點心到時令海鮮都穩。秋天有一整套的蟹宴。"
   },
   {
    "name": "鮨 嘉仁",
@@ -263,67 +432,110 @@
    "lat": 25.051495,
    "lon": 121.529993,
    "area": "zs",
-   "no": 26
+   "no": 26,
+   "slug": "sushi-kajin",
+   "address": "中山區吉林路28號",
+   "site": "https://www.sushi-kajin.com/",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": true,
+   "blurb": "日籍料理長的江戶前壽司，一週兩次從豐洲進貨，檜木吧檯很安靜。春夏記得吃小肌。"
   },
   {
    "name": "小酌之家",
    "tier": "bib",
    "cuisine": "台菜",
-   "address": "台北市中山區吉林路420號",
+   "address": "中山區吉林路420號",
    "lat": 25.065931,
    "lon": 121.530315,
    "area": "zs",
-   "no": 27
+   "no": 27,
+   "slug": "hsiao-cho-chih-chia",
+   "site": "",
+   "closed": false,
+   "price": "$$",
+   "bookable": false,
+   "blurb": "只有五張桌子的台式小館，晚上總是滿座，海釣漁獲和慢燉湯品是重點。"
   },
   {
    "name": "隱食家",
    "tier": "bib",
    "cuisine": "台菜",
-   "address": "台北市中山區雙城街28巷8號",
+   "address": "中山區雙城街28巷8號",
    "lat": 25.065773,
    "lon": 121.523764,
    "area": "zs",
-   "no": 28
+   "no": 28,
+   "slug": "inn-s",
+   "site": "",
+   "closed": false,
+   "price": "$$",
+   "bookable": false,
+   "blurb": "藏在巷子裡、少油少鹽的健康台菜，白飯用冠軍米土鍋現煮，多人來老闆會幫你配菜。"
   },
   {
    "name": "軟食力",
    "tier": "bib",
    "cuisine": "小吃",
-   "address": "台北市中山區民權東路二段135巷30弄21號",
+   "address": "中山區民權東路二段135巷30弄21號",
    "lat": 25.0643,
    "lon": 121.53413,
    "area": "zs",
-   "no": 29
+   "no": 29,
+   "slug": "soft-power",
+   "site": "",
+   "closed": false,
+   "price": "$",
+   "bookable": false,
+   "blurb": "行天宮旁巷子裡的文青早餐店，主打南部軟式粉漿蛋餅，現點現做要有耐心。"
   },
   {
    "name": "黃記魯肉飯",
    "tier": "bib",
    "cuisine": "小吃",
-   "address": "台北市中山區中山北路二段183巷28號",
+   "address": "中山區中山北路二段183巷28號",
    "lat": 25.06367,
    "lon": 121.524142,
    "area": "zs",
-   "no": 30
+   "no": 30,
+   "slug": "huang-chi-lu-rou-fan",
+   "site": "",
+   "closed": false,
+   "price": "$",
+   "bookable": false,
+   "blurb": "巷子裡的老滷肉飯，肥而不膩，滷白菜一定要點，便當也很划算。"
   },
   {
    "name": "人和園",
    "tier": "bib",
    "cuisine": "雲南菜",
-   "address": "台北市中山區中山北路二段112號2樓",
+   "address": "中山區中山北路二段112號2樓",
    "lat": 25.060726,
    "lon": 121.522761,
    "area": "zs",
-   "no": 31
+   "no": 31,
+   "slug": "jen-ho-yuan",
+   "site": "",
+   "closed": false,
+   "price": "$$",
+   "bookable": false,
+   "blurb": "1956 年創立的雲南菜，2022 年搬到中山北路，部分食材直接從雲南來。"
   },
   {
    "name": "雞家莊(長春路)",
    "tier": "bib",
    "cuisine": "台菜",
-   "address": "台北市中山區長春路55號",
+   "address": "中山區長春路55號",
    "lat": 25.055024,
    "lon": 121.526088,
    "area": "zs",
-   "no": 32
+   "no": 32,
+   "slug": "chi-chia-chuang-changchun-road",
+   "site": "",
+   "closed": false,
+   "price": "$$",
+   "bookable": false,
+   "blurb": "雞販出身的老闆做的雞料理，三杯雞配豬血糕最下飯，附近上班族很愛。"
   },
   {
    "name": "彧割烹",
@@ -333,7 +545,14 @@
    "lat": 25.053924,
    "lon": 121.563286,
    "area": "ss",
-   "no": 33
+   "no": 33,
+   "slug": "yu-kapo-1198592",
+   "address": "松山區三民路9之1號",
+   "site": "",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": false,
+   "blurb": "要拿密碼才進得去的割烹，主廚依季節用炭火做單一套餐，最後的釜飯讓人難忘。"
   },
   {
    "name": "Mizue",
@@ -344,7 +563,14 @@
    "lon": 121.549915,
    "note": "首次入選即二星",
    "area": "ss",
-   "no": 34
+   "no": 34,
+   "slug": "mizue",
+   "address": "松山區敦化北路139號2樓 (嘉佩樂酒店)",
+   "site": "https://capellahotels.com/zh-tc/capella-taipei/dining",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": false,
+   "blurb": "嘉佩樂酒店裡的金澤風日料，引進甜蝦、香箱蟹這些少見的北陸海味，一年換四次菜單。"
   },
   {
    "name": "渥達尼斯磨坊",
@@ -354,7 +580,14 @@
    "lat": 25.050701,
    "lon": 121.537125,
    "area": "ss",
-   "no": 35
+   "no": 35,
+   "slug": "molino-de-urdaniz",
+   "address": "中山區建國北路一段61號 (慕舍酒店)",
+   "site": "https://hotelmvsa.com/en/dining/molino-de-urdaniz",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": true,
+   "blurb": "慕舍酒店裡以海鮮為主的現代歐陸料理，石牆配暖光，酒櫃很壯觀。"
   },
   {
    "name": "SENS",
@@ -364,7 +597,14 @@
    "lat": 25.058866,
    "lon": 121.547355,
    "area": "ss",
-   "no": 36
+   "no": 36,
+   "slug": "sens-1204678",
+   "address": "松山區民生東路三段127巷12號",
+   "site": "https://www.senstw.com/tw",
+   "closed": true,
+   "price": "$$$$",
+   "bookable": true,
+   "blurb": "老公寓改成的法式餐廳，醬汁是靈魂。米其林官網目前標示「暫時關閉」，出發前務必先確認。"
   },
   {
    "name": "富錦樹台菜香檳(松山)",
@@ -374,7 +614,14 @@
    "lat": 25.056532,
    "lon": 121.552774,
    "area": "ss",
-   "no": 37
+   "no": 37,
+   "slug": "fujin-tree-taiwanese-cuisine-champagne-songshan",
+   "address": "松山區敦化北路199巷17號",
+   "site": "https://www.fujintreeshop.com/",
+   "closed": false,
+   "price": "$$",
+   "bookable": true,
+   "blurb": "台南創辦人把府城甜味台菜配香檳，大落地窗很舒服，富錦街散步順路。"
   },
   {
    "name": "雅閣",
@@ -384,7 +631,14 @@
    "lat": 25.055553,
    "lon": 121.548328,
    "area": "ss",
-   "no": 38
+   "no": 38,
+   "slug": "ya-ge",
+   "address": "松山區敦化北路158號3樓 (文華東方酒店)",
+   "site": "https://www.mandarinoriental.com/en/taipei/songshan/dine/ya-ge",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": true,
+   "blurb": "文華東方裡典雅的粵菜廳，午間港點很受歡迎，秋天還有大閘蟹。"
   },
   {
    "name": "T+T",
@@ -394,7 +648,14 @@
    "lat": 25.05483,
    "lon": 121.550714,
    "area": "ss",
-   "no": 39
+   "no": 39,
+   "slug": "t-t",
+   "address": "松山區敦化北路165巷11號",
+   "site": "",
+   "closed": false,
+   "price": "$$$",
+   "bookable": false,
+   "blurb": "像歐洲小酒館一樣輕鬆，主廚把亞洲各地旅行的味道和街頭小吃寫進菜裡。"
   },
   {
    "name": "A Cut",
@@ -404,7 +665,14 @@
    "lat": 25.052739,
    "lon": 121.542194,
    "area": "ss",
-   "no": 40
+   "no": 40,
+   "slug": "a-cut",
+   "address": "中山區遼寧街177號2樓 (富邦遼寧大樓)",
+   "site": "",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": true,
+   "blurb": "先看開放廚房再入座的牛排館，可以單點不同產地、部位的牛肉，酒單很厲害。"
   },
   {
    "name": "Wok by O'BOND",
@@ -414,7 +682,14 @@
    "lat": 25.04788,
    "lon": 121.540261,
    "area": "ss",
-   "no": 41
+   "no": 41,
+   "slug": "wok-by-o-bond",
+   "address": "中山區龍江路18號",
+   "site": "",
+   "closed": false,
+   "price": "$$$",
+   "bookable": true,
+   "blurb": "知名酒吧團隊開的餐廳，菜單一定有一道炒鍋菜，服務生會講每道菜的故事，餐酒很有趣。"
   },
   {
    "name": "INITA",
@@ -424,59 +699,96 @@
    "lat": 25.046038,
    "lon": 121.550585,
    "area": "ss",
-   "no": 42
+   "no": 42,
+   "slug": "inita",
+   "address": "松山區八德路三段12巷52弄1號",
+   "site": "https://www.inita.tw/",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": false,
+   "blurb": "日籍主廚混合義大利、日本、台灣三地風味，套餐裡固定有一道現擀手工義大利麵。訂位不定期開放。"
   },
   {
    "name": "武田咖哩",
    "tier": "bib",
    "cuisine": "日式咖哩",
-   "address": "台北市松山區三民路146號",
+   "address": "松山區三民路146號",
    "lat": 25.060825,
    "lon": 121.563384,
    "note": "2026 新入選",
    "area": "ss",
-   "no": 43
+   "no": 43,
+   "slug": "toriaezu-curry",
+   "site": "",
+   "closed": false,
+   "price": "$$",
+   "bookable": false,
+   "blurb": "像街角咖啡館的日式咖哩店，咖哩用日式高湯熬，很下飯，抹茶奶酪別錯過。"
   },
   {
    "name": "雲川水月",
    "tier": "bib",
    "cuisine": "素食",
-   "address": "台北市松山區富錦街120號",
+   "address": "松山區富錦街120號",
    "lat": 25.059743,
    "lon": 121.553166,
    "area": "ss",
-   "no": 44
+   "no": 44,
+   "slug": "clavius",
+   "site": "",
+   "closed": false,
+   "price": "$$",
+   "bookable": false,
+   "blurb": "走過礫石小徑進門的當代蔬食，用台灣原型食材做出細緻的亞洲味。中午來光線最美。"
   },
   {
    "name": "金賞軒",
    "tier": "bib",
    "cuisine": "台菜",
-   "address": "台北市松山區敦化北路155巷111號",
+   "address": "松山區敦化北路155巷111號",
    "lat": 25.054147,
    "lon": 121.552511,
    "area": "ss",
-   "no": 45
+   "no": 45,
+   "slug": "jin-shang-hsuan",
+   "site": "",
+   "closed": false,
+   "price": "$$",
+   "bookable": false,
+   "blurb": "小巧有格調的台菜館，二十多年經驗的主廚，私房菜和烏魚子炒飯都值得。"
   },
   {
    "name": "有有1969",
    "tier": "bib",
    "cuisine": "台菜熱炒",
-   "address": "台北市中山區遼寧街48號",
+   "address": "中山區遼寧街48號",
    "lat": 25.048975,
    "lon": 121.542074,
    "note": "2026 新入選",
    "area": "ss",
-   "no": 46
+   "no": 46,
+   "slug": "yu-yu-1969",
+   "site": "",
+   "closed": false,
+   "price": "$$",
+   "bookable": false,
+   "blurb": "1969 年開的台式熱炒，第三代翻新後小巧舒服，百花油條配奶奶傳下來的滷肉飯。"
   },
   {
    "name": "醉楓園小館",
    "tier": "bib",
    "cuisine": "粵菜",
-   "address": "台北市松山區八德路三段8巷5號",
+   "address": "松山區八德路三段8巷5號",
    "lat": 25.047456,
    "lon": 121.54978,
    "area": "ss",
-   "no": 47
+   "no": 47,
+   "slug": "tsui-feng-yuan",
+   "site": "",
+   "closed": false,
+   "price": "$$",
+   "bookable": false,
+   "blurb": "傳承家族配方的廣東手路菜，份量大，揪人一起來才能多吃幾道。"
   },
   {
    "name": "頤宮",
@@ -486,7 +798,14 @@
    "lat": 25.049148,
    "lon": 121.51687,
    "area": "zz",
-   "no": 48
+   "no": 48,
+   "slug": "le-palais",
+   "address": "大同區承德路一段3號17樓 (君品酒店)",
+   "site": "https://www.palaisdechinehotel.com/pdc-en/pages/26/0/66",
+   "closed": false,
+   "price": "$$$",
+   "bookable": true,
+   "blurb": "君品酒店 17 樓的三星粵菜，港籍主廚天天駐店。片皮鴨用宜蘭櫻桃鴨，要提前訂。"
   },
   {
    "name": "NOBUO",
@@ -497,7 +816,14 @@
    "lon": 121.527963,
    "note": "一星升二星",
    "area": "zz",
-   "no": 49
+   "no": 49,
+   "slug": "nobuo",
+   "address": "中正區泰安街8號",
+   "site": "https://nobuo.tw/",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": true,
+   "blurb": "主廚李信男的單一海鮮套餐，風味乾淨、擺盤留白，空間像溫暖的北歐家。"
   },
   {
    "name": "請客樓",
@@ -507,119 +833,191 @@
    "lat": 25.044655,
    "lon": 121.521702,
    "area": "zz",
-   "no": 50
+   "no": 50,
+   "slug": "the-guest-house",
+   "address": "中正區忠孝東路一段12號17樓 (喜來登大飯店)",
+   "site": "",
+   "closed": false,
+   "price": "$$$",
+   "bookable": false,
+   "blurb": "喜來登 17 樓，以川菜為主、淮揚為輔，講究香而不辣的層次，適合宴請。"
   },
   {
    "name": "祥和蔬食(中正)",
    "tier": "bib",
    "cuisine": "素食",
-   "address": "台北市中正區鎮江街1巷1號",
+   "address": "中正區鎮江街1巷1號",
    "lat": 25.044362,
    "lon": 121.521792,
    "area": "zz",
-   "no": 51
+   "no": 51,
+   "slug": "serenity",
+   "site": "https://www.serenity.com.tw/",
+   "closed": false,
+   "price": "$$",
+   "bookable": false,
+   "blurb": "全台第一家四川風味素菜，麻辣香都有，可以調成全素或蛋奶素。"
   },
   {
    "name": "雙月食品(青島東路)",
    "tier": "bib",
    "cuisine": "台菜",
-   "address": "台北市中正區青島東路6之2號",
+   "address": "中正區青島東路6之2號",
    "lat": 25.043702,
    "lon": 121.522038,
    "area": "zz",
-   "no": 52
+   "no": 52,
+   "slug": "shuang-yue-food",
+   "site": "https://www.moonmoonfood.com/",
+   "closed": false,
+   "price": "$$",
+   "bookable": false,
+   "blurb": "照老闆媽媽配方做的古早味藥膳，雞湯每天用新鮮的溫體雞，油飯很早就賣完。"
   },
   {
    "name": "青嬌",
    "tier": "bib",
    "cuisine": "江浙菜(雞湯)",
-   "address": "台北市中正區濟南路二段9號1樓",
+   "address": "中正區濟南路二段9號",
    "lat": 25.041433,
    "lon": 121.5272,
    "note": "2026 新入選",
    "area": "zz",
-   "no": 53
+   "no": 53,
+   "slug": "ching-jiao",
+   "site": "",
+   "closed": false,
+   "price": "$$",
+   "bookable": true,
+   "blurb": "以雞湯為核心的江浙小館，把功夫菜做成日常小吃，雞湯還附酸甜沾醬。"
   },
   {
    "name": "杭州小籠湯包(大安)",
    "tier": "bib",
    "cuisine": "點心/小籠包",
-   "address": "台北市大安區杭州南路二段53之5號",
+   "address": "大安區杭州南路二段17及19號",
    "lat": 25.034069,
    "lon": 121.523723,
    "area": "zz",
-   "no": 54
+   "no": 54,
+   "slug": "hang-zhou-xiao-long-bao-da-an",
+   "site": "",
+   "closed": false,
+   "price": "$$",
+   "bookable": false,
+   "blurb": "師承上海師傅的小籠湯包，每天現擀皮、皮薄多汁，喜歡辣的加點麻辣臭豆腐。"
   },
   {
    "name": "老山東牛肉家常麵店",
    "tier": "bib",
    "cuisine": "牛肉麵",
-   "address": "台北市萬華區西寧南路70號B1之15室(萬年大樓)",
+   "address": "萬華區西寧南路70號B1之15室 (萬年商業大樓)",
    "lat": 25.04358,
    "lon": 121.506086,
    "area": "wh",
-   "no": 55
+   "no": 55,
+   "slug": "lao-shan-dong-homemade-noodles",
+   "site": "",
+   "closed": false,
+   "price": "$",
+   "bookable": false,
+   "blurb": "1949 年開到現在的西門町牛肉麵，藏在萬年大樓地下，手工刀切麵配中藥紅燒湯。"
   },
   {
    "name": "一甲子餐飲",
    "tier": "bib",
    "cuisine": "小吃",
-   "address": "台北市萬華區康定路79號",
+   "address": "萬華區康定路79號",
    "lat": 25.040402,
    "lon": 121.502171,
    "area": "wh",
-   "no": 56
+   "no": 56,
+   "slug": "yi-jia-zi",
+   "site": "https://home.yi-jia-zi.com/",
+   "closed": false,
+   "price": "$",
+   "bookable": false,
+   "blurb": "傳了三代的台南小吃，控肉飯肥瘦剛好，麻豆碗粿限量，想吃可以先打電話。"
   },
   {
    "name": "源芳刈包",
    "tier": "bib",
    "cuisine": "夜市小吃",
-   "address": "台北市萬華區華西街17之2號(華西街夜市)",
+   "address": "萬華區華西街17之2號161號攤 (華西街夜市)",
    "lat": 25.039406,
    "lon": 121.498584,
    "area": "wh",
-   "no": 57
+   "no": 57,
+   "slug": "yuan-fang-guabao",
+   "site": "",
+   "closed": false,
+   "price": "$",
+   "bookable": false,
+   "blurb": "華西街夜市開了六十多年的刈包，滷五花軟嫩，配一碗四神湯剛好。"
   },
   {
    "name": "小王煮瓜",
    "tier": "bib",
    "cuisine": "夜市小吃",
-   "address": "台北市萬華區華西街17之4號(華西街夜市)",
+   "address": "萬華區華西街17之4號153號攤 (華西街夜市)",
    "lat": 25.039219,
    "lon": 121.498604,
    "area": "wh",
-   "no": 58
+   "no": 58,
+   "slug": "hsiao-wang-steamed-minced-pork-with-pickles-in-broth",
+   "site": "https://wangsbroth.com/",
+   "closed": false,
+   "price": "$",
+   "bookable": false,
+   "blurb": "華西街四十多年的滷肉飯，膠質豐富不膩，清湯瓜仔肉湯頭回甘。"
   },
   {
    "name": "蘇來傳",
    "tier": "bib",
    "cuisine": "小吃",
-   "address": "台北市萬華區和平西路三段",
+   "address": "萬華區和平西路三段176巷4號",
    "lat": 25.035,
    "lon": 121.497693,
-   "verified": false,
    "area": "wh",
-   "no": 59
+   "no": 59,
+   "slug": "su-lai-chuan",
+   "site": "",
+   "closed": false,
+   "price": "$",
+   "bookable": false,
+   "blurb": "傳了三代、七十年的肉圓店，杯子形的肉圓每天現磨米漿做，加蒜泥更香。"
   },
   {
    "name": "吾旺再季",
    "tier": "bib",
    "cuisine": "夜市小吃",
-   "address": "台北市中正區中華路二段313巷29號(南機場夜市)",
+   "address": "中正區中華路二段313巷29號 (南機場夜市)",
    "lat": 25.028758,
    "lon": 121.506724,
    "area": "wh",
-   "no": 60
+   "no": 60,
+   "slug": "wu-wang-tsai-chi",
+   "site": "",
+   "closed": false,
+   "price": "$",
+   "bookable": false,
+   "blurb": "南機場夜市排隊潤餅，紅燒肉加豆皮、肉鬆，可以做素的。"
   },
   {
    "name": "無名推車燒餅",
    "tier": "bib",
    "cuisine": "夜市小吃",
-   "address": "台北市中正區中華路二段311巷(南機場夜市)",
+   "address": "中正區中華路二段311巷74號攤 (南機場夜市)",
    "lat": 25.028444,
    "lon": 121.506733,
    "area": "wh",
-   "no": 61
+   "no": 61,
+   "slug": "unnamed-clay-oven-roll",
+   "site": "",
+   "closed": false,
+   "price": "$",
+   "bookable": false,
+   "blurb": "沒招牌的燒餅推車，在南機場夜市尾段，先煎後烤，甜鹹各兩種。"
   },
   {
    "name": "A",
@@ -629,7 +1027,14 @@
    "lat": 25.041422,
    "lon": 121.542694,
    "area": "da",
-   "no": 62
+   "no": 62,
+   "slug": "a",
+   "address": "大安區忠孝東路三段282號4樓 (新光三越Diamond Towers 2館)",
+   "site": "https://restaurant-a.com/",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": true,
+   "blurb": "像當代畫廊一樣的法式餐廳，五百多款酒，擺盤像藝術品，蕈菇咖啡配甜甜圈是招牌。"
   },
   {
    "name": "牡丹",
@@ -639,7 +1044,14 @@
    "lat": 25.035127,
    "lon": 121.547106,
    "area": "da",
-   "no": 63
+   "no": 63,
+   "slug": "mudan",
+   "address": "大安區四維路52巷17號",
+   "site": "https://mudantempura.com/",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": true,
+   "blurb": "二星天婦羅，麵衣薄得透光，庭院很靜。只開 12:30 和 18:30 兩個時段。"
   },
   {
    "name": "吉兆割烹壽司",
@@ -649,7 +1061,14 @@
    "lat": 25.044309,
    "lon": 121.550769,
    "area": "da",
-   "no": 64
+   "no": 64,
+   "slug": "kitcho",
+   "address": "大安區忠孝東路四段181巷48號",
+   "site": "",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": false,
+   "blurb": "台灣主廚三十多年功力的壽司，蔬菜手卷收尾很清爽，還兼營清酒可以配。"
   },
   {
    "name": "壽司芳",
@@ -659,7 +1078,14 @@
    "lat": 25.040244,
    "lon": 121.553692,
    "area": "da",
-   "no": 65
+   "no": 65,
+   "slug": "sushiyoshi",
+   "address": "大安區忠孝東路四段216巷19弄12號",
+   "site": "",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": false,
+   "blurb": "日法技法融合的創意壽司，晚上點高一級的套餐最能吃出驚喜。"
   },
   {
    "name": "元一",
@@ -669,7 +1095,14 @@
    "lat": 25.04002,
    "lon": 121.553765,
    "area": "da",
-   "no": 66
+   "no": 66,
+   "slug": "motoichi",
+   "address": "大安區忠孝東路四段216巷27弄11號",
+   "site": "",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": false,
+   "blurb": "兩間八人包廂的天婦羅，近距離看師傅炸，每一道配菜都講究。"
   },
   {
    "name": "山海樓",
@@ -680,7 +1113,14 @@
    "lon": 121.531407,
    "green": true,
    "area": "da",
-   "no": 67
+   "no": 67,
+   "slug": "mountain-and-sea-house",
+   "address": "中正區仁愛路二段94號",
+   "site": "https://www.mountain-n-seahouse.com/en",
+   "closed": false,
+   "price": "$$$",
+   "bookable": true,
+   "blurb": "像回到 1930 年代的台菜宅邸，復刻大戶人家的宴席菜，還有台灣地酒。"
   },
   {
    "name": "好嶼",
@@ -691,7 +1131,14 @@
    "lon": 121.553245,
    "green": true,
    "area": "da",
-   "no": 68
+   "no": 68,
+   "slug": "hosu",
+   "address": "大安區仁愛路四段300巷20弄17號",
+   "site": "https://www.hosutaiwan.com/",
+   "closed": false,
+   "price": "$$$",
+   "bookable": true,
+   "blurb": "雲林主廚以台灣五大族群飲食為題的套餐，在乎環境友善，講解生動，有小庭院種五葉松。"
   },
   {
    "name": "ZEA",
@@ -701,7 +1148,14 @@
    "lat": 25.036361,
    "lon": 121.554105,
    "area": "da",
-   "no": 69
+   "no": 69,
+   "slug": "zea",
+   "address": "大安區仁愛路四段300巷20弄5號",
+   "site": "",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": true,
+   "blurb": "拉丁美洲菜加台灣風土，仙人掌和拉美音樂很有度假感，芭樂撒梅粉這種搭法很驚喜。"
   },
   {
    "name": "MUME",
@@ -711,7 +1165,14 @@
    "lat": 25.036266,
    "lon": 121.548064,
    "area": "da",
-   "no": 70
+   "no": 70,
+   "slug": "mume",
+   "address": "大安區四維路28號",
+   "site": "https://www.mume.tw/",
+   "closed": false,
+   "price": "$$$",
+   "bookable": false,
+   "blurb": "每道菜都像一幅花草畫的現代料理，海鮮特別好，燈光暗但氣氛輕鬆，可配台味調酒。"
   },
   {
    "name": "謙安和",
@@ -721,7 +1182,14 @@
    "lat": 25.034567,
    "lon": 121.552868,
    "area": "da",
-   "no": 71
+   "no": 71,
+   "slug": "ken-an-ho",
+   "address": "大安區安和路一段127巷4號",
+   "site": "",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": false,
+   "blurb": "中午手握壽司、晚上割烹，料理長會親自講菜，氣氛比一般日料店活潑。"
   },
   {
    "name": "掬",
@@ -731,7 +1199,14 @@
    "lat": 25.034135,
    "lon": 121.553011,
    "area": "da",
-   "no": 72
+   "no": 72,
+   "slug": "kiku-1216129",
+   "address": "大安區安和路一段135巷4號",
+   "site": "",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": false,
+   "blurb": "日式老屋格局的割烹，用台灣食材和發酵技巧重新詮釋，牆上展台灣藝術家作品。"
   },
   {
    "name": "de nuit",
@@ -741,78 +1216,127 @@
    "lat": 25.033488,
    "lon": 121.550541,
    "area": "da",
-   "no": 73
+   "no": 73,
+   "slug": "de-nuit",
+   "address": "大安區信義路四段175號",
+   "site": "https://www.denuit.com.tw/",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": true,
+   "blurb": "名字是法文「夜晚」，黑灰色調很靜，港籍主廚的法式套餐有八道和十道兩種。"
   },
   {
    "name": "小小樹食(大安路)",
    "tier": "bib",
    "cuisine": "素食",
-   "address": "台北市大安區大安路一段116巷17號",
+   "address": "大安區大安路一段116巷17號",
    "lat": 25.039901,
    "lon": 121.544823,
    "green": true,
    "area": "da",
-   "no": 74
+   "no": 74,
+   "slug": "little-tree-food-da-an-road",
+   "site": "https://www.littletreefood.com/",
+   "closed": false,
+   "price": "$$",
+   "bookable": true,
+   "blurb": "粉綠色外觀的美式蔬食，有奶蛋素和五辛素，一個人也能點獨享套餐。"
   },
   {
    "name": "天下三絕",
    "tier": "bib",
    "cuisine": "牛肉麵",
-   "address": "台北市大安區仁愛路四段27巷3號",
+   "address": "大安區仁愛路四段27巷3號",
    "lat": 25.03888,
    "lon": 121.545317,
    "area": "da",
-   "no": 75
+   "no": 75,
+   "slug": "tien-hsia-san-chueh",
+   "site": "https://www.noodle3.com.tw/",
+   "closed": false,
+   "price": "$$",
+   "bookable": true,
+   "blurb": "水晶燈下配紅酒吃的牛肉麵，湯頭用四種番茄熬，可免費續湯，週三點主食送紅酒。"
   },
   {
    "name": "巷子龍家常菜",
    "tier": "bib",
    "cuisine": "湘菜",
-   "address": "台北市大安區四維路25號",
+   "address": "大安區四維路25號",
    "lat": 25.035469,
    "lon": 121.548253,
    "area": "da",
-   "no": 76
+   "no": 76,
+   "slug": "talking-heads",
+   "site": "",
+   "closed": false,
+   "price": "$$",
+   "bookable": false,
+   "blurb": "湖南和江浙家常菜，黑板上寫著每日限量魚貨，份量可依人數調。"
   },
   {
    "name": "Tableau by Craig Yang",
    "tier": "bib",
    "cuisine": "創新菜",
-   "address": "台北市大安區安和路一段78巷33號",
+   "address": "大安區安和路一段78巷33號",
    "lat": 25.035113,
    "lon": 121.550347,
    "area": "da",
-   "no": 77
+   "no": 77,
+   "slug": "tableau-by-craig-yang",
+   "site": "",
+   "closed": false,
+   "price": "$$",
+   "bookable": false,
+   "blurb": "總舖師家族出身的主廚，用法式技巧做辦桌菜，五道套餐另可加點。"
   },
   {
    "name": "鼎泰豐(信義路)",
    "tier": "bib",
    "cuisine": "上海菜/小籠包",
-   "address": "台北市大安區信義路二段194號",
+   "address": "大安區信義路二段277號",
    "lat": 25.033503,
    "lon": 121.530118,
    "area": "da",
-   "no": 78
+   "no": 78,
+   "slug": "din-tai-fung-xinyi-road",
+   "site": "https://www.dintaifung.com.tw/eng/index.php",
+   "closed": false,
+   "price": "$$",
+   "bookable": false,
+   "blurb": "鼎泰豐信義路旗艦店，四層樓好帶長輩和小孩，除了小籠包也點幾道台灣食材做的菜。"
   },
   {
    "name": "Pàng 胖塔可",
    "tier": "bib",
    "cuisine": "墨西哥菜",
-   "address": "台北市大安區文昌街181號",
+   "address": "大安區文昌街181號",
    "lat": 25.032569,
    "lon": 121.553654,
    "area": "da",
-   "no": 79
+   "no": 79,
+   "slug": "pang",
+   "site": "",
+   "closed": false,
+   "price": "$$",
+   "bookable": false,
+   "blurb": "每天現做玉米餅皮的墨西哥塔可，餡料用台灣食材，碳烤皇宮菜很特別。"
   },
   {
    "name": "雄記蔥抓餅",
    "tier": "bib",
    "cuisine": "夜市小吃",
-   "address": "台北市中正區羅斯福路四段108巷2號(公館)",
+   "address": "中正區羅斯福路四段108巷2號 (公館夜市)",
    "lat": 25.013444,
    "lon": 121.53534,
    "area": "da",
-   "no": 80
+   "no": 80,
+   "slug": "hsiung-chi-scallion-pancake",
+   "site": "",
+   "closed": false,
+   "price": "$",
+   "bookable": false,
+   "blurb": "公館夜市入口三十多年的蔥抓餅，外脆內軟，加蜂蜜芥末和九層塔。"
   },
   {
    "name": "侯布雄",
@@ -822,7 +1346,14 @@
    "lat": 25.039862,
    "lon": 121.567619,
    "area": "xy",
-   "no": 81
+   "no": 81,
+   "slug": "l-atelier-de-joel-robuchon550759",
+   "address": "信義區松仁路28號5樓 (寶麗廣場)",
+   "site": "https://www.bellavita.com.tw/dining/Latelierdejoelrobuchontaipei.php",
+   "closed": false,
+   "price": "$$$$",
+   "bookable": false,
+   "blurb": "侯布雄台北店，紅黑色調低調奢華，招牌馬鈴薯泥不能錯過，法國侍酒師幫你挑酒。"
   },
   {
    "name": "川雅",
@@ -832,28 +1363,47 @@
    "lat": 25.034277,
    "lon": 121.56687,
    "area": "xy",
-   "no": 82
+   "no": 82,
+   "slug": "chuan-ya",
+   "address": "信義區松智路17號46樓 (微風南山)",
+   "site": "https://www.chuan-ya.com/",
+   "closed": false,
+   "price": "$$$",
+   "bookable": false,
+   "blurb": "微風南山 46 樓的川菜，整片窗看 101，開水白菜這種功夫菜做得很細。"
   },
   {
    "name": "心潮飯店",
    "tier": "bib",
    "cuisine": "台菜",
-   "address": "台北市信義區忠孝東路五段68號2樓",
+   "address": "信義區忠孝東路五段68號2樓 (微風信義)",
    "lat": 25.040501,
    "lon": 121.566569,
    "area": "xy",
-   "no": 83
+   "no": 83,
+   "slug": "sinchao-rice-shoppe",
+   "site": "",
+   "closed": false,
+   "price": "$$",
+   "bookable": false,
+   "blurb": "照 1920 年代美國唐人街中餐館設計的復古台菜館，主角是各種炒飯。"
   },
   {
    "name": "開囍",
    "tier": "bib",
    "cuisine": "小吃(滷肉)",
-   "address": "台北市信義區莊敬路441號",
+   "address": "信義區莊敬路441號",
    "lat": 25.02715,
    "lon": 121.567124,
    "note": "2026 新入選",
    "area": "xy",
-   "no": 84
+   "no": 84,
+   "slug": "open-smile",
+   "site": "",
+   "closed": false,
+   "price": "$",
+   "bookable": false,
+   "blurb": "裝潢新潮的滷肉小館，滷肉慢燉軟嫩，加半熟荷包蛋和自製辣醬最好吃。"
   }
  ],
  "areas": [
