@@ -1,0 +1,4 @@
+[out:json][timeout:180];
+(way["natural"="water"]["water"~"river|canal|lake|pond|reservoir"](13.64,100.36,13.96,100.71);relation["natural"="water"]["water"~"river|canal|lake|reservoir"](13.64,100.36,13.96,100.71);
+ way["waterway"="riverbank"](13.64,100.36,13.96,100.71);relation["waterway"="riverbank"](13.64,100.36,13.96,100.71););
+out geom;
