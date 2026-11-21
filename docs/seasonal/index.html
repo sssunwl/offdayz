@@ -56,6 +56,7 @@
 <div class="cover-wrap feature-wrap"><span class="paper-tape" aria-hidden="true"></span><div class="column-masthead">
 <div class="masthead"><a class="mast-logo" href="../">Off<i>Dayz</i></a><div class="issue"><span data-issue>ISSUE 01 · NOV 2026</span><br>HK · TPE DEPARTURES</div></div>
 <div class="dateline"><span>P.05 季節限定</span><span>Seasonal · 只在這個月</span></div>
+<div class="cover-photo" id="coverPhoto"></div>
 <div class="cover-story"><div>
   <div class="eyebrow">COVER STORY · <span id="coverKicker">季節限定</span></div>
   <h1 id="coverTitle">錯過這個月，<br><em>就要再等一年。</em></h1>
@@ -103,6 +104,7 @@
 <script src="../assets/site.js"></script>
 <script>
 let SD = null;
+let PH = null;
 let selMonth = 0;
 let selCat = '全部';
 const MONTHS = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
@@ -115,7 +117,7 @@ const CITY_KEYS = {
 };
 
 async function boot() {
-  SD=await SoSol.getJSON('../data/seasonal.json');
+  [SD, PH] = await Promise.all([SoSol.getJSON('../data/seasonal.json'), SoSol.getJSON('../data/photos.json')]);
   selMonth = +SoSol.todayISO().slice(5,7);
   buildMonthStrip();
   buildCatStrip();
@@ -124,6 +126,13 @@ async function boot() {
 }
 
 // 封面:這個月第一個活動當大標、活動地點蓋章;下面是「下個月才開始」的預告
+// 活動照片:有活動自己的照片用活動的,沒有就用第一個目的地城市當月的照片
+function eventPhoto(v, cls) {
+  const d = (v.destinations || [])[0] || {}, m = selMonth || (v.months || [])[0];
+  const p = SoSol.pickPhoto(PH?.events?.[v.id], m) || SoSol.pickPhoto(PH?.cities?.[d.city_key || CITY_KEYS[d.airport]], m);
+  return SoSol.photoHTML(p, v.title, cls);
+}
+
 function renderCover(RG) {
   const e = SoSol.esc, m = selMonth, next = m % 12 + 1;
   const events = SD?.events || [];
@@ -139,6 +148,8 @@ function renderCover(RG) {
   document.getElementById('coverKicker').textContent = m + ' 月限定';
   document.getElementById('coverTitle').innerHTML = `${m} 月，<br>正好遇見<em>${e(now[0].title)}</em>。`;
   document.getElementById('coverLead').innerHTML = `${e(now[0].desc || '')}<br>這個月還有：<b>${now.slice(1, 4).map(v => e(v.title)).join('、') || '更多活動整理中'}</b>`;
+  const cover = eventPhoto(now[0]);
+  if (cover) document.getElementById('coverPhoto').innerHTML = `<span class="paper-tape" aria-hidden="true"></span><span class="paper-tape" aria-hidden="true"></span>${cover}<span class="photo-tag">${e(now[0].title)} · ${e(now[0].period || '')}</span>`;
   document.getElementById('coverStamps').innerHTML = now.slice(0, 4).map((v, i) => {
     const d = (v.destinations || [])[0] || {}, rect = i % 2 === 1;
     return `<span class="passport-stamp ${AP[d.airport] || 'stamp-japan'} ${rect ? 'stamp-rect' : 'stamp-round'}" style="--stamp-rotation:${-12 + (i * 7) % 25}deg;--i:${i}">${rect ? '<span>SEASON</span>' : `<span>${e(d.airport || '')}</span>`}<b>${e(d.city || v.title)}</b><span>${e(MONTHS[m - 1])}${rect ? ' · ' + e(d.airport || '') : ''}</span></span>`;
@@ -211,7 +222,9 @@ function render() {
 
     const monthLabels = [...new Set(e.months)].sort((a,b)=>a-b).map(m=>MONTHS[m-1]).join(' / ');
 
+    const photo = eventPhoto(e);
     return `<details class="ecard ev-card"><summary>
+      ${photo ? `<div class="ev-photo">${photo}</div>` : ''}
       <span class="ev-icon">${e.icon}</span>
       <div class="ev-title">${e.title}</div>
       <div class="ev-period">${e.period}</div>

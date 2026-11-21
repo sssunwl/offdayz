@@ -57,6 +57,7 @@
 <div class="cover-wrap feature-wrap"><span class="paper-tape" aria-hidden="true"></span><div class="column-masthead">
 <div class="masthead"><a class="mast-logo" href="../">Off<i>Dayz</i></a><div class="issue"><span data-issue>ISSUE 01 · NOV 2026</span><br>HK · TPE DEPARTURES</div></div>
 <div class="dateline"><span>P.03 目的地</span><span>Destinations · 下一站</span></div>
+<div class="cover-photo" id="coverPhoto"></div>
 <div class="cover-story"><div>
   <div class="eyebrow">COVER STORY · <span id="coverKicker">這個月的當季</span></div>
   <h1 id="coverTitle">這個月，<br><em>去哪裡剛好？</em></h1>
@@ -186,8 +187,14 @@
 <script src="../assets/site.js"></script>
 <script>
 (async()=>{
- const {esc:e,getJSON:get}=SoSol,m=+SoSol.todayISO().slice(5,7);
- const [CS,RG]=await Promise.all([get('../data/city_seasons.json'),get('../data/regions.json')]);
+ const {esc:e,getJSON:get,pickPhoto,photoHTML}=SoSol,m=+SoSol.todayISO().slice(5,7);
+ const [CS,RG,PH]=await Promise.all([get('../data/city_seasons.json'),get('../data/regions.json'),get('../data/photos.json')]);
+ const photo=(id,alt,cls)=>photoHTML(pickPhoto(PH?.cities?.[id],m),alt,cls);
+ // 下面的城市卡也配一張當月的照片
+ document.querySelectorAll('a.destination-card[href^="city.html?key="]').forEach(a=>{
+   const id=a.getAttribute('href').split('=')[1],html=photo(id,a.querySelector('.name')?.textContent||'');
+   if(html)a.insertAdjacentHTML('afterbegin',`<div class="city-photo">${html}</div>`);
+ });
  const grid=document.getElementById('seasonGrid');
  document.getElementById('seasonMonth').textContent=m+' 月';
  if(!CS?.cities){grid.innerHTML='<p class="nodata">當季資料暫時無法載入，先翻翻下面的城市指南</p>';return;}
@@ -204,11 +211,13 @@
  document.getElementById('coverKicker').textContent=m+' 月當季';
  document.getElementById('coverTitle').innerHTML=`這個月，<br>正好去<em>${hot.slice(0,2).map(h=>e(h.name)).join('、')}</em>。`;
  document.getElementById('coverLead').innerHTML=`${hot[0].note?e(hot[0].note)+'。':''}<br>${m} 月正當季：<b>${hot.slice(0,5).map(h=>e(h.name)).join('、')}</b>`;
+ const lead=hot.find(h=>PH?.cities?.[h.id]);
+ if(lead)document.getElementById('coverPhoto').innerHTML=`<span class="paper-tape" aria-hidden="true"></span><span class="paper-tape" aria-hidden="true"></span>${photo(lead.id,lead.name+'，'+m+' 月')}<span class="photo-tag">${e(lead.name)} · ${m} 月</span>`;
  document.getElementById('coverStamps').innerHTML=hot.slice(0,4).map((h,i)=>{
    const rect=i%2===1,en=(h.c.en||h.id).toUpperCase(),code=CITY[h.id]?.airports?.[0]||'';
    return `<span class="passport-stamp ${CITY[h.id]?.ink||'stamp-japan'} ${rect?'stamp-rect':'stamp-round'}" style="--stamp-rotation:${-12+(i*7)%25}deg;--i:${i}">${rect?'<span>ARRIVAL</span>':`<span>${e(en)}</span>`}<b>${e(h.name)}</b><span>${rect?e(en)+' · ':''}${e(code)}</span></span>`;
  }).join('');
- grid.innerHTML=hot.filter(h=>h.note).slice(0,3).map(h=>`<a class="polaroid" href="${h.guide?'city.html?key='+e(h.id):'../offdays/'}"><span class="paper-tape" aria-hidden="true"></span><div class="film-frame"><span>${e((h.c.en||h.id).toUpperCase())} · ${m} 月</span><b>${e(h.name)}</b><small>${e(h.note)}</small></div><h3>${e(h.name)}，${m} 月剛好</h3><p>${h.guide?'翻開城市指南 →':'看哪段連假適合去 →'}</p></a>`).join('');
+ grid.innerHTML=hot.filter(h=>h.note).slice(0,3).map(h=>`<a class="polaroid" href="${h.guide?'city.html?key='+e(h.id):'../offdays/'}"><span class="paper-tape" aria-hidden="true"></span>${photo(h.id,h.name)||`<div class="film-frame"><span>${e((h.c.en||h.id).toUpperCase())} · ${m} 月</span><b>${e(h.name)}</b></div>`}<h3>${e(h.name)}，${m} 月剛好</h3><p class="pol-note">${e(h.note)}</p><p>${h.guide?'翻開城市指南 →':'看哪段連假適合去 →'}</p></a>`).join('');
 })();
 </script>
 

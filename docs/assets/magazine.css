@@ -317,3 +317,32 @@ body{background-color:#cfb48c;background-image:var(--grain-heavy),var(--blotch),
 .column-main>.shell,.column-main>.section.shell{width:min(992px,calc(100% - 32px))}
 .column-main>.section.shell{padding-inline:28px}
 @media(max-width:760px){.column-main>.section.shell{padding-inline:16px}}
+/* ── 照片(2026-11-21)
+   SS:旅遊網卻完全看不到照片。照片統一從 docs/data/photos.json 來(自己拍的優先、其次 Commons),
+   用 SoSol.photoHTML 輸出 <figure class="photo-print">,一定帶作者/授權。 */
+.photo-print{position:relative;margin:0;background:#fffdf7;padding:8px 8px 26px;box-shadow:0 14px 26px -14px rgba(60,40,20,.55)}
+.photo-print img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;background:var(--lagoon-soft);filter:saturate(1.05) contrast(1.02)}
+.photo-print figcaption{position:absolute;right:10px;bottom:6px;left:10px;font:10px/1.3 var(--type);color:var(--muted);text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.photo-print figcaption a{color:inherit;text-decoration:none}
+.photo-print figcaption a:hover{text-decoration:underline}
+/* 封面大圖:像雜誌封面那張照片,章蓋在照片角上 */
+.cover-photo{position:relative;margin:20px 0 0}
+.cover-photo:empty{display:none}
+.cover-photo .photo-print{transform:rotate(-.6deg);padding:10px 10px 30px}
+.cover-photo .photo-print img{aspect-ratio:5/2}
+.cover-photo .paper-tape{position:absolute;z-index:2;top:-10px;left:12%;width:110px;height:26px}
+.cover-photo .paper-tape+.paper-tape{left:auto;right:10%;transform:rotate(4deg)}
+.cover-photo .photo-tag{position:absolute;z-index:2;left:22px;bottom:44px;background:var(--ink);color:#fffdf7;font:700 12px var(--type);letter-spacing:.12em;padding:6px 10px}
+/* 拍立得、卡片裡的照片 */
+.polaroid .photo-print{padding:0;box-shadow:none;background:none}
+.polaroid .photo-print img{aspect-ratio:4/3;border:1px solid rgba(0,0,0,.08)}
+.polaroid .photo-print figcaption{position:static;text-align:left;margin-top:4px}
+.city-photo{margin:-6px -6px 14px}
+.city-photo .photo-print{transform:rotate(-1deg)}
+.ev-photo{margin:0 0 10px}
+.ev-photo .photo-print{padding:6px 6px 22px;transform:rotate(.6deg)}
+.ev-photo .photo-print img{aspect-ratio:16/9}
+@media(max-width:760px){
+  .cover-photo .photo-print img{aspect-ratio:4/3}
+  .cover-photo .photo-tag{bottom:40px;left:16px;font-size:10px}
+}

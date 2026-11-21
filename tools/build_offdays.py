@@ -73,6 +73,37 @@ def esc(s):
     return html.escape(str(s), quote=True)
 
 
+_PHOTOS = None
+
+
+def pick_photo(city_id, month):
+    """跟 site.js pickPhoto 同規則：自己拍的優先，再挑月份對得上的。photos.json 不存在就不放圖。"""
+    global _PHOTOS
+    if _PHOTOS is None:
+        f = DATA / "photos.json"
+        _PHOTOS = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+    lst = [x for x in (_PHOTOS.get("cities") or {}).get(city_id) or [] if x.get("url")]
+    fits = [x for x in lst if not x.get("months") or month in x["months"]]
+    own = lambda xs: next((x for x in xs if x.get("source") == "own"), None)
+    return own(fits) or (fits[0] if fits else None) or own(lst) or (lst[0] if lst else None)
+
+
+def photo_html(ph, alt, base, cls="photo-print"):
+    """跟 site.js photoHTML 同一份 HTML：Commons 一定附作者+授權。"""
+    if not ph:
+        return ""
+    url = ph["url"]
+    if url.startswith("assets/photos/"):
+        url = base + url
+    elif not url.startswith(("https://upload.wikimedia.org/", "https://thumb.wikimedia.org/")):
+        return ""
+    credit = "攝影 OffDayz 編輯部" if ph.get("source") == "own" else "© " + esc(ph.get("credit") or "Wikimedia Commons") + (
+        " · " + esc(ph["license"]) if ph.get("license") else "")
+    cap = f'<a href="{esc(ph["page"])}" target="_blank" rel="noopener">{credit}</a>' if ph.get("page") else credit
+    return (f'<figure class="{cls}"><img src="{esc(url)}" alt="{esc(alt)}" loading="lazy" decoding="async">'
+            f'<figcaption>{cap}</figcaption></figure>')
+
+
 # ---------- 假期 ----------
 
 def holiday_map(H, code):
@@ -429,8 +460,10 @@ def render_city(p, w, home):
     note = f'<p class="od-note">{esc(p["month"])} 月：{esc(p["note"])}</p>' if p["note"] else ""
     extra = f'<p class="od-note">{esc(c["note"])}</p>' if c.get("note") else ""
     guide = f'<a class="od-link" href="../../destinations/city.html?key={c["id"]}">城市指南</a>' if c["id"] in CITY_PAGES else ""
+    ph = photo_html(pick_photo(c["id"], w["start"].month), c["name"], "../../")
+    ph = f'<div class="city-photo">{ph}</div>' if ph else ""
     return f"""<article class="card od-city" data-need-leave="{'0' if p['fits_base'] else '1'}">
-  <div class="od-city-head"><span class="city-tag">{esc(r['name'])}</span><h3>{esc(c['name'])}</h3></div>
+  {ph}<div class="od-city-head"><span class="city-tag">{esc(r['name'])}</span><h3>{esc(c['name'])}</h3></div>
   <div class="od-chips">{''.join(chips)}</div>
   {note}{extra}{ev}
   <div class="od-links">
@@ -586,7 +619,15 @@ def render_cover(w, today):
     if w["avoid"]:
         stamps.append(ink_stamp(w["avoid"][0], 3, void=True))
     days = (w["start"] - today).days
-    return f"""<div class="cover-story" data-home="{h['slug']}"><div>
+    lead = next((p for p in w["go"][:3] if pick_photo(p["city"]["id"], w["start"].month)), None)
+    photo = ""
+    if lead:
+        name = lead["city"]["name"].split("・")[0]
+        photo = (f'<div class="cover-photo" data-home="{h["slug"]}"><span class="paper-tape" aria-hidden="true"></span>'
+                 f'<span class="paper-tape" aria-hidden="true"></span>'
+                 f'{photo_html(pick_photo(lead["city"]["id"], w["start"].month), name, "../")}'
+                 f'<span class="photo-tag">{esc(lead["city"]["name"])} · {w["start"].month} 月</span></div>')
+    return photo + f"""<div class="cover-story" data-home="{h['slug']}"><div>
   <div class="eyebrow">COVER STORY · {esc(w['title'])}連假{' · 預估' if w['estimated'] else ''}</div>
   <div class="countdown"{' hidden' if days < 0 else ''}><b data-countdown="{w['start'].isoformat()}">{max(days, 0)}</b><span>天後<br>放假</span></div>
   <h1>{esc(w['title'])}連假，<br><em>{hook}</em></h1>

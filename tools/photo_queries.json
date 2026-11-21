@@ -1,0 +1,101 @@
+{
+  "_note": "Commons 搜尋字。cities 每城兩張:warm=4-10月、cold=11-3月。events 用 seasonal.json 的 id。改了就重跑 tools/photos_commons.py search,再人工挑。",
+  "cities": {
+    "tokyo": {
+      "warm": "Tokyo Asakusa Sensoji street",
+      "cold": "Tokyo autumn ginkgo avenue"
+    },
+    "kansai": {
+      "warm": "Kyoto Fushimi Inari torii",
+      "cold": "Kyoto Kiyomizu-dera autumn"
+    },
+    "fukuoka": {
+      "warm": "Fukuoka Tower Momochi seaside",
+      "cold": "Fukuoka yatai Nakasu night"
+    },
+    "hokkaido": {
+      "warm": "Furano lavender field",
+      "cold": "Otaru canal snow"
+    },
+    "seoul": {
+      "warm": "Bukchon Hanok Village Seoul",
+      "cold": "Gyeongbokgung snow"
+    },
+    "busan": {
+      "warm": "Gamcheon Culture Village Busan",
+      "cold": "Haeundae beach Busan"
+    },
+    "jeju": {
+      "warm": "Seongsan Ilchulbong Jeju",
+      "cold": "Hallasan snow"
+    },
+    "bangkok": {
+      "warm": "Wat Arun Bangkok",
+      "cold": "Bangkok Chao Phraya river boat"
+    },
+    "chiangmai": {
+      "warm": "Wat Phra That Doi Suthep",
+      "cold": "Wat Chedi Luang Chiang Mai"
+    },
+    "phuket": {
+      "warm": "Phuket Kata beach",
+      "cold": "Phi Phi island boat"
+    },
+    "taipei": {
+      "warm": "Jiufen old street",
+      "cold": "Taipei 101 skyline"
+    },
+    "taichung-tainan": {
+      "warm": "Tainan Anping old street",
+      "cold": "Tainan Chihkan Tower"
+    },
+    "hongkong": {
+      "warm": "Hong Kong tram Central",
+      "cold": "Victoria Harbour skyline night"
+    },
+    "macau": {
+      "warm": "Ruins of St. Paul's Macau",
+      "cold": "Senado Square Macau"
+    },
+    "okinawa": {
+      "warm": "Kouri Bridge Okinawa",
+      "cold": "Shuri Castle Okinawa"
+    },
+    "ishigaki": {
+      "warm": "Kabira Bay Ishigaki",
+      "cold": "Ishigaki island beach"
+    },
+    "miyakojima": {
+      "warm": "Irabu Bridge Miyakojima",
+      "cold": "Yonaha Maehama beach"
+    }
+  },
+  "events": {
+    "japan-newyear": "Meiji Jingu hatsumode",
+    "okinawa-hikan-sakura": "Nakijin castle cherry blossom",
+    "kerama-humpback-whale": "humpback whale breaching",
+    "hokkaido-snow-festival": "Sapporo Snow Festival 2019",
+    "hokkaido-drift-ice": "drift ice Abashiri",
+    "taiwan-lantern-festival": "Pingxi sky lantern",
+    "japan-cherry-blossom": "Chidorigafuchi cherry blossom",
+    "seoul-cherry-blossom": "Yeouido cherry blossom",
+    "taiwan-cherry-alishan": "Alishan cherry blossom",
+    "taiwan-firefly": "fireflies long exposure forest",
+    "okinawa-harvest-festival": "Haari boat race",
+    "okinawa-diving-spring": "green sea turtle underwater",
+    "okinawa-coral-spawning": "coral spawning",
+    "okinawa-diving-summer": "tropical fish coral reef Japan",
+    "miyakojima-sea-turtle": "sea turtle swimming coral",
+    "kyoto-gion-festival": "Gion Matsuri yamaboko",
+    "japan-fireworks": "Sumida River Fireworks Festival",
+    "okinawa-eisaa-festival": "Eisa Okinawa festival",
+    "okinawa-diving-autumn": "scuba diver coral reef",
+    "busan-film-festival": "Busan Cinema Center",
+    "japan-autumn-leaves": "Japan autumn maple momiji temple",
+    "korea-autumn-foliage": "Naejangsan autumn",
+    "ishigaki-manta-season": "manta ray underwater",
+    "taiwan-newyear-fireworks": "Taipei 101 fireworks",
+    "korea-christmas": "Myeongdong Christmas lights",
+    "japan-ski-season": "Niseko ski slope Yotei"
+  }
+}

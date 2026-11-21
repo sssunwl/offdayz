@@ -60,6 +60,7 @@
 <div class="cover-wrap"><span class="paper-tape" aria-hidden="true"></span><section class="sheet cover-sheet">
 <header class="masthead" id="masthead"><a class="mast-logo" href="./">Off<i>Dayz</i></a><div class="issue"><span id="issueDate">ISSUE 01 · NOV 2026</span><br>HK · TPE DEPARTURES</div></header>
 <div class="dateline"><span>放假，去哪？</span><span>EST. 2026 · OFFDAYZ.SSSUNI.COM</span></div>
+<div class="cover-photo" id="coverPhoto"></div>
 <div class="cover-story"><div><div class="eyebrow">COVER STORY · <span id="coverKicker">下一個連假</span></div><div class="countdown" id="countdown" hidden><b id="countdownNum">0</b><span>天後<br>放假</span></div><h1 id="coverTitle">先看你<em>什麼時候有假</em>，<br>再告訴你去哪裡。</h1><p id="coverDeck">把香港與台灣的假期攤開來看，先找能一起出發的日子，再挑剛好當季的城市。</p><p class="cover-deck">先看你什麼時候有假，再告訴你去哪裡。<br><i>Off days, well spent.</i></p><a class="cover-cta" id="coverCta" href="offdays/" hidden>翻開這篇攻略 →</a></div><div class="cover-stamps" id="coverStamps" aria-label="這個連假的目的地靈感">目的地資料整理中</div></div>
 <svg class="flight-path" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true"><path class="route-dash"d="M10 100 C 260 10, 640 10, 990 70"/><circle cx="10" cy="100" r="6"/><circle cx="990" cy="70" r="6"/></svg>
 </section></div>
@@ -104,7 +105,7 @@
 (async()=>{
  const {esc:e,getJSON:get}=SoSol,today=SoSol.todayISO();
  const keys=['fukuoka','seoul','taipei','okinawa','tokyo','ishigaki','busan','miyakojima'];
- const [CAL,OD,SD,PL,RG,...cities]=await Promise.all([get('./data/holidays.json'),get('./data/offdays.json'),get('./data/seasonal.json'),get('./data/places.json'),get('./data/regions.json'),...keys.map(k=>get('./destinations/data/'+k+'.json'))]);
+ const [CAL,OD,SD,PL,RG,PH,...cities]=await Promise.all([get('./data/holidays.json'),get('./data/offdays.json'),get('./data/seasonal.json'),get('./data/places.json'),get('./data/regions.json'),get('./data/photos.json'),...keys.map(k=>get('./destinations/data/'+k+'.json'))]);
  // regions.json:城市 id → 名稱/機場/章色
  const CITY={};(RG?.regions||[]).forEach(g=>(g.cities||[]).forEach(c=>CITY[c.id]={...c,ink:g.stamp,country:g.name}));
  const INK={terra:'stamp-japan',green:'stamp-korea',sage:'stamp-taiwan',mustard:'stamp-thai',coral:'stamp-hk'};
@@ -139,11 +140,13 @@
    const av=(next.avoid||[]).find(c=>CITY[c]);
    if(av)picks.push(inkStamp({en:av.toUpperCase(),name:CITY[av].name.split('・')[0],code:CITY[av].airports?.[0]},INK[CITY[av].ink],3,true));
    document.getElementById('coverStamps').innerHTML=picks.join('');
+   const m=+next.start.slice(5,7),lead=(next.picks||[]).find(c=>PH?.cities?.[c]);
+   if(lead)document.getElementById('coverPhoto').innerHTML=`<span class="paper-tape" aria-hidden="true"></span><span class="paper-tape" aria-hidden="true"></span>${SoSol.photoHTML(SoSol.pickPhoto(PH.cities[lead],m),name(lead),'photo-print','')}<span class="photo-tag">${e(name(lead))} · ${m} 月</span>`;
  }else document.getElementById('coverStamps').innerHTML=cities.filter(Boolean).slice(0,3).map(stamp).join('')||'<p class="nodata">目的地資料暫時無法載入</p>';
  document.getElementById('nextbox').innerHTML=win?`<div class="eyebrow">BOARDING · 2 PAX</div><h2>${e(win.from)} — ${e(win.to)}</h2><strong>HKG · TPE → <span class="boarding-destination">去哪？</span></strong><p>下一個共同連假 · ${win.len} 天 · 台港免請假</p><small>${e(win.why.join(' × '))}</small>`:`<div class="eyebrow">BOARDING · 2 PAX</div><p>${CAL?'已收錄日期內暫無符合的共同連假':'假期資料暫時無法載入'}，打開年曆查看 →</p>`;
  const windows=(OD?.windows||[]).filter(w=>w.end>=today).sort((a,b)=>a.start.localeCompare(b.start)||a.home.localeCompare(b.home)).slice(0,3);
  document.getElementById('offdayList').innerHTML=windows.map((w,i)=>{const L=bestLeave(w);return `<a class="gate-ticket" href="${e(w.url)}" style="--i:${i}"><div><span class="eyebrow">GATE A${i+1} · ${e(w.home)}</span><h3>${e(w.title)}</h3><p class="leave-hook">${L?`請 <b>${L.leave}</b> 放 <b>${L.days}</b>`:`放 <b>${w.days}</b> 天`}</p><p>${md(w.start)} — ${md(w.end)} · ${w.home==='HK'?'香港':'台北'}出發${w.estimated?' · 預估':''}</p><small>去 ${(w.picks||[]).slice(0,2).map(c=>e(CITY[c]?.name||c)).join('、')}</small></div><span class="ticket-stub">OPEN →</span></a>`}).join('')||'<p class="nodata">'+(OD?'已收錄的假期窗口已列完，請查看年曆':'假期攻略暫時無法載入')+'</p>';
- document.getElementById('cityGrid').innerHTML=cities.map((c,i)=>c?`<a class="travel-card" href="destinations/city.html?key=${e(keys[i])}">${stamp(c,i)}<h3>${e(c.city)}</h3><dl>${[['時區',c.timezone],['簽證',typeof c.visa==='object'?'港：'+(c.visa.HK||'請查官方')+'／台：'+(c.visa.TW||'請查官方'):c.visa],['貨幣',c.currency],['最佳月份',(c.best_months||[]).join('、')]].map(([k,v])=>`<div><dt>${k}</dt><dd>${e(v||'待補充')}</dd></div>`).join('')}</dl></a>`:`<p class="nodata">${e(english[keys[i]])} 城市資料暫時無法載入</p>`).join('');
+ document.getElementById('cityGrid').innerHTML=cities.map((c,i)=>c?`<a class="travel-card" href="destinations/city.html?key=${e(keys[i])}">${(h=>h?`<div class="city-photo">${h}</div>`:'')(SoSol.photoHTML(SoSol.pickPhoto(PH?.cities?.[keys[i]],+today.slice(5,7)),c.city,'photo-print',''))}${stamp(c,i)}<h3>${e(c.city)}</h3><dl>${[['時區',c.timezone],['簽證',typeof c.visa==='object'?'港：'+(c.visa.HK||'請查官方')+'／台：'+(c.visa.TW||'請查官方'):c.visa],['貨幣',c.currency],['最佳月份',(c.best_months||[]).join('、')]].map(([k,v])=>`<div><dt>${k}</dt><dd>${e(v||'待補充')}</dd></div>`).join('')}</dl></a>`:`<p class="nodata">${e(english[keys[i]])} 城市資料暫時無法載入</p>`).join('');
  document.getElementById('placePeek').innerHTML=(PL?.places||[]).slice(0,3).map(p=>`<a class="polaroid" href="places/"><span class="paper-tape" aria-hidden="true"></span><div class="film-frame"><span>${e(p.region||'旅行筆記')}</span><b>${e(p.name)}</b></div><h3>${e(p.name)}</h3><p>${e(p.summary||p.category||'留給下一趟旅行')}</p></a>`).join('')||'<p class="nodata">'+(PL?'還沒有收藏的地點，先留一頁給下一趟旅行':'口袋地點暫時無法載入')+'</p>';
  const m=+today.slice(5,7),events=(SD?.events||[]).filter(v=>(v.months||[]).some(n=>n===m||n===m%12+1)).slice(0,6);
  document.getElementById('eventList').innerHTML=events.map(v=>`<a class="toc-row" href="seasonal/"><span><small>${e(v.period||'日期待公布')}</small><b>${e(v.title)}</b></span><span class="toc-dots"></span><span>${e((v.destinations||[]).map(d=>d.city).join('、'))}</span></a>`).join('')||'<p class="nodata">'+(SD?'這兩個月暫無活動資料':'活動資料暫時無法載入')+'</p>';

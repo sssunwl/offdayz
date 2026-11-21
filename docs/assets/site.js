@@ -66,7 +66,20 @@
     const d=date(today),n=Math.max(1,(d.getUTCFullYear()-2026)*12+d.getUTCMonth()-10+1);
     return 'ISSUE '+String(n).padStart(2,'0')+' · '+['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'][d.getUTCMonth()]+' '+d.getUTCFullYear();
   }
-  const api={DAY,iso,date,todayISO,esc,nextWindow,upcomingHolidays,getJSON,updateStatus,issueLabel};
+  // 照片:自己拍的(own)優先,再挑月份對得上的;Commons 照片一定要帶作者+授權
+  function pickPhoto(list,month){
+    const fits=(list||[]).filter(p=>p&&p.url&&(!p.months||!month||p.months.includes(month)));
+    return fits.find(p=>p.source==='own')||fits[0]||(list||[]).find(p=>p&&p.source==='own')||(list||[])[0]||null;
+  }
+  // base:頁面到 docs/ 根的相對路徑(首頁 ''、內頁 '../'),自己拍的照片放 docs/assets/photos/
+  function photoHTML(p,alt='',cls='photo-print',base='../'){
+    const url=/^https:\/\/(upload|thumb)\.wikimedia\.org\//.test(p?.url||'')?p.url:/^assets\/photos\/[\w.-]+$/.test(p?.url||'')?base+p.url:'';
+    if(!url)return '';
+    const credit=p.source==='own'?'攝影 OffDayz 編輯部':'© '+esc(p.credit||'Wikimedia Commons')+(p.license?' · '+esc(p.license):'');
+    const cap=p.page?`<a href="${esc(p.page)}" target="_blank" rel="noopener">${credit}</a>`:credit;
+    return `<figure class="${cls}"><img src="${esc(url)}" alt="${esc(alt)}" loading="lazy" decoding="async"><figcaption>${cap}</figcaption></figure>`;
+  }
+  const api={DAY,iso,date,todayISO,esc,nextWindow,upcomingHolidays,getJSON,updateStatus,issueLabel,pickPhoto,photoHTML};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;
   root.SoSol=api;
   if(typeof document==='undefined')return;

@@ -1,0 +1,728 @@
+{
+ "_meta": {
+  "note": "城市/季節活動照片。source=own 是 SS 自己拍的(優先顯示)，commons 要附作者+授權。只由 tools/photos_commons.py / photos_own.py 寫入。"
+ },
+ "cities": {
+  "okinawa": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Kouri_Bridge_%2815130568259%29.jpg/1280px-Kouri_Bridge_%2815130568259%29.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kouri_Bridge_(15130568259).jpg",
+    "credit": "Takuya ASADA",
+    "license": "CC BY 2.0",
+    "source": "commons",
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Naha_Shuri_Castle32bs5s4592.jpg/1280px-Naha_Shuri_Castle32bs5s4592.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Naha_Shuri_Castle32bs5s4592.jpg",
+    "credit": "663highland",
+    "license": "CC BY 2.5",
+    "source": "commons",
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3
+    ]
+   }
+  ],
+  "ishigaki": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Kabira_Bay_Ishigaki_Island40bs3s4592.jpg/1280px-Kabira_Bay_Ishigaki_Island40bs3s4592.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kabira_Bay_Ishigaki_Island40bs3s4592.jpg",
+    "credit": "663highland",
+    "license": "CC BY 2.5",
+    "source": "commons",
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Ishigaki_island_%2852116054497%29.jpg/1280px-Ishigaki_island_%2852116054497%29.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ishigaki_island_(52116054497).jpg",
+    "credit": "Raita Futo from Tokyo, Japan",
+    "license": "CC BY 2.0",
+    "source": "commons",
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3
+    ]
+   }
+  ],
+  "miyakojima": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Irabu_ohashi_20120815.jpg/1280px-Irabu_ohashi_20120815.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Irabu_ohashi_20120815.jpg",
+    "credit": "Rsa",
+    "license": "CC BY-SA 3.0",
+    "source": "commons",
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Miyako%27s_best_beach_%2851924567535%29.jpg/1280px-Miyako%27s_best_beach_%2851924567535%29.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Miyako%27s_best_beach_(51924567535).jpg",
+    "credit": "Raita Futo from Tokyo, Japan",
+    "license": "CC BY 2.0",
+    "source": "commons",
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3
+    ]
+   }
+  ],
+  "fukuoka": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Seaside_Momochi_Seaside_Park_Jigy%C5%8Dhama_Ch%C5%AB%C5%8D-ku_Momochihama_Sawara-ku_Fukuoka_City_20221225.jpg/1280px-Seaside_Momochi_Seaside_Park_Jigy%C5%8Dhama_Ch%C5%AB%C5%8D-ku_Momochihama_Sawara-ku_Fukuoka_City_20221225.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Seaside_Momochi_Seaside_Park_Jigy%C5%8Dhama_Ch%C5%AB%C5%8D-ku_Momochihama_Sawara-ku_Fukuoka_City_20221225.jpg",
+    "credit": "Hirho",
+    "license": "CC BY-SA 4.0",
+    "source": "commons",
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Nakasu-yatai.JPG/1280px-Nakasu-yatai.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Nakasu-yatai.JPG",
+    "credit": "ｍｍｒｙ0241",
+    "license": "CC BY-SA 3.0",
+    "source": "commons",
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3
+    ]
+   }
+  ],
+  "chiangmai": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Wat_Chedi_Luang%2C_Stupa%2C_Chiang_Mai%2C_Thailand.jpg/1280px-Wat_Chedi_Luang%2C_Stupa%2C_Chiang_Mai%2C_Thailand.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Wat_Chedi_Luang,_Stupa,_Chiang_Mai,_Thailand.jpg",
+    "credit": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0",
+    "source": "commons",
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Wat_Phra_That_Doi_Suthep_%28I%29.jpg/1280px-Wat_Phra_That_Doi_Suthep_%28I%29.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Wat_Phra_That_Doi_Suthep_(I).jpg",
+    "credit": "This Photo was taken by Supanut Arunoprayote. Feel free to u",
+    "license": "CC BY 4.0",
+    "source": "commons",
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   }
+  ],
+  "tokyo": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Japan_-_Tokyo_%28Asakusa%29_%2810005429533%29.jpg/1280px-Japan_-_Tokyo_%28Asakusa%29_%2810005429533%29.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Japan_-_Tokyo_(Asakusa)_(10005429533).jpg",
+    "credit": "Maya-Anaïs Yataghène from Paris, France",
+    "license": "CC BY 2.0",
+    "source": "commons",
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Jingu_Gaien_Ginkgo_Street_Tokyo.jpg/1280px-Jingu_Gaien_Ginkgo_Street_Tokyo.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Jingu_Gaien_Ginkgo_Street_Tokyo.jpg",
+    "credit": "Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "source": "commons",
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3
+    ]
+   }
+  ],
+  "kansai": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/KyotoFushimiInariLarge.jpg/1280px-KyotoFushimiInariLarge.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:KyotoFushimiInariLarge.jpg",
+    "credit": "Paul Vlaar",
+    "license": "CC BY-SA 3.0",
+    "source": "commons",
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Kiyomizu-dera%2C_Kyoto%2C_November_2016_-02.jpg/1280px-Kiyomizu-dera%2C_Kyoto%2C_November_2016_-02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kiyomizu-dera,_Kyoto,_November_2016_-02.jpg",
+    "credit": "Martin Falbisoner",
+    "license": "CC BY-SA 4.0",
+    "source": "commons",
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3
+    ]
+   }
+  ],
+  "hokkaido": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Sightseeing_spot_in_Furano%2C_Hokkaido_Prefecture%3B_July_2017_%2802%29.jpg/1280px-Sightseeing_spot_in_Furano%2C_Hokkaido_Prefecture%3B_July_2017_%2802%29.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Sightseeing_spot_in_Furano,_Hokkaido_Prefecture;_July_2017_(02).jpg",
+    "credit": "雷太",
+    "license": "CC BY 2.0",
+    "source": "commons",
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/%E5%B0%8F%E6%A8%BD%E9%9B%AA%E3%81%82%E3%81%8B%E3%82%8A%E3%81%AE%E8%B7%AF2013%EF%BC%88Otaru_Snow_Light_Path_2013%EF%BC%89_-_panoramio_%284%29.jpg/1280px-%E5%B0%8F%E6%A8%BD%E9%9B%AA%E3%81%82%E3%81%8B%E3%82%8A%E3%81%AE%E8%B7%AF2013%EF%BC%88Otaru_Snow_Light_Path_2013%EF%BC%89_-_panoramio_%284%29.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E5%B0%8F%E6%A8%BD%E9%9B%AA%E3%81%82%E3%81%8B%E3%82%8A%E3%81%AE%E8%B7%AF2013%EF%BC%88Otaru_Snow_Light_Path_2013%EF%BC%89_-_panoramio_(4).jpg",
+    "credit": "t-konno",
+    "license": "CC BY-SA 3.0",
+    "source": "commons",
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3
+    ]
+   }
+  ],
+  "seoul": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Bukchon-ro_11-gil_street_with_hanok_houses_and_blue_sky_in_Bukchon_Hanok_Village_Seoul.jpg/1280px-Bukchon-ro_11-gil_street_with_hanok_houses_and_blue_sky_in_Bukchon_Hanok_Village_Seoul.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Bukchon-ro_11-gil_street_with_hanok_houses_and_blue_sky_in_Bukchon_Hanok_Village_Seoul.jpg",
+    "credit": "Basile Morin",
+    "license": "CC BY-SA 4.0",
+    "source": "commons",
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/KOCIS_Korea_Snowfall_in_Gyeongbokgung_19_%2811318862306%29.jpg/1280px-KOCIS_Korea_Snowfall_in_Gyeongbokgung_19_%2811318862306%29.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:KOCIS_Korea_Snowfall_in_Gyeongbokgung_19_(11318862306).jpg",
+    "credit": "Korea.net / Korean Culture and Information Service (Jeon Han",
+    "license": "CC BY-SA 2.0",
+    "source": "commons",
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3
+    ]
+   }
+  ],
+  "busan": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Colorful_houses_in_Gamcheon_Culture_Village_at_sunset_in_Busan_South_Korea.jpg/1280px-Colorful_houses_in_Gamcheon_Culture_Village_at_sunset_in_Busan_South_Korea.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Colorful_houses_in_Gamcheon_Culture_Village_at_sunset_in_Busan_South_Korea.jpg",
+    "credit": "Basile Morin",
+    "license": "CC BY-SA 4.0",
+    "source": "commons",
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Haeundae_Beach_20200522_005.jpg/1280px-Haeundae_Beach_20200522_005.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Haeundae_Beach_20200522_005.jpg",
+    "credit": "Mobius6",
+    "license": "CC BY-SA 4.0",
+    "source": "commons",
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3
+    ]
+   }
+  ],
+  "jeju": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Seongsan_Ilchulbong_from_the_air.jpg/1280px-Seongsan_Ilchulbong_from_the_air.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Seongsan_Ilchulbong_from_the_air.jpg",
+    "credit": "Korea.net / Korean Culture and Information Service",
+    "license": "CC BY-SA 2.0",
+    "source": "commons",
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   }
+  ],
+  "bangkok": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Templo_Wat_Arun%2C_Bangkok%2C_Tailandia%2C_2013-08-22%2C_DD_37.jpg/1280px-Templo_Wat_Arun%2C_Bangkok%2C_Tailandia%2C_2013-08-22%2C_DD_37.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Templo_Wat_Arun,_Bangkok,_Tailandia,_2013-08-22,_DD_37.jpg",
+    "credit": "Diego Delso",
+    "license": "CC BY-SA 3.0",
+    "source": "commons",
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Long_motorboat_on_the_Chao_Phraya_River_in_Bangkok.jpg/1280px-Long_motorboat_on_the_Chao_Phraya_River_in_Bangkok.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Long_motorboat_on_the_Chao_Phraya_River_in_Bangkok.jpg",
+    "credit": "Grendelkhan",
+    "license": "CC BY-SA 3.0",
+    "source": "commons",
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3
+    ]
+   }
+  ],
+  "phuket": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Phuket_-_Kata_Beach_001.jpg/1280px-Phuket_-_Kata_Beach_001.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Phuket_-_Kata_Beach_001.jpg",
+    "credit": "ADwarf",
+    "license": "Public domain",
+    "source": "commons",
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Isla_Phi_Phi_Lay%2C_Tailandia%2C_2013-08-19%2C_DD_04.JPG/1280px-Isla_Phi_Phi_Lay%2C_Tailandia%2C_2013-08-19%2C_DD_04.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Isla_Phi_Phi_Lay,_Tailandia,_2013-08-19,_DD_04.JPG",
+    "credit": "Diego Delso",
+    "license": "CC BY-SA 3.0",
+    "source": "commons",
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3
+    ]
+   }
+  ],
+  "taipei": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Jiufen%2C_November_27%2C_2024_-_181.jpg/1280px-Jiufen%2C_November_27%2C_2024_-_181.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Jiufen,_November_27,_2024_-_181.jpg",
+    "credit": "Another Believer",
+    "license": "CC BY-SA 4.0",
+    "source": "commons",
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Taipei_Taiwan_Taipei-101-Tower-01.jpg/1280px-Taipei_Taiwan_Taipei-101-Tower-01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Taipei_Taiwan_Taipei-101-Tower-01.jpg",
+    "credit": "CEphoto, Uwe Aranas",
+    "license": "CC BY-SA 3.0",
+    "source": "commons",
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3
+    ]
+   }
+  ],
+  "taichung-tainan": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Anping%2C_Tainan_-_TainanS5488.jpg/1280px-Anping%2C_Tainan_-_TainanS5488.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Anping,_Tainan_-_TainanS5488.jpg",
+    "credit": "lumoplank",
+    "license": "CC0",
+    "source": "commons",
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Tainan_Taiwan_Fort-Provintia-01.jpg/1280px-Tainan_Taiwan_Fort-Provintia-01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Tainan_Taiwan_Fort-Provintia-01.jpg",
+    "credit": "CEphoto, Uwe Aranas",
+    "license": "CC BY-SA 3.0",
+    "source": "commons",
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3
+    ]
+   }
+  ],
+  "hongkong": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Hong_Kong_Tram_170.jpg/1280px-Hong_Kong_Tram_170.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Hong_Kong_Tram_170.jpg",
+    "credit": "Mk2010",
+    "license": "CC BY-SA 3.0",
+    "source": "commons",
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Hong_Kong_Harbour_Night_2019-06-11.jpg/1280px-Hong_Kong_Harbour_Night_2019-06-11.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Hong_Kong_Harbour_Night_2019-06-11.jpg",
+    "credit": "Benh LIEU SONG (Flickr)",
+    "license": "CC BY-SA 4.0",
+    "source": "commons",
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3
+    ]
+   }
+  ],
+  "macau": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/St_Paul%27s_Ruins%2C_Macau.jpg/1280px-St_Paul%27s_Ruins%2C_Macau.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:St_Paul%27s_Ruins,_Macau.jpg",
+    "credit": "Anthony Hartman from Meizhou, China",
+    "license": "CC BY 2.0",
+    "source": "commons",
+    "months": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Macau_-_Senado_Square.jpg/1280px-Macau_-_Senado_Square.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Macau_-_Senado_Square.jpg",
+    "credit": "kewl",
+    "license": "CC BY 2.0",
+    "source": "commons",
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3
+    ]
+   }
+  ]
+ },
+ "events": {
+  "japan-newyear": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Meiji_Jingu_Shrine_%40_Yoyogi_%2811931069643%29.jpg/1280px-Meiji_Jingu_Shrine_%40_Yoyogi_%2811931069643%29.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Meiji_Jingu_Shrine_@_Yoyogi_(11931069643).jpg",
+    "credit": "Guilhem Vellut from Annecy, France",
+    "license": "CC BY 2.0",
+    "source": "commons"
+   }
+  ],
+  "hokkaido-drift-ice": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/JRH_Senmo-main-line_Kiha40_Drift-ice.jpg/1280px-JRH_Senmo-main-line_Kiha40_Drift-ice.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:JRH_Senmo-main-line_Kiha40_Drift-ice.jpg",
+    "credit": "MaedaAkihiko",
+    "license": "CC0",
+    "source": "commons"
+   }
+  ],
+  "taiwan-lantern-festival": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Pingxi_Sky_Lantern_Festival_2014_in_Taiwan_-_12431713344.jpg/1280px-Pingxi_Sky_Lantern_Festival_2014_in_Taiwan_-_12431713344.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Pingxi_Sky_Lantern_Festival_2014_in_Taiwan_-_12431713344.jpg",
+    "credit": "Jirka Matousek",
+    "license": "CC BY 2.0",
+    "source": "commons"
+   }
+  ],
+  "japan-cherry-blossom": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Cherry_trees_in_blossom_%40_Chidorigafuchi_%2813507608793%29.jpg/1280px-Cherry_trees_in_blossom_%40_Chidorigafuchi_%2813507608793%29.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Cherry_trees_in_blossom_@_Chidorigafuchi_(13507608793).jpg",
+    "credit": "Guilhem Vellut from Annecy, France",
+    "license": "CC BY 2.0",
+    "source": "commons"
+   }
+  ],
+  "seoul-cherry-blossom": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Cherry_Blossom_in_Yeouido_Park_-_panoramio_%281%29.jpg/1280px-Cherry_Blossom_in_Yeouido_Park_-_panoramio_%281%29.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Cherry_Blossom_in_Yeouido_Park_-_panoramio_(1).jpg",
+    "credit": "Alexey Komarov",
+    "license": "CC BY 3.0",
+    "source": "commons"
+   }
+  ],
+  "taiwan-cherry-alishan": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/%E6%AB%BB%E8%8A%B1%E5%9C%A8%E8%87%BA%E7%81%A3%E5%98%89%E7%BE%A9%E9%98%BF%E9%87%8C%E5%B1%B1_Cherry_blossom_-_Sakura_in_Alishan%2C_Chiayi%2C_TAIWAN.jpg/1280px-%E6%AB%BB%E8%8A%B1%E5%9C%A8%E8%87%BA%E7%81%A3%E5%98%89%E7%BE%A9%E9%98%BF%E9%87%8C%E5%B1%B1_Cherry_blossom_-_Sakura_in_Alishan%2C_Chiayi%2C_TAIWAN.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E6%AB%BB%E8%8A%B1%E5%9C%A8%E8%87%BA%E7%81%A3%E5%98%89%E7%BE%A9%E9%98%BF%E9%87%8C%E5%B1%B1_Cherry_blossom_-_Sakura_in_Alishan,_Chiayi,_TAIWAN.jpg",
+    "credit": "王子 貓 princecat95",
+    "license": "CC BY-SA 2.0",
+    "source": "commons"
+   }
+  ],
+  "okinawa-coral-spawning": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/FGBNMS_-_Coral_Spawning_%2832330899546%29.jpg/1280px-FGBNMS_-_Coral_Spawning_%2832330899546%29.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:FGBNMS_-_Coral_Spawning_(32330899546).jpg",
+    "credit": "National Marine Sanctuaries",
+    "license": "Public domain",
+    "source": "commons"
+   }
+  ],
+  "kyoto-gion-festival": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Gion_Matsuri_2017-5.jpg/1280px-Gion_Matsuri_2017-5.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Gion_Matsuri_2017-5.jpg",
+    "credit": "江戸村のとくぞう",
+    "license": "CC BY-SA 4.0",
+    "source": "commons"
+   }
+  ],
+  "japan-fireworks": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/2012%E5%B9%B4%E9%9A%85%E7%94%B0%E5%B7%9D%E8%8A%B1%E7%81%AB%E5%A4%A7%E4%BC%9A.jpg/1280px-2012%E5%B9%B4%E9%9A%85%E7%94%B0%E5%B7%9D%E8%8A%B1%E7%81%AB%E5%A4%A7%E4%BC%9A.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:2012%E5%B9%B4%E9%9A%85%E7%94%B0%E5%B7%9D%E8%8A%B1%E7%81%AB%E5%A4%A7%E4%BC%9A.jpg",
+    "credit": "てんどん",
+    "license": "CC BY 2.1 jp",
+    "source": "commons"
+   }
+  ],
+  "okinawa-eisaa-festival": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/20240804_Ryuka_Sousako_Eisa_Daiko_-_20%C2%BA_Okinawa_Festival_-_2024_08_09_006.jpg/1280px-20240804_Ryuka_Sousako_Eisa_Daiko_-_20%C2%BA_Okinawa_Festival_-_2024_08_09_006.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:20240804_Ryuka_Sousako_Eisa_Daiko_-_20%C2%BA_Okinawa_Festival_-_2024_08_09_006.jpg",
+    "credit": "Tet",
+    "license": "CC BY 4.0",
+    "source": "commons"
+   }
+  ],
+  "busan-film-festival": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Busan_Cinema_Center.jpg/1280px-Busan_Cinema_Center.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Busan_Cinema_Center.jpg",
+    "credit": "399scout",
+    "license": "CC BY-SA 4.0",
+    "source": "commons"
+   }
+  ],
+  "japan-autumn-leaves": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Tsuten-kyo_bridge.JPG/1280px-Tsuten-kyo_bridge.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Tsuten-kyo_bridge.JPG",
+    "credit": "Oavio at English Wikipedia",
+    "license": "Public domain",
+    "source": "commons"
+   }
+  ],
+  "korea-autumn-foliage": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Naejangsan_Pavilion_2.jpg/1280px-Naejangsan_Pavilion_2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Naejangsan_Pavilion_2.jpg",
+    "credit": "Tung Thanh Dang",
+    "license": "CC BY-SA 3.0",
+    "source": "commons"
+   }
+  ],
+  "taiwan-newyear-fireworks": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/2021_Taipei_101_Fireworks_%2850786811807%29.jpg/1280px-2021_Taipei_101_Fireworks_%2850786811807%29.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:2021_Taipei_101_Fireworks_(50786811807).jpg",
+    "credit": "Artemas Liu",
+    "license": "CC BY 2.0",
+    "source": "commons"
+   }
+  ],
+  "korea-christmas": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Myeongdong_Crowd_at_Christmas%2C_Seoul.jpg/1280px-Myeongdong_Crowd_at_Christmas%2C_Seoul.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Myeongdong_Crowd_at_Christmas,_Seoul.jpg",
+    "credit": "Ken Eckert",
+    "license": "CC BY-SA 4.0",
+    "source": "commons"
+   }
+  ],
+  "kerama-humpback-whale": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/001_Humpback_whale_breaching_in_Ballena_Marine_National_Park_Photo_by_Giles_Laurent.jpg/1280px-001_Humpback_whale_breaching_in_Ballena_Marine_National_Park_Photo_by_Giles_Laurent.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:001_Humpback_whale_breaching_in_Ballena_Marine_National_Park_Photo_by_Giles_Laurent.jpg",
+    "credit": "Giles Laurent",
+    "license": "CC BY-SA 4.0",
+    "source": "commons"
+   }
+  ],
+  "okinawa-diving-spring": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Green-sea-turtle.jpg/1280px-Green-sea-turtle.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Green-sea-turtle.jpg",
+    "credit": "Vogel, David",
+    "license": "Public domain",
+    "source": "commons"
+   }
+  ],
+  "miyakojima-sea-turtle": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Munching_Turtle_%28219429797%29.jpeg/1280px-Munching_Turtle_%28219429797%29.jpeg",
+    "page": "https://commons.wikimedia.org/wiki/File:Munching_Turtle_(219429797).jpeg",
+    "credit": "Tilonaut",
+    "license": "CC BY 3.0",
+    "source": "commons"
+   }
+  ],
+  "okinawa-diving-autumn": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/NOAA_diver_measures_coral_Rose_Atoll_2023.png/1280px-NOAA_diver_measures_coral_Rose_Atoll_2023.png",
+    "page": "https://commons.wikimedia.org/wiki/File:NOAA_diver_measures_coral_Rose_Atoll_2023.png",
+    "credit": "NOAA Fisheries/Damaris Torres-Pulliza",
+    "license": "Public domain",
+    "source": "commons"
+   }
+  ],
+  "hokkaido-snow-festival": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/The_U.S._7th_Fleet_Band_performs_at_the_70th_annual_Sapporo_Snow_Festival_%2846147976845%29..jpg/1280px-The_U.S._7th_Fleet_Band_performs_at_the_70th_annual_Sapporo_Snow_Festival_%2846147976845%29..jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:The_U.S._7th_Fleet_Band_performs_at_the_70th_annual_Sapporo_Snow_Festival_(46147976845)..jpg",
+    "credit": "Official U.S. Navy Page from United States of America MC2 Ad",
+    "license": "Public domain",
+    "source": "commons"
+   }
+  ],
+  "japan-ski-season": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Namara_Slope.jpg/1280px-Namara_Slope.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Namara_Slope.jpg",
+    "credit": "Excellent moniteur de ski",
+    "license": "CC BY-SA 4.0",
+    "source": "commons"
+   }
+  ]
+ }
+}
