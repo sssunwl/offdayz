@@ -494,7 +494,7 @@ def build_flights_msg(flight_data: dict, destinations: dict) -> str:
         lines.append(f"\n<b>{label}</b>")
         lines.append("  " + "  ·  ".join(dest_parts))
 
-    lines += ["", "🌐 sssunwl.github.io/offdayz", "—— Sosol × Steve · Suniverse"]
+    lines += ["", "🌐 offdayz.sssuni.com", "—— Sosol × Steve · Suniverse"]
     return "\n".join(lines)
 
 
@@ -515,7 +515,7 @@ def build_hotels_msg(hotel_all: list, weekends: list) -> str:
         for price, name, rating in top2:
             lines.append(f"  {name}  <b>HK${price:,.0f}</b> ⭐{rating}")
         lines.append("")
-    lines.append("🌐 sssunwl.github.io/offdayz")
+    lines.append("🌐 offdayz.sssuni.com")
     lines.append("—— Sosol × Steve · Suniverse")
     return "\n".join(lines)
 

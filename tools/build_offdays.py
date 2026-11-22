@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 DATA = DOCS / "data"
 OUT = DOCS / "offdays"
-SITE = "https://sssunwl.github.io/offdayz"
+SITE = "https://offdayz.sssuni.com"
 
 # 出發地：regions.json 的 home 代碼 → 假期代碼、機場、幣別
 HOMES = {

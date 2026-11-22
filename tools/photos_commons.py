@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parent.parent
 QUERIES = ROOT / "tools" / "photo_queries.json"
 PHOTOS = ROOT / "docs" / "data" / "photos.json"
 API = "https://commons.wikimedia.org/w/api.php"
-HEADERS = {"User-Agent": "OffDayz/1.0 (https://sssunwl.github.io/offdayz/)"}
+HEADERS = {"User-Agent": "OffDayz/1.0 (https://offdayz.sssuni.com/)"}
 OK_LICENSE = re.compile(r"^(CC0|CC BY|CC BY-SA|Public domain|PD)", re.I)
 WARM, COLD = [4, 5, 6, 7, 8, 9, 10], [11, 12, 1, 2, 3]
 
