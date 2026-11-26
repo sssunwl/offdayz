@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25 14:30 HKT",
+  "updated_at": "2026-11-26 14:23 HKT",
   "routes": [
     {
       "key": "HKG_TPE",
@@ -11,21 +11,21 @@
       "months": [
         {
           "month": "2026-11",
-          "price": 1676,
-          "date": "2026-11-26",
-          "airline": "北部灣航空",
+          "price": 1670,
+          "date": "2026-11-27",
+          "airline": "香港航空",
           "is_cheapest": false,
-          "return_date": "2026-11-28",
+          "return_date": "2026-11-27",
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 84,
-            "median": 1302.0,
+            "samples": 85,
+            "median": 1302,
             "p10": 1030.0,
             "min": 988,
             "max": 1676,
-            "percentile": 99,
-            "vs_median_pct": 29,
+            "percentile": 98,
+            "vs_median_pct": 28,
             "verdict": "high"
           }
         },
@@ -39,8 +39,8 @@
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 84,
-            "median": 1263.5,
+            "samples": 85,
+            "median": 1263,
             "p10": 1016.0,
             "min": 962,
             "max": 1512,
@@ -51,22 +51,22 @@
         },
         {
           "month": "2027-01",
-          "price": 1056,
-          "date": "2027-01-09",
+          "price": 1074,
+          "date": "2027-01-12",
           "airline": "香港快運",
           "is_cheapest": false,
-          "return_date": "2027-01-12",
+          "return_date": "2027-01-16",
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 76,
-            "median": 1382.5,
+            "samples": 77,
+            "median": 1381,
             "p10": 1063.0,
             "min": 1056,
             "max": 1735,
-            "percentile": 0,
-            "vs_median_pct": -24,
-            "verdict": "great"
+            "percentile": 19,
+            "vs_median_pct": -22,
+            "verdict": "good"
           }
         },
         {
@@ -79,12 +79,12 @@
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 69,
-            "median": 1337,
-            "p10": 1109.0,
+            "samples": 70,
+            "median": 1336.0,
+            "p10": 1110.0,
             "min": 1089,
             "max": 2048,
-            "percentile": 35,
+            "percentile": 34,
             "vs_median_pct": -14,
             "verdict": "normal"
           }
@@ -99,13 +99,13 @@
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 47,
-            "median": 1141,
+            "samples": 48,
+            "median": 1137.5,
             "p10": 1080.0,
             "min": 1020,
             "max": 2041,
             "percentile": 0,
-            "vs_median_pct": -11,
+            "vs_median_pct": -10,
             "verdict": "great"
           }
         }
@@ -129,8 +129,8 @@
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 82,
-            "median": 1618.0,
+            "samples": 83,
+            "median": 1618,
             "p10": 1507.0,
             "min": 1420,
             "max": 2279,
@@ -149,12 +149,12 @@
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 57,
-            "median": 1556,
+            "samples": 58,
+            "median": 1556.0,
             "p10": 1505.0,
             "min": 1505,
             "max": 2775,
-            "percentile": 49,
+            "percentile": 48,
             "vs_median_pct": 0,
             "verdict": "normal"
           }
@@ -169,8 +169,8 @@
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 60,
-            "median": 1604.0,
+            "samples": 61,
+            "median": 1604,
             "p10": 1466.0,
             "min": 1466,
             "max": 2894,
@@ -189,13 +189,13 @@
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 55,
-            "median": 2163,
+            "samples": 56,
+            "median": 2093.0,
             "p10": 1531.0,
             "min": 1531,
             "max": 4039,
             "percentile": 25,
-            "vs_median_pct": -17,
+            "vs_median_pct": -14,
             "verdict": "good"
           }
         },
@@ -209,9 +209,9 @@
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 25,
-            "median": 1973,
-            "p10": 1894.6,
+            "samples": 26,
+            "median": 1973.0,
+            "p10": 1879.0,
             "min": 1879,
             "max": 1989,
             "percentile": 0,
@@ -239,8 +239,8 @@
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 84,
-            "median": 1294.0,
+            "samples": 85,
+            "median": 1294,
             "p10": 1073.0,
             "min": 1050,
             "max": 1465,
@@ -252,15 +252,15 @@
         {
           "month": "2026-12",
           "price": 1064,
-          "date": "2026-12-05",
+          "date": "2026-12-10",
           "airline": "香港快運",
           "is_cheapest": false,
-          "return_date": "2026-12-09",
+          "return_date": "2026-12-14",
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 75,
-            "median": 1114,
+            "samples": 76,
+            "median": 1114.0,
             "p10": 1000.0,
             "min": 972,
             "max": 1982,
@@ -271,27 +271,27 @@
         },
         {
           "month": "2027-01",
-          "price": 995,
-          "date": "2027-01-07",
+          "price": 1027,
+          "date": "2027-01-14",
           "airline": "香港快運",
           "is_cheapest": true,
-          "return_date": "2027-01-11",
+          "return_date": "2027-01-17",
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 41,
-            "median": 1459,
-            "p10": 995.0,
+            "samples": 42,
+            "median": 1459.0,
+            "p10": 995.1,
             "min": 995,
             "max": 2149,
-            "percentile": 0,
-            "vs_median_pct": -32,
-            "verdict": "great"
+            "percentile": 14,
+            "vs_median_pct": -30,
+            "verdict": "good"
           }
         },
         {
           "month": "2027-02",
-          "price": 1514,
+          "price": 1489,
           "date": "2027-02-08",
           "airline": "香港快運",
           "is_cheapest": false,
@@ -299,14 +299,34 @@
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 40,
-            "median": 1514.0,
+            "samples": 41,
+            "median": 1514,
             "p10": 1150.0,
             "min": 1150,
             "max": 2018,
-            "percentile": 35,
-            "vs_median_pct": 0,
+            "percentile": 34,
+            "vs_median_pct": -2,
             "verdict": "normal"
+          }
+        },
+        {
+          "month": "2027-04",
+          "price": 1709,
+          "date": "2027-04-03",
+          "airline": "香港快運",
+          "is_cheapest": false,
+          "return_date": "2027-04-06",
+          "is_round_trip": true,
+          "baseline": {
+            "n_days": 90,
+            "samples": 2,
+            "median": 1456.5,
+            "p10": 1254.5,
+            "min": 1204,
+            "max": 1709,
+            "percentile": 50,
+            "vs_median_pct": 17,
+            "verdict": "unknown"
           }
         }
       ]
@@ -329,33 +349,33 @@
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 84,
-            "median": 1193.0,
+            "samples": 85,
+            "median": 1193,
             "p10": 1080.0,
             "min": 1000,
             "max": 1683,
-            "percentile": 55,
+            "percentile": 54,
             "vs_median_pct": 1,
             "verdict": "normal"
           }
         },
         {
           "month": "2026-12",
-          "price": 1112,
-          "date": "2026-12-10",
+          "price": 1153,
+          "date": "2026-12-13",
           "airline": "台灣虎航",
           "is_cheapest": false,
           "return_date": "2026-12-17",
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 82,
-            "median": 1249.0,
-            "p10": 1020.3,
+            "samples": 83,
+            "median": 1249,
+            "p10": 1021.6,
             "min": 984,
             "max": 1745,
-            "percentile": 18,
-            "vs_median_pct": -11,
+            "percentile": 23,
+            "vs_median_pct": -8,
             "verdict": "good"
           }
         },
@@ -369,8 +389,8 @@
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 81,
-            "median": 1373,
+            "samples": 82,
+            "median": 1373.0,
             "p10": 1207.0,
             "min": 1048,
             "max": 2001,
@@ -389,8 +409,8 @@
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 76,
-            "median": 1498.0,
+            "samples": 77,
+            "median": 1498,
             "p10": 1400.0,
             "min": 1208,
             "max": 3758,
@@ -409,9 +429,9 @@
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 55,
-            "median": 1512,
-            "p10": 1291.6,
+            "samples": 56,
+            "median": 1512.0,
+            "p10": 1262.0,
             "min": 1255,
             "max": 1962,
             "percentile": 2,
@@ -429,8 +449,8 @@
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 25,
-            "median": 1467,
+            "samples": 26,
+            "median": 1467.0,
             "p10": 1387.0,
             "min": 1357,
             "max": 1985,
@@ -459,13 +479,13 @@
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 4,
-            "median": 2243.5,
+            "samples": 5,
+            "median": 2196,
             "p10": 2196.0,
             "min": 2196,
             "max": 2291,
             "percentile": 0,
-            "vs_median_pct": -2,
+            "vs_median_pct": 0,
             "verdict": "unknown"
           }
         },
@@ -479,8 +499,8 @@
           "is_round_trip": true,
           "baseline": {
             "n_days": 90,
-            "samples": 5,
-            "median": 2480,
+            "samples": 6,
+            "median": 2480.0,
             "p10": 2480.0,
             "min": 2480,
             "max": 2480,
@@ -495,19 +515,9 @@
   "destinations": {
     "HKG": [
       {
-        "price": 918,
+        "price": 1043,
         "name": "峴港",
         "code": "DAD"
-      },
-      {
-        "price": 974,
-        "name": "河內",
-        "code": "HAN"
-      },
-      {
-        "price": 1014,
-        "name": "馬尼拉",
-        "code": "MNL"
       },
       {
         "price": 1085,
@@ -515,9 +525,19 @@
         "code": "PQC"
       },
       {
-        "price": 1161,
-        "name": "寧波",
-        "code": "NGB"
+        "price": 1120,
+        "name": "馬尼拉",
+        "code": "MNL"
+      },
+      {
+        "price": 1143,
+        "name": "河內",
+        "code": "HAN"
+      },
+      {
+        "price": 1348,
+        "name": "上海",
+        "code": "SHA"
       }
     ],
     "TPE": [
@@ -537,14 +557,14 @@
         "code": "ISG"
       },
       {
-        "price": 1556,
-        "name": "上海",
-        "code": "SHA"
+        "price": 1591,
+        "name": "峴港",
+        "code": "DAD"
       },
       {
-        "price": 1575,
-        "name": "首爾",
-        "code": "SEL"
+        "price": 1599,
+        "name": "曼谷",
+        "code": "BKK"
       }
     ]
   }
